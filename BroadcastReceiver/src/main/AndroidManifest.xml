@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.broadcastreceiver">
+
+    <permission
+        android:name="asw.permission.MY_BROADCAST_PERMISSION"
+        android:protectionLevel="normal" />
+    <uses-permission android:name="asw.permission.MY_BROADCAST_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="OrderedBroadcast1"
+            android:permission="com.asw.broadcast2">
+            <intent-filter android:priority="1000">
+                <action android:name="com.asw.broadcast2" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="OrderedBroadcast2"
+            android:permission="com.asw.broadcast2">
+            <intent-filter android:priority="-1000">
+                <action android:name="com.asw.broadcast2" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

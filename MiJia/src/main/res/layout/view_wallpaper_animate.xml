@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="bottom" android:id="@id/wallpaper_image" android:background="@drawable/white" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip" android:scaleType="centerCrop" />
+    <ImageView android:layout_gravity="bottom|center" android:id="@id/app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bottom_bar_height" android:src="@drawable/mihome_app_icon" />
+    <com.xiaomi.smarthome.newui.wallpaper.LibAnimationView android:layout_gravity="bottom" android:id="@id/wallpaper_animate" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="300.0dip" android:layout_margin="0.0dip" />
+</FrameLayout>

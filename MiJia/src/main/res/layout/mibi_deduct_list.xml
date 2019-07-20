@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Mibi.Payment.Dialog">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/title" android:focusable="false" android:layout_width="fill_parent" android:layout_height="@dimen/mibi_payment_action_bar_height" android:text="@string/mibi_signing_pay_group_title" android:maxLines="1" style="@style/V6.TextAppearance.WindowTitle" />
+        <View android:id="@id/action_bar_line" android:background="@color/mibi_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <ListView android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:fadingEdge="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-1.0px" android:cacheColorHint="@null" android:divider="@null" android:choiceMode="singleChoice" android:fastScrollEnabled="false" />
+    </LinearLayout>
+</FrameLayout>

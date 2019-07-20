@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="37.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="#b0000000" android:id="@id/tv_view_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scene2_view_more" android:layout_centerInParent="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:src="@drawable/scene_right_arrow" android:scaleType="center" android:layout_toRightOf="@id/tv_view_more" android:layout_centerVertical="true" android:layout_marginStart="6.0dip" android:layout_toEndOf="@id/tv_view_more" />
+</RelativeLayout>

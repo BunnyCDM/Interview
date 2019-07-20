@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/class_A" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/main_icon_layout" android:background="#fff48e1f" android:layout_width="fill_parent" android:layout_height="320.0dip">
+        <ImageView android:id="@id/main_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/main_text_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="15.299988dip" android:textColor="@color/class_text_16" android:id="@id/device_intro_text_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="37.0dip" android:layout_marginTop="23.0dip" android:drawableLeft="@drawable/introduction_dot" android:drawablePadding="8.699982dip" android:layout_below="@id/main_icon_layout" />
+    <TextView android:textSize="15.299988dip" android:textColor="@color/class_text_16" android:id="@id/device_intro_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="37.0dip" android:layout_marginTop="19.0dip" android:drawableLeft="@drawable/introduction_dot" android:drawablePadding="8.699982dip" android:layout_below="@id/device_intro_text_1" />
+    <TextView android:textSize="15.299988dip" android:textColor="@color/class_text_16" android:id="@id/device_intro_text_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="37.0dip" android:layout_marginTop="19.0dip" android:drawableLeft="@drawable/introduction_dot" android:drawablePadding="8.699982dip" android:layout_below="@id/device_intro_text_2" />
+    <TextView android:textSize="@dimen/font_size_3" android:gravity="center" android:id="@id/btn_go_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:text="@string/intru_btn_text" android:layout_below="@id/device_intro_text_3" android:layout_centerHorizontal="true" />
+    <include layout="@layout/module_a_3_title_bar_return_transparent" />
+</RelativeLayout>

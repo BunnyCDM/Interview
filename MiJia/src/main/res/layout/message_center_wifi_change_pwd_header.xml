@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/wifi_changed_bg_blue" android:paddingLeft="@dimen/txt_padding_3" android:paddingBottom="@dimen/txt_padding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/txt_padding_3"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_size_4" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginBottom="28.0dip" android:text="@string/msg_detail" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:src="@drawable/wifi_icon" android:scaleType="center" />
+    <TextView android:textSize="@dimen/font_size_4" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/wifi_pwd_changed" />
+    <TextView android:textSize="@dimen/font_size_13sp" android:textColor="@color/white_60_transparent" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/date_time_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="28.0dip" />
+</LinearLayout>

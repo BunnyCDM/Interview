@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/home_name_status_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" />
+    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/home_name_status_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/home_name_status_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/top_title_text_color_white" android:id="@id/more_3" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_edit_more" android:maxLines="1" android:paddingStart="10.0dip" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/more_arrow_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_top_more" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/home_name_status_4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/top_title_text_color_white" android:id="@id/more_4" android:paddingLeft="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_edit_more" android:maxLines="1" android:paddingStart="10.0dip" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/more_arrow_4" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_top_more" />
+    </LinearLayout>
+</LinearLayout>

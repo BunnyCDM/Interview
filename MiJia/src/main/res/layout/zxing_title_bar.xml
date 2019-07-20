@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/zxing_title_bar" android:background="@drawable/title_background" android:layout_width="fill_parent" android:layout_height="45.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/zxing_back" android:paddingLeft="15.0dip" android:paddingRight="13.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/btn_common_back" android:scaleType="centerInside" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/title_color" android:layout_gravity="center" android:id="@id/zxing_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

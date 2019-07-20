@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/ll_image" android:paddingLeft="@dimen/size_5dp" android:paddingRight="@dimen/size_5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/album_img" android:layout_width="@dimen/size_52dp" android:layout_height="@dimen/size_52dp" android:src="@drawable/icon_photo_default" />
+    <View android:id="@id/overlay" android:background="@drawable/yp_select_image_overlay" android:layout_width="@dimen/size_52dp" android:layout_height="@dimen/size_52dp" />
+</FrameLayout>

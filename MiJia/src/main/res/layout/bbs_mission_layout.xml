@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip">
+            <ImageView android:id="@id/mission_rabbit" android:background="@drawable/bbs_mission_fail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" />
+            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="start" android:id="@id/mission_title" android:background="@drawable/bbs_bg_task_mes" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/not_complete_mission" android:paddingStart="28.0dip" android:paddingEnd="25.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="15.0dip" android:layout_toEndOf="@id/mission_rabbit" />
+        </RelativeLayout>
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0dip" android:textColor="#ffff6700" android:gravity="center_vertical" android:id="@id/new_bie_mission_title" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_marginTop="-8.0dip" android:text="@string/newbie_mission" android:drawablePadding="10.0dip" android:drawableStart="@drawable/bbs_iv_mission_newbie" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+        <include layout="@layout/bbs_newbie_mission_complete_layout" />
+        <com.mi.global.bbs.view.TaskListView android:id="@id/newbie_task_list" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0dip" android:textColor="#ffff6700" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_marginTop="-8.0dip" android:text="@string/daily_mission" android:drawablePadding="10.0dip" android:drawableStart="@drawable/bbs_iv_mission_diary" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+        <com.mi.global.bbs.view.TaskListView android:id="@id/daily_task_list" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/browser_progress_bar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/browser_progressbar_height" android:progressDrawable="@drawable/shop_web_view_progress_bar" style="?android:progressBarStyleHorizontal" />
+    <com.mi.global.shop.widget.BaseWebView android:id="@id/browser" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

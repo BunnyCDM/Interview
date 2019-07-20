@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':sample-clink')
+    implementation project(':sample-foo')
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'

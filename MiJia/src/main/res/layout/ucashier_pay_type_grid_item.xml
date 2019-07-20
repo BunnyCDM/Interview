@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mipay.ucashier.component.PayTypeGridItem android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/pay_image" android:layout_width="@dimen/ucashier_pay_image_width" android:layout_height="@dimen/ucashier_pay_image_height" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/ucashier_pay_type_default" />
+    <TextView android:id="@id/pay_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" style="@style/UCashier.TextAppearance.GridItem.Title" />
+    <TextView android:id="@id/pay_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/UCashier.TextAppearance.GridItem.Tip" />
+</com.mipay.ucashier.component.PayTypeGridItem>

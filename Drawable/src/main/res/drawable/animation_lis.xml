@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:drawable="@drawable/zem20"
+        android:duration="150">
+    </item>
+    
+        <item
+        android:drawable="@drawable/zem21"
+        android:duration="150">
+    </item>
+    
+            <item
+        android:drawable="@drawable/zem22"
+        android:duration="150">
+    </item>
+    
+                <item
+        android:drawable="@drawable/zem23"
+        android:duration="150">
+    </item>
+    
+                    <item
+        android:drawable="@drawable/zem24"
+        android:duration="150">
+    </item>
+    
+                        <item
+        android:drawable="@drawable/zem25"
+        android:duration="150">
+    </item>
+
+</animation-list>

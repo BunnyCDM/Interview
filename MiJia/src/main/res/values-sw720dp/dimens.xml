@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">128.0dip</dimen>
+    <dimen name="bottomsheet_default_sheet_width">480.0dip</dimen>
+    <dimen name="mibi_carrier_grid_item_min_height">90.0dip</dimen>
+    <dimen name="mibi_home_banner_min_height">170.0dip</dimen>
+    <dimen name="mibi_milicenter_header_height">210.0dip</dimen>
+    <dimen name="mibi_recharge_grid_item_height">50.0dip</dimen>
+    <dimen name="mibi_recharge_layout_padding_top">45.0dip</dimen>
+    <dimen name="mibi_recharge_result_banner_margin_top">30.0dip</dimen>
+    <dimen name="mibi_recharge_result_padding_bottom">18.0dip</dimen>
+    <dimen name="mibi_text_size_denominate_grid_item_balance">40.0sp</dimen>
+    <dimen name="mibi_text_size_denominate_grid_item_edit">35.0sp</dimen>
+    <dimen name="mibi_text_size_grid_view_edit">30.0sp</dimen>
+    <dimen name="mis_folder_cover_size">82.0dip</dimen>
+    <dimen name="mis_image_size">120.0dip</dimen>
+    <dimen name="mis_space_size">3.0dip</dimen>
+    <dimen name="scene_operation_title_height">400.0dip</dimen>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/share_root" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/share_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/share_to_title" android:paddingTop="16.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/share_to" android:textDirection="locale" android:paddingStart="13.0dip" />
+        <include layout="@layout/new_share_dialog_top" />
+        <android.support.v7.widget.RecyclerView android:orientation="horizontal" android:id="@id/share_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="9.0dip" />
+        <View android:background="@color/common_bg_color" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="19.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/save_ly" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="23.0dip">
+                <ImageView android:background="@drawable/share_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" android:textDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/copy_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="23.0dip">
+                <ImageView android:background="@drawable/share_copylink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:paddingTop="3.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_copy_link" android:textDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/sms_ly" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="23.0dip">
+                <ImageView android:background="@drawable/share_sms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:paddingTop="3.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_sms" android:textDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/email_ly" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="23.0dip">
+                <ImageView android:background="@drawable/share_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:paddingTop="3.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_email" android:textDirection="locale" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/report_ly" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="23.0dip">
+                <ImageView android:background="@drawable/share_report" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:paddingTop="3.0dip" android:paddingBottom="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_Report" android:lines="1" android:textDirection="locale" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

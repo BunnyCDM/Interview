@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <ListView android:id="@id/auth_manager_list_lv" android:background="@color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/black_00_transparent" android:layout_below="@id/title_bar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/empty_ll" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/std_main_icon_empty" android:importantForAccessibility="no" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/black_80_transparent" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/no_auth_app" />
+    </LinearLayout>
+</RelativeLayout>

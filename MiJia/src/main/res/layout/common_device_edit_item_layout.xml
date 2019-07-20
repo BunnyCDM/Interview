@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="#ffd9d9d9" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/select_common_edit_dialog_tv_color" android:gravity="center" android:id="@id/tv_name" android:background="@drawable/selector_list_common_edit_item" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+</LinearLayout>

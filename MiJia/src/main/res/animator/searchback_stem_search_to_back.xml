@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in" android:duration="@integer/searchback_stem_trim_longer_duration" android:valueFrom="@fraction/searchback_stem_search_trim_start" android:valueTo="@fraction/searchback_stem_back_trim_start" android:propertyName="trimPathStart" />
+    <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in" android:duration="@integer/searchback_stem_trim_shorter_duration" android:valueFrom="@fraction/searchback_stem_search_trim_end" android:valueTo="@fraction/searchback_stem_back_trim_end" android:propertyName="trimPathEnd" />
+</set>

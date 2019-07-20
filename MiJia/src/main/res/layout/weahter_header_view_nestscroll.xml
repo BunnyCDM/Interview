@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/weather_root_view" android:background="#ff63bae6" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/ref_view" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="-10.0dip" android:layout_marginRight="-50.0dip" android:layout_alignParentTop="true" android:layout_marginEnd="-50.0dip" />
+    <RelativeLayout android:id="@id/variable_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/weather_nestscroll_bg_iv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/weather_nestscroll_bg" android:scaleType="fitXY" android:alpha="0.1" />
+        <ImageView android:id="@id/foregroud_iv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_alignParentTop="true" />
+        <View android:id="@id/title_bar_spacer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="65.0dip" android:layout_alignParentTop="true" />
+        <View android:id="@id/spacer" android:layout_width="fill_parent" android:layout_height="57.0dip" android:layout_alignParentBottom="true" />
+        <include android:id="@id/header_view_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/spacer" android:layout_below="@id/title_bar_spacer" layout="@layout/weather_header_view_content" />
+        <include android:id="@id/header_view_no_login" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/spacer" android:layout_below="@id/title_bar_spacer" layout="@layout/header_view_login" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/title_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <View android:id="@id/placeholder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_alignParentTop="true" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="45.0dip">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="8.0dip" android:layout_marginStart="14.0dip">
+                <ImageView android:id="@id/drawer_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/client_all_drawer_lite_btn" />
+                <ImageView android:layout_gravity="center|right|top" android:id="@id/drawer_dot" android:visibility="invisible" android:layout_width="@dimen/red_dot_size" android:layout_height="@dimen/red_dot_size" android:src="@drawable/dot_red" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/title_bar_text_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/module_a_2_more_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:maxWidth="150.0dip" android:maxLines="1" android:layout_centerHorizontal="true" />
+            <ProgressBar android:id="@id/title_prog" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="12.5dip" android:layout_marginRight="10.0dip" android:indeterminate="true" android:layout_toLeftOf="@id/module_a_2_more_title" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/module_a_2_more_title" style="@style/circle_progressbar_large_white" />
+            <ViewStub android:id="@id/title_more_stub" android:layout="@layout/client_all_page_title_more_lite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="14.0dip" android:layout_alignParentRight="true" android:layout_marginEnd="14.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/bg_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mi.global.shop.widget.CustomTextView android:textSize="@dimen/text_size_medium" android:layout_gravity="center_horizontal" android:id="@id/user_no_coupon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/user_coupon_nocoupon" />
+    <ListView android:id="@id/user_coupon_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" />
+</FrameLayout>

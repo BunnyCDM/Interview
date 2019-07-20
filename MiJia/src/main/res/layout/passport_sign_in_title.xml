@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/mi_logo" android:layout_width="52.0dip" android:layout_height="52.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="40.0dip" android:src="@drawable/passport_auth_logo" />
+    <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/signin_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="40.0dip" android:text="@string/passport_auth_title" />
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:padding="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/bg_pop_dialog" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ly_share_fb" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_ic_facebook" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/str_facebook" android:textDirection="locale" style="@style/text_12_555555" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ly_share_tw" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_ic_twitter" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/str_twitter" android:textDirection="locale" style="@style/text_12_555555" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ly_share_whatapp" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_ic_whatsapp" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/str_whatsapp" android:textDirection="locale" style="@style/text_12_555555" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ly_share_copy" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_ic_copyurl" />
+                <com.mi.global.bbs.view.Editor.FontTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/str_copyurl" android:textDirection="locale" style="@style/text_12_555555" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ffd0d0d0" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="15.0dip" />
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/ly_share_cancle" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <com.mi.global.bbs.view.Editor.FontTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/bbs_cancel" android:textDirection="locale" style="@style/text_15_666666" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

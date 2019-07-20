@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/sh_login_home_group" android:background="@drawable/default_bg_signin_nor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xiaomi.smarthome.frame.login.ui.view.CustomerVideoView android:id="@id/sh_login_video" android:background="@drawable/default_bg_signin_nor" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ScrollView android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/smarthome_login_header_inc" />
+            <com.xiaomi.smarthome.frame.login.ui.view.LoginPhoneView android:id="@id/sh_login_pwd_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+            <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <include layout="@layout/smarthome_login_inc_home_other" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

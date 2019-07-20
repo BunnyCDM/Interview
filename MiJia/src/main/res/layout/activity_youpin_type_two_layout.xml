@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root_view" android:background="#90000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/youpin_sdv" android:layout_width="267.0dip" android:layout_height="334.0dip" />
+    </RelativeLayout>
+</RelativeLayout>

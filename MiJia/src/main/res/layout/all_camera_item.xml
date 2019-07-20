@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/video_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/video_view_cover" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <RelativeLayout android:id="@id/btn_large_view" android:background="@drawable/camera_title_background" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/white" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:text="" android:layout_centerVertical="true" android:layout_marginStart="17.0dip" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_icon_link_l" android:layout_toRightOf="@id/title" android:layout_centerVertical="true" android:layout_toEndOf="@id/title" />
+            <ImageView android:id="@id/ivExitFullscreenButton" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/all_camera_item_exit_full_screen" android:scaleType="center" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            <ImageView android:id="@id/mute_button" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginRight="30.0dip" android:src="@drawable/camera_icon_btn_vocal" android:scaleType="center" android:layout_toLeftOf="@id/ivExitFullscreenButton" android:layout_marginEnd="30.0dip" android:layout_toStartOf="@id/ivExitFullscreenButton" />
+            <ImageView android:id="@id/pause_button" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginRight="30.0dip" android:src="@drawable/camera_icon_btn_vocal" android:scaleType="center" android:layout_toLeftOf="@id/mute_button" android:layout_marginEnd="30.0dip" android:layout_toStartOf="@id/mute_button" />
+        </RelativeLayout>
+        <ImageView android:layout_gravity="center" android:id="@id/camera_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/ivPlayCenter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_camera_play_center" />
+    </FrameLayout>
+</LinearLayout>

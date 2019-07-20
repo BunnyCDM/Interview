@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/smart_group_header_root" android:background="@drawable/white" android:paddingLeft="@dimen/location_item_margin_horz" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/location_item_margin_horz"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/default_icon_mijialogo_nor" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginBottom="40.0dip" android:text="@string/device_list_empty" />
+    </LinearLayout>
+    <FrameLayout android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/btn_group_title" android:background="@drawable/transparent" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/std_home_infrared_icon_setting" android:paddingStart="15.0dip" android:paddingEnd="10.0dip" />
+        <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/black_40_transparent" android:gravity="center_vertical" android:id="@id/txt_group_title" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/phone_ir_device" android:layout_weight="1.0" />
+        <com.xiaomi.smarthome.library.common.widget.ExpandableItemIndicator android:id="@id/btn_expand_indicator" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+    </FrameLayout>
+    <include android:id="@id/bottom_tip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/footer_error_view" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.library.common.widget.SingleCheckLinearLayout android:gravity="center_vertical" android:background="@drawable/common_menu_list_bg" android:layout_width="fill_parent" android:layout_height="@dimen/std_dialog_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/select_icon" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_dialog_list_item_indicator_padding_left" android:src="@drawable/btn_icon_selected" />
+    <TextView android:textSize="@dimen/std_dialog_list_item_title_font_size" android:textColor="@color/std_dialog_list_item_txt_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:singleLine="true" android:layout_weight="1.0" />
+</com.xiaomi.smarthome.library.common.widget.SingleCheckLinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.mibrain.viewutil.waveview.MiBrainAudioRecordView android:layout_width="@dimen/mi_brain_bottom_height" android:layout_height="@dimen/mi_brain_bottom_height" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xiaomi.smarthome.mibrain.viewutil.waveview.MiBrainCircleWaveView android:id="@id/wave_view" android:layout_width="@dimen/mi_brain_bottom_height" android:layout_height="@dimen/mi_brain_bottom_height" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" app:wave_color="@android:color/darker_gray" app:wave_width="1.0dip" />
+</com.xiaomi.smarthome.mibrain.viewutil.waveview.MiBrainAudioRecordView>

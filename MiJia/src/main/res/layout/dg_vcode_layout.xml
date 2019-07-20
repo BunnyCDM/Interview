@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="18.0dip" android:paddingTop="12.0dip" android:paddingRight="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatEditText android:id="@id/v_code_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <CheckBox android:id="@id/cb_add_to_trust_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" android:layout_marginBottom="-10.0dip" android:checked="true" android:scaleX="0.7" android:scaleY="0.7" android:layout_marginStart="-10.0dip" android:layout_marginEnd="-10.0dip" />
+        <TextView android:textSize="@dimen/passport_text_tiny_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_to_trust_device" android:layout_marginStart="2.0dip" />
+    </LinearLayout>
+</LinearLayout>

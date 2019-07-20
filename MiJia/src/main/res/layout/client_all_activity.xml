@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/lite_scene_bg_normal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/title_bar" android:background="@drawable/common_title_bar_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height">
+            <TextView android:textSize="@dimen/title_bar_text_size" android:textColor="@color/title_bar_text_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/module_a_2_more_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/titlebar_return_area_size" android:layout_marginRight="@dimen/titlebar_return_area_size" android:maxLines="1" android:layout_marginStart="@dimen/titlebar_return_area_size" android:layout_marginEnd="@dimen/titlebar_return_area_size" />
+            <ViewStub android:layout_gravity="center|right" android:id="@id/title_more_stub" android:layout="@layout/client_all_page_title_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/std_titlebar_margin_left_right" android:layout_marginEnd="@dimen/std_titlebar_margin_left_right" />
+        </FrameLayout>
+        <ViewStub android:layout="@layout/camera_view_flow_viewstub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/offline_stub" android:background="#ffffeeee" android:layout="@layout/offline_tag" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/xiaofang_dialog" android:layout="@layout/xiaofang_dialog" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/pull_down_refresh_view_stub" android:layout="@layout/client_all_activity_pull_down_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/pull_down_refresh_view_stub_pull_to_refresh" android:layout="@layout/client_all_activity_pull_down_refresh_with_ptr" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:layout="@layout/common_ad_view_pullrefresh" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/mi_brain" android:padding="30.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mi_brain_voice" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_centerInParent="true" android:layout_alignParentEnd="true" />
+</RelativeLayout>

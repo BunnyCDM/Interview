@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="27.0dip">
+        <FrameLayout android:layout_gravity="center" android:layout_width="260.0dip" android:layout_height="260.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_wap_work_bg" android:visibility="gone" android:layout_width="260.0dip" android:layout_height="260.0dip" android:src="@drawable/smartgroup_ap_work_bg" android:scaleType="center" />
+            <ImageView android:layout_gravity="center" android:id="@id/iv_wap_work" android:layout_width="260.0dip" android:layout_height="260.0dip" android:src="@drawable/smartgroup_wp_work" android:scaleType="center" />
+        </FrameLayout>
+        <View android:background="#22000000" android:layout_width="fill_parent" android:layout_height="0.30000007dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="27.0dip" android:layout_marginRight="30.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="27.0dip">
+        <TextView android:textSize="11.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/tv_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="43.0dip" android:text="@string/smartgroup_default_address" android:drawableLeft="@drawable/smartgroup_address_white" android:drawablePadding="3.0dip" android:drawableStart="@drawable/smartgroup_address_white" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="152.0dip" android:layout_height="wrap_content" android:layout_marginTop="31.0dip">
+            <View android:layout_gravity="center_vertical" android:background="#55ffffff" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="11.0sp" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@id/tv_wap_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/smartgroup_ah_title" />
+            <View android:layout_gravity="center_vertical" android:background="#55ffffff" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="50.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/tv_wp_data_max" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/smartgroup_tds_default_max" android:includeFontPadding="false" />
+            <TextView android:textSize="45.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/smartgroup_tds_divider" android:includeFontPadding="false" />
+            <TextView android:textSize="50.0sp" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/tv_wp_data_min" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/smartgroup_tds_default_min" android:includeFontPadding="false" />
+            <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:layout_gravity="bottom" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="%" android:includeFontPadding="false" />
+        </LinearLayout>
+        <View android:layout_gravity="center_horizontal" android:background="#44ffffff" android:layout_width="152.0dip" android:layout_height="1.0dip" android:layout_marginTop="6.0dip" />
+        <TextView android:textSize="10.0sp" android:textColor="#ddffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_data_source" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:lineSpacingExtra="4.0dip" />
+    </LinearLayout>
+</FrameLayout>

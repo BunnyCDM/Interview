@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.youpin.frame.login.view.VerifyCodeInputItem android:background="@drawable/verify_code_input_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textCursorDrawable="@drawable/cursor"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

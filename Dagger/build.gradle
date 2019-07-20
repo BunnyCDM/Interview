@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+//添加Dragger apt插件
+//apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    //buildToolsVersion '25.0.3'
+
+    defaultConfig {
+        applicationId "com.example.dagger"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+
+    //Dagger2
+
+    //In your app projects build.gradle file
+    //implementation 'com.google.dagger:dagger:2.4'
+    //apt 'com.google.dagger:dagger-compiler:2.4'
+
+    //AndroidStudio 3.2.1中dagger的用法，以上是用在AndroidStudio2.3.3版本中,改动如下
+    //1.注释build.gradle 插件引入
+    //2.注释以上dependencies引入修改为以下引入方式
+    //3.root build.gradle添加dagger不变
+
+    implementation 'com.google.dagger:dagger:2.4'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+}

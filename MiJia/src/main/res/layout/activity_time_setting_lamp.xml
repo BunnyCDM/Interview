@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/class_F" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/rl_timer_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/add_view" android:background="@color/class_A" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <TextView android:textSize="@dimen/font_size_6" android:layout_gravity="center" android:id="@id/tv_add_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="8.0dip" android:text="@string/plug_timer_add" android:drawableTop="@drawable/timer_add_button" />
+            </LinearLayout>
+            <com.xiaomi.smarthome.library.common.widget.DevicePtrFrameLayout android:layout_gravity="center" android:id="@id/pull_down_refresh" android:background="@color/class_A" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.0dip" android:layout_above="@id/add_view" cube_ptr:ptr_duration_to_close="300" cube_ptr:ptr_duration_to_close_header="500" cube_ptr:ptr_keep_header_when_refresh="true" cube_ptr:ptr_pull_to_fresh="true" cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2" cube_ptr:ptr_resistance="1.7" xmlns:cube_ptr="http://schemas.android.com/apk/res-auto">
+                <com.xiaomi.smarthome.library.common.widget.SmartHomePtrHeader android:id="@id/pull_header_new" android:layout_width="fill_parent" android:layout_height="60.0dip" />
+                <android.support.v7.widget.RecyclerView android:scrollbarThumbVertical="@drawable/list_view_scroll_bar" android:scrollbarStyle="insideOverlay" android:id="@id/device_grid_view" android:paddingLeft="23.0dip" android:paddingRight="23.0dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:fastScrollEnabled="false" android:paddingStart="23.0dip" android:paddingEnd="23.0dip" cube_ptr:max_drag_scroll_speed="5.0" />
+            </com.xiaomi.smarthome.library.common.widget.DevicePtrFrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_timer_list_empty_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="13.0dip" android:textColor="#ff999999" android:gravity="center_horizontal" android:padding="5.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:text="@string/add_timer_hint" android:drawableTop="@drawable/icon_timelist_empty" android:drawablePadding="10.0dip" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/add_timer_id" android:layout_width="66.0dip" android:layout_height="66.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" android:src="@drawable/btn_add_timer" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

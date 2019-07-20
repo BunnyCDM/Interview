@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/mask" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/header_view_home_status" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/header_view_home_status" />
+    <include android:id="@id/header_view_no_login" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" layout="@layout/header_view_login" />
+    <include android:id="@id/header_view_offline" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" layout="@layout/header_view_offline" />
+</RelativeLayout>

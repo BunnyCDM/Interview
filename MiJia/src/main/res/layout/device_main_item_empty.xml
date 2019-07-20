@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/rounded_white_bg_2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="160.0dip" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <ImageView android:id="@id/iv_empty_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_empty" android:scaleType="fitXY" />
+        <TextView android:textSize="@dimen/font_size_13sp" android:textColor="@color/class_D" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/no_login_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="130.0dip" android:text="@string/room_no_device_tips" android:includeFontPadding="false" />
+    </FrameLayout>
+</RelativeLayout>

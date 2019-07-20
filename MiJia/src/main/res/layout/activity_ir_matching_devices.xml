@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/module_a_3_title_bar_return_more" />
+
+    <GridView
+        android:id="@id/ir_matching_device_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:listSelector="@color/ir_transparent"
+        android:numColumns="3"
+        android:overScrollMode="never"
+        android:stretchMode="columnWidth" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="150.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/common_divider_line" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <ImageView android:id="@id/yp_new_share_close" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/yp_share_close_2" android:scaleType="centerInside" android:layout_alignParentRight="true" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/class_V" android:id="@id/yp_new_share_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/yp_share_poster_title" android:layout_centerHorizontal="true" />
+    <LinearLayout android:id="@id/yp_new_share_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="16.0dip" android:layout_below="@id/yp_new_share_title">
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_wx_share" android:text="@string/yp_share_wechat" android:drawableTop="@drawable/yp_share_wechat" style="@style/ShareItem.Light" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_friends_share" android:text="@string/yp_share_wxcircle" android:drawableTop="@drawable/yp_share_pyq" style="@style/ShareItem.Light" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_weibo_share" android:text="@string/yp_share_sinaweibo" android:drawableTop="@drawable/yp_share_weibo" style="@style/ShareItem.Light" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_save" android:text="@string/yp_share_save" android:drawableTop="@drawable/yp_share_save" style="@style/ShareItem.Light" />
+    </LinearLayout>
+</merge>

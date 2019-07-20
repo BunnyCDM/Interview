@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white_pressed_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="@dimen/forum_title_textSize" android:textColor="@color/black" android:ellipsize="end" android:id="@id/forum_item_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="3" android:layout_weight="1.0" android:lineSpacingExtra="5.0dip" android:textDirection="locale" app:textBounds="medium" />
+        <ImageView android:id="@id/forum_item_pic" android:layout_width="124.0dip" android:layout_height="73.0dip" android:scaleType="centerCrop" android:layout_marginStart="16.0dip" />
+    </LinearLayout>
+    <include layout="@layout/bbs_home_item_common_bottom" />
+</LinearLayout>

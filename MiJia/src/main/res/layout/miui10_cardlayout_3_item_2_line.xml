@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/control_card_bg" android:layout_width="339.0dip" android:layout_height="296.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/layout_title" layout="@layout/miui10_card_title_layout" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_top" android:layout_width="fill_parent" android:layout_height="73.0dip" android:layout_marginTop="18.0dip" android:layout_below="@id/layout_title" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="73.0dip" android:layout_marginBottom="30.0dip" android:layout_above="@id/layout_bottom" android:layout_below="@id/ll_top">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_left" android:layout_width="135.0dip" android:layout_height="fill_parent" android:layout_marginLeft="35.0dip" android:layout_marginStart="35.0dip" />
+        <LinearLayout android:gravity="center" android:layout_gravity="end" android:orientation="vertical" android:id="@id/ll_right" android:layout_width="135.0dip" android:layout_height="fill_parent" android:layout_marginRight="35.0dip" android:layout_marginEnd="35.0dip" />
+    </LinearLayout>
+    <include android:id="@id/layout_bottom" layout="@layout/miui10_card_bottom" />
+    <ImageView android:id="@id/card_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/control_card_bg" />
+</RelativeLayout>

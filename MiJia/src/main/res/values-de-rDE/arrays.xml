@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ble_guide_content_description">
+        <item>Erste Seite</item>
+        <item>Zweite Seite</item>
+        <item>Dritte Seite</item>
+    </string-array>
+    <string-array name="common_edit_item_name">
+        <item>@string/menu_edit_rename</item>
+        <item>@string/menu_edit_share</item>
+        <item>@string/menu_edit_delete</item>
+    </string-array>
+    <string-array name="cs_month_array">
+        <item>Jan.</item>
+        <item>Febr.</item>
+        <item>März</item>
+        <item>Apr.</item>
+        <item>Mai</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Aug.</item>
+        <item>Sept.</item>
+        <item>Okt.</item>
+        <item>Nov.</item>
+        <item>Dez.</item>
+    </string-array>
+    <string-array name="default_room_config">
+        <item>Wohnzimmer</item>
+        <item>Schlafzimmer</item>
+        <item>Esszimmer</item>
+        <item>Badezimmer</item>
+        <item>Badezimmer</item>
+        <item>Küche</item>
+        <item>Kinderzimmer</item>
+        <item>Babyzimmer</item>
+        <item>Hobbyraum</item>
+        <item>Medienzimmer</item>
+        <item>Büro</item>
+        <item>Aufenthaltsraum</item>
+        <item>Arbeitszimmer</item>
+        <item>Werkstatt/Atelier</item>
+        <item>Garderobe</item>
+        <item>Hinterhof</item>
+        <item>Garten</item>
+        <item>Keller</item>
+        <item>Dachboden</item>
+        <item>Balkon</item>
+        <item>Angepasst</item>
+    </string-array>
+    <string-array name="family_memeber_names">
+        <item>Ehepartner</item>
+        <item>Vater</item>
+        <item>Mutter</item>
+        <item>Sohn</item>
+        <item>Tochter</item>
+        <item>Mitbewohner</item>
+        <item>Sonstiges</item>
+    </string-array>
+    <array name="mikey_bgcolor">
+        <item>@drawable/top_down_gradient_yellow</item>
+        <item>@drawable/top_down_gradient_blue</item>
+        <item>@drawable/top_down_gradient_purple</item>
+    </array>
+    <string-array name="mikey_menu">
+        <item>Aufgabe testen</item>
+        <item>Aufgaben verwalten</item>
+        <item>Abbrechen</item>
+    </string-array>
+    <string-array name="mikey_title_bgcolor">
+        <item>\#d19f60</item>
+        <item>\#1e929f</item>
+        <item>\#ff0067</item>
+    </string-array>
+    <string-array name="month">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mär</item>
+        <item>Apr</item>
+        <item>Mai</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Okt</item>
+        <item>Nov</item>
+        <item>Dez</item>
+    </string-array>
+    <string-array name="timezone_city_name">
+        <item>Peking</item>
+        <item>Seoul</item>
+        <item>Tokio</item>
+        <item>Denver</item>
+        <item>Costa_Rica</item>
+        <item>Chicago</item>
+        <item>Mexiko_Stadt</item>
+        <item>Regina</item>
+        <item>Majuro</item>
+        <item>Midway</item>
+        <item>Honolulu</item>
+        <item>Anchorage</item>
+        <item>Los_Angeles</item>
+        <item>Tijuana</item>
+        <item>Phoenix</item>
+        <item>Chihuahua</item>
+        <item>Bogota</item>
+        <item>New_York</item>
+        <item>Caracas</item>
+        <item>Barbados</item>
+        <item>Manaus</item>
+        <item>Santiago</item>
+        <item>St_Johns</item>
+        <item>Sao_Paulo</item>
+        <item>Buenos_Aires</item>
+        <item>Nuuk</item>
+        <item>Montevideo</item>
+        <item>Südgeorgien</item>
+        <item>Azoren</item>
+        <item>Kap_Verde</item>
+        <item>Casablanca</item>
+        <item>London</item>
+        <item>Amsterdam</item>
+        <item>Belgrad</item>
+        <item>Brüssel</item>
+        <item>Sarajevo</item>
+        <item>Windhoek</item>
+        <item>Brazzaville</item>
+        <item>Amman</item>
+        <item>Athen</item>
+        <item>Beirut</item>
+        <item>Kairo</item>
+        <item>Helsinki</item>
+        <item>Jerusalem</item>
+        <item>Minsk</item>
+        <item>Harare</item>
+        <item>Bagdad</item>
+        <item>Moskau</item>
+        <item>Kuwait</item>
+        <item>Nairobi</item>
+        <item>Teheran</item>
+        <item>Baku</item>
+        <item>Tiflis</item>
+        <item>Jerewan</item>
+        <item>Dubai</item>
+        <item>Kabul</item>
+        <item>Karatschi</item>
+        <item>Oral</item>
+        <item>Jekaterinburg</item>
+        <item>Kalkutta</item>
+        <item>Colombo</item>
+        <item>Kathmandu</item>
+        <item>Almaty</item>
+        <item>Rangun</item>
+        <item>Krasnojarsk</item>
+        <item>Bangkok</item>
+        <item>Irkutsk</item>
+        <item>Kuala_Lumpur</item>
+        <item>Perth</item>
+        <item>Jakutsk</item>
+        <item>Adelaide</item>
+        <item>Darwin</item>
+        <item>Brisbane</item>
+        <item>Hobart</item>
+        <item>Sydney</item>
+        <item>Wladiwostok</item>
+        <item>Guam</item>
+        <item>Magadan</item>
+        <item>Auckland</item>
+        <item>Fidschi</item>
+        <item>Tongatapu</item>
+    </string-array>
+    <string-array name="weekday">
+        <item>Sonntag</item>
+        <item>Montag</item>
+        <item>Dienstag</item>
+        <item>Mittwoch</item>
+        <item>Donnerstag</item>
+        <item>Freitag</item>
+        <item>Samstag</item>
+    </string-array>
+    <string-array name="weekday_short">
+        <item>So.</item>
+        <item>Mo.</item>
+        <item>Di.</item>
+        <item>Mi.</item>
+        <item>Do.</item>
+        <item>Fr.</item>
+        <item>Sa.</item>
+    </string-array>
+</resources>

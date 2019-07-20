@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_padding">32.0dip</dimen>
+    <dimen name="button_margin_top">32.0dip</dimen>
+    <dimen name="center_container_margin_top">32.0dip</dimen>
+    <dimen name="center_container_padding_bottom">30.0dip</dimen>
+    <dimen name="center_container_padding_left">30.0dip</dimen>
+    <dimen name="center_container_padding_right">30.0dip</dimen>
+    <dimen name="center_container_padding_top">40.0dip</dimen>
+    <dimen name="fields_margin_top">16.0dip</dimen>
+</resources>

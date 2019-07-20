@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/log_content" android:background="@drawable/transparent" android:layout_width="fill_parent" android:layout_height="53.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_line_container" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginLeft="23.5dip" android:layout_marginBottom="0.0dip" android:layout_alignParentTop="true" />
+    <RelativeLayout android:id="@id/log_time_line" android:layout_width="25.0dip" android:layout_height="53.0dip" android:layout_marginLeft="23.5dip">
+        <ImageView android:background="@drawable/log_axis_line" android:layout_width="wrap_content" android:layout_height="53.0dip" android:layout_below="@id/feed_item_line_top" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/feed_item_line_circle_bottom" android:background="@drawable/log_axis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font_size_11sp" android:textColor="@color/black_80_transparent" android:id="@id/log_detail_right_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17.0dip" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/log_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_toLeftOf="@id/log_detail_right_text" android:layout_toRightOf="@id/log_time_line" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/font_size_3" android:textColor="@color/class_text_8" android:id="@id/log_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/font_size_5" android:textColor="@color/class_text_3" android:id="@id/log_detail_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:id="@id/bottom_line" android:background="@color/class_O" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="17.0dip" android:layout_marginRight="17.0dip" android:layout_toRightOf="@id/log_time_line" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.library.common.widget.ListItemView android:background="@drawable/selector_list_item" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_6_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/class_V" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_6_height" android:layout_marginLeft="@dimen/tag_margin_left" android:maxWidth="150.0dip" android:maxLines="1" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_marginStart="@dimen/tag_margin_left" android:layout_alignParentStart="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/title" android:layout_centerVertical="true" android:layout_toEndOf="@id/title">
+        <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/black_60_transparent" android:id="@id/count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginStart="6.0dip" />
+        <ImageView android:id="@id/new_tag" android:visibility="invisible" android:layout_width="@dimen/red_dot_size" android:layout_height="@dimen/red_dot_size" android:src="@drawable/dot_red" />
+    </LinearLayout>
+    <com.xiaomi.smarthome.library.common.widget.SwitchButton android:focusable="false" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    <View android:id="@id/divider_item" android:background="@color/list_item_bg_press" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="13.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="13.0dip" />
+</com.xiaomi.smarthome.library.common.widget.ListItemView>

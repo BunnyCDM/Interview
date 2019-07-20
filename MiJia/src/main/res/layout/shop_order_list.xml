@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/orderItemList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" android:divider="@color/bg_gray" android:dividerHeight="15.0dip" />
+    <com.mi.global.shop.widget.CustomTextView android:textSize="14.0sp" android:gravity="center" android:id="@id/no_orders_txt" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="27.0dip" android:text="@string/no_orders" />
+</LinearLayout>

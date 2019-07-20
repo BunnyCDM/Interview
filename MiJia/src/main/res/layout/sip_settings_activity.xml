@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_bar" android:background="@drawable/common_title_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/std_titlebar_height">
+        <ImageView android:layout_gravity="center|left" android:id="@id/module_a_3_return_btn" android:paddingLeft="@dimen/std_titlebar_margin_left_right" android:paddingRight="@dimen/std_titlebar_margin_left_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/common_title_bar_return" android:scaleType="center" />
+        <TextView android:textSize="@dimen/std_title_bar_text_size" android:textColor="@color/title_bar_text_color" android:ellipsize="end" android:id="@id/module_a_3_return_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_titlebar_return_area_size" android:layout_marginRight="@dimen/std_titlebar_return_area_size" android:text="@string/sip_settings" android:maxLines="1" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/setting_callee" android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/settings_callee" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff999999" android:gravity="top" android:id="@id/callee_value" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/setting_account_1" android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/settings_account" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff999999" android:gravity="top" android:id="@id/account_value" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/settings_account" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="#ff999999" android:gravity="top" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/setting_call_options" android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_options" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/settings_notifications" android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_notifications" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/settings_av_options" android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_av_options" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/codecs" android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/codecs" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_advanced_options" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_wireless_options" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@drawable/common_white_list_padding" android:layout_width="fill_parent" android:layout_height="60.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_pbxes_options" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

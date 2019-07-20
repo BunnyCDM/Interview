@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff5b84f6"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="10.0dip">
+
+        <RelativeLayout
+            android:id="@id/title_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/um_title_size">
+
+            <ImageView
+                android:id="@id/back"
+                android:layout_width="@dimen/um_title_size"
+                android:layout_height="@dimen/um_title_size"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="umimg"
+                android:paddingEnd="4.0dip"
+                android:paddingRight="4.0dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/std_tittlebar_main_device_back_white" />
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/um_title_size"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/um_title_size"
+                android:layout_marginLeft="@dimen/um_title_size"
+                android:layout_marginRight="@dimen/um_title_size"
+                android:layout_marginStart="@dimen/um_title_size"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_4" />
+
+            <ImageView
+                android:id="@id/module_a_3_return_more_more_btn"
+                android:layout_width="@dimen/titlebar_return_area_size"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:scaleType="center"
+                android:src="@drawable/um_more_normal"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@id/title_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45.0dip"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/class_A"
+            android:textSize="@dimen/font_size_11sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/item_time_desc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/class_A"
+            android:textSize="@dimen/font_size_30sp" />
+
+        <View
+            android:id="@id/split_line"
+            android:layout_width="1.0px"
+            android:layout_height="@dimen/font_size_22sp"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginEnd="15.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="#80ffffff"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/item_time_desc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily=""
+            android:text=""
+            android:textColor="@color/class_A"
+            android:textSize="@dimen/font_size_30sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <com.xiaomi.smarthome.miio.activity.WifiLogStatBackground
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <com.xiaomi.smarthome.miio.activity.WifiLogHorizontalScrollView
+                android:id="@id/scroll_view"
+                android:layout_width="280.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@id/list_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" />
+            </com.xiaomi.smarthome.miio.activity.WifiLogHorizontalScrollView>
+
+            <View
+                android:layout_width="35.0dip"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="#a0ffffff" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="145.0dip"
+        android:background="#ffffffff">
+
+        <TextView
+            android:id="@id/time_period"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/wifi_log_day"
+            android:textColor="#ff818693"
+            android:textSize="@dimen/font_size_3" />
+
+        <ImageView
+            android:id="@id/prev_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="60.0dip"
+            android:layout_marginStart="60.0dip"
+            android:layout_marginTop="55.0dip"
+            android:layout_toLeftOf="@id/time_period"
+            android:layout_toStartOf="@id/time_period"
+            android:clickable="true"
+            android:src="@drawable/prev" />
+
+        <ImageView
+            android:id="@id/next_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="60.0dip"
+            android:layout_marginRight="60.0dip"
+            android:layout_marginTop="55.0dip"
+            android:layout_toEndOf="@id/time_period"
+            android:layout_toRightOf="@id/time_period"
+            android:clickable="true"
+            android:src="@drawable/next" />
+    </RelativeLayout>
+</LinearLayout>

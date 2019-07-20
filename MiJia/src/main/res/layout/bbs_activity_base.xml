@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/parentView" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/content_base" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/toolbar_container" android:background="@color/main_title_bar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/toolbar_agent" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+            <include layout="@layout/bbs_app_title_bar" />
+            <View android:id="@id/toolbar_divider" android:background="@color/divide_color" android:layout_width="fill_parent" android:layout_height="@dimen/divide_height" />
+            <ProgressBar android:id="@id/activity_progressBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/browser_progressbar_height" android:progressDrawable="@drawable/web_view_progress_bar" style="?android:progressBarStyleHorizontal" />
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:layout_gravity="end|bottom|center" android:id="@id/floating_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="166.0dip" android:layout_marginEnd="16.0dip" />
+</FrameLayout>

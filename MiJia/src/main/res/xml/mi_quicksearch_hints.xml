@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<misearch
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <items>
+        <item>
+            <id>1</id>
+            <description>mibi_description</description>
+            <intent_action>com.xiaomi.action.VIEW_MILI_CENTER</intent_action>
+            <title>mibi</title>
+            <keywords>mibi_search</keywords>
+            <drawable>android.resource://com.xiaomi.payment/drawable/mibi_search_home</drawable>
+        </item>
+    </items>
+</misearch>

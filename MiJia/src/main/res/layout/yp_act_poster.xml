@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/yp_share_root_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/yp_share_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.xiaomi.youpin.share.ui.SharePosterView android:layout_gravity="center_vertical" android:id="@id/yp_new_share_poster" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.xiaomi.youpin.share.ui.PosterShareView android:layout_gravity="bottom" android:id="@id/yp_new_share_share" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+</FrameLayout>

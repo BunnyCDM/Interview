@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="@color/black" android:layout_gravity="center_vertical" android:id="@id/mCategoryTextView" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textDirection="locale" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_forum_category_more" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+</merge>

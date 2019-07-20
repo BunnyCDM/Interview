@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/result_success" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xiaomi.payment.ui.component.PaySuccessView android:id="@id/icon_success" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mibi_payment_success_icon_marging_top" />
+    <TextView android:id="@id/text_result_success" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mibi_payment_success_text_result_margin_top" style="@style/Mibi.TextAppearance.Payment.General.Gray" />
+</LinearLayout>

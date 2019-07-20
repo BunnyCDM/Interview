@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.library.common.widget.CustomPullDownRefreshLinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:customPullDownRefreshLL="http://schemas.android.com/apk/res/com.xiaomi.smarthome">
+    <com.xiaomi.smarthome.library.common.widget.TitleBarScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.xiaomi.smarthome.library.common.widget.IRHeaderView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.xiaomi.smarthome.library.common.widget.NestedWebView android:scrollbarStyle="insideOverlay" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@android:color/transparent" android:divider="@null" />
+        </LinearLayout>
+    </com.xiaomi.smarthome.library.common.widget.TitleBarScrollView>
+</com.xiaomi.smarthome.library.common.widget.CustomPullDownRefreshLinearLayout>

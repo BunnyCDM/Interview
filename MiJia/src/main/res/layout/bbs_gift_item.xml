@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0dip" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mi.global.bbs.view.Editor.FontTextView android:id="@id/gift_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:textDirection="locale" />
+    <com.mi.global.bbs.view.Editor.FontTextView android:textColor="@color/main_yellow" android:id="@id/gift_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_x1" android:textDirection="locale" />
+</LinearLayout>

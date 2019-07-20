@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@null" android:layout_width="50.0dip" android:layout_height="36.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/alpha_bg" android:layout_width="50.0dip" android:layout_height="36.0dip" />
+    <ImageButton android:background="@null" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/room_navi_arrow_down" android:layout_centerInParent="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</RelativeLayout>

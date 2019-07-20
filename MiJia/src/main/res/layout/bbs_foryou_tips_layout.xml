@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_homepage_is_ready" />
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="#ffc4c4c4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="@string/customise_your_homepage_now" />
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/do_it_now" android:background="@drawable/do_it_now_bt_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:paddingStart="25.0dip" android:paddingEnd="25.0dip" />
+</LinearLayout>

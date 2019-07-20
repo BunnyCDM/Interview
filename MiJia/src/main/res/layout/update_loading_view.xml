@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_loading" android:background="@color/class_A" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/pb_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateDrawable="@drawable/update_circle_loading_progress" style="@style/page_circle_loading_progress" />
+    <TextView android:textSize="@dimen/font_size_4" android:textColor="@color/black" android:layout_gravity="center_horizontal" android:id="@id/loading_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/refreshing_no_point" />
+</LinearLayout>

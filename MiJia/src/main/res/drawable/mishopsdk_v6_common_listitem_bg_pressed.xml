@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/mishopsdk_v6_common_listitem_padding" android:right="@dimen/mishopsdk_v6_common_listitem_padding">
+        <shape android:dither="true" android:shape="rectangle">
+            <solid android:color="#ffdddddd" />
+        </shape>
+    </item>
+    <item android:bottom="1.0px">
+        <shape android:dither="true" android:shape="rectangle">
+            <corners android:radius="1.0dip" />
+            <solid android:color="#fff2f2f2" />
+            <padding android:bottom="1.0px" />
+        </shape>
+    </item>
+</layer-list>

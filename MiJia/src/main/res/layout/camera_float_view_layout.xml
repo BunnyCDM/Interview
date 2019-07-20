@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/video_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/video_view_cover" android:background="@color/camera_list_bg" android:layout_width="200.0dip" android:layout_height="125.0dip" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/btn_bottom_view" android:background="@drawable/camera_title_background" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <ImageView android:id="@id/delete_btn" android:layout_width="0.0dip" android:layout_height="44.0dip" android:src="@drawable/camera_float_btn_close" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageView android:id="@id/pause_button" android:layout_width="0.0dip" android:layout_height="44.0dip" android:src="@drawable/camera_float_btn_play" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageView android:id="@id/mute_button" android:layout_width="0.0dip" android:layout_height="44.0dip" android:src="@drawable/camera_float_btn_mute" android:scaleType="center" android:layout_weight="1.0" />
+        <ImageView android:id="@id/goto_plugin_button" android:layout_width="0.0dip" android:layout_height="44.0dip" android:src="@drawable/camera_float_btn_inside" android:scaleType="center" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/camera_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

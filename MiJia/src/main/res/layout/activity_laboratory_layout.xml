@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/module_a_3_title_bar_righttext" />
+    <ScrollView android:background="@color/std_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/option_1" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="20.0dip" layout="@layout/common_list_space_empty" />
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/audio_controller" android:background="@drawable/common_white_list_padding_no_left_margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:textSize="@dimen/std_list_font_size_title" android:textColor="@color/std_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/audio_controller" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/std_list_content_margin_right" android:src="@drawable/um_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/std_list_content_margin_right" android:layout_alignParentEnd="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/btn_my_mini_program" android:background="@drawable/common_white_list_padding_no_left_margin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:textSize="@dimen/std_list_font_size_title" android:textColor="@color/std_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_mini_program" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/std_list_content_margin_right" android:src="@drawable/um_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/std_list_content_margin_right" android:layout_alignParentEnd="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/third_cloud_layout" android:background="@drawable/common_white_list_padding_no_left_margin" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:textSize="@dimen/std_list_font_size_title" android:textColor="@color/std_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/third_account_list_title" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/std_list_content_margin_right" android:src="@drawable/um_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/std_list_content_margin_right" android:layout_alignParentEnd="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

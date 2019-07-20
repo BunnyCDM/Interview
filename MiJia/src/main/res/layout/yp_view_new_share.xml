@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/yp_new_share_close" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="50.0dip" android:src="@drawable/yp_share_close" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <LinearLayout android:id="@id/yp_new_share_item_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="40.0dip" android:layout_above="@id/yp_new_share_close">
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_poster" android:text="@string/yp_share_generate_poster" android:drawableTop="@drawable/yp_share_poster" style="@style/ShareItem.Dark" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_copyurl" android:text="@string/yp_share_copyurl" android:drawableTop="@drawable/yp_share_copy" style="@style/ShareItem.Dark" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:visibility="invisible" android:drawableTop="@drawable/yp_share_poster" style="@style/ShareItem.Dark" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_placeholder" android:visibility="gone" android:drawableTop="@drawable/yp_share_poster" style="@style/ShareItem.Dark" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/yp_new_share_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="26.0dip" android:layout_above="@id/yp_new_share_item_2">
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_wx_share" android:text="@string/yp_share_wechat" android:drawableTop="@drawable/yp_share_wechat" style="@style/ShareItem.Dark" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_friends_share" android:text="@string/yp_share_wxcircle" android:drawableTop="@drawable/yp_share_pyq" style="@style/ShareItem.Dark" />
+        <com.xiaomi.youpin.share.ui.CenterDrawableTextView android:id="@id/yp_new_share_weibo_share" android:text="@string/yp_share_sinaweibo" android:drawableTop="@drawable/yp_share_weibo" style="@style/ShareItem.Dark" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_size_11sp" android:textColor="#99ffffff" android:id="@id/yp_new_share_subtitle" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="每日首次分享有惊喜" android:layout_above="@id/yp_new_share_item" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/white" android:id="@id/yp_new_share_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="分享给好友" android:layout_above="@id/yp_new_share_subtitle" android:layout_centerHorizontal="true" />
+</merge>

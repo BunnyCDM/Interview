@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/layout_layer1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false">
+        <com.xiaomi.smarthome.newui.wallpaper.SlideWallpaperView android:id="@id/animate_wallpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.xiaomi.smarthome.library.common.widget.TabPageIndicatorNew android:id="@id/indicator" android:background="#fff7f7f7" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_bar_height" android:layout_alignParentBottom="true" />
+        <com.xiaomi.smarthome.newui.widget.LinearViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/bottom_bar_height" />
+        <ViewStub android:id="@id/title_bar_choose_device_stub" android:layout="@layout/title_bar_choose_device" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height" android:layout_alignParentTop="true" />
+        <ViewStub android:id="@id/edit_action_bar_stub" android:layout="@layout/edit_action_bar_v2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <ViewStub android:id="@id/edit_action_bar_stub_v2" android:layout="@layout/edit_action_bar_v3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+        <ViewStub android:layout="@layout/lite_add_device_or_scene_ui" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/title_bar_choose_scene_stub" android:layout="@layout/title_bar_choose_scene" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height" android:layout_alignParentTop="true" />
+        <ViewStub android:id="@id/menu_choose_scene_stub" android:layout="@layout/edit_scene_menu" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ViewStub android:layout_gravity="left" android:layout="@layout/left_drawer_fragment_v2" android:layout_width="260.0dip" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/blur_view_vs" android:layout="@layout/common_blur_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:layout_gravity="center" android:id="@id/card_to_animate_vs" android:layout="@layout/card_to_animate_layout" android:layout_width="@dimen/device_card_width" android:layout_height="@dimen/device_card_height" />
+    <ViewStub android:layout_gravity="center" android:id="@id/tv_card_page_vs" android:layout="@layout/tv_card_page_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="187.0dip" />
+    <ViewStub android:layout_gravity="center" android:id="@id/recycler_view_vs" android:layout="@layout/card_controller_recyclerview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:layout_gravity="bottom|center" android:id="@id/ll_scroll_desc_vs" android:layout="@layout/card_controller_ll_scroll_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/layout_report_vs" android:layout="@layout/card_controller_layout_report" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/ir_hint" android:layout="@layout/ir_hint_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

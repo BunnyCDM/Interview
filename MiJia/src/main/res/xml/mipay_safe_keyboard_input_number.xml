@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SafeKeyboard app:keyBackground="@drawable/mipay_safe_keyboard_key" app:keyHeight="60.0dip" app:keyLabelColor="@color/mipay_safe_keyboard_key_text_color" app:keyLabelSize="20.0dip" app:keyWidth="25.0%p" app:keyboardBarHeight="38.0dip" app:keyboardBarTitle="@string/mipay_safe_keyboard_title" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Row>
+        <Key app:code="8" app:keyLabel="1" />
+        <Key app:code="9" app:keyLabel="2" />
+        <Key app:code="10" app:keyLabel="3" />
+        <Key app:code="67" app:keyHeight="120.0dip" app:keyIcon="@drawable/mipay_safe_keyboard_key_del" />
+    </Row>
+    <Row>
+        <Key app:code="11" app:keyLabel="4" />
+        <Key app:code="12" app:keyLabel="5" />
+        <Key app:code="13" app:keyLabel="6" />
+    </Row>
+    <Row>
+        <Key app:code="14" app:keyLabel="7" />
+        <Key app:code="15" app:keyLabel="8" />
+        <Key app:code="16" app:keyLabel="9" />
+        <Key app:code="66" app:keyBackground="@drawable/mipay_safe_keyboard_blue_key" app:keyHeight="120.0dip" app:keyLabel="@string/keyboard_key_confirm" app:keyLabelColor="@color/mipay_safe_keyboard_blue_key_text_color" />
+    </Row>
+    <Row>
+        <Key app:code="56" app:keyLabel="." />
+        <Key app:code="7" app:keyLabel="0" />
+        <Key app:code="0" app:keyEnabled="false" app:keyLabel="" />
+    </Row>
+</SafeKeyboard>

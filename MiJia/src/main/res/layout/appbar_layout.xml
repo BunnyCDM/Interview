@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip" app:theme="@style/PassportTheme.AppBarOverlay" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/PassportTheme.PopupOverlay" app:theme="@style/PassportTheme.AppBarOverlay">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/passport_text_size" android:id="@id/close_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/passport_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:foregroundGravity="right" android:layout_alignParentEnd="true" style="@style/PassportButtonBorderless" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>

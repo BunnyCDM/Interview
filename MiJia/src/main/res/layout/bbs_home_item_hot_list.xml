@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/home_hot_list_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/home_hot" android:layout_alignParentTop="true" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" app:textBounds="medium" />
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="@color/main_yellow" android:id="@id/tv_home_hot_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/str_caps_more" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" app:textBounds="medium" />
+    <android.support.v7.widget.RecyclerView android:id="@id/home_hot_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_below="@id/tv_home_hot_more" />
+    <View android:background="@color/common_bg_color" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_below="@id/home_hot_list" />
+</RelativeLayout>

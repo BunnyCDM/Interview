@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mi.global.shop.widget.CustomTextView android:textColor="@color/title_text_color" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip" android:text="@string/buy_confirm_NetBank_choose" />
+    <com.mi.global.shop.widget.NoScrollGridView android:id="@id/buy_confirm_netbank_grid_view" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:horizontalSpacing="10.0dip" android:verticalSpacing="10.0dip" android:numColumns="2" />
+</LinearLayout>

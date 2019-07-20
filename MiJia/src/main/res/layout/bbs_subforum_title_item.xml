@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/sub_forum_title_item_divide" android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="@color/activity_black_color" android:id="@id/sub_forum_title_item_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="10.0dip" android:textDirection="locale" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:textBounds="medium" />
+</LinearLayout>

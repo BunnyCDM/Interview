@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivHeaderLeftBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/std_tittlebar_main_device_back_black" android:layout_centerVertical="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/class_X" android:id="@id/tvTitleBarTitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/ivHeaderRightEdit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/cs_icon_edit_selector" />
+        <ImageView android:id="@id/ivHeaderRightSetting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cs_icon_setting_selector" />
+        <TextView android:textSize="16.0sp" android:layout_gravity="center_vertical" android:id="@id/tvRightMore" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:id="@id/viewDivider3" android:background="@color/black_06_transparent" android:layout_width="fill_parent" android:layout_height="0.20000005dip" android:layout_marginTop="20.0dip" android:layout_below="@id/ivHeaderLeftBack" />
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root" android:background="@drawable/rounded_white_bg_2" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/left_bar_common" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/most_used" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/most_used_iv" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginTop="7.0dip" android:src="@drawable/selector_leftbar_most_used" />
+            <com.xiaomi.smarthome.newui.widget.FixedTextView android:textSize="@dimen/font_size_6" android:textColor="@color/card_item_txt_color" android:gravity="center" android:id="@id/most_used_tv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:singleLine="true" android:includeFontPadding="false" />
+        </LinearLayout>
+        <View android:id="@id/most_used_divider" android:background="#ff999999" android:layout_width="18.0dip" android:layout_height="1.0px" android:layout_below="@id/most_used" android:layout_centerHorizontal="true" />
+        <com.xiaomi.smarthome.newui.widget.FadingScrollView android:id="@id/scroll" android:scrollbars="none" android:fadingEdgeLength="52.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/left_bar_setting_fl" android:layout_below="@id/most_used_divider" android:requiresFadingEdge="vertical">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioGroup android:orientation="vertical" android:id="@id/left_bar_room" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <View android:layout_gravity="center_horizontal" android:id="@id/divider" android:background="#ff999999" android:layout_width="18.0dip" android:layout_height="1.0px" android:layout_marginTop="7.0dip" />
+                <LinearLayout android:orientation="vertical" android:id="@id/share" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/share_device" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginTop="7.0dip" android:src="@drawable/selector_leftbar_share_device" />
+                    <com.xiaomi.smarthome.newui.widget.FixedTextView android:textSize="@dimen/font_size_6" android:textColor="@color/card_item_txt_color" android:gravity="center" android:id="@id/share_device_tv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:singleLine="true" android:includeFontPadding="false" />
+                </LinearLayout>
+                <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/nearby_device_group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="21.0dip">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/nearby_device" android:layout_width="fill_parent" android:layout_height="38.0dip" android:src="@drawable/selector_leftbar_nearby_device" />
+                    <com.xiaomi.smarthome.newui.widget.FixedTextView android:textSize="@dimen/font_size_6" android:textColor="@color/card_item_txt_color" android:gravity="center" android:layout_gravity="bottom" android:id="@id/nearby_device_tv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:singleLine="true" android:includeFontPadding="false" />
+                    <ImageView android:layout_gravity="center|right|top" android:id="@id/new_nearby_device" android:visibility="visible" android:layout_width="@dimen/red_dot_size" android:layout_height="@dimen/red_dot_size" android:layout_marginTop="4.0dip" android:layout_marginRight="11.0dip" android:src="@drawable/dot_red" android:scaleType="fitXY" />
+                </FrameLayout>
+            </LinearLayout>
+        </com.xiaomi.smarthome.newui.widget.FadingScrollView>
+        <View android:background="#ff999999" android:layout_width="18.0dip" android:layout_height="1.0px" android:layout_above="@id/left_bar_setting_fl" android:layout_centerHorizontal="true" />
+        <FrameLayout android:id="@id/left_bar_setting_fl" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/left_bar_setting_iv" android:clickable="true" android:layout_width="fill_parent" android:layout_height="38.0dip" android:src="@drawable/selector_leftbar_setting" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/new_setting" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="11.0dip" android:src="@drawable/dot_red" android:scaleType="fitXY" />
+        </FrameLayout>
+    </RelativeLayout>
+    <ImageView android:id="@id/left_bar_delete" android:background="@drawable/selector_left_bar_delete" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

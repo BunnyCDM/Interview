@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/comment_layout_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/reply_horizontal_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/activity_comments_pick_pic_bt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="13.0dip" android:src="@drawable/bbs_pick_pic" android:layout_marginStart="16.0dip" />
+        <EditText android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/activity_comments_edit_text" android:background="@drawable/reply_edit_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0" android:textDirection="locale" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/activity_comments_send_bt" android:background="@drawable/send_bt_bg" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:text="@string/send" android:textDirection="locale" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginEnd="16.0dip" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/activity_comments_select_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/reply_horizontal_layout" android:layout_centerHorizontal="true" />
+</RelativeLayout>

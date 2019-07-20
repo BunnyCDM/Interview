@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/item_all" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView android:id="@id/item_bargainimage" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" fresco:actualImageScaleType="fitXY" fresco:failureImage="@drawable/shop_default_pic_small_inverse" fresco:placeholderImage="@drawable/shop_default_pic_small_inverse" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+                <com.mi.global.shop.widget.CustomTextView android:textSize="@dimen/text_size_5" android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.mi.global.shop.widget.CustomTextView android:textSize="@dimen/text_size_5" android:id="@id/item_compatible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+                <com.mi.global.shop.widget.CustomTextView android:textSize="@dimen/text_size_5" android:textColor="@color/orange" android:id="@id/item_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/item_select" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/shop_radio_unselected" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

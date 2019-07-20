@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xiaomi.smarthome.lite.scene.LiteSceneContainerView android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/title_bar_holder" android:layout_width="fill_parent" android:layout_height="45.0dip" />
+        <fragment android:name="com.xiaomi.smarthome.lite.scene.LiteSceneFragment" android:id="@id/list_scene_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.xiaomi.smarthome.lite.scene.LiteSceneContainerView>
+    <ViewStub android:id="@id/execption_tips_stub" android:layout="@layout/execption_tip_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" />
+</LinearLayout>

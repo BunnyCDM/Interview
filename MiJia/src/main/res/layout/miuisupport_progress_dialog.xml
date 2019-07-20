@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/content" android:background="@drawable/miuisupport_dialog_bg_light" android:paddingLeft="35.0dip" android:paddingTop="37.0dip" android:paddingRight="48.0dip" android:paddingBottom="37.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="13.0dip" style="@style/MiuiSupport.Widget.ProgressBar" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff000000" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/title_bar" android:background="@drawable/common_title_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="left" android:id="@id/module_titlebar_back_image_back" android:paddingLeft="@dimen/std_titlebar_margin_left_right" android:paddingRight="@dimen/std_titlebar_margin_left_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/common_title_bar_return" android:scaleType="center" android:contentDescription="@string/action_back" />
+    <ImageView android:layout_gravity="center" android:id="@id/module_titlebar_back_image_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#99000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffecedef" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/progress_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="25.0dip">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/indeterminate_progress" android:layout_width="24.0dip" android:layout_height="24.0dip" style="@style/circle_progressbar_large" />
+        </FrameLayout>
+        <TextView android:textSize="@dimen/font_size_4" android:textColor="@color/class_B" android:id="@id/progress_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/miio_setting_upgrade_checking" android:layout_toRightOf="@id/progress_layout" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font_size_4" android:textColor="@color/class_B" android:gravity="center_vertical" android:id="@id/progress_percent" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_toRightOf="@id/progress_message" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

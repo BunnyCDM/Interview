@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="#ff212121" android:gravity="center" android:id="@id/unsign_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/how_is_your_day" android:textDirection="locale" />
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <ImageView android:id="@id/face1_iv" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="@dimen/common_padding" android:layout_marginBottom="@dimen/common_padding" android:src="@drawable/happy_big" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+        <ImageView android:id="@id/face2_iv" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="@dimen/common_padding" android:layout_marginBottom="@dimen/common_padding" android:src="@drawable/regular_big" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+        <ImageView android:id="@id/face3_iv" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="@dimen/common_padding" android:layout_marginBottom="@dimen/common_padding" android:src="@drawable/sad_big" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+    </LinearLayout>
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/unsign_tip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:textDirection="locale" />
+</merge>

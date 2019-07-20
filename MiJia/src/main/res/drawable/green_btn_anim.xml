@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="200" android:drawable="@drawable/search_error_green" />
+    <item android:duration="200" android:drawable="@drawable/search_error_green_ah" />
+</animation-list>

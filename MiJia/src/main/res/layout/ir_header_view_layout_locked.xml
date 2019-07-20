@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="41.0dip">
+            <TextView android:textSize="@dimen/font_size_4" android:textColor="@color/white_80_transparent" android:gravity="center_vertical" android:id="@id/btn_ir_settings" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/phone_ir_device" android:drawablePadding="7.0dip" />
+        </LinearLayout>
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ir_header_view_layout_locked_bottom" />
+    </LinearLayout>
+</FrameLayout>

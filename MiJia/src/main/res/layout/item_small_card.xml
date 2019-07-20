@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_small_card_0" android:background="#ffffffff" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/common_list_item_right_margin" android:layout_marginTop="@dimen/small_card_item_top_margin" android:layout_marginRight="@dimen/common_list_item_left_margin" android:layout_marginBottom="@dimen/small_card_item_bottom_margin">
+        <TextView android:id="@id/tlTitle_textview" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/Mifi.Widget.TextView.List.SmallCard.Title" />
+        <TextView android:id="@id/tlSubtitle_textview" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="@style/Mifi.Widget.TextView.List.SmallCard.Subtitle" />
+        <TextView android:id="@id/trSubtitle_textview" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/Mifi.Widget.TextView.List.SmallCard.Subtitle" />
+    </RelativeLayout>
+</FrameLayout>

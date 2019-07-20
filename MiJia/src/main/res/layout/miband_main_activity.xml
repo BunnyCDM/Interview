@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/view_container" android:background="@color/step_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_bar" layout="@layout/module_a_3_title_bar_return_transparent_white" />
+    <android.support.v4.view.ViewPager android:layout_gravity="center" android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="280.0dip" android:layout_below="@id/title_bar" android:layout_centerHorizontal="true" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ll_indicator_container" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginTop="5.0dip" android:layout_below="@id/pager" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_steps_indicator" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/dot_indicator_selected" />
+        <ImageView android:layout_gravity="center" android:id="@id/iv_sleep_indicator" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/dot_indicator_unselected" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font_size_15sp" android:textColor="#ff909090" android:gravity="center" android:background="#fff8f8f8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="@string/no_interactive_device" android:layout_below="@id/ll_indicator_container" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/interactive_device_container" android:background="#fff8f8f8" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="8.0dip" android:layout_below="@id/ll_indicator_container" android:layout_alignParentBottom="true">
+        <TextView android:id="@id/device_list_title" android:text="@string/device_with_band" style="@style/list_title" />
+        <View style="@style/list_item_divider" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/rl_device_list_empty" android:visibility="gone" layout="@layout/miband_device_list_empty" />
+            <ListView android:id="@id/lv_band_devices" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

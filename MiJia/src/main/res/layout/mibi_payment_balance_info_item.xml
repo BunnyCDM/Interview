@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow android:id="@id/partner_giftcard" style="@style/Mibi.Payment.Item"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:gravity="left" android:id="@id/text_giftcard_name" android:paddingLeft="@dimen/mibi_recharge_layout_group_gap" android:maxLines="1" style="@style/Mibi.TextAppearance.Payment.General" />
+    <TextView android:gravity="right" android:id="@id/text_mibi_balance_value" style="@style/Mibi.TextAppearance.Payment.General.Gray" />
+    <TextView android:gravity="right" android:text="@string/mibi_unit" style="@style/Mibi.TextAppearance.Payment.General.Gray" />
+    <CheckBox android:id="@id/giftcard_checkbox" android:clickable="true" android:layout_marginLeft="@dimen/mibi_counter_balance_info_checkbox_margin_left" android:checked="true" android:layout_marginEnd="@dimen/mibi_counter_balance_info_checkbox_margin_right" />
+</TableRow>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="60.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+            <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center_horizontal" android:id="@id/icon" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginTop="30.0dip" android:src="@drawable/accept_loading" fresco:actualImageScaleType="fitCenter" />
+            <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/lite_device_name_close" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/loading_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/share_accept_ing" />
+            <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/lite_device_name_close" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/device_name" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/message_icon_color_green" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/accept_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:maxLines="2" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttons" android:background="@drawable/bg_black15_corner4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <Button android:textSize="@dimen/font_size_13sp" android:textColor="@color/class_Y" android:gravity="center" android:id="@id/back_wechat1" android:background="@drawable/selector_trans_left" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/back_to_wechat" android:layout_weight="1.0" />
+        <View android:background="@color/black_15_transparent" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <Button android:textSize="@dimen/font_size_13sp" android:textColor="@color/class_Y" android:gravity="center" android:id="@id/stay_mijia" android:background="@drawable/selector_trans_right" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/stay_in_mihome" android:layout_weight="1.0" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/font_size_15sp" android:textColor="@color/class_Y" android:gravity="center" android:id="@id/back_wechat2" android:background="@drawable/bg_black15_corner4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_margin="19.0dip" android:text="@string/back_to_wechat" android:layout_alignParentBottom="true" />
+</RelativeLayout>

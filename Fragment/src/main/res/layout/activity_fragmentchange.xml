@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--展示内容标签-->
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+    <!--展示切换标签-->
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_shoprand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ic_launcher_round"
+                android:gravity="center"
+                android:text="热销排行"
+                android:textColor="#b3b3b3"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ic_launcher_round"
+                android:gravity="center"
+                android:text="手机专项"
+                android:textColor="#b3b3b3"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_gift"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ic_launcher_round"
+                android:gravity="center"
+                android:text="未来礼品"
+                android:textColor="#b3b3b3"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/ic_launcher_round"
+                android:gravity="center"
+                android:text="我的订单"
+                android:textColor="#b3b3b3"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

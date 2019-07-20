@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xiaomi.smarthome.library.common.widget.DevicePtrFrameLayout android:id="@id/pull_down_refresh" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" cube_ptr:ptr_duration_to_close="300" cube_ptr:ptr_duration_to_close_header="500" cube_ptr:ptr_keep_header_when_refresh="true" cube_ptr:ptr_pull_to_fresh="false" cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2" cube_ptr:ptr_resistance="1.7" xmlns:cube_ptr="http://schemas.android.com/apk/res-auto">
+        <com.xiaomi.smarthome.library.common.widget.SmartHomePtrHeader android:id="@id/pull_header_new" android:layout_width="fill_parent" android:layout_height="60.0dip" />
+        <android.support.v7.widget.RecyclerView android:scrollbarThumbVertical="@drawable/list_view_scroll_bar" android:scrollbarStyle="insideOverlay" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:fastScrollEnabled="false" cube_ptr:max_drag_scroll_speed="5.0" />
+    </com.xiaomi.smarthome.library.common.widget.DevicePtrFrameLayout>
+    <com.xiaomi.smarthome.library.common.widget.nestscroll.FlyRefreshLayout android:orientation="vertical" android:id="@id/nested_scroll_parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:scrollbarThumbVertical="@drawable/list_view_scroll_bar" android:scrollbarStyle="insideOverlay" android:id="@id/device_grid_view" android:background="@color/lite_scene_bg_normal" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:fastScrollEnabled="false" app:max_drag_scroll_speed="5.0" />
+    </com.xiaomi.smarthome.library.common.widget.nestscroll.FlyRefreshLayout>
+</FrameLayout>

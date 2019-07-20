@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height" layout="@layout/module_a_3_title_bar_return_more" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="131.0dip">
+                <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center_vertical" android:id="@id/partner_icon" android:layout_width="77.0dip" android:layout_height="77.0dip" android:layout_marginLeft="29.0dip" android:layout_marginStart="29.0dip" fresco:placeholderImage="@drawable/third_account_default_icon" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/partner_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_list_content_margin_left" android:maxLines="1" android:maxEms="13" android:layout_marginStart="@dimen/std_list_content_margin_left" />
+            </LinearLayout>
+            <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="29.0dip" android:layout_marginRight="29.0dip" android:layout_marginStart="29.0dip" android:layout_marginEnd="29.0dip" />
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/std_word_003" android:textStyle="bold" android:textColor="@color/black" android:ellipsize="end" android:gravity="left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="29.0dip" android:layout_marginTop="27.0dip" android:layout_marginRight="29.0dip" android:text="@string/third_account_platform_intro" android:maxLines="1" android:maxEms="13" />
+                <TextView android:textSize="@dimen/std_word_003" android:textColor="@color/std_list_title" android:gravity="left" android:id="@id/partner_desc" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="29.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="29.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView android:textSize="@dimen/font_size_14sp" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/bind_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="29.0dip" android:layout_marginTop="60.0dip" android:layout_marginRight="29.0dip" android:layout_marginBottom="24.0dip" android:text="@string/third_account_bind" style="@style/LoginNormalBtn.Dark" />
+</LinearLayout>

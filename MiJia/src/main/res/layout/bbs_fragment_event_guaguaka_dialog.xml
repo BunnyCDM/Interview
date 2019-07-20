@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="12.0sp" android:textColor="#ff333333" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/text_game_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="" android:textDirection="locale" />
+    <com.mi.global.bbs.view.XCGuaguakaView android:layout_gravity="center_horizontal" android:id="@id/ggk" android:layout_width="230.0dip" android:layout_height="80.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="230.0dip" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+        <Button android:id="@id/btn_card_share" android:background="@drawable/dialog_button_bg" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="30.0dip" android:text="@string/str_login" android:layout_marginEnd="30.0dip" style="@style/DialogButton" />
+        <Button android:id="@id/btn_card_myprize" android:background="@drawable/dialog_button_bg" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="30.0dip" android:text="@string/get_my_prize_tip" style="@style/DialogButton" />
+    </LinearLayout>
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="12.0sp" android:textColor="#ff555555" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/text_game_share_tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/share_to_scratch_again" android:textDirection="locale" />
+</LinearLayout>

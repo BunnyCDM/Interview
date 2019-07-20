@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <com.xiaomi.smarthome.library.common.widget.HeaderGridView android:id="@id/scan_qrcode_device_list" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:numColumns="4" />
+</LinearLayout>

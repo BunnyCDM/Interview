@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <com.xiaomi.smarthome.framework.webview.SmartHomeWebView android:id="@id/kuailian_reset_web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="43.0dip" android:layout_above="@id/check_box_root" android:layout_below="@id/title_bar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/check_box_root" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginBottom="43.0dip" android:layout_above="@id/next_btn" android:layout_centerHorizontal="true">
+        <CheckBox android:id="@id/check_box_confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/camera_check_icon" />
+        <TextView android:textSize="11.669983sp" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tips" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:singleLine="true" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+    <Button android:textSize="12.669983dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/next_btn" android:background="@drawable/blue_btn_bg" android:layout_width="fill_parent" android:layout_height="42.599976dip" android:layout_marginLeft="16.669983dip" android:layout_marginRight="16.669983dip" android:layout_marginBottom="16.669983dip" android:text="@string/next_button" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_centerVertical="true" android:layout_marginStart="17.0dip" android:layout_marginEnd="17.0dip" />
+</RelativeLayout>

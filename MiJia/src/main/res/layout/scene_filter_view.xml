@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.scene.view.SceneFilterView android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="320.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/list_bg_color" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/scene_filter_tv_color_selector" android:gravity="center" android:id="@id/filter_tv_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/tag_router_title" android:layout_weight="1.0" />
+        <View android:background="@color/black_10_transparent" android:layout_width="0.33000004dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/scene_filter_tv_color_selector" android:gravity="center" android:id="@id/filter_tv_mid" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/tag_custom_title" android:layout_weight="1.0" />
+        <View android:background="@color/black_10_transparent" android:layout_width="0.33000004dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/scene_filter_tv_color_selector" android:gravity="center" android:id="@id/filter_tv_right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/tag_category_title" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/divider_1" android:layout_width="fill_parent" android:layout_height="0.33000004dip" android:layout_marginRight="23.0dip" android:src="@color/black_10_transparent" android:layout_alignParentBottom="true" android:layout_marginEnd="23.0dip" />
+    <ListView android:id="@id/scene_filter_lv" android:layout_width="fill_parent" android:layout_height="280.0dip" android:listSelector="@android:color/transparent" android:divider="@color/transparent" />
+</com.xiaomi.smarthome.scene.view.SceneFilterView>

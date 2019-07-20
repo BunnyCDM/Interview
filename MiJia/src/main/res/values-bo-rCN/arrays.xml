@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="common_edit_item_name">
+        <item>@string/menu_edit_rename</item>
+        <item>@string/menu_edit_share</item>
+        <item>@string/menu_edit_delete</item>
+    </string-array>
+    <string-array name="default_room_config">
+        <item>མགྲོན་ཁང་།</item>
+        <item>ཉལ་ཁང་།</item>
+        <item>ཟ་ཁང་།</item>
+        <item>གསང་སྤྱོད།</item>
+        <item>བཀྲུ་ཁང་།</item>
+        <item>ཐབ་ཚང།</item>
+        <item>བྱིས་ཁང་།</item>
+        <item>ཕྲུ་གུ་ཁང་།</item>
+        <item>ཁྱིམ་ཚང་བྱེད་སྒོ་ཁང་།</item>
+        <item>སྨྱར་སྦྱོར་ཁང་།</item>
+        <item>གཞུང་ལས་ཁང་།</item>
+        <item>རྩེད་འཇོག་ཁང་།</item>
+        <item>དཔེ་ཁང་།</item>
+        <item>ལས་དོན་ཁང་།</item>
+        <item>གྱོན་གོས་ཁང་།</item>
+        <item>སྒོ་ར་རྒྱབ་མ།</item>
+        <item>མེ་ཏོག་ལྡུམ་ར།</item>
+        <item>ས་འོག་ཁང་པ།</item>
+        <item>གནམ་ཁང་།</item>
+        <item>ཉི་འཁྱམས།</item>
+        <item>རང་སྒྲུབ།</item>
+    </string-array>
+    <string-array name="family_memeber_names">
+        <item>སྙིང་ཉེ་བ།</item>
+        <item>ཨ་ཕ།</item>
+        <item>ཨ་མ།</item>
+        <item>བུ།</item>
+        <item>བུ་མོ།</item>
+        <item>མཉམ་འདུག་མཛའ་གྲོགས།</item>
+        <item>ཁྱིམ་མི་གཞན་དག</item>
+    </string-array>
+    <array name="mikey_bgcolor">
+        <item>@drawable/top_down_gradient_yellow</item>
+        <item>@drawable/top_down_gradient_blue</item>
+        <item>@drawable/top_down_gradient_purple</item>
+    </array>
+    <string-array name="mikey_menu">
+        <item>གནས་ལྗོངས་ཚོད་ལྟ</item>
+        <item>གནས་ལྗོངས་དོ་དམ།</item>
+        <item>རྕིས་མེད།</item>
+    </string-array>
+    <string-array name="mikey_title_bgcolor">
+        <item>\#d19f60</item>
+        <item>\#1e929f</item>
+        <item>\#ff0067</item>
+    </string-array>
+    <string-array name="month">
+        <item>ཟླ་དང་པོ།</item>
+        <item>ཟླ་གཉིས་པ།</item>
+        <item>ཟླ་གསུམ་པ།</item>
+        <item>ཟླ་བཞི་པ།</item>
+        <item>ཟླ་ལྔ་པ།</item>
+        <item>ཟླ་དྲུག་པ།</item>
+        <item>ཟླ་བ་བདུན་པ།</item>
+        <item>ཟླ་བ་བརྒྱད་པ།</item>
+        <item>ཟླ་བ་དགུ་པ།</item>
+        <item>ཟླ་བ་བཅུ་པ།</item>
+        <item>ཟླ་བ་བཅུ་གཅིག</item>
+        <item>ཟླ་བ་བཅུ་གཉིས།</item>
+    </string-array>
+    <string-array name="weekday">
+        <item>གཟའ་ཉི་མ།</item>
+        <item>གཟའ་ཟླ་བ།</item>
+        <item>གཟའ་མིག་དམར།</item>
+        <item>གཟའ་ལྷག་པ།</item>
+        <item>གཟའ་ཕུར་བུ།</item>
+        <item>གཟའ་པ་སངས།</item>
+        <item>གཟའ་སྤེན་པ།</item>
+    </string-array>
+    <string-array name="weekday_short">
+        <item>གཟའ་ཉི་མ།</item>
+        <item>གཟའ་ཟླ་བ།</item>
+        <item>གཟའ་མིག་དམར།</item>
+        <item>གཟའ་ལྷག་པ།</item>
+        <item>གཟའ་ཕུར་བུ།</item>
+        <item>གཟའ་པ་སངས།</item>
+        <item>གཟའ་སྤེན་པ།</item>
+    </string-array>
+</resources>

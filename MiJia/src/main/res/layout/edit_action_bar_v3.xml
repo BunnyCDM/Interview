@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.newui.widget.DeviceMainPageEditBarV2 android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/menu_bar_choose_device" android:background="@drawable/white" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="77.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

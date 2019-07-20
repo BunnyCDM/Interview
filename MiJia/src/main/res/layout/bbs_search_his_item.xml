@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/search_his_item_container" android:background="@drawable/white_pressed_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="@color/search_history_item_text_color" android:id="@id/search_his_item_text" android:paddingTop="18.0dip" android:paddingBottom="18.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawablePadding="6.0dip" android:layout_weight="1.0" android:drawableStart="@drawable/bbs_history_left_icon" android:textDirection="locale" android:paddingStart="18.0dip" android:paddingEnd="22.0dip" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/search_his_item_clear" android:padding="22.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_history_delete_icon" />
+    </LinearLayout>
+    <View android:background="@color/divide_color" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginStart="13.0dip" android:layout_marginEnd="13.0dip" />
+</LinearLayout>

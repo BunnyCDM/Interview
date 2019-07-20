@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="line"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:color="#ffdddddd" android:dashWidth="1.5dip" android:dashGap="1.5dip" />
+    <size android:height="1.0dip" android:width="1.0dip" />
+</shape>

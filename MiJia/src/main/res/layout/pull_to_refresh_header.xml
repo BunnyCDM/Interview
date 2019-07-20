@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/pull_to_refresh_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/arrow_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pull_arrow" />
+    <ImageView android:layout_gravity="center" android:id="@id/loading_imageview" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/miuisupport_progressbar_indeterminate_circle_light" />
+</FrameLayout>

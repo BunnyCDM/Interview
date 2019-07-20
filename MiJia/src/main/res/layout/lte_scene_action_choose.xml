@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/class_A" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <include android:id="@id/list_space" android:layout_width="fill_parent" android:layout_height="@dimen/std_list_space_margin_top" android:layout_below="@id/title_bar" layout="@layout/common_list_space_empty" />
+    <ListView android:scrollbarStyle="insideOverlay" android:id="@id/content_list_view" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:indicatorRight="15.0dip" android:divider="@null" android:layout_weight="1.0" android:fastScrollEnabled="true" />
+    <include layout="@layout/buy_empty_view" />
+</LinearLayout>

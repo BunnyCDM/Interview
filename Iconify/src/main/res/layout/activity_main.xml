@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/alipay_button_style" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/wx_button_style" />
+
+        </LinearLayout>
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#22000000"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="1"
+            android:text="Welcome {fa-smile-o} {fa-hand-peace-o} !"
+            android:textColor="#2A9BDA"
+            android:textSize="30sp" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:shadowColor="#22000000"
+            android:text="{fa-weixin}"
+            android:textColor="@drawable/selector_text_press_color"
+            android:textSize="40sp" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="{icon-scan}"
+            android:textSize="40sp" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="{icon-ali-pay}"
+            android:textSize="40sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="{fa-cog}"
+                android:textSize="30dp" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="{fa-cog spin}"
+                android:textSize="30dp" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="{fa-refresh spin}"
+                android:textSize="30dp" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="{fa-spinner spin}"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/id_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

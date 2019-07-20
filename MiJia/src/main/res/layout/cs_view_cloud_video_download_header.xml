@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivHeaderLeftBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/std_tittlebar_main_device_back_black" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/ivHeaderRightSetting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/std_titlebar_icon_setting" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <TextView android:textSize="24.0sp" android:textColor="#ff333333" android:gravity="center_horizontal" android:id="@id/xiaomi_sm_pin_inputs_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="27.0dip" android:layout_below="@id/title_bar" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="14.0sp" android:textColor="#fff43f31" android:id="@id/xiaomi_sm_pin_sub_hint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="16.0dip" android:layout_below="@id/xiaomi_sm_pin_inputs_desc" android:layout_centerHorizontal="true" />
+    <com.xiaomi.smarthome.framework.page.verify.view.PinInputView android:id="@id/xiaomi_sm_pin_inputs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="118.0dip" android:layout_below="@id/xiaomi_sm_pin_inputs_desc" android:layout_centerHorizontal="true" custom:spacing="6" />
+    <com.xiaomi.smarthome.framework.page.verify.view.PinSoftKeyboard android:id="@id/xiaomi_sm_pin_softkeyboard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

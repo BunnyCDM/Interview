@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff8f8f8" android:visibility="gone" android:layout_width="260.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/tag_group_item_account" />
+    <ScrollView android:scrollbars="none" android:layout_width="260.0dip" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="260.0dip" android:layout_height="wrap_content">
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/group_all" android:background="@drawable/selector_list_item" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_6_height">
+                <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/class_V" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_all" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_6_height" android:layout_marginLeft="@dimen/tag_margin_left" android:maxWidth="150.0dip" android:text="@string/tag_all_devices" android:maxLines="1" android:layout_alignParentLeft="true" />
+                <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/group_camera" android:background="@drawable/selector_list_item" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_6_height">
+                <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/class_V" android:ellipsize="end" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_6_height" android:layout_marginLeft="@dimen/tag_margin_left" android:maxWidth="150.0dip" android:text="@string/camera_name_drawer" android:maxLines="1" android:layout_alignParentLeft="true" />
+                <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:background="@drawable/std_list_item_space_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/std_list_space_common_height_single_line">
+                <TextView android:textSize="@dimen/std_list_font_size_group" android:textColor="@color/std_list_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_list_content_margin_left" android:layout_marginTop="@dimen/std_list_space_margin_top" android:text="@string/tag_custom_title" />
+                <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ExpandListView android:id="@id/list_view" android:scrollbars="none" android:layout_width="260.0dip" android:layout_height="0.0dip" android:divider="@null" android:layout_weight="1.0" />
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/group_empty" android:background="@drawable/selector_list_item" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_6_height">
+                <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/black_30_transparent" android:gravity="center" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_4_height" android:text="@string/tag_custom_empty" />
+                <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/group_share" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="72.0dip">
+                <LinearLayout android:orientation="horizontal" android:id="@id/group_tv_share" android:background="@drawable/selector_list_item" android:layout_width="fill_parent" android:layout_height="@dimen/listitem_6_height" android:layout_alignParentBottom="true">
+                    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/class_V" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_share" android:clickable="false" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_6_height" android:layout_marginLeft="@dimen/tag_margin_left" android:maxWidth="150.0dip" android:text="@string/smarthome_device_device" android:maxLines="1" />
+                    <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/black_60_transparent" android:id="@id/tv_share_count" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" />
+                </LinearLayout>
+                <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/group_tv_share" />
+                <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ListItemView android:background="@drawable/std_list_item_space_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/std_list_space_common_height_single_line">
+                <TextView android:textSize="@dimen/std_list_font_size_group" android:textColor="@color/std_list_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/std_list_content_margin_left" android:layout_marginTop="@dimen/std_list_space_margin_top" android:text="@string/tag_router_title" />
+                <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            </com.xiaomi.smarthome.library.common.widget.ListItemView>
+            <com.xiaomi.smarthome.library.common.widget.ExpandListView android:id="@id/router_list_view" android:scrollbars="none" android:layout_width="260.0dip" android:layout_height="0.0dip" android:divider="@null" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/class_V" android:gravity="center" android:id="@id/button" android:background="@drawable/std_personal_center_button" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginLeft="22.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="22.0dip" android:layout_marginBottom="15.0dip" android:text="@string/home_manager" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/left_drawer_footer" />
+</LinearLayout>

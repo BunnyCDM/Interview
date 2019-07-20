@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/std_list_item_space_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/module_a_3_title_bar_return" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title_bar">
+            <RelativeLayout android:id="@id/select_device_geek" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="25.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="25.0dip">
+                <ImageView android:textSize="@dimen/font_size_13sp" android:textColor="@color/select_device_list_mode_color" android:gravity="center" android:id="@id/iv_geek" android:background="@drawable/select_client_geek_mode_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+                <TextView android:textSize="@dimen/font_size_13sp" android:textColor="@color/select_device_list_mode_color" android:gravity="center" android:id="@id/tv_geek" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/device_geek_mode" android:lines="1" android:drawableLeft="@drawable/list_icon_selector" android:drawablePadding="8.0dip" android:layout_below="@id/iv_geek" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/select_device_list" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_marginTop="25.0dip" android:layout_marginBottom="25.0dip">
+                <ImageView android:textSize="@dimen/font_size_13sp" android:textColor="@color/select_device_list_mode_color" android:gravity="center" android:id="@id/iv_list" android:background="@drawable/select_client_list_mode_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+                <TextView android:textSize="@dimen/font_size_13sp" android:textColor="@color/select_device_list_mode_color" android:gravity="center" android:id="@id/tv_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/device_list_mode" android:lines="1" android:drawableLeft="@drawable/list_icon_selector" android:drawablePadding="8.0dip" android:layout_below="@id/iv_list" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

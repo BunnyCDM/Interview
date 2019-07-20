@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="52.0dip">
+        <RelativeLayout android:id="@id/child_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="78.0dip">
+            <TextView android:textSize="15.0sp" android:textColor="#ff333333" android:id="@id/prop_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+            <CheckBox android:id="@id/chosen_check" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17.0dip" android:button="@drawable/tag_normal_checkbox_layout" android:text="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="17.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:id="@id/last_short_line" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="69.0dip" android:layout_alignParentBottom="true" />
+        <View android:id="@id/last_long_line" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="13.0dip" android:layout_alignParentBottom="true" />
+        <View android:id="@id/last_bottom_line" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

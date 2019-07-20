@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.yp_ui.widget.dialog.SingleCheckLinearLayout android:gravity="center_vertical" android:background="@drawable/yp_common_menu_list_bg" android:layout_width="fill_parent" android:layout_height="@dimen/std_dialog_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0dip" android:textColor="@color/yp_std_dialog_list_item_txt_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:singleLine="true" android:layout_weight="1.0" />
+</com.xiaomi.yp_ui.widget.dialog.SingleCheckLinearLayout>

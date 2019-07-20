@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:customPullDownRefreshLL="http://schemas.android.com/apk/res/com.xiaomi.smarthome">
+    <include layout="@layout/module_a_3_title_bar_return_more" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.xiaomi.smarthome.library.common.widget.CustomPullDownRefreshListView android:id="@id/pull_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+        <include layout="@layout/common_white_empty_view_pullrefresh" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/bottom_panel" android:background="@color/white" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

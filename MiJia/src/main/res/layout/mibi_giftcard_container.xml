@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/mibi_giftcard_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/mibi_giftcard_header_height">
+        <TextView android:textSize="@dimen/mibi_giftcard_header_text_size" android:textColor="@color/mibi_text_color_giftcard_header_default" android:gravity="center" android:id="@id/available_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/mibi_giftcard_available" android:layout_weight="1.0" />
+        <ImageView android:background="@color/mibi_line_color" android:layout_width="@dimen/mibi_divider" android:layout_height="fill_parent" android:layout_marginTop="@dimen/mibi_giftcard_header_vertical_margin" android:layout_marginBottom="@dimen/mibi_giftcard_header_vertical_margin" />
+        <TextView android:textSize="@dimen/mibi_giftcard_header_text_size" android:textColor="@color/mibi_text_color_giftcard_header_default" android:gravity="center" android:id="@id/unavailable_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/mibi_giftcard_unavailable" android:layout_weight="1.0" />
+        <ImageView android:background="@color/mibi_line_color" android:layout_width="@dimen/mibi_divider" android:layout_height="fill_parent" android:layout_marginTop="@dimen/mibi_giftcard_header_vertical_margin" android:layout_marginBottom="@dimen/mibi_giftcard_header_vertical_margin" />
+        <TextView android:textSize="@dimen/mibi_giftcard_header_text_size" android:textColor="@color/mibi_text_color_giftcard_header_default" android:gravity="center" android:id="@id/used_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/mibi_giftcard_used" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:background="@color/mibi_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/mibi_divider" />
+    <android.support.v4.view.ViewPager android:id="@id/giftcard_pager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

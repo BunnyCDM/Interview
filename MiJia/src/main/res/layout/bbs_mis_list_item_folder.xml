@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@android:color/white" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/cover" android:layout_width="@dimen/mis_folder_cover_size" android:layout_height="@dimen/mis_folder_cover_size" android:src="@drawable/bbs_mis_default_error" android:scaleType="centerInside" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" android:layout_toStartOf="@id/indicator" android:layout_toEndOf="@id/cover">
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffafafaf" android:ellipsize="middle" android:id="@id/path" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:textDirection="locale" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffafafaf" android:ellipsize="end" android:id="@id/size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" android:textDirection="locale" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_mis_default_check" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+</RelativeLayout>

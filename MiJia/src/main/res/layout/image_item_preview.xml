@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xiaomi.yp_ui.widget.CommonLoadingView android:id="@id/loading_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.xiaomi.yp_ui.widget.zoomable.ZoomableDraweeViewSupport android:id="@id/image_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

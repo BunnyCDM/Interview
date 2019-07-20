@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/smart_live_camera_item_root" android:background="@drawable/white" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="15.0dip" android:paddingEnd="15.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/img_camera0" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="106.0dip" android:scaleType="fitXY" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center|left" android:layout_gravity="bottom" android:id="@id/txt_camera_title0" android:background="@drawable/std_home_livecamera_bg" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="27.0dip" android:singleLine="true" android:drawableLeft="@drawable/std_home_icon_video" android:drawablePadding="7.0dip" android:drawableStart="@drawable/std_home_icon_video" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" />
+    </FrameLayout>
+    <View android:layout_width="10.0dip" android:layout_height="0.0dip" />
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/img_camera1" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="106.0dip" android:scaleType="fitXY" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center|left" android:layout_gravity="bottom" android:id="@id/txt_camera_title1" android:background="@drawable/std_home_livecamera_bg" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="27.0dip" android:singleLine="true" android:drawableLeft="@drawable/std_home_icon_video" android:drawablePadding="7.0dip" android:drawableStart="@drawable/std_home_icon_video" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" />
+    </FrameLayout>
+</LinearLayout>

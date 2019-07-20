@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="@color/main_yellow" android:background="@drawable/bbs_welcome_pop_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/welcome_hint" android:textDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

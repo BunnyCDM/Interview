@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_width="fill_parent" style="@style/Divide_shadow_bottom" />
+    <View android:background="@color/bg_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divide_space_height" />
+</LinearLayout>

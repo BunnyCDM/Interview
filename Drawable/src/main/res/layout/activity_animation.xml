@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animation动画设置--Tween Animation(渐变动画)" />
+
+    <ImageView
+        android:id="@+id/iv_ImageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/btn_Button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alpha： 渐变透明度动画效果" />
+
+    <Button
+        android:id="@+id/btn_Button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scale： 渐变尺寸伸缩动画效果" />
+
+    <Button
+        android:id="@+id/btn_Button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Translate： 移动动画效果" />
+
+    <Button
+        android:id="@+id/btn_Button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rotate： 旋转动画效果" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Animation动画设置--Frame Animation(帧动画)" />
+
+    <Button
+        android:id="@+id/btn_Button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frame Animation(顺序播放)" />
+
+    <ImageView
+        android:id="@+id/iv_ImageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

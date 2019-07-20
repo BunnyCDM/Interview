@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.library.common.widget.ListItemView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/space" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="20.0dip">
+        <View android:background="@color/list_item_bg_press" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/class_D" android:id="@id/desc_edit_mode" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="25.0dip" android:text="@string/tag_edit_mode_hint" android:layout_marginStart="17.0dip" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/view_group" android:background="@drawable/selector_list_item" android:layout_width="fill_parent" android:layout_height="62.0dip" android:layout_below="@id/space">
+        <View android:background="@color/list_item_bg_press" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <ImageView android:id="@id/imageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/std_list_content_margin_right" android:src="@drawable/um_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/std_list_content_margin_right" android:layout_alignParentEnd="true" />
+        <ImageView android:id="@id/delete_btn" android:padding="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:src="@drawable/list_icon_delete_dis" android:scaleType="center" android:layout_centerVertical="true" android:layout_marginStart="13.0dip" />
+        <ImageView android:id="@id/room_icon" android:background="@drawable/shape_bg_room_icon" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginLeft="13.0dip" android:src="@drawable/default_1_normal" android:layout_toRightOf="@id/delete_btn" android:layout_centerVertical="true" android:layout_marginStart="13.0dip" android:layout_toEndOf="@id/delete_btn" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/listitem_7_height" android:layout_marginLeft="9.0dip" android:layout_toRightOf="@id/room_icon" android:layout_marginStart="9.0dip" android:layout_toEndOf="@id/room_icon">
+            <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/class_V" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="220.0dip" android:maxLines="1" />
+            <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/class_D" android:id="@id/desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxLength="20" />
+        </LinearLayout>
+        <View android:id="@id/divider_item" android:background="@color/list_item_bg_press" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</com.xiaomi.smarthome.library.common.widget.ListItemView>

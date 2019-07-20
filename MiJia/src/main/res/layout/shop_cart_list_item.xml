@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/item_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.facebook.drawee.view.SimpleDraweeView android:id="@id/item_image" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="14.0dip" android:layout_marginBottom="20.0dip" fresco:actualImageScaleType="fitXY" fresco:failureImage="@drawable/shop_default_pic_small_inverse" fresco:placeholderImage="@drawable/shop_default_pic_small_inverse" />
+                <com.mi.global.shop.widget.CustomTextView android:textSize="13.0sp" android:textColor="#ff2e2323" android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:layout_marginRight="16.0dip" android:layout_toRightOf="@id/item_image" />
+                <com.mi.global.shop.widget.CustomTextView android:textSize="12.0sp" android:textColor="#ffdddddd" android:id="@id/item_dealer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.5dip" android:layout_marginRight="15.0dip" android:layout_toRightOf="@id/item_image" android:layout_below="@id/item_title" />
+                <com.mi.global.shop.widget.EasyTextView android:textSize="13.0sp" android:textColor="#ffff6700" android:id="@id/item_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.5dip" android:layout_marginRight="15.0dip" android:layout_below="@id/item_dealer" android:layout_alignParentRight="true" />
+                <com.mi.global.shop.widget.CustomTextView android:textSize="12.0sp" android:textColor="#ff888888" android:id="@id/item_limit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.5dip" android:layout_toRightOf="@id/item_image" android:layout_below="@id/item_dealer" />
+                <com.mi.global.shop.widget.AddAndSubView android:id="@id/item_num" android:visibility="gone" android:layout_width="90.0dip" android:layout_height="25.0dip" android:layout_marginTop="20.0dip" android:layout_toRightOf="@id/item_image" android:layout_below="@id/item_dealer" />
+                <com.mi.global.shop.widget.CustomTextView android:textSize="10.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/item_type" android:background="@drawable/shop_cart_type_bg" android:paddingLeft="5.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="15.0dip" android:layout_marginTop="10.0dip" />
+            </RelativeLayout>
+            <include layout="@layout/shop_insurance_layout" />
+        </LinearLayout>
+        <View android:id="@id/item_mask" android:background="@color/invalid_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/item_warning_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/item_content">
+        <View android:background="@drawable/shop_dash_line" android:layout_width="fill_parent" android:layout_height="1.5dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layerType="software" />
+        <com.mi.global.shop.widget.CustomTextView android:textSize="12.0sp" android:textColor="@color/warning" android:gravity="center_vertical" android:layout_gravity="bottom" android:id="@id/item_warning" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    </LinearLayout>
+    <ImageView android:id="@id/item_del" android:padding="7.5dip" android:duplicateParentState="true" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/shop_delete_icon" android:layout_alignParentRight="true" />
+</RelativeLayout>

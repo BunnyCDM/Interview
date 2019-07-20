@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/avatar" android:background="@drawable/setting_avatar_placeholder" android:layout_width="@dimen/setting_avatar_size" android:layout_height="@dimen/setting_avatar_size" android:layout_marginTop="100.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/lockpattern" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:gravity="bottom" android:layout_gravity="center_horizontal" android:id="@id/stage_hint" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Mifi.TextAppearance.List.Primary" />
+        <com.xiaomi.jr.security.lockpattern.LockPatternView android:id="@id/confirm_lock_pattern" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="40.0dip" style="@style/Pattern.View" />
+        <TextView android:layout_gravity="bottom|center" android:id="@id/forget_lock_pattern" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:text="@string/forget_lock_pattern_label" style="@style/Mifi.TextAppearance.List.Primary" />
+    </LinearLayout>
+</LinearLayout>

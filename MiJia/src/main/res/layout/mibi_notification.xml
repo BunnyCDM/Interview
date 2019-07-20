@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/mibi_android_notification_padding_left" android:paddingRight="@dimen/mibi_android_notification_padding_right" android:layout_width="fill_parent" android:layout_height="@dimen/mibi_android_notification_layout_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@android:id/icon" android:layout_width="@android:dimen/notification_large_icon_width" android:layout_height="@android:dimen/notification_large_icon_height" android:scaleType="centerInside" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/mibi_android_notification_content_to_icon_length" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent" android:ellipsize="marquee" android:id="@id/sub_title" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

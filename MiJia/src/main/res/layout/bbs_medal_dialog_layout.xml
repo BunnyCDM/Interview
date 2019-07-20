@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/round_dialog_selector" android:layout_width="280.0dip" android:layout_height="wrap_content">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:background="@drawable/medal_dialog_title_bg" android:padding="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="11.0sp" android:textColor="#ff555555" android:gravity="center" android:id="@id/medal_dialog_des" android:padding="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/medal_dialog_img" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="13.0dip" android:layout_marginBottom="13.0dip" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="11.0sp" android:textColor="#ff555555" android:gravity="center" android:id="@id/medal_dialog_tip" android:padding="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Congratulations" android:textDirection="locale" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/medal_dialog_ok_bt" android:background="@drawable/medal_dialog_bt_bg" android:clickable="true" android:layout_width="116.0dip" android:layout_height="30.0dip" android:text="OK" android:textDirection="locale" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="11.0sp" android:textColor="#ff999999" android:layout_gravity="center_horizontal" android:id="@id/medal_dialog_watch_all_bt" android:paddingTop="13.0dip" android:paddingBottom="20.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/check_all_my_medals" android:textDirection="locale" />
+    </LinearLayout>
+</RelativeLayout>

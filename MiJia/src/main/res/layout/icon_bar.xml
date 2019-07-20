@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:tag="layout/icon_bar_0" android:background="@drawable/preference_last_item_bg_normal" android:clickable="false" android:layout_width="fill_parent" android:layout_height="80.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xiaomi.jr.view.IconBarView android:id="@id/icon_bar_view" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

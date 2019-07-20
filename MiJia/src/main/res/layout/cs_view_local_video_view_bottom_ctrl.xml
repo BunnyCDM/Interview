@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:background="@color/black_40_transparent" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/cbTogglePlay" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:button="@drawable/cs_player_toggle_play" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llProgressBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_toLeftOf="@id/cbIsMute" android:layout_toRightOf="@id/cbTogglePlay" android:layout_centerVertical="true">
+        <TextView android:id="@id/tvVideoStart" android:background="@color/transparent" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="00:00" />
+        <SeekBar android:layout_gravity="center_vertical" android:id="@id/sbProgress" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:maxHeight="2.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/cs_view_video_progress" android:minHeight="2.0dip" android:thumb="@drawable/cs_icon_progressbar_normal2" android:thumbOffset="0.0dip" android:layout_weight="1.0" />
+        <TextView android:id="@id/tvVideoEnd" android:background="@color/transparent" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="00:00" />
+    </LinearLayout>
+    <CheckBox android:id="@id/cbIsMute" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/cs_player_toggle_mute" android:layout_toLeftOf="@id/ivFullScreen" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/ivFullScreen" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/cs_player_enter_fullscreen" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

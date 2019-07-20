@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/fragment_me_root" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:seek="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/fragment_me_refresh" android:background="@color/common_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:id="@id/fragment_me_scroll" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:background="@color/main_title_bar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/fragment_me_center" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="15.0dip" android:textDirection="locale" android:layoutDirection="locale">
+                        <com.mi.global.bbs.view.CircleImageView android:id="@id/user_item_icon" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/bbs_user_head_icon" android:scaleType="centerCrop" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:border_color="@color/white" app:border_width="1.5dip" xmlns:app="http://schemas.android.com/apk/res-auto" />
+                        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="16.0sp" android:textColor="#ff222222" android:id="@id/fragment_me_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/visitor" android:singleLine="true" android:textDirection="locale" seek:textBounds="medium" />
+                            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="#ff666666" android:id="@id/fragment_me_moment" android:paddingTop="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_and_edit_your_profile" android:singleLine="true" android:textDirection="locale" />
+                        </LinearLayout>
+                        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0sp" android:src="@drawable/bbs_item_next_icon" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/fragment_me_points_layout" android:background="@drawable/white_pressed_selector" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:src="@drawable/bbs_point" android:layout_marginStart="16.0dip" android:layout_marginEnd="10.0dip" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="#ff333333" android:id="@id/fragment_me_points_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/points" android:textDirection="locale" seek:textBounds="medium" />
+                            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="11.0sp" android:textColor="#ff999999" android:id="@id/fragment_me_points_subtext" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sign_in_to_check" android:textDirection="locale" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="@color/user_center_divider_color" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginTop="22.0dip" android:layout_marginBottom="22.0dip" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/fragment_me_medal_layout" android:background="@drawable/white_pressed_selector" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:src="@drawable/bbs_medal_icon" android:layout_marginStart="16.0dip" android:layout_marginEnd="10.0dip" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="#ff333333" android:id="@id/fragment_me_medal_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/medals" android:textDirection="locale" seek:textBounds="medium" />
+                            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="11.0sp" android:textColor="#ff999999" android:id="@id/fragment_me_medal_subtext" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sign_in_to_check" android:textDirection="locale" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.mi.global.bbs.view.AppSettingsItem android:id="@id/fragment_me_check_in" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layoutDirection="locale" seek:leftIcon="@drawable/bbs_iv_check_in" seek:text="@string/check_in" />
+                <View android:background="@drawable/item_divide_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.mi.global.bbs.view.AppSettingsItem android:id="@id/fragment_me_missions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" seek:leftIcon="@drawable/bbs_iv_mission" seek:text="@string/daily_mission" />
+                <View android:background="@drawable/item_divide_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.mi.global.bbs.view.AppSettingsItem android:id="@id/fragment_me_notify" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" seek:leftIcon="@drawable/bbs_notifications" seek:text="@string/messages" />
+                <View android:background="@drawable/item_divide_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.mi.global.bbs.view.AppSettingsItem android:id="@id/fragment_me_favor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" android:layoutDirection="locale" seek:leftIcon="@drawable/bbs_my_favor" seek:text="@string/my_favours" />
+                <View android:background="@drawable/item_divide_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.mi.global.bbs.view.AppSettingsItem android:id="@id/fragment_me_threads" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" android:layoutDirection="locale" seek:leftIcon="@drawable/bbs_my_thread" seek:text="@string/my_threads" />
+                <View android:background="@drawable/item_divide_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.mi.global.bbs.view.AppSettingsItem android:id="@id/fragment_me_reply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" android:layoutDirection="locale" seek:leftIcon="@drawable/bbs_my_reply" seek:text="@string/my_replies" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

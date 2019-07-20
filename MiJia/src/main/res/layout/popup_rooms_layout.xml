@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.newui.widget.topnavi.widgets.DrawerAnimContainer android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/pop_window_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="34.0dip">
+            <ImageView android:gravity="center" android:id="@id/nav" android:background="@drawable/my_navi" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="18.0dip" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff666666" android:ellipsize="marquee" android:id="@id/nav_title" android:layout_width="127.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/my_navigation" android:singleLine="true" android:layout_toRightOf="@id/nav" android:layout_alignParentBottom="true" android:layout_centerVertical="true" />
+            <ImageButton android:layout_gravity="right" android:id="@id/collapse_arrow" android:background="@color/white" android:padding="6.0dip" android:clickable="true" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <com.xiaomi.smarthome.newui.widget.FixHeightRecyclerView android:id="@id/recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="11.0dip" android:layout_marginRight="16.0dip" android:minHeight="96.0dip" />
+        <View android:id="@id/divider" android:background="#ffe5e5e5" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="13.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="13.0dip" />
+        <RelativeLayout android:id="@id/my_nav" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="49.0dip">
+            <ImageView android:gravity="center" android:id="@id/nav_manager" android:background="@null" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="18.0dip" android:src="@drawable/navi_setting" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="#ff666666" android:ellipsize="marquee" android:gravity="left" android:id="@id/nav_manager_title" android:layout_width="127.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/navigation_manager" android:singleLine="true" android:layout_toRightOf="@id/nav_manager" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.xiaomi.smarthome.newui.widget.topnavi.widgets.DrawerAnimContainer>

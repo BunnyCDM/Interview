@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/home_hot_list_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/home_ly_rd_column_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_alignParentTop="true" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="#ff222222" android:id="@id/home_tv_rd_column_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/home_hot" android:singleLine="true" android:layout_weight="1.0" app:textBounds="medium" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="@color/main_yellow" android:id="@id/home_tv_column_more" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_caps_more" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:textBounds="medium" />
+    </LinearLayout>
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:id="@id/home_tv_rd_column_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_hot" android:layout_below="@id/home_ly_rd_column_title" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" />
+    <android.support.v7.widget.RecyclerView android:id="@id/home_rd_column_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_below="@id/home_tv_rd_column_des" />
+    <View android:background="@color/user_center_divider_color" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="16.0dip" android:layout_below="@id/home_rd_column_list" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" />
+</RelativeLayout>

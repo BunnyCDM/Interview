@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/qa_request_more_item_layout" android:background="@drawable/home_banner_white_pressed_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip">
+        <com.mi.global.bbs.view.CircleImageView android:id="@id/item_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginTop="15.0dip" android:scaleType="centerCrop" android:layout_marginEnd="6.0dip" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ff999999" android:id="@id/item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:textDirection="locale" android:layout_toEndOf="@id/item_icon" />
+    </RelativeLayout>
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="#ff222222" android:ellipsize="end" android:id="@id/item_answer_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:maxLines="2" android:lineSpacingExtra="5.0dip" android:textDirection="locale" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:textBounds="medium" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ffc4c4c4" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="15.0dip" android:textDirection="locale" android:layout_marginStart="16.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="16.0dip" android:layout_alignParentEnd="true">
+            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ffff6700" android:id="@id/answer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="15.0dip" android:text="@string/qa_home_answer" android:textDirection="locale" />
+            <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/ignore" android:background="@drawable/ignore_textview_bg" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/qa_home_ignore" android:textDirection="locale" android:paddingStart="13.0dip" android:paddingEnd="13.0dip" />
+            <LinearLayout android:id="@id/answer_img_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:id="@id/answer_img" android:background="@drawable/bbs_top_request_close_answer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginStart="16.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/user_center_divider_color" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+</LinearLayout>

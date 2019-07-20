@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/root_item" android:background="@drawable/selector_list_item" android:layout_width="fill_parent" android:layout_height="70.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/icon" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_marginLeft="13.0dip" android:layout_centerVertical="true" android:layout_marginStart="13.0dip" fresco:actualImageScaleType="fitCenter" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="70.0dip" android:layout_marginLeft="78.0dip" android:layout_marginStart="78.0dip">
+        <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/class_V" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxLength="16" />
+        <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/class_D" android:id="@id/room" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxLength="20" />
+    </LinearLayout>
+    <CheckBox android:id="@id/select_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17.0dip" android:button="@drawable/tag_normal_checkbox_layout" android:text="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="17.0dip" android:layout_alignParentEnd="true" />
+    <View android:id="@id/divider_item" android:background="@color/list_item_bg_press" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="13.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="13.0dip" />
+</com.xiaomi.smarthome.library.common.widget.ListItemView>

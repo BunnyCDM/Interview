@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ble_guide_content_description">
+        <item>当前展示第一页</item>
+        <item>当前展示第二页</item>
+        <item>当前展示第三页</item>
+    </string-array>
+    <string-array name="common_edit_item_name">
+        <item>@string/menu_edit_rename</item>
+        <item>@string/menu_edit_share</item>
+        <item>@string/menu_edit_delete</item>
+    </string-array>
+    <string-array name="compression_display_values">
+        <item>仅当使用WLAN时</item>
+        <item>仅当使用WLAN/3G时</item>
+        <item>总是尝试使用</item>
+        <item>从不使用</item>
+    </string-array>
+    <string-array name="compression_values">
+        <item>wlan</item>
+        <item>wlanor3g</item>
+        <item>always</item>
+        <item>never</item>
+    </string-array>
+    <string-array name="cs_month_array">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+    <string-array name="default_room_config">
+        <item>客厅</item>
+        <item>卧室</item>
+        <item>餐厅</item>
+        <item>卫生间</item>
+        <item>浴室</item>
+        <item>厨房</item>
+        <item>儿童房</item>
+        <item>婴儿房</item>
+        <item>家庭活动室</item>
+        <item>媒体室</item>
+        <item>办公室</item>
+        <item>休闲室</item>
+        <item>书房</item>
+        <item>工作室</item>
+        <item>衣帽间</item>
+        <item>后院</item>
+        <item>花园</item>
+        <item>地下室</item>
+        <item>阁楼</item>
+        <item>阳台</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="default_room_config_icon">
+        <item>livingroom</item>
+        <item>bedroom</item>
+        <item>dining</item>
+        <item>washroom</item>
+        <item>bathroom</item>
+        <item>kitchen</item>
+        <item>kidsroom</item>
+        <item>babyroom</item>
+        <item>familyroom</item>
+        <item>mediaroom</item>
+        <item>office</item>
+        <item>restroom</item>
+        <item>study</item>
+        <item>workshop</item>
+        <item>cloakroom</item>
+        <item>backyard</item>
+        <item>garden</item>
+        <item>basement</item>
+        <item>attic</item>
+        <item>balcony</item>
+        <item>more</item>
+    </string-array>
+    <string-array name="eargain_display_values">
+        <item>低 (无回音)</item>
+        <item>中</item>
+        <item>高 (可能会出现回音)</item>
+        <item>极高</item>
+    </string-array>
+    <string-array name="eargain_values">
+        <item>0.1</item>
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>1.0</item>
+    </string-array>
+    <string-array name="family_memeber_names">
+        <item>亲爱的</item>
+        <item>爸爸</item>
+        <item>妈妈</item>
+        <item>儿子</item>
+        <item>女儿</item>
+        <item>同居密友</item>
+        <item>其他家人</item>
+    </string-array>
+    <array name="mikey_bgcolor">
+        <item>@drawable/top_down_gradient_yellow</item>
+        <item>@drawable/top_down_gradient_blue</item>
+        <item>@drawable/top_down_gradient_purple</item>
+    </array>
+    <string-array name="mikey_menu">
+        <item>测试场景</item>
+        <item>管理场景</item>
+        <item>取消</item>
+    </string-array>
+    <string-array name="mikey_title_bgcolor">
+        <item>\#d19f60</item>
+        <item>\#1e929f</item>
+        <item>\#ff0067</item>
+    </string-array>
+    <string-array name="month">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+    <string-array name="pref_display_values">
+        <item>只使用Sipdroid</item>
+        <item>当可用时使用Sipdroid</item>
+        <item>总是使用电话</item>
+        <item>Always ask</item>
+    </string-array>
+    <string-array name="pref_values">
+        <item>SIPONLY</item>
+        <item>SIP</item>
+        <item>PSTN</item>
+        <item>ASK</item>
+    </string-array>
+    <string-array name="timezone_city_name">
+        <item>北京</item>
+        <item>首尔</item>
+        <item>东京</item>
+        <item>纽约</item>
+        <item>丹佛</item>
+        <item>哥斯达黎加</item>
+        <item>芝加哥</item>
+        <item>墨西哥城</item>
+        <item>里贾纳</item>
+        <item>洛杉矶</item>
+        <item>马朱罗</item>
+        <item>中途岛</item>
+        <item>檀香山</item>
+        <item>安克雷奇</item>
+        <item>提华纳</item>
+        <item>凤凰城</item>
+        <item>奇瓦瓦</item>
+        <item>波哥大</item>
+        <item>加拉加斯</item>
+        <item>巴巴多斯</item>
+        <item>马瑙斯</item>
+        <item>圣约翰</item>
+        <item>圣地亚哥</item>
+        <item>布宜诺斯艾利斯</item>
+        <item>戈特霍布</item>
+        <item>蒙得维的亚</item>
+        <item>圣保罗</item>
+        <item>南乔治亚</item>
+        <item>亚述尔群岛</item>
+        <item>佛得角</item>
+        <item>卡萨布兰卡</item>
+        <item>伦敦</item>
+        <item>阿姆斯特丹</item>
+        <item>贝尔格莱德</item>
+        <item>布鲁塞尔</item>
+        <item>萨拉热窝</item>
+        <item>布拉扎维</item>
+        <item>温得和克</item>
+        <item>安曼</item>
+        <item>雅典</item>
+        <item>贝鲁特</item>
+        <item>开罗</item>
+        <item>赫尔辛基</item>
+        <item>耶路撒冷</item>
+        <item>哈拉雷</item>
+        <item>明斯克</item>
+        <item>巴格达</item>
+        <item>莫斯科</item>
+        <item>科威特</item>
+        <item>内罗毕</item>
+        <item>德黑兰</item>
+        <item>巴库</item>
+        <item>第比利斯</item>
+        <item>埃里温</item>
+        <item>迪拜</item>
+        <item>喀布尔</item>
+        <item>卡拉奇</item>
+        <item>乌拉尔</item>
+        <item>叶卡捷林堡</item>
+        <item>加尔各答</item>
+        <item>科伦坡</item>
+        <item>加德满都</item>
+        <item>阿拉木图</item>
+        <item>仰光</item>
+        <item>克拉斯诺亚尔斯克</item>
+        <item>曼谷</item>
+        <item>伊尔库茨克</item>
+        <item>吉隆坡</item>
+        <item>佩思</item>
+        <item>雅库茨克</item>
+        <item>达尔文</item>
+        <item>布里斯班</item>
+        <item>符拉迪沃斯托克</item>
+        <item>关岛</item>
+        <item>阿德莱德</item>
+        <item>霍巴特</item>
+        <item>悉尼</item>
+        <item>马加丹</item>
+        <item>奥克兰</item>
+        <item>斐济</item>
+        <item>东加塔布</item>
+    </string-array>
+    <string-array name="vquality_display_values">
+        <item>高 (352x288 @ 360kbit)</item>
+        <item>低 (176x144 @ 192kbit)</item>
+    </string-array>
+    <string-array name="vquality_values">
+        <item>high</item>
+        <item>low</item>
+    </string-array>
+    <string-array name="weekday">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+    <string-array name="weekday_short">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+</resources>

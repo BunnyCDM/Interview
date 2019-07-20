@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/module_a_3_title_bar_righticon" />
+    <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/category_toogle" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/std_list_item_height_single_line">
+        <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/std_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="@string/open_category_manager" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        <com.xiaomi.smarthome.library.common.widget.SwitchButton android:id="@id/category_toogle_btn" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="24.0dip" android:layout_alignParentEnd="true" />
+        <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </com.xiaomi.smarthome.library.common.widget.ListItemView>
+    <com.xiaomi.smarthome.library.common.widget.ListItemView android:id="@id/category_show_first" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/std_list_item_height_single_line">
+        <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/std_list_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="@string/first_show_category" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        <com.xiaomi.smarthome.library.common.widget.SwitchButton android:id="@id/category_show_first_btn" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="24.0dip" android:layout_alignParentEnd="true" />
+        <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </com.xiaomi.smarthome.library.common.widget.ListItemView>
+</LinearLayout>

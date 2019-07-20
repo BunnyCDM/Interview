@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/container_pg" android:background="@color/mk_uic_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="12.0dip" style="@style/full_layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/white_container">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center" android:layout_gravity="left" android:id="@id/merchant" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:drawablePadding="8.0dip" style="@style/text" />
+            <TextView android:id="@id/otpMsg" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fields_margin_top" android:text="Msg" style="@style/text" />
+            <EditText android:id="@id/otp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fields_margin_top" android:layout_marginBottom="16.0dip" android:hint="One Time Password" android:password="true" android:selectAllOnFocus="true" android:inputType="number" style="@style/wallet_textbox">
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+        <Button android:id="@id/LoginButton" android:text="LOGIN" style="@style/new_button" />
+        <Button android:id="@id/ResendOtpButton" android:text="Resend OTP" style="@style/new_secondary_button" />
+    </LinearLayout>
+</ScrollView>

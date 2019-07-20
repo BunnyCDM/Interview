@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ARouter/ARouter.iml" filepath="$PROJECT_DIR$/ARouter/ARouter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ActionBar/ActionBar.iml" filepath="$PROJECT_DIR$/ActionBar/ActionBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Activity/Activity.iml" filepath="$PROJECT_DIR$/Activity/Activity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" filepath="$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AsyncTask/AsyncTask.iml" filepath="$PROJECT_DIR$/AsyncTask/AsyncTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BottomTab/BottomTab.iml" filepath="$PROJECT_DIR$/BottomTab/BottomTab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" filepath="$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ButterKnife/ButterKnife.iml" filepath="$PROJECT_DIR$/ButterKnife/ButterKnife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConstraintLayout/ConstraintLayout.iml" filepath="$PROJECT_DIR$/ConstraintLayout/ConstraintLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ContentProvider/ContentProvider.iml" filepath="$PROJECT_DIR$/ContentProvider/ContentProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dagger/Dagger.iml" filepath="$PROJECT_DIR$/Dagger/Dagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Drawable/Drawable.iml" filepath="$PROJECT_DIR$/Drawable/Drawable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fragment/Fragment.iml" filepath="$PROJECT_DIR$/Fragment/Fragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GreenDao/GreenDao.iml" filepath="$PROJECT_DIR$/GreenDao/GreenDao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" filepath="$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GuidePage/GuidePage.iml" filepath="$PROJECT_DIR$/GuidePage/GuidePage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Handler/Handler.iml" filepath="$PROJECT_DIR$/Handler/Handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Iconify/Iconify.iml" filepath="$PROJECT_DIR$/Iconify/Iconify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Intent/Intent.iml" filepath="$PROJECT_DIR$/Intent/Intent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interview.iml" filepath="$PROJECT_DIR$/Interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Layout/Layout.iml" filepath="$PROJECT_DIR$/Layout/Layout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ListView/ListView.iml" filepath="$PROJECT_DIR$/ListView/ListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Menu/Menu.iml" filepath="$PROJECT_DIR$/Menu/Menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiDex/MultiDex.iml" filepath="$PROJECT_DIR$/MultiDex/MultiDex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OkGo/OkGo.iml" filepath="$PROJECT_DIR$/OkGo/OkGo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Permissions/Permissions.iml" filepath="$PROJECT_DIR$/Permissions/Permissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RadioButton/RadioButton.iml" filepath="$PROJECT_DIR$/RadioButton/RadioButton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecycleView/RecycleView.iml" filepath="$PROJECT_DIR$/RecycleView/RecycleView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Service/Service.iml" filepath="$PROJECT_DIR$/Service/Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" filepath="$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sign/Sign.iml" filepath="$PROJECT_DIR$/Sign/Sign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Socket/Socket.iml" filepath="$PROJECT_DIR$/Socket/Socket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SparseArray/SparseArray.iml" filepath="$PROJECT_DIR$/SparseArray/SparseArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SwipeRefreshLayout/SwipeRefreshLayout.iml" filepath="$PROJECT_DIR$/SwipeRefreshLayout/SwipeRefreshLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Synchronized/Synchronized.iml" filepath="$PROJECT_DIR$/Synchronized/Synchronized.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Thread/Thread.iml" filepath="$PROJECT_DIR$/Thread/Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Timer/Timer.iml" filepath="$PROJECT_DIR$/Timer/Timer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToolBar/ToolBar.iml" filepath="$PROJECT_DIR$/ToolBar/ToolBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TouchEvent/TouchEvent.iml" filepath="$PROJECT_DIR$/TouchEvent/TouchEvent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UnitTest/UnitTest.iml" filepath="$PROJECT_DIR$/UnitTest/UnitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewStub/ViewStub.iml" filepath="$PROJECT_DIR$/ViewStub/ViewStub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-client/sample-client.iml" filepath="$PROJECT_DIR$/sample-client/sample-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-clink/sample-clink.iml" filepath="$PROJECT_DIR$/sample-clink/sample-clink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-foo/sample-foo.iml" filepath="$PROJECT_DIR$/sample-foo/sample-foo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-server/sample-server.iml" filepath="$PROJECT_DIR$/sample-server/sample-server.iml" />
+    </modules>
+  </component>
+</project>

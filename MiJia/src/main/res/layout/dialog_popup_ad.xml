@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xiaomi.jr.view.RoundCornerLayout android:layout_width="@dimen/center_popup_dialog_content_width" android:layout_height="@dimen/center_popup_dialog_content_height" app:mifi_radius="10.0dip">
+        <ImageView android:id="@id/ad_imageview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </com.xiaomi.jr.view.RoundCornerLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/close_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/close_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/dialog_close_button" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="#ff46c2a5" android:paddingLeft="@dimen/txt_padding_3" android:paddingBottom="@dimen/txt_padding_10" android:layout_width="fill_parent" android:layout_height="154.0dip" android:paddingStart="@dimen/txt_padding_3"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/std_title_bar_text_size" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/device_op_history" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginBottom="14.0dip" android:layout_alignParentBottom="true" android:layoutDirection="ltr" android:layout_marginStart="30.0dip">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/device_icon" android:layout_width="63.0dip" android:layout_height="63.0dip" android:layout_marginRight="11.0dip" android:layout_marginEnd="11.0dip" />
+        <LinearLayout android:gravity="center|left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/device_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

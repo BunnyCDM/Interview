@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ffeaeff4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include layout="@layout/module_a_3_title_bar_return_transparent" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip">
+            <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/mitv_remote_control_button_on_off" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/mitv_remote_control_button_home" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:background="@drawable/mitv_remote_control_button_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:background="@drawable/mitv_white_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <com.xiaomi.smarthome.library.common.widget.MitvGestureTouchView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="#ffbabdbf" android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="@string/mitv_touch_info" />
+            <ImageView android:id="@id/circle_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.xiaomi.smarthome.library.common.widget.MitvGestureTouchView>
+        <View android:background="@drawable/mitv_white_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/mitv_remote_control_button_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="30.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.xiaomi.smarthome.library.common.widget.MitvVolumeView android:background="#80000000" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/mitv_volume" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/mitv_volume_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mitv_volume_add" />
+            <com.xiaomi.smarthome.library.common.widget.MitvCircleView android:id="@id/mitv_volume_circle" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+            <ImageView android:id="@id/mitv_volume_sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mitv_volume_sub" />
+        </LinearLayout>
+    </com.xiaomi.smarthome.library.common.widget.MitvVolumeView>
+</FrameLayout>

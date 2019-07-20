@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/list_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font_size_11sp" android:textColor="@color/class_text_29" android:gravity="bottom" android:layout_gravity="center_vertical" android:id="@id/list_space" android:paddingLeft="@dimen/tag_margin_left" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/std_list_item_height_single_line" android:text="@string/shortcut_switch" />
+    <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+</LinearLayout>

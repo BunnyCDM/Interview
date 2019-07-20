@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="47.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/std_list_item_bg_press" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+    <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/class_D" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="20.0dip" android:text="@string/search_new_device" />
+    <View android:background="@drawable/std_list_item_bg_press" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

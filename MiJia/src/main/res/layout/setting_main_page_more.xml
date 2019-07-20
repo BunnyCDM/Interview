@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center|right" android:id="@id/module_a_2_return_more_more_btn" android:paddingLeft="9.0dip" android:paddingRight="9.0dip" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/miio_setting_message_center"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/module_a_2_return_more_more_btn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/std_tittlebar_main_device_add" />
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/new_message_tag" android:visibility="invisible" android:layout_width="@dimen/red_dot_size" android:layout_height="@dimen/red_dot_size" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/dot_red" />
+</FrameLayout>

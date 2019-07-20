@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_app_icon" android:layout_width="46.0dip" android:layout_height="46.0dip" />
+    <com.mi.global.shop.widget.CustomTextView android:textSize="10.0dip" android:textColor="@color/text_color_d" android:gravity="center" android:id="@id/tv_app_name" android:layout_width="60.0dip" android:layout_height="wrap_content" android:lines="2" />
+</LinearLayout>

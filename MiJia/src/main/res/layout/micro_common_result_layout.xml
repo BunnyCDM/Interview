@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaomi.smarthome.voice.microaudio.viewutil.MicroCommonResultView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/white_60_transparent" android:gravity="center" android:id="@id/micro_content_result_tv" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerHorizontal="true" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+    <ImageView android:id="@id/micro_content_result_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="56.0dip" android:layout_below="@id/micro_content_result_tv" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/white_60_transparent" android:id="@id/setting_tv_white" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="39.0dip" android:layout_below="@id/micro_content_result_iv" android:layout_centerHorizontal="true" />
+</com.xiaomi.smarthome.voice.microaudio.viewutil.MicroCommonResultView>

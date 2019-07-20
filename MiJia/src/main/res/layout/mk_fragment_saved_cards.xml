@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/mk_uic_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/white_container">
+            <TextView android:id="@id/amount" android:text="" style="@style/textBlueHeading" />
+            <View android:background="@color/mk_uic_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" />
+            <TextView android:gravity="center_horizontal" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:text="Please select one of the saved card(s) to pay" />
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_saved_cards" android:background="@color/mk_uic_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" />
+        </LinearLayout>
+        <Button android:id="@id/btnContinueWithNewCard" android:visibility="visible" android:text="Other Payment Options" style="@style/new_secondary_button" />
+    </LinearLayout>
+</ScrollView>

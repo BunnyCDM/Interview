@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="244.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/button_left" android:background="@drawable/btn_minus" android:layout_width="43.329987dip" android:layout_height="43.329987dip" android:layout_marginRight="6.669983dip" android:scaleType="fitCenter" android:layout_toLeftOf="@id/button_center" />
+    <com.xiaomi.smarthome.newui.widget.RoundedHorizontalSeekBar android:id="@id/button_center" android:layout_width="143.34dip" android:layout_height="43.329987dip" android:layout_centerInParent="true" app:bg_color_my="#fff2f2f2" app:progress_color_my="#ff0099ff" app:seek_enable="false" app:text_color_my="#ffffffff" app:text_padding_left_my="16.329987dip" app:text_size_my="10.669983sp" />
+    <ImageView android:id="@id/button_right" android:background="@drawable/btn_plus" android:layout_width="43.329987dip" android:layout_height="43.329987dip" android:layout_marginLeft="6.669983dip" android:scaleType="fitCenter" android:layout_toRightOf="@id/button_center" />
+</RelativeLayout>

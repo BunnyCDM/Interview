@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white_pressed_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ffc4c4c4" android:ellipsize="end" android:id="@id/item_target" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:textDirection="locale" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ffc4c4c4" android:ellipsize="end" android:id="@id/item_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:textDirection="locale" android:paddingEnd="16.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="@color/activity_black_color" android:ellipsize="end" android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="2" android:lineSpacingExtra="5.0dip" android:textDirection="locale" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:textBounds="medium" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="16.0dip">
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ffc4c4c4" android:id="@id/item_watch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="6.0dip" android:drawableStart="@drawable/bbs_qa_item_watch" android:textDirection="locale" android:paddingStart="16.0dip" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="#ffc4c4c4" android:id="@id/item_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="6.0dip" android:layout_alignBottom="@id/item_watch" android:drawableStart="@drawable/bbs_qa_item_comment" android:textDirection="locale" android:paddingStart="20.0dip" android:layout_toEndOf="@id/item_watch" />
+        <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="#ffff6700" android:id="@id/item_Answer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textDirection="locale" android:paddingEnd="16.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="@color/user_center_divider_color" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+</LinearLayout>

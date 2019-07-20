@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+        <TextView android:textSize="@dimen/font_size_13sp" android:textColor="@color/class_Y" android:id="@id/sh_login_pwd_other_way_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:text="@string/third_login" android:layout_centerInParent="true" />
+        <View android:background="@color/class_D" android:layout_width="72.0dip" android:layout_height="1.0px" android:layout_toLeftOf="@id/sh_login_pwd_other_way_title" android:layout_centerVertical="true" />
+        <View android:background="@color/class_D" android:layout_width="72.0dip" android:layout_height="1.0px" android:layout_toRightOf="@id/sh_login_pwd_other_way_title" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginBottom="16.0dip">
+        <TextView android:id="@id/sh_login_pwd_other_way_wx" android:text="@string/login_wx" android:drawableTop="@drawable/signin_icon_wechat_nor" style="@style/LoginOtherWay" />
+        <TextView android:id="@id/sh_login_pwd_other_way_fb" android:text="@string/login_fb" android:drawableTop="@drawable/signin_icon_fb_nor" style="@style/LoginOtherWay" />
+        <TextView android:id="@id/sh_login_pwd_other_way_pwd" android:text="@string/login_home_pwd" android:drawableTop="@drawable/signin_icon_code_nor" style="@style/LoginOtherWay" />
+        <TextView android:id="@id/sh_login_pwd_other_way_phone" android:text="@string/login_home_phone" android:drawableTop="@drawable/signin_icon_message_nor" style="@style/LoginOtherWay" />
+    </LinearLayout>
+</merge>

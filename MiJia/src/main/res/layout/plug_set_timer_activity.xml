@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/class_A" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/plug_set_timer_title" />
+    <ImageView android:id="@id/loading" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_loading" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/view_repeat" android:layout_width="fill_parent" android:layout_height="66.0dip" android:layout_marginLeft="23.0dip" android:layout_marginRight="23.0dip" android:layout_below="@id/title_bar">
+        <TextView android:textSize="14.0sp" android:textColor="@color/class_V" android:id="@id/tv_repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="@string/plug_timer_repeat" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/plug_timer_subTitle" android:id="@id/tv_repeat_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plug_timer_onetime" android:layout_below="@id/tv_repeat" android:layout_alignParentLeft="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/um_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:background="#ffdfdfdf" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/view_timer_on" android:layout_width="fill_parent" android:layout_height="66.0dip" android:layout_marginRight="23.0dip" android:layout_below="@id/view_repeat">
+        <TextView android:textSize="14.0sp" android:textColor="@color/plug_timer_marked" android:id="@id/tv_timer_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="23.0dip" android:layout_marginTop="14.0dip" android:text="@string/plug_timer_on_time" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/plug_timer_subTitle" android:id="@id/tv_timer_on_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plug_timer_no_set" android:layout_below="@id/tv_timer_on" android:layout_alignLeft="@id/tv_timer_on" />
+        <View android:background="#ffdfdfdf" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="23.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/view_timer_off" android:layout_width="fill_parent" android:layout_height="66.0dip" android:layout_marginRight="23.0dip" android:layout_below="@id/view_timer_on">
+        <TextView android:textSize="14.0sp" android:textColor="@color/class_V" android:id="@id/tv_timer_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="23.0dip" android:layout_marginTop="14.0dip" android:text="@string/plug_timer_off_time" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/plug_timer_subTitle" android:id="@id/tv_timer_off_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plug_timer_no_set" android:layout_below="@id/tv_timer_off" android:layout_alignLeft="@id/tv_timer_off" />
+        <View android:background="#ffdfdfdf" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="23.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

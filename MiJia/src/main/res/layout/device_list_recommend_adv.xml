@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/device_ir" android:layout_width="wrap_content" android:layout_height="@dimen/device_main_page_grid_item_height" layout="@layout/item_main_grid" />
+    <include android:id="@id/add_device" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginBottom="@dimen/device_main_page_common_padding_between_elements" layout="@layout/device_list_empty_add_device_layout" />
+    <include android:id="@id/ad_banner" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/operation_main_page_ad_banner" />
+</LinearLayout>

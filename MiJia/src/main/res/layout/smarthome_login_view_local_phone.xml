@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/sh_login_copyright" android:visibility="invisible" android:text="@string/login_phone_operator_hint" style="@style/LoginCopyRight" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/sh_login_local_content" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="52.0dip">
+        <ImageView android:id="@id/login_phone_local_icon" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/default_icon_phone_nor" />
+        <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/class_Y" android:gravity="center_vertical" android:id="@id/login_phone_local_phone" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:includeFontPadding="false" />
+        <TextView android:textSize="11.0dip" android:textColor="@color/class_V" android:gravity="center" android:id="@id/login_phone_local_tag" android:background="@drawable/login_new_user_tag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="新用户" />
+        <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ImageView android:id="@id/login_phone_local_clear" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/login_input_close" android:scaleType="centerInside" />
+    </LinearLayout>
+    <View android:background="#ff808080" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/sh_login_local_content" />
+</merge>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/white_30_transparent" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" />
+    <LinearLayout android:orientation="horizontal" android:paddingTop="15.299988dip" android:layout_width="fill_parent" android:layout_height="106.0dip">
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <Button android:textSize="13.0sp" android:textColor="#88ffffff" android:ellipsize="end" android:gravity="center" android:id="@id/btn_remote0" android:background="@drawable/transparent" android:layout_width="90.0dip" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:singleLine="true" android:drawableTop="@drawable/std_lock_list_infrared_icon_plus" android:drawablePadding="4.0dip" />
+        <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <Button android:textSize="13.0sp" android:textColor="#88ffffff" android:ellipsize="end" android:gravity="center" android:id="@id/btn_remote1" android:background="@drawable/transparent" android:layout_width="90.0dip" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:singleLine="true" android:drawableTop="@drawable/std_lock_list_infrared_icon_plus" android:drawablePadding="4.0dip" />
+        <View android:id="@id/divider_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <Button android:textSize="13.0sp" android:textColor="#88ffffff" android:ellipsize="end" android:gravity="center" android:id="@id/btn_remote2" android:background="@drawable/transparent" android:layout_width="90.0dip" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:singleLine="true" android:drawableTop="@drawable/std_lock_list_infrared_icon_plus" android:drawablePadding="4.0dip" />
+        <View android:id="@id/divider_2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

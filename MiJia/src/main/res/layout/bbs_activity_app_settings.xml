@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/common_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:seek="http://schemas.android.com/apk/res-auto">
+    <com.mi.global.bbs.view.AppSettingsItem android:id="@id/settings_notifications" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" seek:leftIcon="@drawable/bbs_settings_notifications_icon" seek:rightIconVisibility="true" seek:text="@string/push_notification_settings" />
+    <com.mi.global.bbs.view.AppSettingsItem android:id="@id/settings_rate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:textDirection="locale" seek:leftIcon="@drawable/bbs_settings_rate_icon" seek:text="@string/rate_us" />
+    <View android:background="@drawable/item_divide_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <com.mi.global.bbs.view.AppSettingsItem android:id="@id/settings_share" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" seek:leftIcon="@drawable/bbs_settings_share_icon" seek:text="@string/share_mi_com" />
+    <View android:background="@drawable/item_divide_bg" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <com.mi.global.bbs.view.AppSettingsItem android:id="@id/settings_feedback" android:layout_width="fill_parent" android:layout_height="wrap_content" seek:leftIcon="@drawable/bbs_settings_feedback_icon" seek:text="@string/facebook" />
+    <com.mi.global.bbs.view.AppSettingsItem android:id="@id/settings_clear" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:textDirection="locale" seek:leftIcon="@drawable/bbs_settings_clear_icon" seek:text="@string/clear_cache" />
+    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="@color/main_yellow" android:gravity="center" android:id="@id/settings_log" android:background="@drawable/white_pressed_selector" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/log_out" android:onClick="logout" android:textDirection="locale" />
+</LinearLayout>
