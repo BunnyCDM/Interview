@@ -19,6 +19,7 @@ import java.util.List;
  * Created by mac on 2019/7/16.
  */
 public class ClientTest {
+
     // 不考虑发送消耗，并发量：2000*4/400*1000 = 2w/s 算上来回2次数据解析：4w/s
     private static final int CLIENT_SIZE = 2000;
     private static final int SEND_THREAD_SIZE = 4;

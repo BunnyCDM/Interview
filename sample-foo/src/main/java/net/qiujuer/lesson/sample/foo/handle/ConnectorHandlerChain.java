@@ -6,6 +6,7 @@ package net.qiujuer.lesson.sample.foo.handle;
  * @param <Model>
  */
 public abstract class ConnectorHandlerChain<Model> {
+
     // 当前节点所持有的小一份节点
     private volatile ConnectorHandlerChain<Model> next;
 
@@ -92,5 +93,6 @@ public abstract class ConnectorHandlerChain<Model> {
     protected boolean consumeAgain(ConnectorHandler handler, Model model) {
         return false;
     }
+
 }
 

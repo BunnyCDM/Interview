@@ -11,6 +11,7 @@ import java.util.List;
  * Created by mac on 2019/7/20.
  */
 public class Group {
+
     private final String name;
     private final GroupMessageAdapter adapter;
     private final List<ConnectorHandler> members = new ArrayList<>();
@@ -93,4 +94,5 @@ public class Group {
          */
         void sendMessageToClient(ConnectorHandler handler, String msg);
     }
+
 }

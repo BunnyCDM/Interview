@@ -14,6 +14,7 @@ import java.util.concurrent.CountDownLatch;
  * Created by mac on 2019/7/20.
  */
 public class ServerAcceptor extends Thread {
+
     private final AcceptListener listener;
     private final Selector selector;
     private final CountDownLatch latch = new CountDownLatch(1);
@@ -91,4 +92,5 @@ public class ServerAcceptor extends Thread {
     interface AcceptListener {
         void onNewSocketArrived(SocketChannel channel);
     }
+
 }

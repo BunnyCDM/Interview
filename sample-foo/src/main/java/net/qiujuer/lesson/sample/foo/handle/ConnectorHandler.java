@@ -18,6 +18,7 @@ import java.nio.channels.SocketChannel;
  * Created by mac on 2019/7/16.
  */
 public class ConnectorHandler extends Connector {
+
     private final File cachePath;
     private final String clientInfo;
     private final ConnectorCloseChain closeChain = new DefaultPrintConnectorCloseChain();
@@ -102,4 +103,5 @@ public class ConnectorHandler extends Connector {
     public ConnectorCloseChain getCloseChain() {
         return closeChain;
     }
+
 }

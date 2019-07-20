@@ -24,6 +24,7 @@ import java.util.concurrent.TimeUnit;
  * Created by mac on 2019/7/16.
  */
 public class Client {
+
     public static void main(String[] args) throws IOException {
         File cachePath = Foo.getCacheDir("client");
         IoContext.setup()

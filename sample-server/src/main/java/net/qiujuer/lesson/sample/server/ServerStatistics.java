@@ -8,6 +8,7 @@ import net.qiujuer.library.clink.box.StringReceivePacket;
  * Created by mac on 2019/7/20.
  */
 public class ServerStatistics {
+
     long receiveSize;
     long sendSize;
 
@@ -28,4 +29,5 @@ public class ServerStatistics {
             return false;
         }
     }
+
 }

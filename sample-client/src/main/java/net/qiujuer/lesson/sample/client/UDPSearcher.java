@@ -18,6 +18,7 @@ import java.util.concurrent.TimeUnit;
  * Created by mac on 2019/7/16.
  */
 public class UDPSearcher {
+
     private static final int LISTEN_PORT = UDPConstants.PORT_CLIENT_RESPONSE;
 
     public static ServerInfo searchServer(int timeout) {
@@ -168,5 +169,6 @@ public class UDPSearcher {
             return serverInfoList;
         }
     }
+
 }
 

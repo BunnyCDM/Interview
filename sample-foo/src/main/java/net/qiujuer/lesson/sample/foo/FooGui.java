@@ -16,6 +16,7 @@ import javax.swing.Timer;
  * Created by mac on 2019/7/16.
  */
 public class FooGui extends JFrame {
+
     private Timer timer;
     private JLabel label;
 
@@ -84,5 +85,6 @@ public class FooGui extends JFrame {
     public interface Callback {
         Object[] takeText();
     }
+
 }
 

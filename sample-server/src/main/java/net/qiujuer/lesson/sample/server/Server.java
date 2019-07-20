@@ -16,6 +16,7 @@ import java.io.InputStreamReader;
  * Created by mac on 2019/7/20.
  */
 public class Server {
+
     public static void main(String[] args) throws IOException {
         File cachePath = Foo.getCacheDir("server");
 
@@ -57,5 +58,6 @@ public class Server {
         IoContext.close();
         gui.doDismiss();
     }
+
 }
 

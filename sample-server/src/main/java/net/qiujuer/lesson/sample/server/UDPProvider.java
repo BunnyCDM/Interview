@@ -12,6 +12,7 @@ import java.util.UUID;
  * Created by mac on 2019/7/20.
  */
 public class UDPProvider {
+
     private static Provider PROVIDER_INSTANCE;
 
     static void start(int port) {
@@ -129,5 +130,6 @@ public class UDPProvider {
             close();
         }
     }
+
 }
 

@@ -10,6 +10,7 @@ import java.util.Random;
  * 房间的基本封装
  */
 public class AudioRoom {
+
     private final String roomCode;
     private volatile ConnectorHandler handler1;
     private volatile ConnectorHandler handler2;

@@ -8,6 +8,7 @@ import java.util.UUID;
  * Created by mac on 2019/7/16.
  */
 public class Foo {
+
     // 绑定Stream到一个命令链接(带参数)
     public static final String COMMAND_CONNECTOR_BIND = "--m c bind ";
     // 创建对话房间
