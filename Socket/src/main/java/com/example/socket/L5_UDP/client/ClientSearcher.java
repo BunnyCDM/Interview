@@ -10,6 +10,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -71,8 +72,7 @@ public class ClientSearcher {
         // 回送端口信息
         byteBuffer.putInt(LISTEN_PORT);
         // 直接构建packet
-        DatagramPacket requestPacket = new DatagramPacket(byteBuffer.array(),
-                byteBuffer.position() + 1);
+        DatagramPacket requestPacket = new DatagramPacket(byteBuffer.array(), byteBuffer.position() + 1);
         // 广播地址
         requestPacket.setAddress(InetAddress.getByName("255.255.255.255"));
         // 设置服务器端口
@@ -81,6 +81,8 @@ public class ClientSearcher {
         // 发送
         ds.send(requestPacket);
         ds.close();
+
+        System.out.println("byteBuffer=" + byteBuffer);
 
         // 完成
         System.out.println("UDPSearcher sendBroadcast finished.");
@@ -125,11 +127,13 @@ public class ClientSearcher {
                     int port = receivePack.getPort();
                     int dataLen = receivePack.getLength();
                     byte[] data = receivePack.getData();
-                    boolean isValid = dataLen >= minLen
-                            && ByteUtils.startsWith(data, UDPConstants.HEADER);
+                    boolean isValid = dataLen >= minLen && ByteUtils.startsWith(data, UDPConstants.HEADER);
 
                     System.out.println("UDPSearcher receive form ip:" + ip
-                            + "\tport:" + port + "\tdataValid:" + isValid);
+                            + "\tport:" + port
+                            + "\tdataLen:" + dataLen
+                            + "\tdata:" + Arrays.toString(data)
+                            + "\tisValid:" + isValid);
 
                     if (!isValid) {
                         // 无效继续

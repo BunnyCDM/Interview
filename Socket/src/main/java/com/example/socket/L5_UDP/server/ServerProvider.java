@@ -7,6 +7,7 @@ import com.example.socket.L5_UDP.constants.UDPConstants;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.UUID;
 
 /**
@@ -52,7 +53,7 @@ public class ServerProvider {
             System.out.println("UDPProvider Started.");
 
             try {
-                // 监听20000 端口
+                // 监听30201 端口
                 ds = new DatagramSocket(UDPConstants.PORT_SERVER);
                 // 接收消息的Packet
                 DatagramPacket receivePack = new DatagramPacket(buffer, buffer.length);
@@ -73,7 +74,10 @@ public class ServerProvider {
                             && ByteUtils.startsWith(clientData, UDPConstants.HEADER);
 
                     System.out.println("ServerProvider receive form ip:" + clientIp
-                            + "\tport:" + clientPort + "\tdataValid:" + isValid);
+                            + "\tport:" + clientPort
+                            + "\tclientDataLen:" + clientDataLen
+                            + "\tclientData:" + Arrays.toString(clientData)
+                            + "\tisValid:" + isValid);
 
                     if (!isValid) {
                         // 无效继续
@@ -103,11 +107,10 @@ public class ServerProvider {
                                 receivePack.getAddress(),
                                 responsePort);
                         ds.send(responsePacket);
-                        System.out.println("ServerProvider response to:" + clientIp
-                                + "\tport:" + responsePort + "\tdataLen:" + len);
+                        System.out.println("byteBuffer=" + byteBuffer);
+                        System.out.println("ServerProvider response to:" + clientIp + "\tport:" + responsePort + "\tdataLen:" + len);
                     } else {
-                        System.out.println("ServerProvider receive cmd nonsupport; cmd:" + cmd
-                                + "\tport:" + port);
+                        System.out.println("ServerProvider receive cmd nonsupport; cmd:" + cmd + "\tport:" + port);
                     }
                 }
             } catch (Exception ignored) {
