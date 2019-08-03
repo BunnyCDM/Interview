@@ -98,11 +98,11 @@ public class TCPServer {
                     " P:" + socket.getPort());
 
             try {
-                // 得到打印流，用于数据输出；服务器回送数据使用
-                PrintStream socketOutput = new PrintStream(socket.getOutputStream());
                 // 得到输入流，用于接收数据
                 BufferedReader socketInput = new BufferedReader(new InputStreamReader(
                         socket.getInputStream()));
+                // 得到打印流，用于数据输出；服务器回送数据使用
+                PrintStream socketOutput = new PrintStream(socket.getOutputStream());
 
                 do {
                     // 客户端拿到一条数据

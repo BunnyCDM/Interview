@@ -47,7 +47,6 @@ public class TCPClient {
         InputStream in = System.in;
         BufferedReader input = new BufferedReader(new InputStreamReader(in));
 
-
         // 得到Socket输出流，并转换为打印流
         OutputStream outputStream = client.getOutputStream();
         PrintStream socketPrintStream = new PrintStream(outputStream);
