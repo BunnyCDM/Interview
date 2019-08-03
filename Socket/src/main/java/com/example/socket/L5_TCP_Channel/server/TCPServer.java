@@ -77,13 +77,12 @@ public class TCPServer {
                 }
                 try {
                     // 客户端构建异步线程
-                    ClientHandler clientHandler = new ClientHandler(client,
-                            new ClientHandler.CloseNotify() {
-                                @Override
-                                public void onSelfClosed(ClientHandler handler) {
-                                    clientHandlerList.remove(handler);
-                                }
-                            });
+                    ClientHandler clientHandler = new ClientHandler(client, new ClientHandler.CloseNotify() {
+                        @Override
+                        public void onSelfClosed(ClientHandler handler) {
+                            clientHandlerList.remove(handler);
+                        }
+                    });
                     // 读取数据并打印
                     clientHandler.readToPrint();
                     clientHandlerList.add(clientHandler);
