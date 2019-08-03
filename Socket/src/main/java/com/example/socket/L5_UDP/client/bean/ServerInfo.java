@@ -2,6 +2,8 @@ package com.example.socket.L5_UDP.client.bean;
 
 /**
  * Created by mac on 2019/7/14.
+ * <p>
+ * 服务端信息
  */
 public class ServerInfo {
     private String sn;

@@ -91,5 +91,19 @@ public class ByteUtils {
     public static byte[] subbytes(byte[] source, int srcBegin) {
         return subbytes(source, srcBegin, source.length);
     }
+
+
+    public static String myByteToHexString(byte[] data) {
+        StringBuilder builder = new StringBuilder();
+        if (data != null && data.length > 0)
+            for (int i = 0; i < data.length; i++) {
+                String temp = Integer.toHexString(data[i] & 0xFF).toUpperCase();
+                if (temp.length() == 1) {
+                    temp = "0" + temp;
+                }
+                builder.append(temp + " ");
+            }
+        return builder.toString();
+    }
 }
 

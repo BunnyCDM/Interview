@@ -11,5 +11,6 @@ public class Client {
 
         ServerInfo info = ClientSearcher.searchServer(10000);
         System.out.println("Server:" + info);
+
     }
 }

@@ -3,11 +3,61 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ARouter" />
+            <option value="$PROJECT_DIR$/ActionBar" />
+            <option value="$PROJECT_DIR$/Activity" />
+            <option value="$PROJECT_DIR$/ActivityForResult" />
+            <option value="$PROJECT_DIR$/AsyncTask" />
+            <option value="$PROJECT_DIR$/BottomTab" />
+            <option value="$PROJECT_DIR$/BroadcastReceiver" />
+            <option value="$PROJECT_DIR$/ButterKnife" />
+            <option value="$PROJECT_DIR$/ConstraintLayout" />
+            <option value="$PROJECT_DIR$/ContentProvider" />
+            <option value="$PROJECT_DIR$/Dagger" />
+            <option value="$PROJECT_DIR$/DesignPatterns" />
+            <option value="$PROJECT_DIR$/Drawable" />
+            <option value="$PROJECT_DIR$/Fragment" />
+            <option value="$PROJECT_DIR$/GreenDao" />
+            <option value="$PROJECT_DIR$/GreenDaoGenerate" />
+            <option value="$PROJECT_DIR$/GuidePage" />
+            <option value="$PROJECT_DIR$/Handler" />
+            <option value="$PROJECT_DIR$/Iconify" />
+            <option value="$PROJECT_DIR$/Intent" />
+            <option value="$PROJECT_DIR$/Layout" />
+            <option value="$PROJECT_DIR$/ListView" />
+            <option value="$PROJECT_DIR$/Menu" />
+            <option value="$PROJECT_DIR$/MultiDex" />
+            <option value="$PROJECT_DIR$/OkGo" />
+            <option value="$PROJECT_DIR$/Permissions" />
+            <option value="$PROJECT_DIR$/RadioButton" />
+            <option value="$PROJECT_DIR$/RecycleView" />
+            <option value="$PROJECT_DIR$/ScreenAdapterTools" />
+            <option value="$PROJECT_DIR$/Service" />
+            <option value="$PROJECT_DIR$/SharedPreferences" />
+            <option value="$PROJECT_DIR$/Sign" />
+            <option value="$PROJECT_DIR$/Socket" />
+            <option value="$PROJECT_DIR$/SparseArray" />
+            <option value="$PROJECT_DIR$/SwipeRefreshLayout" />
+            <option value="$PROJECT_DIR$/Synchronized" />
+            <option value="$PROJECT_DIR$/Thread" />
+            <option value="$PROJECT_DIR$/Timer" />
+            <option value="$PROJECT_DIR$/ToolBar" />
+            <option value="$PROJECT_DIR$/TouchEvent" />
+            <option value="$PROJECT_DIR$/UnitTest" />
+            <option value="$PROJECT_DIR$/VideoView" />
+            <option value="$PROJECT_DIR$/ViewStub" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/sample-client" />
+            <option value="$PROJECT_DIR$/sample-clink" />
+            <option value="$PROJECT_DIR$/sample-foo" />
+            <option value="$PROJECT_DIR$/sample-server" />
+          </set>
+        </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

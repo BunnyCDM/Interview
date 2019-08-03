@@ -1,5 +1,6 @@
 package com.example.handler;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,6 +11,7 @@ import android.util.Log;
 public class SecondActivity extends AppCompatActivity {
 
 
+    @SuppressLint("HandlerLeak")
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -24,6 +26,7 @@ public class SecondActivity extends AppCompatActivity {
         public Handler handler;
         public Looper looper;
 
+        @SuppressLint("HandlerLeak")
         @Override
         public void run() {
             Looper.prepare();

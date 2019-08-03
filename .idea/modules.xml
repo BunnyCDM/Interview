@@ -44,6 +44,7 @@
       <module fileurl="file://$PROJECT_DIR$/ToolBar/ToolBar.iml" filepath="$PROJECT_DIR$/ToolBar/ToolBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/TouchEvent/TouchEvent.iml" filepath="$PROJECT_DIR$/TouchEvent/TouchEvent.iml" />
       <module fileurl="file://$PROJECT_DIR$/UnitTest/UnitTest.iml" filepath="$PROJECT_DIR$/UnitTest/UnitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VideoView/VideoView.iml" filepath="$PROJECT_DIR$/VideoView/VideoView.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewStub/ViewStub.iml" filepath="$PROJECT_DIR$/ViewStub/ViewStub.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-client/sample-client.iml" filepath="$PROJECT_DIR$/sample-client/sample-client.iml" />

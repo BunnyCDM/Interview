@@ -34,6 +34,7 @@ public class ClientSearcher {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         // 完成
         System.out.println("UDPSearcher Finished.");
         if (listener == null) {

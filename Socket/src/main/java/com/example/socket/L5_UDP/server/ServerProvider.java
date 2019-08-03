@@ -1,5 +1,6 @@
 package com.example.socket.L5_UDP.server;
 
+
 import com.example.socket.L5_UDP.clink.net.clink.qiujuer.utils.ByteUtils;
 import com.example.socket.L5_UDP.constants.UDPConstants;
 
@@ -12,6 +13,7 @@ import java.util.UUID;
  * Created by mac on 2019/7/14.
  */
 public class ServerProvider {
+
     private static Provider PROVIDER_INSTANCE;
 
     static void start(int port) {
@@ -34,7 +36,7 @@ public class ServerProvider {
         private final int port;
         private boolean done = false;
         private DatagramSocket ds = null;
-        // 存储消息的Buffer
+        // 存储消息的Buffe，在这里我们认为数据是不会超过128个字节
         final byte[] buffer = new byte[128];
 
         Provider(String sn, int port) {
@@ -66,6 +68,7 @@ public class ServerProvider {
                     int clientPort = receivePack.getPort();
                     int clientDataLen = receivePack.getLength();
                     byte[] clientData = receivePack.getData();
+                    //校验合法性，cmd为short类型字节2port为int类型4个字节
                     boolean isValid = clientDataLen >= (UDPConstants.HEADER.length + 2 + 4)
                             && ByteUtils.startsWith(clientData, UDPConstants.HEADER);
 
