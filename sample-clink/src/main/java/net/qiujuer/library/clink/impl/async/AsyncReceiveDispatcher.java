@@ -11,8 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * 接收调度
  */
-public class AsyncReceiveDispatcher implements ReceiveDispatcher,
-        IoArgs.IoArgsEventProcessor, AsyncPacketWriter.PacketProvider {
+public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsEventProcessor, AsyncPacketWriter.PacketProvider {
 
     private final AtomicBoolean isClosed = new AtomicBoolean(false);
 

@@ -41,6 +41,7 @@ public class Foo {
     private static final String CACHE_DIR = "cache";
 
     public static File getCacheDir(String dir) {
+        ///Users/mac/work/Android/Workspace/Studio/Interview/cache/server
         String path = System.getProperty("user.dir") + (File.separator + CACHE_DIR + File.separator + dir);
         File file = new File(path);
         if (!file.exists()) {

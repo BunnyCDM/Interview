@@ -14,8 +14,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * Created by mac on 2019/7/16.
  */
-public class AsyncSendDispatcher implements SendDispatcher,
-        IoArgs.IoArgsEventProcessor, AsyncPacketReader.PacketProvider {
+public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventProcessor, AsyncPacketReader.PacketProvider {
 
     private final Sender sender;
     // 阻塞队列，默认等待任务数量设定为16个；超过16个添加任务将被阻塞等待
