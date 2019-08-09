@@ -14,7 +14,7 @@ import java.nio.ByteBuffer;
  */
 public class Server {
 
-    private static final int PORT = 20000;
+    private static final int PORT = 20004;
 
     public static void main(String[] args) throws IOException {
 
@@ -95,32 +95,42 @@ public class Server {
 
                 byte[] buffer = new byte[256];
                 int readCount = inputStream.read(buffer);
+                System.out.println("readCount="+readCount);
                 ByteBuffer byteBuffer = ByteBuffer.wrap(buffer, 0, readCount);
+                System.out.println("byteBuffer="+byteBuffer);
 
                 // byte
                 byte be = byteBuffer.get();
+                System.out.println("byteBuffer(byte)="+byteBuffer);
 
                 // char
                 char c = byteBuffer.getChar();
+                System.out.println("byteBuffer(char)="+byteBuffer);
 
                 // int
                 int i = byteBuffer.getInt();
+                System.out.println("byteBuffer(int)="+byteBuffer);
 
                 // bool
                 boolean b = byteBuffer.get() == 1;
+                System.out.println("byteBuffer(bool)="+byteBuffer);
 
                 // Long
                 long l = byteBuffer.getLong();
+                System.out.println("byteBuffer(Long)="+byteBuffer);
 
                 // float
                 float f = byteBuffer.getFloat();
+                System.out.println("byteBuffer(float)="+byteBuffer);
 
                 // double
                 double d = byteBuffer.getDouble();
+                System.out.println("byteBuffer(double)="+byteBuffer);
 
                 // String
                 int pos = byteBuffer.position();
                 String str = new String(buffer, pos, readCount - pos - 1);
+                System.out.println("byteBuffer(String)="+byteBuffer);
 
                 System.out.println("收到数量：" + readCount + " 数据："
                         + be + "\n"
@@ -133,6 +143,9 @@ public class Server {
                         + str + "\n");
 
                 outputStream.write(buffer, 0, readCount);
+                System.out.println("byteBuffer="+byteBuffer);
+                byteBuffer.flip();
+                System.out.println("byteBuffer(flip)="+byteBuffer);
                 outputStream.close();
                 inputStream.close();
 

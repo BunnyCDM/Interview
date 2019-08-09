@@ -1,4 +1,4 @@
-package com.example.socket.L5_UDP.clink.net.clink.qiujuer.utils;
+package com.example.socket.util;
 
 import java.nio.ByteBuffer;
 
@@ -15,9 +15,15 @@ public class ByteBufferTest {
 
     public static void main(String args[]) {
 
-        System.out.println("----------Test allocate--------");
-
-        System.out.println("before alocate:" + Runtime.getRuntime().freeMemory());
+        /**
+         * freeMemory：在Java运行过程中内存总是慢慢从操作系统那里挖，挖过来多余没用的部分就是freeMemory
+         * totalMemory：java虚拟机现在已经从操作系统那里挖过来的内存大小，也就是java虚拟机这个进程当时所占用的所有 内存
+         * maxMemory：java虚拟机（这个进程）能构从操作系统那里挖到的最大的内存，以字节为单位
+         * 以上反映都是java进程内存的情况，跟操作系统的内存根本没什么关系
+         */
+        System.out.println("before freeMemory:" + Runtime.getRuntime().freeMemory());
+        System.out.println("before totalMemory:" + Runtime.getRuntime().totalMemory());
+        System.out.println("before maxMemory:" + Runtime.getRuntime().maxMemory());
         //如果分配的内存比较小，调用Runtime.getRuntime().freeMemory()大小不会变化？
         //要超过多少内存大小JVM才能感觉到？
         ByteBuffer buffer = ByteBuffer.allocate(102400);//102400

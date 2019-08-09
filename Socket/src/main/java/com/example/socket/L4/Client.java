@@ -14,7 +14,7 @@ import java.nio.ByteBuffer;
  */
 public class Client {
 
-    private static final int PORT = 20000;
+    private static final int PORT = 20004;
     private static final int LOCAL_PORT = 20001;
 
     public static void main(String[] args) throws IOException {
@@ -109,39 +109,47 @@ public class Client {
         InputStream inputStream = client.getInputStream();
         byte[] buffer = new byte[256];
         ByteBuffer byteBuffer = ByteBuffer.wrap(buffer);
+        System.out.println("byteBuffer=" + byteBuffer);
 
         // byte
         byteBuffer.put((byte) 126);
+        System.out.println("byteBuffer（byte）=" + byteBuffer);
 
         // char
         char c = 'a';
         byteBuffer.putChar(c);
+        System.out.println("byteBuffer（char）=" + byteBuffer);
 
         // int
         int i = 2323123;
         byteBuffer.putInt(i);
+        System.out.println("byteBuffer（int）=" + byteBuffer);
 
         // bool
         boolean b = true;
         byteBuffer.put(b ? (byte) 1 : (byte) 0);
+        System.out.println("byteBuffer（bool）=" + byteBuffer);
 
         // Long
         long l = 298789739;
         byteBuffer.putLong(l);
-
+        System.out.println("byteBuffer（Long）=" + byteBuffer);
 
         // float
         float f = 12.345f;
         byteBuffer.putFloat(f);
+        System.out.println("byteBuffer（float）=" + byteBuffer);
 
 
         // double
         double d = 13.31241248782973;
         byteBuffer.putDouble(d);
+        System.out.println("byteBuffer（double）=" + byteBuffer);
 
         // String
         String str = "Hello你好！";
         byteBuffer.put(str.getBytes());
+        System.out.println("byteBuffer（String）=" + byteBuffer);
 
         // 发送到服务器
         outputStream.write(buffer, 0, byteBuffer.position() + 1);
