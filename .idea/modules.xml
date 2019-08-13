@@ -27,6 +27,7 @@
       <module fileurl="file://$PROJECT_DIR$/ListView/ListView.iml" filepath="$PROJECT_DIR$/ListView/ListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/Menu/Menu.iml" filepath="$PROJECT_DIR$/Menu/Menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/MultiDex/MultiDex.iml" filepath="$PROJECT_DIR$/MultiDex/MultiDex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NIO/NIO.iml" filepath="$PROJECT_DIR$/NIO/NIO.iml" />
       <module fileurl="file://$PROJECT_DIR$/OkGo/OkGo.iml" filepath="$PROJECT_DIR$/OkGo/OkGo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Permissions/Permissions.iml" filepath="$PROJECT_DIR$/Permissions/Permissions.iml" />
       <module fileurl="file://$PROJECT_DIR$/RadioButton/RadioButton.iml" filepath="$PROJECT_DIR$/RadioButton/RadioButton.iml" />
