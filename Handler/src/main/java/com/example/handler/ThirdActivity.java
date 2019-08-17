@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
 
-
     private TextView textView;
 
     private HandlerThread thread;

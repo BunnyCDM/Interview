@@ -18,16 +18,16 @@ import java.util.function.Consumer;
 
 /**
  * NIO服务器端
- *
+ * <p>
  * NIO SelectionKey中定义的4种事件
  * SelectionKey.OP_ACCEPT —— 接收连接继续事件，表示服务器监听到了客户连接，服务器可以接收这个连接了
  * SelectionKey.OP_CONNECT —— 连接就绪事件，表示客户与服务器的连接已经建立成功
  * SelectionKey.OP_READ —— 读就绪事件，表示通道中已经有了可读的数据，可以执行读操作了（通道目前有数据，可以进行读操作了）
  * SelectionKey.OP_WRITE —— 写就绪事件，表示已经可以向通道写数据了（通道目前可以用于写操作）
  * 这里 注意，下面两种，SelectionKey.OP_READ ，SelectionKey.OP_WRITE ，
- *
+ * <p>
  * 1.当向通道中注册SelectionKey.OP_READ事件后，如果客户端有向缓存中write数据，下次轮询时，则会 isReadable()=true；
- *
+ * <p>
  * 2.当向通道中注册SelectionKey.OP_WRITE事件后，这时你会发现当前轮询线程中isWritable()一直为ture，如果不设置为其他事件
  */
 public class NioServer {
@@ -60,7 +60,7 @@ public class NioServer {
         /**
          * 3. 为channel通道绑定监听端口
          */
-        serverSocketChannel.bind(new InetSocketAddress(8000));
+        serverSocketChannel.bind(new InetSocketAddress(8001));
 
         /**
          * 4. **设置channel为非阻塞模式**

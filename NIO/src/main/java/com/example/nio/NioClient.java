@@ -25,7 +25,7 @@ public class NioClient {
         /**
          * 连接服务器端
          */
-        SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 8000));
+        SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 8001));
 
         /**
          * 接收服务器端响应

@@ -21,7 +21,7 @@ public class SecondActivity extends AppCompatActivity {
     };
 
 
-    class MyThread extends Thread {
+    private class MyThread extends Thread {
 
         public Handler handler;
         public Looper looper;
@@ -43,7 +43,6 @@ public class SecondActivity extends AppCompatActivity {
 
 
     private MyThread thread;
-    private Handler handler2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,23 +52,23 @@ public class SecondActivity extends AppCompatActivity {
         thread = new MyThread();
         thread.start();
 
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        handler.sendEmptyMessage(1);
+
+
+//        Handler handler = new Handler(thread.looper) {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                Log.d("SecondActivity", "handleMessage:3" + Thread.currentThread());
+//            }
+//        };
 //
 //        handler.sendEmptyMessage(1);
-
-
-        handler2 = new Handler(thread.looper) {
-            @Override
-            public void handleMessage(Message msg) {
-                Log.d("SecondActivity", "handleMessage:3" + Thread.currentThread());
-            }
-        };
-
-        handler2.sendEmptyMessage(1);
 
     }
 }
