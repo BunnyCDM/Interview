@@ -12,8 +12,9 @@ public class ThirdActivity extends AppCompatActivity {
 
     private TextView textView;
 
-    private HandlerThread thread;
 
+    //使用HandlerThread会避免SecondActivity中空指针问题，同时已解决多线程并发的问题
+    private HandlerThread thread;
     private Handler handler;
 
 
@@ -21,16 +22,17 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView= (TextView) findViewById(R.id.tv);
+        textView = (TextView) findViewById(R.id.tv);
+        textView.setText("handler thread");
 
-        thread=new HandlerThread("bunny");
+        thread = new HandlerThread("handler thread");
         thread.start();
 
-        handler=new Handler(thread.getLooper()){
+        handler = new Handler(thread.getLooper()) {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                Log.d("ThirdActivity", "handleMessage: "+Thread.currentThread());
+                Log.d("bunny", "handleMessage: " + Thread.currentThread());
             }
         };
 
