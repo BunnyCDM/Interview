@@ -15,7 +15,6 @@ public abstract class Telphone {
     // TODO: 2019-08-17 倘若Telphone implements IPlayGame以下方法可重写或不被重写，但是在最外非abstract类 一定会被重写否则会报错
 //    @Override
 //    public void playGame() {
-//
 //    }
 
 }

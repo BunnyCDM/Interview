@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/Fragment/Fragment.iml" filepath="$PROJECT_DIR$/Fragment/Fragment.iml" />
       <module fileurl="file://$PROJECT_DIR$/GreenDao/GreenDao.iml" filepath="$PROJECT_DIR$/GreenDao/GreenDao.iml" />
       <module fileurl="file://$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" filepath="$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GridView/GridView.iml" filepath="$PROJECT_DIR$/GridView/GridView.iml" />
       <module fileurl="file://$PROJECT_DIR$/GuidePage/GuidePage.iml" filepath="$PROJECT_DIR$/GuidePage/GuidePage.iml" />
       <module fileurl="file://$PROJECT_DIR$/Handler/Handler.iml" filepath="$PROJECT_DIR$/Handler/Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Iconify/Iconify.iml" filepath="$PROJECT_DIR$/Iconify/Iconify.iml" />

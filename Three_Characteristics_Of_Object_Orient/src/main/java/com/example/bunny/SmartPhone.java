@@ -23,9 +23,4 @@ public class SmartPhone extends Telphone implements IPlayGame {
         return super.getTest();
     }
 
-//    @Override
-//    public void playGame() {
-//
-//    }
-
 }
