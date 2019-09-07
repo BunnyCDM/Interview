@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Activity/Activity.iml" filepath="$PROJECT_DIR$/Activity/Activity.iml" />
       <module fileurl="file://$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" filepath="$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" />
       <module fileurl="file://$PROJECT_DIR$/AsyncTask/AsyncTask.iml" filepath="$PROJECT_DIR$/AsyncTask/AsyncTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/BottomTab/BottomTab.iml" filepath="$PROJECT_DIR$/BottomTab/BottomTab.iml" />
       <module fileurl="file://$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" filepath="$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/ButterKnife/ButterKnife.iml" filepath="$PROJECT_DIR$/ButterKnife/ButterKnife.iml" />
@@ -48,6 +49,7 @@
       <module fileurl="file://$PROJECT_DIR$/TouchEvent/TouchEvent.iml" filepath="$PROJECT_DIR$/TouchEvent/TouchEvent.iml" />
       <module fileurl="file://$PROJECT_DIR$/UnitTest/UnitTest.iml" filepath="$PROJECT_DIR$/UnitTest/UnitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/VideoView/VideoView.iml" filepath="$PROJECT_DIR$/VideoView/VideoView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewPager/ViewPager.iml" filepath="$PROJECT_DIR$/ViewPager/ViewPager.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewStub/ViewStub.iml" filepath="$PROJECT_DIR$/ViewStub/ViewStub.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-client/sample-client.iml" filepath="$PROJECT_DIR$/sample-client/sample-client.iml" />

@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/Activity" />
             <option value="$PROJECT_DIR$/ActivityForResult" />
             <option value="$PROJECT_DIR$/AsyncTask" />
+            <option value="$PROJECT_DIR$/BaseLibrary" />
             <option value="$PROJECT_DIR$/BottomTab" />
             <option value="$PROJECT_DIR$/BroadcastReceiver" />
             <option value="$PROJECT_DIR$/ButterKnife" />
@@ -53,6 +54,7 @@
             <option value="$PROJECT_DIR$/TouchEvent" />
             <option value="$PROJECT_DIR$/UnitTest" />
             <option value="$PROJECT_DIR$/VideoView" />
+            <option value="$PROJECT_DIR$/ViewPager" />
             <option value="$PROJECT_DIR$/ViewStub" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/sample-client" />
