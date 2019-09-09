@@ -1,20 +1,34 @@
-package com.example.touchevent;
+package com.example.touchevent.shijianfenfa;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.RelativeLayout;
+import android.widget.FrameLayout;
 
 /**
- * Created by mac on 2019/6/14.
+ * Created by mac on 2019-09-08.
  */
-public class ParentView extends RelativeLayout {
+public class MyViewGroup extends FrameLayout {
 
+    public MyViewGroup(@NonNull Context context) {
+        super(context);
+    }
 
-    public ParentView(Context context, AttributeSet attrs) {
+    public MyViewGroup(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
+
+    public MyViewGroup(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    public MyViewGroup(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
 
 
     @Override
@@ -37,4 +51,5 @@ public class ParentView extends RelativeLayout {
         Log.d("bunny", "onTouchEvent[ParentView]: 爸爸" + (eat ? "吃苹果" : "不吃苹果"));
         return eat ? true : super.onTouchEvent(event);
     }
+
 }

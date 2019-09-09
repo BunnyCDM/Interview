@@ -1,9 +1,11 @@
-package com.example.touchevent;
+package com.example.touchevent.shijianfenfa;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
+
+import com.example.touchevent.R;
 
 
 /**
@@ -13,14 +15,14 @@ import android.view.MotionEvent;
  * ParentView：爸爸
  * ChildView：我
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity02 extends AppCompatActivity {
 
     private final static String TAG = "bunny";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main02);
     }
 
 

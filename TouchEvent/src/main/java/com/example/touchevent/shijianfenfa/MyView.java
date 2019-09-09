@@ -1,23 +1,33 @@
-package com.example.touchevent;
+package com.example.touchevent.shijianfenfa;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 
 /**
- * Created by mac on 2019/6/14.
+ * Created by mac on 2019-09-08.
  */
-public class ChildView extends View implements OnTouchListener {
+public class MyView  extends View implements View.OnTouchListener {
 
+    public MyView(Context context) {
+        super(context);
+    }
 
-    public ChildView(Context context, AttributeSet attrs) {
+    public MyView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         setOnTouchListener(this);
     }
 
+    public MyView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    public MyView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
@@ -51,6 +61,4 @@ public class ChildView extends View implements OnTouchListener {
         Log.d("bunny", "onTouch[ChildView]: 老婆" + (eat ? "吃苹果" : "不吃苹果"));
         return eat;
     }
-
-
 }

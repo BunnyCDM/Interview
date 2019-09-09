@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.touchevent.shijianfenfa.MyViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <com.example.touchevent.shijianfenfa.MyView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/colorAccent" />
+
+</com.example.touchevent.shijianfenfa.MyViewGroup>
