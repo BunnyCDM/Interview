@@ -34,6 +34,7 @@
       <module fileurl="file://$PROJECT_DIR$/Permissions/Permissions.iml" filepath="$PROJECT_DIR$/Permissions/Permissions.iml" />
       <module fileurl="file://$PROJECT_DIR$/RadioButton/RadioButton.iml" filepath="$PROJECT_DIR$/RadioButton/RadioButton.iml" />
       <module fileurl="file://$PROJECT_DIR$/RecycleView/RecycleView.iml" filepath="$PROJECT_DIR$/RecycleView/RecycleView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecyclerViewLibrary/RecyclerViewLibrary.iml" filepath="$PROJECT_DIR$/RecyclerViewLibrary/RecyclerViewLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/Service/Service.iml" filepath="$PROJECT_DIR$/Service/Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" filepath="$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" />

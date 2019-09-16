@@ -16,6 +16,7 @@ import com.example.baselibrary.utils.log.AppLogger;
 import com.example.viewpager.R;
 import com.example.viewpager.wechat.fragment.TabFragment;
 import com.example.viewpager.wechat.view.TabView;
+import com.example.viewpager.wechat.view.transformer.ScaleTransformer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -163,6 +164,7 @@ public class MainActivityWithTab extends AppCompatActivity {
                 AppLogger.d("onPageScrollStateChanged: state=" + state);
             }
         });
+
     }
 
 

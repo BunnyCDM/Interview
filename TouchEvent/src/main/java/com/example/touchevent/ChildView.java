@@ -15,6 +15,7 @@ public class ChildView extends View implements OnTouchListener {
 
     public ChildView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        Log.d("bunny", "ChildView[ChildView]: ");
         setOnTouchListener(this);
     }
 

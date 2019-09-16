@@ -49,7 +49,7 @@ public class TabView extends FrameLayout {
     //设置icon,text
     //方式一：抽取自定义属性，通过xml设置
     //方式二：直接对外开放设置方法
-    public void setIconAndText(int icon,int iconSelect,String text) {
+    public void setIconAndText(int icon, int iconSelect, String text) {
         mIvIcon.setImageResource(icon);
         mIvIconSelect.setImageResource(iconSelect);
         mTvTitle.setText(text);

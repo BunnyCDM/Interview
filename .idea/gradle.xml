@@ -39,6 +39,7 @@
             <option value="$PROJECT_DIR$/Permissions" />
             <option value="$PROJECT_DIR$/RadioButton" />
             <option value="$PROJECT_DIR$/RecycleView" />
+            <option value="$PROJECT_DIR$/RecyclerViewLibrary" />
             <option value="$PROJECT_DIR$/ScreenAdapterTools" />
             <option value="$PROJECT_DIR$/Service" />
             <option value="$PROJECT_DIR$/SharedPreferences" />
