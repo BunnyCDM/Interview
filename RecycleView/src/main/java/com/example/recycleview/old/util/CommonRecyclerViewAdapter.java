@@ -1,4 +1,4 @@
-package com.example.recycleview.util;
+package com.example.recycleview.old.util;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+
 
 /**
  * Created by mac on 2019/2/12.

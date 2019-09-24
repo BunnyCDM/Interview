@@ -1,4 +1,4 @@
-package com.example.recycleview.bean;
+package com.example.recycleview.old.bean;
 
 /**
  * Created by mac on 2019/2/12.

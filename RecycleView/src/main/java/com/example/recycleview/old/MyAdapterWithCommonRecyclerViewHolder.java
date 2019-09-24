@@ -1,11 +1,11 @@
-package com.example.recycleview;
+package com.example.recycleview.old;
 
 import android.content.Context;
 
 import com.example.recycleview.R;
-import com.example.recycleview.bean.IrDeviceType;
-import com.example.recycleview.util.CommonRecyclerViewAdapter;
-import com.example.recycleview.util.RecyclerViewHolder;
+import com.example.recycleview.old.bean.IrDeviceType;
+import com.example.recycleview.old.util.CommonRecyclerViewAdapter;
+import com.example.recycleview.old.util.RecyclerViewHolder;
 
 import java.util.List;
 

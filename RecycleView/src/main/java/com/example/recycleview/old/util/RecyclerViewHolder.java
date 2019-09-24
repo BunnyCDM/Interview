@@ -1,4 +1,4 @@
-package com.example.recycleview.util;
+package com.example.recycleview.old.util;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;

@@ -47,9 +47,9 @@ public class BannerActivity extends AppCompatActivity {
             @Override
             public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-                View view=new View(container.getContext());
+                View view = new View(container.getContext());
                 view.setBackgroundColor(mResIds[position]);
-                ViewGroup.LayoutParams lp=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
                 container.addView(view);
                 return view;
             }
@@ -61,7 +61,7 @@ public class BannerActivity extends AppCompatActivity {
             }
         });
 
-        mVpMain.setPageTransformer(true,new ScaleTransformer());
+        mVpMain.setPageTransformer(true, new ScaleTransformer());
 
 
     }

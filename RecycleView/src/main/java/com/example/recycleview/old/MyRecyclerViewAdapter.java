@@ -1,4 +1,4 @@
-package com.example.recycleview;
+package com.example.recycleview.old;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.recycleview.bean.IrDeviceType;
+import com.example.recycleview.R;
+import com.example.recycleview.old.bean.IrDeviceType;
 
 import java.util.List;
 
