@@ -1,7 +1,6 @@
 package com.example.viewpager.wechat;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -10,13 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.baselibrary.utils.log.AppLogger;
 import com.example.viewpager.R;
 import com.example.viewpager.wechat.fragment.TabFragment;
 import com.example.viewpager.wechat.view.TabView;
-import com.example.viewpager.wechat.view.transformer.ScaleTransformer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
