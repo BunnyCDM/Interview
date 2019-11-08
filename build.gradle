@@ -5,18 +5,19 @@ buildscript {
         jcenter()
 
         //google()，被以下替换，解决Gradle DSL method not found: 'google()'
-        maven { url 'https://maven.google.com' }//Multidex
+        maven { url 'https://maven.google.com' }
+        google()//Multidex
     }
     dependencies {
 
         //In your root build.gradle file
 
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.4.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
-        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
 
         //添加Dagger apt插件
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
@@ -30,7 +31,8 @@ allprojects {
         //google()，别以下替换，解决Gradle DSL method not found: 'google()'
         maven { url 'https://maven.google.com' }//Multidex
 
-        mavenCentral()//butterknife
+        mavenCentral()
+        google()//butterknife
 
     }
 }

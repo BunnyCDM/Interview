@@ -21,13 +21,15 @@
 
         <activity
             android:name=".A_Activity"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTop">
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="philn"/>
+
+                <data android:scheme="philn" />
             </intent-filter>
 
         </activity>

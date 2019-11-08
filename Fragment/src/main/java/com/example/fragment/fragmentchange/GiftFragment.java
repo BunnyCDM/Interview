@@ -21,7 +21,7 @@ public class GiftFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container
             , Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_gift,null);
+        View view = inflater.inflate(R.layout.fragment_gift, null);
         return view;
     }
 }
