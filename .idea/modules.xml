@@ -12,6 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/BottomTab/BottomTab.iml" filepath="$PROJECT_DIR$/BottomTab/BottomTab.iml" />
       <module fileurl="file://$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" filepath="$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/ButterKnife/ButterKnife.iml" filepath="$PROJECT_DIR$/ButterKnife/ButterKnife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CityPicker/CityPicker.iml" filepath="$PROJECT_DIR$/CityPicker/CityPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CitySelector/CitySelector.iml" filepath="$PROJECT_DIR$/CitySelector/CitySelector.iml" />
       <module fileurl="file://$PROJECT_DIR$/ConstraintLayout/ConstraintLayout.iml" filepath="$PROJECT_DIR$/ConstraintLayout/ConstraintLayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/ContentProvider/ContentProvider.iml" filepath="$PROJECT_DIR$/ContentProvider/ContentProvider.iml" />
       <module fileurl="file://$PROJECT_DIR$/CustomPullMenu/CustomPullMenu.iml" filepath="$PROJECT_DIR$/CustomPullMenu/CustomPullMenu.iml" />
