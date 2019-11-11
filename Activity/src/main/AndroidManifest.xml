@@ -27,21 +27,32 @@
             android:label=".A_Activity"
             android:launchMode="singleTop">
 
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.VIEW" />-->
+
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--<data android:scheme="philn" />-->
+            <!--</intent-filter>-->
+
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
+                <action android:name="android.intent.action.A_Activity" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="philn" />
             </intent-filter>
-
         </activity>
 
         <activity
             android:name="B_Activity"
             android:label=".B_Activity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop">
+
+            <intent-filter>
+                <action android:name="android.intent.action.B_Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
 
     </application>
 

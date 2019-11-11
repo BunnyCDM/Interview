@@ -11,6 +11,7 @@ import com.example.baselibrary.utils.log.AppLogger;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_Next;
+    private TextView tv_OneSelf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        tv_OneSelf = findViewById(R.id.tv_OneSelf);
+        tv_OneSelf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -39,15 +48,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        AppLogger.d("onStart[MainActivity]: ");
-    }
-
-    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         AppLogger.d("onNewIntent[MainActivity]: ");
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        AppLogger.d("onStart[MainActivity]: ");
     }
 
     @Override
@@ -73,4 +83,5 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         AppLogger.d("onDestroy[MainActivity]: ");
     }
+
 }

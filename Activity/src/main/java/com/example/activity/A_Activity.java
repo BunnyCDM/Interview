@@ -16,6 +16,7 @@ public class A_Activity extends AppCompatActivity {
 
 
     private TextView tv_Next;
+    private TextView tv_OneSelf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,14 @@ public class A_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        tv_OneSelf = findViewById(R.id.tv_OneSelf);
+        tv_OneSelf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(A_Activity.this, A_Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -54,15 +63,15 @@ public class A_Activity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        AppLogger.d("onStart[A_Activity]: ");
-    }
-
-    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         AppLogger.d("onNewIntent[A_Activity]: ");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        AppLogger.d("onStart[A_Activity]: ");
     }
 
     @Override
@@ -88,4 +97,5 @@ public class A_Activity extends AppCompatActivity {
         super.onDestroy();
         AppLogger.d("onDestroy[A_Activity]: ");
     }
+
 }
