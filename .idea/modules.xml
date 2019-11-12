@@ -22,6 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/Drawable/Drawable.iml" filepath="$PROJECT_DIR$/Drawable/Drawable.iml" />
       <module fileurl="file://$PROJECT_DIR$/FingerprintIdentification/FingerprintIdentification.iml" filepath="$PROJECT_DIR$/FingerprintIdentification/FingerprintIdentification.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fragment/Fragment.iml" filepath="$PROJECT_DIR$/Fragment/Fragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GenerateSignatureFile/GenerateSignatureFile.iml" filepath="$PROJECT_DIR$/GenerateSignatureFile/GenerateSignatureFile.iml" />
       <module fileurl="file://$PROJECT_DIR$/GestureVerify/GestureVerify.iml" filepath="$PROJECT_DIR$/GestureVerify/GestureVerify.iml" />
       <module fileurl="file://$PROJECT_DIR$/GreenDao/GreenDao.iml" filepath="$PROJECT_DIR$/GreenDao/GreenDao.iml" />
       <module fileurl="file://$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" filepath="$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" />
