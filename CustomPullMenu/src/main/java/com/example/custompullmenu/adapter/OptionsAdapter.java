@@ -10,9 +10,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.custompullmenu.R;
-import com.example.custompullmenu.business.AccountDao;
-import com.example.custompullmenu.business.HistoryInfo;
-import com.example.custompullmenu.ui.LoginActivity;
+import com.example.custompullmenu.db.AccountDao;
+import com.example.custompullmenu.db.AccountBean;
+import com.example.custompullmenu.LoginActivity;
 
 import java.util.ArrayList;
 
@@ -22,11 +22,11 @@ import java.util.ArrayList;
  */
 
 public class OptionsAdapter extends BaseAdapter {
-    private ArrayList<HistoryInfo> list = new ArrayList<HistoryInfo>();
+    private ArrayList<AccountBean> list = new ArrayList<AccountBean>();
     private LoginActivity activity = null;
     AccountDao dao;
 
-    public OptionsAdapter(Activity activity, ArrayList<HistoryInfo> list, AccountDao accountDao) {
+    public OptionsAdapter(Activity activity, ArrayList<AccountBean> list, AccountDao accountDao) {
         this.activity = (LoginActivity) activity;
         this.dao = accountDao;
         this.list = list;
@@ -63,16 +63,16 @@ public class OptionsAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        final HistoryInfo historyInfo = list.get(position);
-        holder.textView.setText(historyInfo.getPhone());
-        holder.nickName.setText(historyInfo.getName());
+        final AccountBean accountBean = list.get(position);
+        holder.textView.setText(accountBean.getPhone());
+        holder.nickName.setText(accountBean.getName());
 
         //为下拉框选项删除图标部分设置事件，最终效果是点击将该选项删除
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                list.remove(historyInfo);
-                dao.delete(historyInfo.getPhone());
+                list.remove(accountBean);
+                dao.delete(accountBean.getPhone());
                 activity.setVivi();
                 notifyDataSetChanged();
             }

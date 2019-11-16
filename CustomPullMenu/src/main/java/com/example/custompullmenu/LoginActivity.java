@@ -1,4 +1,4 @@
-package com.example.custompullmenu.ui;
+package com.example.custompullmenu;
 
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
@@ -18,10 +18,9 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.custompullmenu.R;
 import com.example.custompullmenu.adapter.OptionsAdapter;
-import com.example.custompullmenu.business.AccountDao;
-import com.example.custompullmenu.business.HistoryInfo;
+import com.example.custompullmenu.db.AccountDao;
+import com.example.custompullmenu.db.AccountBean;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,8 +38,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private AccountDao accountDao;
 
     //下拉框选项数据源
-    ArrayList<HistoryInfo> datas = new ArrayList<HistoryInfo>();
-    private List<HistoryInfo> historyList;
+    ArrayList<AccountBean> datas = new ArrayList<AccountBean>();
+    private List<AccountBean> historyList;
     private PopupWindow selectPopupWindow;
     private ListView listview;
     private OptionsAdapter optionsAdapter;
@@ -61,7 +60,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         pwdET = (EditText) findViewById(R.id.pwdET);  //密码
         loginBtn = (Button) findViewById(R.id.loginBtn); //登录按钮
 
-        accountDao = new AccountDao(this);
+        accountDao = new AccountDao();
     }
 
     private void initListener() {
@@ -122,10 +121,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      */
     private void initAddNum() {
         datas.clear();
-        historyList = (List<HistoryInfo>) accountDao.queryAll();
-        Comparator<HistoryInfo> comparator = new Comparator<HistoryInfo>() {
+        historyList = (List<AccountBean>) accountDao.queryAll();
+        Comparator<AccountBean> comparator = new Comparator<AccountBean>() {
             @Override
-            public int compare(HistoryInfo t1, HistoryInfo t2) {
+            public int compare(AccountBean t1, AccountBean t2) {
                 if (Long.parseLong(t1.getTime() + "") < Long.parseLong(t2.getTime() + "")) {
                     return 1;
                 }
@@ -158,8 +157,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(LoginActivity.this, "账号或者密码不能为空", Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    HistoryInfo historyInfo = new HistoryInfo(userET.getText().toString(), "Tom", new Date().getTime());
-                    accountDao.insert(historyInfo);
+                    AccountBean accountBean = new AccountBean(userET.getText().toString(), "Tom", new Date().getTime());
+                    accountDao.insert(accountBean);
                     startActivity(new Intent(LoginActivity.this, new SecondActivity().getClass()));
                 }
                 break;

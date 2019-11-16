@@ -1,4 +1,4 @@
-package com.example.custompullmenu.business;
+package com.example.custompullmenu.db;
 
 import java.io.Serializable;
 
@@ -6,14 +6,16 @@ import java.io.Serializable;
  * 登录时存储数据
  */
 
-public class HistoryInfo implements Serializable {
+public class AccountBean implements Serializable {
+
     String phone;
-    String name ;
+    String name;
     Long time;
-    public HistoryInfo() {
+
+    public AccountBean() {
     }
 
-    public HistoryInfo(String phone, String name, Long time) {
+    public AccountBean(String phone, String name, Long time) {
         this.phone = phone;
         this.name = name;
         this.time = time;
@@ -34,7 +36,6 @@ public class HistoryInfo implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
 
 
     public Long getTime() {
