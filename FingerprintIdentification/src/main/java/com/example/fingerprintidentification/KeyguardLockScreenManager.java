@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-import com.example.fingerprintidentification.log.FPLog;
+import com.example.baselibrary.utils.log.AppLogger;
 
 
 /**
@@ -19,6 +19,7 @@ public class KeyguardLockScreenManager {
 
     /**
      * 是否开启锁屏密码，注意：有Api版本限制
+     *
      * @return
      */
     public boolean isOpenLockScreenPwd() {
@@ -41,7 +42,7 @@ public class KeyguardLockScreenManager {
         try {
             keyguardManager = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
         } catch (Throwable throwable) {
-            FPLog.log("getKeyguardManager exception");
+            AppLogger.d("getKeyguardManager exception");
         }
         return keyguardManager;
     }

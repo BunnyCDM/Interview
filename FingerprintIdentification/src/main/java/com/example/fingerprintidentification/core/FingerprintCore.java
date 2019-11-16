@@ -9,7 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.example.fingerprintidentification.log.FPLog;
+import com.example.baselibrary.utils.log.AppLogger;
 
 import java.lang.ref.WeakReference;
 
@@ -39,23 +39,31 @@ public class FingerprintCore {
      * 指纹识别回调接口
      */
     public interface IFingerprintResultListener {
-        /** 指纹识别成功 */
+        /**
+         * 指纹识别成功
+         */
         void onAuthenticateSuccess();
 
-        /** 指纹识别失败 */
+        /**
+         * 指纹识别失败
+         */
         void onAuthenticateFailed(int helpId);
 
-        /** 指纹识别发生错误-不可短暂恢复 */
+        /**
+         * 指纹识别发生错误-不可短暂恢复
+         */
         void onAuthenticateError(int errMsgId);
 
-        /** 开始指纹识别监听成功 */
+        /**
+         * 开始指纹识别监听成功
+         */
         void onStartAuthenticateResult(boolean isSuccess);
     }
 
     public FingerprintCore(Context context) {
         mFingerprintManager = getFingerprintManager(context);
         isSupport = (mFingerprintManager != null && isHardwareDetected());
-        FPLog.log("fingerprint isSupport: " + isSupport);
+        AppLogger.d("fingerprint isSupport: " + isSupport);
         initCryptoObject();
     }
 
@@ -69,7 +77,7 @@ public class FingerprintCore {
                 }
             });
         } catch (Throwable throwable) {
-            FPLog.log("create cryptoObject failed!");
+            AppLogger.d("create cryptoObject failed!");
         }
     }
 
@@ -107,12 +115,12 @@ public class FingerprintCore {
 
     private void notifyStartAuthenticateResult(boolean isSuccess, String exceptionMsg) {
         if (isSuccess) {
-            FPLog.log("start authenticate...");
+            AppLogger.d("start authenticate...");
             if (mFpResultListener.get() != null) {
                 mFpResultListener.get().onStartAuthenticateResult(true);
             }
         } else {
-            FPLog.log("startListening, Exception" + exceptionMsg);
+            AppLogger.d("startListening, Exception" + exceptionMsg);
             if (mFpResultListener.get() != null) {
                 mFpResultListener.get().onStartAuthenticateResult(false);
             }
@@ -120,7 +128,7 @@ public class FingerprintCore {
     }
 
     private void notifyAuthenticationSucceeded() {
-        FPLog.log("onAuthenticationSucceeded");
+        AppLogger.d("onAuthenticationSucceeded");
         mFailedTimes = 0;
         if (null != mFpResultListener && null != mFpResultListener.get()) {
             mFpResultListener.get().onAuthenticateSuccess();
@@ -128,14 +136,14 @@ public class FingerprintCore {
     }
 
     private void notifyAuthenticationError(int errMsgId, CharSequence errString) {
-        FPLog.log("onAuthenticationError, errId:" + errMsgId + ", err:" + errString + ", retry after 30 seconds");
+        AppLogger.d("onAuthenticationError, errId:" + errMsgId + ", err:" + errString + ", retry after 30 seconds");
         if (null != mFpResultListener && null != mFpResultListener.get()) {
             mFpResultListener.get().onAuthenticateError(errMsgId);
         }
     }
 
     private void notifyAuthenticationFailed(int msgId, String errString) {
-        FPLog.log("onAuthenticationFailed, msdId: " +  msgId + " errString: " + errString);
+        AppLogger.d("onAuthenticationFailed, msdId: " + msgId + " errString: " + errString);
         if (null != mFpResultListener && null != mFpResultListener.get()) {
             mFpResultListener.get().onAuthenticateFailed(msgId);
         }
@@ -159,14 +167,14 @@ public class FingerprintCore {
                 public void onAuthenticationHelp(int helpMsgId, CharSequence helpString) {
                     mState = NONE;
                     // 建议根据参数helpString返回值，并且仅针对特定的机型做处理，并不能保证所有厂商返回的状态一致
-                    notifyAuthenticationFailed(helpMsgId , helpString.toString());
+                    notifyAuthenticationFailed(helpMsgId, helpString.toString());
                     onFailedRetry(helpMsgId, helpString.toString());
                 }
 
                 @Override
                 public void onAuthenticationFailed() {
                     mState = NONE;
-                    notifyAuthenticationFailed(0 , "onAuthenticationFailed");
+                    notifyAuthenticationFailed(0, "onAuthenticationFailed");
                     onFailedRetry(-1, "onAuthenticationFailed");
                 }
 
@@ -181,7 +189,7 @@ public class FingerprintCore {
 
     public void cancelAuthenticate() {
         if (mCancellationSignal != null && mState != CANCEL) {
-            FPLog.log("cancelAuthenticate...");
+            AppLogger.d("cancelAuthenticate...");
             mState = CANCEL;
             mCancellationSignal.cancel();
             mCancellationSignal = null;
@@ -190,12 +198,12 @@ public class FingerprintCore {
 
     private void onFailedRetry(int msgId, String helpString) {
         mFailedTimes++;
-        FPLog.log("on failed retry time " + mFailedTimes);
+        AppLogger.d("on failed retry time " + mFailedTimes);
         if (mFailedTimes > 5) { // 每个验证流程最多重试5次，这个根据使用场景而定，验证成功时清0
-            FPLog.log("on failed retry time more than 5 times");
+            AppLogger.d("on failed retry time more than 5 times");
             return;
         }
-        FPLog.log("onFailedRetry: msgId " + msgId + " helpString: " + helpString);
+        AppLogger.d("onFailedRetry: msgId " + msgId + " helpString: " + helpString);
         cancelAuthenticate();
         mHandler.removeCallbacks(mFailedRetryRunnable);
         mHandler.postDelayed(mFailedRetryRunnable, 300); // 每次重试间隔一会儿再启动
@@ -214,18 +222,21 @@ public class FingerprintCore {
 
     /**
      * 时候有指纹识别硬件支持
+     *
      * @return
      */
     public boolean isHardwareDetected() {
         try {
             return mFingerprintManager.isHardwareDetected();
         } catch (SecurityException e) {
-        } catch (Throwable e) {}
+        } catch (Throwable e) {
+        }
         return false;
     }
 
     /**
      * 是否录入指纹，有些设备上即使录入了指纹，但是没有开启锁屏密码的话此方法还是返回false
+     *
      * @return
      */
     public boolean isHasEnrolledFingerprints() {
@@ -243,7 +254,7 @@ public class FingerprintCore {
         try {
             fingerprintManager = (FingerprintManager) context.getSystemService(Context.FINGERPRINT_SERVICE);
         } catch (Throwable e) {
-            FPLog.log("have not class FingerprintManager");
+            AppLogger.d("have not class FingerprintManager");
         }
         return fingerprintManager;
     }
