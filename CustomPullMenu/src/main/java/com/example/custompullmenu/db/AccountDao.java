@@ -32,7 +32,7 @@ public class AccountDao {
         }
         cursor.close();
         ContentValues values = new ContentValues();
-        values.put(AccountTable.ID, info.getPhone());
+        values.put(AccountTable.PHONE, info.getPhone());
         values.put(AccountTable.NAME, info.getName());
         values.put(AccountTable.TIME, info.getTime());
         if (!TextUtils.isEmpty(phone)) {
