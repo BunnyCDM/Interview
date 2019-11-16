@@ -64,6 +64,8 @@ public class AccountDao {
             accountBean.setTime(cursor.getLong(AccountTable.ID_TIME));
             list.add(accountBean);
         }
+
+        // TODO: 2019-11-16 关闭数据库需要你注意哈 
         //db.close();
         //DatabaseHelper.closeSQLiteDatabase();
         cursor.close();
