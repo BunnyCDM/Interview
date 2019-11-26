@@ -43,5 +43,5 @@ dependencies {
 
     implementation project(path: ':BaseLibrary')
 
-    compile(name: 'Generate_Library-debug', ext: 'aar')
+    implementation(name: 'Generate_Library-debug', ext: 'aar')
 }

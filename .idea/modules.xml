@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ACache/ACache.iml" filepath="$PROJECT_DIR$/ACache/ACache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AIDL-Client/AIDL-Client.iml" filepath="$PROJECT_DIR$/AIDL-Client/AIDL-Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AIDL-Service/AIDL-Service.iml" filepath="$PROJECT_DIR$/AIDL-Service/AIDL-Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/ARouter/ARouter.iml" filepath="$PROJECT_DIR$/ARouter/ARouter.iml" />
       <module fileurl="file://$PROJECT_DIR$/ActionBar/ActionBar.iml" filepath="$PROJECT_DIR$/ActionBar/ActionBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/Activity/Activity.iml" filepath="$PROJECT_DIR$/Activity/Activity.iml" />
