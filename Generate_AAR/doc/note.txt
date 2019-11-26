@@ -1,0 +1,5 @@
+http://blog.csdn.net/justinnick/article/details/52421234
+
+https://jingyan.baidu.com/article/2a13832890d08f074a134ff0.html
+
+注意：打出来的aar包含所有资源，class以及res资源文件全部包含

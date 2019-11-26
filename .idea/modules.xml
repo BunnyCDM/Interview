@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" filepath="$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" />
       <module fileurl="file://$PROJECT_DIR$/AsyncTask/AsyncTask.iml" filepath="$PROJECT_DIR$/AsyncTask/AsyncTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BottomTab/BottomTab.iml" filepath="$PROJECT_DIR$/BottomTab/BottomTab.iml" />
       <module fileurl="file://$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" filepath="$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/ButterKnife/ButterKnife.iml" filepath="$PROJECT_DIR$/ButterKnife/ButterKnife.iml" />
       <module fileurl="file://$PROJECT_DIR$/CityPicker/CityPicker.iml" filepath="$PROJECT_DIR$/CityPicker/CityPicker.iml" />
@@ -23,11 +22,13 @@
       <module fileurl="file://$PROJECT_DIR$/FingerprintIdentification/FingerprintIdentification.iml" filepath="$PROJECT_DIR$/FingerprintIdentification/FingerprintIdentification.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fragment/Fragment.iml" filepath="$PROJECT_DIR$/Fragment/Fragment.iml" />
       <module fileurl="file://$PROJECT_DIR$/GenerateSignatureFile/GenerateSignatureFile.iml" filepath="$PROJECT_DIR$/GenerateSignatureFile/GenerateSignatureFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generate_AAR/Generate_AAR.iml" filepath="$PROJECT_DIR$/Generate_AAR/Generate_AAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generate_JAR/Generate_JAR.iml" filepath="$PROJECT_DIR$/Generate_JAR/Generate_JAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generate_Library/Generate_Library.iml" filepath="$PROJECT_DIR$/Generate_Library/Generate_Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/GestureVerify/GestureVerify.iml" filepath="$PROJECT_DIR$/GestureVerify/GestureVerify.iml" />
       <module fileurl="file://$PROJECT_DIR$/GreenDao/GreenDao.iml" filepath="$PROJECT_DIR$/GreenDao/GreenDao.iml" />
       <module fileurl="file://$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" filepath="$PROJECT_DIR$/GreenDaoGenerate/GreenDaoGenerate.iml" />
       <module fileurl="file://$PROJECT_DIR$/GridView/GridView.iml" filepath="$PROJECT_DIR$/GridView/GridView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GuidePage/GuidePage.iml" filepath="$PROJECT_DIR$/GuidePage/GuidePage.iml" />
       <module fileurl="file://$PROJECT_DIR$/Handler/Handler.iml" filepath="$PROJECT_DIR$/Handler/Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Iconify/Iconify.iml" filepath="$PROJECT_DIR$/Iconify/Iconify.iml" />
       <module fileurl="file://$PROJECT_DIR$/Intent/Intent.iml" filepath="$PROJECT_DIR$/Intent/Intent.iml" />
@@ -45,7 +46,6 @@
       <module fileurl="file://$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/Service/Service.iml" filepath="$PROJECT_DIR$/Service/Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" filepath="$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Sign/Sign.iml" filepath="$PROJECT_DIR$/Sign/Sign.iml" />
       <module fileurl="file://$PROJECT_DIR$/Socket/Socket.iml" filepath="$PROJECT_DIR$/Socket/Socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/SparseArray/SparseArray.iml" filepath="$PROJECT_DIR$/SparseArray/SparseArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwipeRefreshLayout/SwipeRefreshLayout.iml" filepath="$PROJECT_DIR$/SwipeRefreshLayout/SwipeRefreshLayout.iml" />
