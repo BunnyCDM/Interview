@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/Dagger/Dagger.iml" filepath="$PROJECT_DIR$/Dagger/Dagger.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/Drawable/Drawable.iml" filepath="$PROJECT_DIR$/Drawable/Drawable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EventBus/EventBus.iml" filepath="$PROJECT_DIR$/EventBus/EventBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/FingerprintIdentification/FingerprintIdentification.iml" filepath="$PROJECT_DIR$/FingerprintIdentification/FingerprintIdentification.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fragment/Fragment.iml" filepath="$PROJECT_DIR$/Fragment/Fragment.iml" />
       <module fileurl="file://$PROJECT_DIR$/GenerateSignatureFile/GenerateSignatureFile.iml" filepath="$PROJECT_DIR$/GenerateSignatureFile/GenerateSignatureFile.iml" />
@@ -45,6 +46,7 @@
       <module fileurl="file://$PROJECT_DIR$/RadioButton/RadioButton.iml" filepath="$PROJECT_DIR$/RadioButton/RadioButton.iml" />
       <module fileurl="file://$PROJECT_DIR$/RecycleView/RecycleView.iml" filepath="$PROJECT_DIR$/RecycleView/RecycleView.iml" />
       <module fileurl="file://$PROJECT_DIR$/RecyclerViewLibrary/RecyclerViewLibrary.iml" filepath="$PROJECT_DIR$/RecyclerViewLibrary/RecyclerViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RxBus/RxBus.iml" filepath="$PROJECT_DIR$/RxBus/RxBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/Service/Service.iml" filepath="$PROJECT_DIR$/Service/Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" filepath="$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" />
