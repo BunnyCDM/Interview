@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.example.jni"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // 使用Cmake工具
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                //生成多个版本的so文件
+                abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86', 'x86_64'
+            }
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            //方式一
+            //jniLibs.srcDirs 'src/main/jni'
+            //方式二
+            jniLibs.srcDirs = ['libs']
+            //方式三
+            //jniLibs.srcDirs = ['src/main/jni', 'libs']
+        }
+    }
+
+
+    // 配置CMakeLists.txt路径
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"  // 设置所要编写的c源码位置，以及编译后so文件的名字
+        }
+    }
+
+    packagingOptions {//加上这些代码
+        pickFirst 'lib/armeabi-v7a/libnative-lib.so'
+        pickFirst 'lib/armeabi-v8a/libnative-lib.so'
+        pickFirst 'lib/arm64-v8a/libnative-lib.so'
+        pickFirst 'lib/x86/libnative-lib.so'
+        pickFirst 'lib/x86_64/libnative-lib.so'
+        pickFirst 'lib/x86/libnative-lib.so'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

@@ -36,6 +36,7 @@
       <module fileurl="file://$PROJECT_DIR$/Iconify/Iconify.iml" filepath="$PROJECT_DIR$/Iconify/Iconify.iml" />
       <module fileurl="file://$PROJECT_DIR$/Intent/Intent.iml" filepath="$PROJECT_DIR$/Intent/Intent.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interview.iml" filepath="$PROJECT_DIR$/Interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JNI/JNI.iml" filepath="$PROJECT_DIR$/JNI/JNI.iml" />
       <module fileurl="file://$PROJECT_DIR$/Layout/Layout.iml" filepath="$PROJECT_DIR$/Layout/Layout.iml" />
       <module fileurl="file://$PROJECT_DIR$/ListView/ListView.iml" filepath="$PROJECT_DIR$/ListView/ListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/Menu/Menu.iml" filepath="$PROJECT_DIR$/Menu/Menu.iml" />
