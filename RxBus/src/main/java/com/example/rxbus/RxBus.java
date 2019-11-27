@@ -13,7 +13,8 @@ import rx.subjects.Subject;
  */
 public class RxBus {
 
-    private static volatile RxBus mInstance;
+    //采用单例模式，保证唯一
+    private static volatile RxBus instance;
     private final Subject bus;
 
 
@@ -27,13 +28,13 @@ public class RxBus {
      * @return
      */
     public static RxBus getInstance() {
-        RxBus rxBus = mInstance;
-        if (mInstance == null) {
+        RxBus rxBus = instance;
+        if (instance == null) {
             synchronized (RxBus.class) {
-                rxBus = mInstance;
-                if (mInstance == null) {
+                rxBus = instance;
+                if (instance == null) {
                     rxBus = new RxBus();
-                    mInstance = rxBus;
+                    instance = rxBus;
                 }
             }
         }

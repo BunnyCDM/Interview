@@ -1,11 +1,13 @@
 package com.example.rxbus;
 
 import android.os.Bundle;
+import android.support.annotation.MainThread;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
 import com.example.baselibrary.utils.log.AppLogger;
+import com.hwangjr.rxbus.annotation.Subscribe;
 
 import rx.Subscriber;
 import rx.Subscription;
@@ -36,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     public void do_send(View view) {
         RxBus.getInstance().post(new StudentEvent("007", "小明"));//发送事件
     }
-
 
     private void rxBusObservers1() {
         /**

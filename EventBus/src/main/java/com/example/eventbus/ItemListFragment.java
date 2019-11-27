@@ -67,17 +67,21 @@ public class ItemListFragment extends ListFragment {
         EventBus.getDefault().post(getListView().getItemAtPosition(0));
     }
 
+    public void onEvent() {
+    }
+
+    public void onEventBackgroundThread() {
+    }
+
+    public void onEventAsync() {
+    }
+
     /**
      * 代表这个方法会在当前发布事件的线程执行
      */
     public void onEventPostThread() {
     }
 
-    public void BackgroundThread() {
-    }
-
-    public void Async() {
-    }
 
     @Override
     public void onDestroy() {
