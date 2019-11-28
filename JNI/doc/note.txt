@@ -1,0 +1,5 @@
+1.http://blog.csdn.net/cheng2290/article/details/77717164 (编译C生成.so文件 3.0之前方式)
+2.https://blog.csdn.net/zuoyioo7/article/details/81235796 (编译C生成.so文件 3.0之后方式)
+
+（静态注册、动态注册使用JNI的方法，以及加载第三方so文件的方法）
+3.https://www.cnblogs.com/aliflycoris/p/5507236.html
