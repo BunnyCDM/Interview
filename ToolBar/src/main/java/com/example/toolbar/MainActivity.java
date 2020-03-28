@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
 //                .hideBar(BarHide.FLAG_HIDE_BAR)  //隐藏状态栏或导航栏或两者，不写默认不隐藏
 //                .init();
 
-        method_1();
+//        method_1();
 
 //        method_2();
 
-//        method_3();
+        method_3();
 
     }
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void method_3() {
         TopBar topBar = (TopBar) findViewById(R.id.toolbar);
-        topBar.setOnClickListener(new TopBar.topbarClickListener() {
+        topBar.setOnTopbarClickListener(new TopBar.topbarClickListener() {
             @Override
             public void leftClick() {
                 Toast.makeText(MainActivity.this, "left", Toast.LENGTH_SHORT).show();

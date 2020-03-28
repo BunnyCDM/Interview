@@ -81,12 +81,12 @@ public class TopBar extends RelativeLayout {
         tvTitle.setGravity(Gravity.CENTER);
 
 
-        setBackgroundColor(0Xfff59563);//viewgroup的背景颜色
+        setBackgroundColor(0XFFF59563);//viewGroup的背景颜色
 
         leftParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);//宽高
         leftParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT, TRUE);//左对齐
 
-        addView(leftButton, leftParams);// leftButton以leftParams添加viewgroup
+        addView(leftButton, leftParams);// leftButton以leftParams添加viewGroup
 
         rightParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         rightParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, TRUE);
@@ -125,7 +125,7 @@ public class TopBar extends RelativeLayout {
         public void rightClick();
     }
 
-    public void setOnClickListener(topbarClickListener listener) {
+    public void setOnTopbarClickListener(topbarClickListener listener) {
         this.listener = listener;
     }
 
