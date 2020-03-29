@@ -3,6 +3,10 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.example.framemodel.mvvm.MVVMViewModel" />
+
     </data>
 
     <LinearLayout
@@ -11,6 +15,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:text="@={viewModel.userInput}"
             android:id="@+id/et_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,6 +23,7 @@
             android:hint="请输入要查询的账号" />
 
         <Button
+            android:onClick="@{viewModel.getData}"
             android:id="@+id/btn_getAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,11 +33,12 @@
 
         <TextView
             android:id="@+id/tv_result"
+            android:text="@{viewModel.result}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="80dp"
+            android:gravity="center"
             android:hint="账号信息暂未获取" />
     </LinearLayout>
 </layout>
