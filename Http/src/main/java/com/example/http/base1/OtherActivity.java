@@ -10,11 +10,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.HttpURLConnection;
-
 
 /**
- * Android中的Http通信
+ * Android中的Http通信，cardproject1-master所在Github文件下
+ * <p>
+ * 随着Okhttp等框架的横空出世，最原生的网络请求HttpURLConnection已经退出历史舞台
+ * <p>
+ * URLConnection和HttpURLConnection使用的都是java.net中的类，属于标准的java接口
+ * HttpURLConnection继承自URLConnection,差别在与HttpURLConnection仅仅针对Http连接，https用HttpsURLConnection
+ * <p>
+ * OkGo基于Http协议，封装了OkHttp的网络请求框架，支持自定义缓存，支持批量断点下载管理和批量上传管理功能
+ * <p>
+ * okhttp-OkGo的使用，完美支持RxJava
  */
 public class OtherActivity extends AppCompatActivity {
 
@@ -30,6 +37,7 @@ public class OtherActivity extends AppCompatActivity {
         //URLConnection
         //HttpURLConnection
 
+        //OkGo okhttp3、
         //okhttp
         //okio
         createJson_01();
@@ -64,15 +72,15 @@ public class OtherActivity extends AppCompatActivity {
 
 
     private void createJson_03() {
-        String jsonStr="{\"name\": \"http在安卓中的应用\",\"author\": \"Nick\"}";
+        String jsonStr = "{\"name\": \"http在安卓中的应用\",\"author\": \"Nick\"}";
 
         mTextView.setText(jsonStr);
     }
 
     private void createJson_04() {
-        String name="http在安卓中的应用";
-        String author="Nick";
-        String jsonStr="{\"name\": "+"\""+name+"\""+"}";
+        String name = "http在安卓中的应用";
+        String author = "Nick";
+        String jsonStr = "{\"name\": " + "\"" + name + "\"" + "}";
 
         mTextView.setText(jsonStr);
     }

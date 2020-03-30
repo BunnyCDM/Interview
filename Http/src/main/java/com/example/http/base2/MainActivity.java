@@ -35,9 +35,8 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
- * okhttp的使用
+ * Android网络框架-OkHttp使用，okhttp所在Github文件下，其中也包括服务端代码
  * github地址：https://github.com/square/okhttp
- * Android网络框架-OkHttp使用
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -146,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Request.Builder builder = new Request.Builder();
         Request request = builder.post(requestBody).url(BASE_URL + "login").build();
-
         execute(request);
     }
 
