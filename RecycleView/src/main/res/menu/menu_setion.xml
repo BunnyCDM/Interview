@@ -3,17 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <!--为了让其item可以显示在上面使用app:showAsAction代替android:showAsAction-->
     <item
-        android:id="@+id/action_about"
-        android:orderInCategory="999"
-        android:showAsAction="never"
-        android:title="About"
+        android:id="@+id/action_add"
+        android:icon="@mipmap/rt_add"
+        android:orderInCategory="500"
+        android:title="add"
+        app:showAsAction="ifRoom"
         tools:ignore="AppCompatResource" />
 
     <item
-        android:id="@+id/action_clear_cache"
+        android:id="@+id/action_del"
+        android:orderInCategory="600"
+        android:title="del"
+        app:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/action_listview"
+        android:orderInCategory="10"
+        android:showAsAction="never"
+        android:title="ListView"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/action_gridview"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="Clear Cache"
+        android:title="GridView"
         tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/action_hor_gridview"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="hor_gridview"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/action_staggered"
+        android:orderInCategory="300"
+        android:showAsAction="never"
+        android:title="StaggeredGridView"
+        tools:ignore="AppCompatResource" />
+
 </menu>

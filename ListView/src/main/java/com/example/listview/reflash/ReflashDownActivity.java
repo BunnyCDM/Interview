@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 
-import com.example.listview.MyAdapterWithCommonViewHolder_2;
+import com.example.listview.demo1.MyAdapterWithCommonViewHolder_2;
 import com.example.listview.R;
-import com.example.listview.bean.Bean;
+import com.example.listview.demo1.bean.Bean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +60,6 @@ public class ReflashDownActivity extends Activity implements ReFlashListView.IRe
 
     @Override
     public void onReflash() {
-
         Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override

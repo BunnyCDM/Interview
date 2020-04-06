@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".demo.NewActivity">
+        <activity android:name=".demo22.MainDemo22Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,14 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".demo.LinearLayoutActivity" />
+        <activity android:name=".demo1.StaggeredGridLayoutActivity" />
 
-        <activity android:name=".demo.EndlessLinearLayoutActivity"/>
-        <activity android:name=".demo.SwipeRefreshLayoutActivity"/>
-        <activity android:name=".demo.PartialRefreshActivity"/>
-        <activity android:name=".demo.ExpandableRecyclerViewOneActivity"/>
-        <activity android:name=".demo.ClickLoadingFootActivity"/>
-        <activity android:name=".demo.AlphaChangeActivity"/>
     </application>
 
 </manifest>

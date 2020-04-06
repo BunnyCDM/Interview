@@ -23,6 +23,8 @@ import java.util.Date;
  */
 public class ReFlashListView extends ListView implements AbsListView.OnScrollListener {
 
+    private View headerView;//顶部布局文件
+    private int headerHeight;//顶部布局文件的高的
 
     public ReFlashListView(Context context) {
         super(context);
@@ -30,7 +32,8 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
 
     public ReFlashListView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initView(context);
+        initHeaderView(context);
+        this.setOnScrollListener(this);
     }
 
     public ReFlashListView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -41,27 +44,22 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    View header;//顶部布局文件
-    int headerHeight;//顶部布局文件的高的
 
     /**
      * 初始化界面，添加顶部布局文件到listview
      *
      * @param context
      */
-    private void initView(Context context) {
+    private void initHeaderView(Context context) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        header = inflater.inflate(R.layout.header_layout, null);
+        headerView = inflater.inflate(R.layout.layout_header, null);
 
-        measureView(header);
+        measureView(headerView);
 
-        headerHeight = header.getMeasuredHeight();
+        headerHeight = headerView.getMeasuredHeight();
         topPadding(-headerHeight);
 
-        this.addHeaderView(header);//添加都布局
-
-        this.setOnScrollListener(this);
-
+        this.addHeaderView(headerView);//添加都布局
     }
 
     /**
@@ -93,7 +91,7 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
      * @param topPadding
      */
     private void topPadding(int topPadding) {
-        header.setPadding(header.getPaddingLeft(), topPadding, header.getPaddingRight(), header.getPaddingBottom());
+        headerView.setPadding(headerView.getPaddingLeft(), topPadding, headerView.getPaddingRight(), headerView.getPaddingBottom());
     }
 
     @Override
@@ -202,10 +200,9 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
 
     //根据当前状态显示布局
     private void reflashViewByStatus() {
-
-        TextView tip = (TextView) header.findViewById(R.id.tip);
-        ImageView arrow = (ImageView) header.findViewById(R.id.arrow);
-        ProgressBar progress = (ProgressBar) header.findViewById(R.id.progress);
+        TextView tip = (TextView) headerView.findViewById(R.id.tip);
+        ImageView arrow = (ImageView) headerView.findViewById(R.id.arrow);
+        ProgressBar progress = (ProgressBar) headerView.findViewById(R.id.progress);
 
 
         RotateAnimation animation = new RotateAnimation(0, 180, RotateAnimation.RELATIVE_TO_SELF
@@ -257,7 +254,7 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
         isRemark = false;
         reflashViewByStatus();
 
-        TextView lastT = (TextView) header.findViewById(R.id.lastupdate_time);
+        TextView lastT = (TextView) headerView.findViewById(R.id.lastupdate_time);
         SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日hh:mm:ss");
         Date date = new Date(System.currentTimeMillis());
         String time = format.format(date);
