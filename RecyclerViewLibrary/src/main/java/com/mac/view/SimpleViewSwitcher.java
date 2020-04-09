@@ -7,26 +7,22 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 /**
- * Created by mac on 2019-09-14.
+ * Created by mac on 2020-04-07.
  */
 public class SimpleViewSwitcher extends ViewGroup {
-
 
     public SimpleViewSwitcher(Context context) {
         super(context);
     }
 
     public SimpleViewSwitcher(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
 
-    public SimpleViewSwitcher(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    public SimpleViewSwitcher(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
     }
 
-    public SimpleViewSwitcher(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
@@ -57,6 +53,8 @@ public class SimpleViewSwitcher extends ViewGroup {
         }
         setMeasuredDimension(maxWidth, maxHeight);
     }
+
+
 
     public void setView(View view) {
         if (this.getChildCount() != 0) {

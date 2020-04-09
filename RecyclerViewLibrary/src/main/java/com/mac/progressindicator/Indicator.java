@@ -9,54 +9,15 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by mac on 2019-09-16.
+ * Created by Jack Wang on 2016/8/5.
  */
-public abstract class Indicator extends Drawable implements Animatable {
 
-//
-//    @Override
-//    public void draw(@NonNull Canvas canvas) {
-//
-//    }
-//
-//    @Override
-//    public void setAlpha(int i) {
-//
-//    }
-//
-//    @Override
-//    public void setColorFilter(@Nullable ColorFilter colorFilter) {
-//
-//    }
-//
-//    @Override
-//    public int getOpacity() {
-//        return 0;
-//    }
-//
-//
-//
-//    @Override
-//    public void start() {
-//
-//    }
-//
-//    @Override
-//    public void stop() {
-//
-//    }
-//
-//    @Override
-//    public boolean isRunning() {
-//        return false;
-//    }
+public abstract class Indicator extends Drawable implements Animatable {
 
     private HashMap<ValueAnimator, ValueAnimator.AnimatorUpdateListener> mUpdateListeners = new HashMap<>();
 
@@ -237,4 +198,5 @@ public abstract class Indicator extends Drawable implements Animatable {
     public float exactCenterY() {
         return drawBounds.exactCenterY();
     }
+
 }

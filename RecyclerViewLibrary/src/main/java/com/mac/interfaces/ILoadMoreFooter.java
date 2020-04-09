@@ -3,32 +3,48 @@ package com.mac.interfaces;
 import android.view.View;
 
 /**
- * Created by mac on 2019-09-12.
+ * Created by mac on 2020-04-07.
+ * <p>
+ * 加载更多FooterView需要实现的接口
  */
 public interface ILoadMoreFooter {
 
-
     enum State {
-        Normal,//正常
-        ManualLoadMore,//手动点击加载
-        NoMore,//加载到最低了
-        Loading,//加载中
-        NetWorkError//网络异常
+        Normal/**正常*/
+        , ManualLoadMore/**手动点击加载*/
+        , NoMore/**加载到最底了*/
+        , Loading/**加载中..*/
+        , NetWorkError/**网络异常*/
     }
 
-    void onReset();//状态回调，回复初始设置
+    /**
+     * 状态回调，回复初始设置
+     */
+    void onReset();
 
-    void onLoading();//状态回调，加载中
+    /**
+     * 状态回调，加载中
+     */
+    void onLoading();
 
-    void onComplete();//状态回调，加载完成
+    /**
+     * 状态回调，加载完成
+     */
+    void onComplete();
 
-    void onNoMore();//状态回调，已全部加载完成
+    /**
+     * 状态回调，已全部加载完成
+     */
+    void onNoMore();
 
-    View getFootView();//加载更多的View
+    /**
+     * 加载更多的View
+     *
+     * @return
+     */
+    View getFootView();
 
     void setNetworkErrorViewClickListener(OnNetWorkErrorListener listener);
 
-    void setOnClickLoadMoreListener(OnLoadMoreListener listener);
-
-
+    void setOnClickLoadMoreListener(final OnLoadMoreListener listener);
 }

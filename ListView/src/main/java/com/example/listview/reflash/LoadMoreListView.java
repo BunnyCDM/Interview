@@ -157,6 +157,7 @@ public class LoadMoreListView extends ListView implements AbsListView.OnScrollLi
         noMoreComplete(null);
     }
 
+
     public void noMoreComplete(String msg) {
         if (TextUtils.isEmpty(msg)) {
             msg = "没有更多！";

@@ -1,7 +1,6 @@
 package com.mac.recyclerview;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.content.ContextCompat;
@@ -25,10 +24,9 @@ import com.mac.view.ArrowRefreshHeader;
 import com.mac.view.LoadingFooter;
 
 /**
- * Created by mac on 2019-09-12.
+ * Created by mac on 2020-04-07.
  */
 public class LRecyclerView extends RecyclerView {
-
     private int mTouchSlop;
     private boolean mPullRefreshEnabled = true;
     private boolean mLoadMoreEnabled = true;
@@ -53,7 +51,6 @@ public class LRecyclerView extends RecyclerView {
     private OnRefreshListener mRefreshListener;
     private OnLoadMoreListener mLoadMoreListener;
     private LScrollListener mLScrollListener;
-
 
     /**
      * 当前RecyclerView类型
@@ -100,20 +97,33 @@ public class LRecyclerView extends RecyclerView {
      */
     private int currentScrollState = 0;
 
+
     private boolean isNoMore = false;
     private boolean isCritical = false;
 
+
     public LRecyclerView(Context context) {
-        super(context);
+        this(context, null);
     }
 
-    public LRecyclerView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
+    public LRecyclerView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public LRecyclerView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
         init();
     }
 
-    public LRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
+    private void init() {
+        mTouchSlop = ViewConfiguration.get(getContext().getApplicationContext()).getScaledTouchSlop();
+        if (mPullRefreshEnabled) {
+            setRefreshHeader(new ArrowRefreshHeader(getContext().getApplicationContext()));
+        }
+
+        if (mLoadMoreEnabled) {
+            setLoadMoreFooter(new LoadingFooter(getContext().getApplicationContext()), false);
+        }
     }
 
     /**
@@ -368,22 +378,11 @@ public class LRecyclerView extends RecyclerView {
         refresh();
     }
 
-    private void init() {
-        mTouchSlop = ViewConfiguration.get(getContext().getApplicationContext()).getScaledTouchSlop();
-        if (mPullRefreshEnabled) {
-            setRefreshHeader(new ArrowRefreshHeader(getContext().getApplicationContext()));
-        }
-
-        if (mLoadMoreEnabled) {
-            setLoadMoreFooter(new LoadingFooter(getContext().getApplicationContext()), false);
-        }
-    }
-
     /**
      * 设置自定义的RefreshHeader
      * 注意：setRefreshHeader方法必须在setAdapter方法之前调用才能生效
      */
-    private void setRefreshHeader(IRefreshHeader refreshHeader) {
+    public void setRefreshHeader(IRefreshHeader refreshHeader) {
         if (isRegisterDataObserver) {
             throw new RuntimeException("setRefreshHeader must been invoked before setting the adapter.");
         }
@@ -396,7 +395,7 @@ public class LRecyclerView extends RecyclerView {
      * @param loadMoreFooter
      * @param isCustom       是否自定义footview
      */
-    private void setLoadMoreFooter(ILoadMoreFooter loadMoreFooter, boolean isCustom) {
+    public void setLoadMoreFooter(ILoadMoreFooter loadMoreFooter, boolean isCustom) {
         this.mILoadMoreFooter = loadMoreFooter;
         if (isCustom) {
             if (null != mLRecyclerViewAdapter && mLRecyclerViewAdapter.getFooterViewsCount() > 0) {
@@ -419,12 +418,11 @@ public class LRecyclerView extends RecyclerView {
                 mLRecyclerViewAdapter.addFooterView(mFootView);
             }
         }
-    }
 
+    }
 
     @Override
     public void setAdapter(Adapter adapter) {
-        //super.setAdapter(adapter);
         if (mLRecyclerViewAdapter != null && mDataObserver != null && isRegisterDataObserver) {
             mLRecyclerViewAdapter.getInnerAdapter().unregisterAdapterDataObserver(mDataObserver);
         }
@@ -557,8 +555,8 @@ public class LRecyclerView extends RecyclerView {
     }
 
     @Override
-    protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX,
-                                   int scrollRangeY, int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent) {
+    protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX, int scrollRangeY, int maxOverScrollX,
+                                   int maxOverScrollY, boolean isTouchEvent) {
         if (deltaY != 0 && isTouchEvent) {
             mIRefreshHeader.onMove(deltaY, sumOffSet);
         }
@@ -736,6 +734,7 @@ public class LRecyclerView extends RecyclerView {
         GridLayout
     }
 
+
     public void setLScrollListener(LScrollListener listener) {
         mLScrollListener = listener;
     }
@@ -750,6 +749,7 @@ public class LRecyclerView extends RecyclerView {
 
         void onScrollStateChanged(int state);
     }
+
 
     private class DataObserver extends RecyclerView.AdapterDataObserver {
         @Override

@@ -3,7 +3,6 @@ package com.mac.view;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -26,7 +25,7 @@ import com.mac.util.WeakHandler;
 import java.util.Date;
 
 /**
- * Created by mac on 2019-09-14.
+ * Created by mac on 2020-04-07.
  */
 public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
 
@@ -47,24 +46,19 @@ public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
 
     private WeakHandler mHandler = new WeakHandler();
 
-
     public ArrowRefreshHeader(Context context) {
         super(context);
-    }
-
-    public ArrowRefreshHeader(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
         initView();
     }
 
-    public ArrowRefreshHeader(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    /**
+     * @param context
+     * @param attrs
+     */
+    public ArrowRefreshHeader(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        initView();
     }
-
-    public ArrowRefreshHeader(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
-
 
     private void initView() {
         // 初始情况，设置下拉刷新view高度为0
@@ -258,7 +252,6 @@ public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
         }, 200);
     }
 
-
     @Override
     public View getHeaderView() {
         return this;
@@ -286,7 +279,6 @@ public class ArrowRefreshHeader extends LinearLayout implements IRefreshHeader {
     public int getType() {
         return TYPE_HEADER_NORMAL;
     }
-
 
     public void reset() {
         smoothScrollTo(0);

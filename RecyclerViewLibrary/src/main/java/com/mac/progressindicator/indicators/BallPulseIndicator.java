@@ -9,7 +9,7 @@ import com.mac.progressindicator.Indicator;
 import java.util.ArrayList;
 
 /**
- * Created by mac on 2019-09-16.
+ * Created by Jack on 2015/10/16.
  */
 public class BallPulseIndicator extends Indicator {
 
@@ -64,4 +64,3 @@ public class BallPulseIndicator extends Indicator {
 
 
 }
-

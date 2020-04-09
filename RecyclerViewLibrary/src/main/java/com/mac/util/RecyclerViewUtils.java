@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import com.mac.recyclerview.LRecyclerViewAdapter;
 
 /**
- * Created by mac on 2019-09-16.
+ * @author Lzx
+ * @created 2016/9/30 10:36
+ * <p>
  * RecyclerView设置Header/Footer所用到的工具类
  */
 public class RecyclerViewUtils {

@@ -9,7 +9,6 @@ import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -48,31 +47,8 @@ import static com.mac.recyclerview.ProgressStyle.SemiCircleSpin;
 import static com.mac.recyclerview.ProgressStyle.SquareSpin;
 import static com.mac.recyclerview.ProgressStyle.TriangleSkewSpin;
 
-/**
- * Created by mac on 2019-09-16.
- */
+
 public class AVLoadingIndicatorView extends View {
-
-    public AVLoadingIndicatorView(Context context) {
-        super(context);
-        init(context, null, 0, 0);
-    }
-
-    public AVLoadingIndicatorView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        init(context, attrs, 0, R.style.AVLoadingIndicatorView);
-    }
-
-    public AVLoadingIndicatorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init(context, attrs, defStyleAttr, R.style.AVLoadingIndicatorView);
-    }
-
-    public AVLoadingIndicatorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context, attrs, defStyleAttr, R.style.AVLoadingIndicatorView);
-    }
-
 
     private static final String TAG = "AVLoadingIndicatorView";
 
@@ -120,6 +96,27 @@ public class AVLoadingIndicatorView extends View {
     private int mIndicatorColor;
 
     private boolean mShouldStartAnimationDrawable;
+
+    public AVLoadingIndicatorView(Context context) {
+        super(context);
+        init(context, null, 0, 0);
+    }
+
+    public AVLoadingIndicatorView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context, attrs, 0, R.style.AVLoadingIndicatorView);
+    }
+
+    public AVLoadingIndicatorView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context, attrs, defStyleAttr, R.style.AVLoadingIndicatorView);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public AVLoadingIndicatorView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init(context, attrs, defStyleAttr, R.style.AVLoadingIndicatorView);
+    }
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         mMinWidth = 24;
@@ -547,5 +544,6 @@ public class AVLoadingIndicatorView extends View {
         }
         setIndicator(indicatorName);
     }
+
 
 }

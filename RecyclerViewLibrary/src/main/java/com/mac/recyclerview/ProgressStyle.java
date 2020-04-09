@@ -1,7 +1,7 @@
 package com.mac.recyclerview;
 
 /**
- * Created by mac on 2019-09-16.
+ * Created by mac on 2020-04-07.
  */
 public class ProgressStyle {
     public static final int SysProgress = -1;
@@ -33,4 +33,6 @@ public class ProgressStyle {
     public static final int Pacman = 25;
     public static final int BallGridBeat = 26;
     public static final int SemiCircleSpin = 27;
+
+
 }

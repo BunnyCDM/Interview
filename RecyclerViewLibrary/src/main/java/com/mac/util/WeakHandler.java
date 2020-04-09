@@ -12,8 +12,22 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by mac on 2019-09-14.
+ * Memory safer implementation of android.os.Handler
+ * <p/>
+ * Original implementation of Handlers always keeps hard reference to handler in queue of execution.
+ * If you create anonymous handler and post delayed message into it, it will keep all parent class
+ * for that time in memory even if it could be cleaned.
+ * <p/>
+ * This implementation is trickier, it will keep WeakReferences to runnables and messages,
+ * and GC could collect them once WeakHandler instance is not referenced any more
+ * <p/>
+ *
+ * @see Handler
+ * <p>
+ * Created by Dmytro Voronkevych on 17/06/2014.
+ * Optimized by Septenary on 8/15/2015
  */
+
 public class WeakHandler {
     private final Handler.Callback mCallback; // hard reference to Callback. We need to keep callback in memory
     private final ExecHandler mExec;

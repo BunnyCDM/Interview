@@ -20,7 +20,7 @@ import com.mac.recyclerview.ProgressStyle;
 import com.mac.recyclerview.R;
 
 /**
- * Created by mac on 2019-09-14.
+ * Created by mac on 2020-04-07.
  */
 public class LoadingFooter extends RelativeLayout implements ILoadMoreFooter {
 
@@ -43,6 +43,7 @@ public class LoadingFooter extends RelativeLayout implements ILoadMoreFooter {
 
     public LoadingFooter(Context context) {
         super(context);
+        init();
     }
 
     public LoadingFooter(Context context, AttributeSet attrs) {
@@ -52,14 +53,10 @@ public class LoadingFooter extends RelativeLayout implements ILoadMoreFooter {
 
     public LoadingFooter(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-    }
-
-    public LoadingFooter(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+        init();
     }
 
     private void init() {
-
         inflate(getContext(), R.layout.layout_recyclerview_footer, this);
         setOnClickListener(null);
 

@@ -3,37 +3,69 @@ package com.mac.interfaces;
 import android.view.View;
 
 /**
- * Created by mac on 2019-09-12.
+ * Created by mac on 2020-04-07.
  */
 public interface IRefreshHeader {
 
-    int STATE_NORMAL = 0;//正常状态
-    int STATE_RELEASE_TO_REFRESH = 1;//释放刷新
-    int STATE_REFRESHING = 2;//刷新中
-    int STATE_DONE = 3;//完成
+    int STATE_NORMAL=0;
+    int STATE_RELEASE_TO_REFRESH=1;
+    int STATE_REFRESHING = 2;
+    int STATE_DONE = 3;
 
     int TYPE_HEADER_NORMAL = 0;
     int TYPE_HEADER_MATERIAL = 1;
 
     void onReset();
 
-    void onPrepare();//处于可以刷新的状态，已经过了指定距离
+    /**
+     * 处于可以刷新的状态，已经过了指定距离
+     */
+    void onPrepare();
 
-    void onRefreshing();//正在刷新
+    /**
+     * 正在刷新
+     */
+    void onRefreshing();
 
-    void onMove(float offSet,float sunOffSet);//下拉移动
+    /**
+     * 下拉移动
+     * @param offSet
+     * @param sumOffSet
+     */
+    void onMove(float offSet,float sumOffSet);
 
-    boolean onRelease();//下拉松开
+    /**
+     * 下拉松开
+     * @return
+     */
+    boolean onRelease();
 
-    void refreshComplete();//下拉刷新完成
+    /**
+     * 下拉刷新完成
+     */
+    void refreshComplete();
 
-    View getHeaderView();//获取HeaderView
+    /**
+     * 获取HeaderView
+     * @return
+     */
+    View getHeaderView();
 
-    int getVisibleHeight();//获取Header的显示高度
+    /**
+     * 获取Header的显示高度
+     * @return
+     */
+    int getVisibleHeight();
 
-    int getVisibleWidth();//获取Header的显示宽度,横向滑动时使用
+    /**
+     * 获取Header的显示宽度,横向滑动时使用
+     */
+    int getVisibleWidth();
 
-    int getType();//获取Header的类型
-
+    /**
+     * 获取Header的类型
+     * @return
+     */
+    int getType();
 
 }

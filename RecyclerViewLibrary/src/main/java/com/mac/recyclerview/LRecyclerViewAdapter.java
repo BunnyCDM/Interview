@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by mac on 2019-09-14.
- * <p>
- * RecyclerView.Adapter with Header and Footer
+ * Created by mac on 2020-04-07.
  */
 public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -32,7 +30,6 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     private OnItemClickListener mOnItemClickListener;
     private OnItemLongClickListener mOnItemLongClickListener;
 
-
     /**
      * RecyclerView使用的，真正的Adapter
      */
@@ -43,6 +40,7 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     private SpanSizeLookup mSpanSizeLookup;
 
+
     public LRecyclerViewAdapter(RecyclerView.Adapter innerAdapter) {
         this.mInnerAdapter = innerAdapter;
     }
@@ -52,9 +50,8 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     }
 
     public void setRefreshHeader(IRefreshHeader refreshHeader) {
-        mRefreshHeader = refreshHeader;
+        this.mRefreshHeader = refreshHeader;
     }
-
 
     public void addHeaderView(View view) {
         if (view == null) {
@@ -65,16 +62,10 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
         mHeaderViews.add(view);
     }
 
-    /**
-     * 返回第一个FootView
-     *
-     * @return
-     */
     public void addFooterView(View view) {
         if (view == null) {
             throw new RuntimeException("footer is null");
         }
-
         removeFooterView();
         mFooterViews.add(view);
     }
@@ -100,11 +91,6 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
         return getFooterViewsCount() > 0 ? mFooterViews.get(0) : null;
     }
 
-    /**
-     * 返回第一个HeaderView
-     *
-     * @return
-     */
     public View getHeaderView() {
         return getHeaderViewsCount() > 0 ? mHeaderViews.get(0) : null;
     }
@@ -148,6 +134,7 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
         if (!isHeaderType(itemType)) {
             return null;
         }
+
         return mHeaderViews.get(itemType - HEADER_INIT_INDEX);
     }
 
@@ -157,28 +144,32 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
      * @param itemViewType
      * @return
      */
-    private boolean isHeaderType(int itemViewType) {
+    public boolean isHeaderType(int itemViewType) {
         return mHeaderViews.size() > 0 && mHeaderTypes.contains(itemViewType);
+
     }
 
     @NonNull
     @Override
+
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == TYPE_REFRESH_HEADER) {
-            ViewHolder viewHolder = new ViewHolder(mRefreshHeader.getHeaderView());
+            RecyclerView.ViewHolder viewHolder = new ViewHolder(mRefreshHeader.getHeaderView());
             return viewHolder;
         } else if (isHeaderType(viewType)) {
             ViewHolder viewHolder = new ViewHolder(getHeaderViewByType(viewType));
             return viewHolder;
+
         } else if (viewType == TYPE_FOOTER_VIEW) {
             ViewHolder viewHolder = new ViewHolder(mFooterViews.get(0));
             return viewHolder;
+        } else {
+            return mInnerAdapter.createViewHolder(parent, viewType);
         }
-        return mInnerAdapter.onCreateViewHolder(parent, viewType);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
         if (isHeader(position) || isRefreshHeader(position)) {
             return;
         }
@@ -213,7 +204,7 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position, @NonNull List<Object> payloads) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position, List<Object> payloads) {
         if (payloads.isEmpty()) {
             onBindViewHolder(holder, position);
         } else {
@@ -282,8 +273,8 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     }
 
     @Override
-    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
-        //super.onAttachedToRecyclerView(recyclerView);
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
         RecyclerView.LayoutManager manager = recyclerView.getLayoutManager();
         if (manager instanceof GridLayoutManager) {
             final GridLayoutManager gridManager = ((GridLayoutManager) manager);
@@ -305,13 +296,12 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     }
 
     @Override
-    public void onDetachedFromRecyclerView(@NonNull RecyclerView recyclerView) {
-        //super.onDetachedFromRecyclerView(recyclerView);
+    public void onDetachedFromRecyclerView(RecyclerView recyclerView) {
         mInnerAdapter.onDetachedFromRecyclerView(recyclerView);
     }
 
     @Override
-    public void onViewAttachedToWindow(@NonNull RecyclerView.ViewHolder holder) {
+    public void onViewAttachedToWindow(RecyclerView.ViewHolder holder) {
         super.onViewAttachedToWindow(holder);
         ViewGroup.LayoutParams lp = holder.itemView.getLayoutParams();
         if (lp != null && lp instanceof StaggeredGridLayoutManager.LayoutParams) {
@@ -325,13 +315,19 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     }
 
     @Override
-    public void onViewDetachedFromWindow(@NonNull RecyclerView.ViewHolder holder) {
-        //super.onViewDetachedFromWindow(holder);
+    public void onViewDetachedFromWindow(RecyclerView.ViewHolder holder) {
         mInnerAdapter.onViewDetachedFromWindow(holder);
     }
 
+    /*@Override
+    public void onViewRecycled(RecyclerView.ViewHolder holder) {
+        mInnerAdapter.onViewRecycled(holder);
+    }*/
+
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ViewHolder(View itemView) {
+
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
         }
     }
@@ -368,11 +364,12 @@ public class LRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
     }
 
     /**
-     * @param spanSizeLookup only used to GridLayoutManager
+     * only used to GridLayoutManager
+     *
+     * @param spanSizeLookup
      */
     public void setSpanSizeLookup(SpanSizeLookup spanSizeLookup) {
         this.mSpanSizeLookup = spanSizeLookup;
     }
-
 
 }

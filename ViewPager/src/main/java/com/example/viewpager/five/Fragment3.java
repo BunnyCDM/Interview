@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.baselibrary.utils.log.AppLogger;
 import com.example.viewpager.R;
 
 /**
@@ -18,6 +19,7 @@ public class Fragment3 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        AppLogger.d( "onCreateView: Fragment3");
         View view = inflater.inflate(R.layout.layout3_05, container, false);
         return view;
     }

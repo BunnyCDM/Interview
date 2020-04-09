@@ -24,7 +24,7 @@ import java.util.Date;
 public class ReFlashListView extends ListView implements AbsListView.OnScrollListener {
 
     private View headerView;//顶部布局文件
-    private int headerHeight;//顶部布局文件的高的
+    private int headerViewHeight;//顶部布局文件的高的
 
     public ReFlashListView(Context context) {
         super(context);
@@ -56,8 +56,8 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
 
         measureView(headerView);
 
-        headerHeight = headerView.getMeasuredHeight();
-        topPadding(-headerHeight);
+        headerViewHeight = headerView.getMeasuredHeight();
+        topPadding(-headerViewHeight);
 
         this.addHeaderView(headerView);//添加都布局
     }
@@ -125,7 +125,6 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
                 onMove(ev);
                 break;
 
-
             case MotionEvent.ACTION_UP:
                 if (state == RELESH) {
                     state = RELESHNG;
@@ -133,7 +132,6 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
                     reflashViewByStatus();
 
                     listener.onReflash();
-
 
                 } else if (state == PULL) {
                     state = NONE;
@@ -161,7 +159,7 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
         int tempY = (int) ev.getY();
         int space = tempY - startY;
 
-        int topPadding = space - headerHeight;
+        int topPadding = space - headerViewHeight;
         switch (state) {
             case NONE:
                 if (space > 0) {
@@ -172,7 +170,7 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
 
             case PULL:
                 topPadding(topPadding);
-                if (space > headerHeight + 30
+                if (space > headerViewHeight + 30
                         && scrollState == SCROLL_STATE_TOUCH_SCROLL) {
                     state = RELESH;
                     reflashViewByStatus();
@@ -181,7 +179,7 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
 
             case RELESH:
                 topPadding(topPadding);
-                if (space < headerHeight + 30) {
+                if (space < headerViewHeight + 30) {
                     state = PULL;
                     reflashViewByStatus();
                 } else if (space <= 0) {
@@ -217,7 +215,7 @@ public class ReFlashListView extends ListView implements AbsListView.OnScrollLis
 
             case NONE:
                 arrow.clearAnimation();
-                topPadding(-headerHeight);
+                topPadding(-headerViewHeight);
                 break;
 
             case PULL:

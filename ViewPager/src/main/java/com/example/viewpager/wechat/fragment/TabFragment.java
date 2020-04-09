@@ -93,7 +93,7 @@ public class TabFragment extends Fragment {
     }
 
     public void changeTitle(String title) {
-        if (!isAdded()) {
+        if (!isAdded()) { // 或者isResumed()
             return;
         }
         mTvTitle.setText(title);
