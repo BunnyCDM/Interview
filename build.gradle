@@ -31,6 +31,8 @@ allprojects {
         //google()，别以下替换，解决Gradle DSL method not found: 'google()'
         maven { url 'https://maven.google.com' }//Multidex
 
+        maven { url "https://jitpack.io" }//BaseRecyclerViewAdapterHelper
+
         mavenCentral()
         google()//butterknife
 

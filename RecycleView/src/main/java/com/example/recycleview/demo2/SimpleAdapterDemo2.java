@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.recycleview.R;
 
@@ -63,17 +62,33 @@ public class SimpleAdapterDemo2 extends RecyclerView.Adapter<RecyclerView.ViewHo
      */
     @Override
     public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, final int position) {
-        ((TypeAbstracViewHolder) holder).bindHolder(datas.get(position));
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return datas.get(position).type;
+        //方式一
+//        int viewType = getItemViewType(position);
+//        switch (viewType) {
+//            case DataModel.TYPE_ONE:
+//                ((TypeOneViewHolder)holder).bindHolder(datas.get(position));
+//                break;
+//
+//            case DataModel.TYPE_TWO:
+//                ((TypeTwoViewHolder)holder).bindHolder(datas.get(position));
+//                break;
+//
+//            case DataModel.TYPE_THREE:
+//                ((TypeThreeViewHolder)holder).bindHolder(datas.get(position));
+//                break;
+//        }
+        //方式二
+        ((TypeAbstractViewHolder) holder).bindHolder(datas.get(position));
     }
 
     @Override
     public int getItemCount() {
         return datas.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return datas.get(position).type;
     }
 
     public void addList(List<DataModel> list) {

@@ -2,7 +2,6 @@ package com.example.recycleview.demo2;
 
 import android.graphics.Color;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,7 +11,7 @@ import com.example.recycleview.R;
 /**
  * Created by mac on 2020-04-05.
  */
-public class TypeThreeViewHolder extends TypeAbstracViewHolder {
+public class TypeThreeViewHolder extends TypeAbstractViewHolder {
 
     public ImageView avatar;
     public TextView name;
@@ -32,7 +31,7 @@ public class TypeThreeViewHolder extends TypeAbstracViewHolder {
 
     @Override
     public void bindHolder(DataModel dataModel){
-        avatar.setBackgroundColor(dataModel.avatarColor);
+        avatar.setBackgroundResource(dataModel.avatarColor);
         name.setText(dataModel.name);
         content.setText(dataModel.content);
         contentImage.setBackgroundResource(dataModel.contentColor);

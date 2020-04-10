@@ -40,22 +40,23 @@ public class MainActivity extends AppCompatActivity {
 
         //1.通过findViewById拿到RecyclerView实例
         mRecyclerView = findViewById(R.id.mRecyclerView);
-        //2.初始化适配器
-        mSimpleAdapter = new SimpleAdapter(this, mDatas);
-        //3.设置适配器
-        mRecyclerView.setAdapter(mSimpleAdapter);
-
-        //4.设置RecyclerView的布局管理
+        //2.设置RecyclerView的布局管理
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(linearLayoutManager);
+        //3.初始化适配器
+        mSimpleAdapter = new SimpleAdapter(this, mDatas);
+        //4.设置适配器
+        mRecyclerView.setAdapter(mSimpleAdapter);
 
         //5.设置RecyclerView的item分割线,使用系统默认方式
-//        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,
-//                DividerItemDecoration.VERTICAL));
+//        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         //5.设置RecyclerView的item分割线,使用自定义方式
 //        mRecyclerView.addItemDecoration(new com.example.recycleview.demo1.DividerItemDecoration(this,
 //                LinearLayoutManager.VERTICAL));
+
+        //5.设置RecyclerView的item分割线,使用GridViewItem方式
+        mRecyclerView.addItemDecoration(new DividerGridViewItemDecoration(this));
 
         //6.动画效果，以下为默认动画，git上面有相应的动画效果.连接地址如下：
         // https://github.com/gabrielemariotti/RecyclerViewItemAnimators

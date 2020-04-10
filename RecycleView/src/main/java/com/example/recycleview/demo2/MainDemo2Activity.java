@@ -6,8 +6,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
+import com.example.baselibrary.utils.log.AppLogger;
 import com.example.recycleview.R;
 
 import java.util.ArrayList;
@@ -34,9 +36,9 @@ public class MainDemo2Activity extends AppCompatActivity {
         mDatas = new ArrayList<DataModel>();
         for (int i = 0; i < 30; i++) {
             int type = (int) ((Math.random() * 3) + 1);
-            if (i < 5 || (i > 15 && i < 20)) {
+            if (i <= 10) {
                 type = 1;
-            } else if (i < 10 || i > 26) {
+            } else if (i > 10 && i <= 20) {
                 type = 2;
             } else {
                 type = 3;
@@ -52,12 +54,8 @@ public class MainDemo2Activity extends AppCompatActivity {
 
         //1.通过findViewById拿到RecyclerView实例
         mRecyclerView = findViewById(R.id.mRecyclerView);
-        //2.初始化适配器
-        mSimpleAdapterDemo2 = new SimpleAdapterDemo2(this, mDatas);
-        //3.设置适配器
-        mRecyclerView.setAdapter(mSimpleAdapterDemo2);
 
-        //4.设置RecyclerView的布局管理
+        //2.设置RecyclerView的布局管理
 //        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,
 //                LinearLayoutManager.VERTICAL, false);
 //        mRecyclerView.setLayoutManager(linearLayoutManager);
@@ -75,6 +73,12 @@ public class MainDemo2Activity extends AppCompatActivity {
                 }
             }
         });
+        mRecyclerView.setLayoutManager(gridLayoutManager);
+
+        //3.初始化适配器
+        mSimpleAdapterDemo2 = new SimpleAdapterDemo2(this, mDatas);
+        //4.设置适配器
+        mRecyclerView.setAdapter(mSimpleAdapterDemo2);
 
         mRecyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
@@ -93,10 +97,9 @@ public class MainDemo2Activity extends AppCompatActivity {
                 }
             }
         });
-        mRecyclerView.setLayoutManager(gridLayoutManager);
 
-        mSimpleAdapterDemo2.addList(mDatas);
-        mSimpleAdapterDemo2.notifyDataSetChanged();
+//        mSimpleAdapterDemo2.addList(mDatas);
+//        mSimpleAdapterDemo2.notifyDataSetChanged();
     }
 
 

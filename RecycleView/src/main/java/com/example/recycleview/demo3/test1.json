@@ -1,0 +1,76 @@
+{
+  "code": 0,
+  "message": "OK",
+  "total": 100,
+  "page_size": 6,
+  "data": [
+    {
+      "goodsId": 0,
+      "spanSize": 4,
+      "banners": [
+        "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+        "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/b9540da01aef9a00a5c640b1c98b955a.jpg"
+      ]
+    },
+    {
+      "goodsId": 1,
+      "text": "明星单品",
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 2,
+      "text": "小米5c  64GB 移动版",
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 3,
+      "text": "米家智能摄像机",
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 4,
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 5,
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 6,
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 7,
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 5,
+      "text": "智能生活，从这里开始",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 5,
+      "text": "测试描述5",
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 6,
+      "text": "测试描述6",
+      "imageUrl": "http://imgsrc.baidu.com/baike/pic/item/0b55b319ebc4b745a58395aecffc1e178a821576.jpg",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 5,
+      "text": "我又是野广告",
+      "spanSize": 4
+    }
+  ]
+}
