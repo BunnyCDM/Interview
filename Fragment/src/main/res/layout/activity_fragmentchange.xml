@@ -5,12 +5,11 @@
 
     <!--展示内容标签-->
     <LinearLayout
+        android:gravity="center"
         android:id="@+id/content_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
 
 
     <!--展示切换标签-->

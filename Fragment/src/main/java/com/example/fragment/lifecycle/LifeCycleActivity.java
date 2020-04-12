@@ -44,7 +44,6 @@ public class LifeCycleActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lifecycle);
         AppLogger.d("------LifeCycleActivity------onCreate: ");
-
         tv_hotspot = (TextView) findViewById(R.id.hotspot);
         tv_topline = (TextView) findViewById(R.id.topline);
 

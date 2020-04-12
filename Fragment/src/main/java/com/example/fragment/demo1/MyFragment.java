@@ -1,53 +1,59 @@
-package com.example.fragment.lifecycle;
+package com.example.fragment.demo1;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.baselibrary.utils.log.AppLogger;
 import com.example.fragment.R;
 
 /**
- * Created by mac on 2019/2/26.
+ * Created by mac on 2020-04-11.
  */
-
-public class HotspotFragment extends Fragment {
-
+public class MyFragment extends Fragment {
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         //表示当activity和fragment产生关联时回调的方法
-        AppLogger.d("------HotspotFragment------onAttach: Activity");
+        AppLogger.d("------TitleFragment------onAttach: Activity");
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        AppLogger.d("------HotspotFragment------onAttach: Context");
+        AppLogger.d("------TitleFragment------onAttach: Context");
     }
 
-    // TODO: 2020-04-11  比较重要的方法
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //表示当fragment第一次被创建时回调的方法
-        AppLogger.d("------HotspotFragment------onCreate:");
+        AppLogger.d("------TitleFragment------onCreate:");
     }
 
-    // TODO: 2020-04-11  比较重要的方法
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container
             , @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_hotspot, null);
+        View view = inflater.inflate(R.layout.fragment_my, null);
+        RelativeLayout relativeLayout=view.findViewById(R.id.rl_layout);
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"TitleFragment",Toast.LENGTH_SHORT).show();
+            }
+        });
         //表示当fragment第一次绘制用户界面时回调的方法
-        AppLogger.d("------HotspotFragment------onCreateView:");
+        AppLogger.d("------TitleFragment------onCreateView:");
         return view;
     }
 
@@ -55,62 +61,62 @@ public class HotspotFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //表示当fragment所属的activity创建成功时回调的方法
-        AppLogger.d("------HotspotFragment------onActivityCreated:");
+        AppLogger.d("------TitleFragment------onActivityCreated:");
     }
 
     @Override
     public void onStart() {
         super.onStart();
         //表示当fragment能够被用户看到时回调的方法
-        AppLogger.d("------HotspotFragment------onStart:");
+        AppLogger.d("------TitleFragment------onStart:");
     }
 
     @Override
     public void onResume() {
         super.onResume();
         //表示当fragment能够获取用户焦点时回调的方法
-        AppLogger.d("------HotspotFragment------onResume:");
+        AppLogger.d("------TitleFragment------onResume:");
     }
 
-    // TODO: 2020-04-11  比较重要的方法
     @Override
     public void onPause() {
         super.onPause();
         //表示当fragment失去用户焦点时回调的方法
-        AppLogger.d("------HotspotFragment------onPause:");
+        AppLogger.d("------TitleFragment------onPause:");
     }
 
     @Override
     public void onStop() {
         super.onStop();
         //表示当fragment完全被用户遮挡时回调的方法
-        AppLogger.d("------HotspotFragment------onStop:");
+        AppLogger.d("------TitleFragment------onStop:");
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         //表示fragment视图在activity中移除时回调的方法
-        AppLogger.d("------HotspotFragment------onDestroyView:");
+        AppLogger.d("------TitleFragment------onDestroyView:");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         //表示当fragment被销毁时回调的方法
-        AppLogger.d("------HotspotFragment------onDestroy:");
+        AppLogger.d("------TitleFragment------onDestroy:");
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
         //表示当fragment与activity失去关联时回调的方法
-        AppLogger.d("------HotspotFragment------onDetach:");
+        AppLogger.d("------TitleFragment------onDetach:");
     }
 
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-        AppLogger.d("------HotspotFragment------onHiddenChanged: hidden=" + hidden);
+        AppLogger.d("------TitleFragment------onHiddenChanged: hidden=" + hidden);
     }
+
 }

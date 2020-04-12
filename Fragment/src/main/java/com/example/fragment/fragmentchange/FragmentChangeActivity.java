@@ -12,7 +12,7 @@ import com.example.fragment.R;
 /**
  * Created by mac on 2019/2/27.
  * <p>
- * 演示点击标签切换对应的界面
+ * 演示点击标签切换对应的界面ZX
  */
 
 public class FragmentChangeActivity extends Activity implements View.OnClickListener {
@@ -35,7 +35,6 @@ public class FragmentChangeActivity extends Activity implements View.OnClickList
         findViewById(R.id.rb_share).setOnClickListener(this);
         findViewById(R.id.rb_gift).setOnClickListener(this);
         findViewById(R.id.rb_order).setOnClickListener(this);
-
     }
 
 
