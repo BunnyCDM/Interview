@@ -6,13 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/vp_main"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"/>-->
+
+    <!--这个可以设置是否禁止左右滑动，以上系统默认不可以-->
+    <com.example.viewpager.wechat.ViewPagerScroll
         android:id="@+id/vp_main"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-
-    </android.support.v4.view.ViewPager>
+        android:layout_weight="1" />
 
     <View
         android:layout_width="match_parent"
