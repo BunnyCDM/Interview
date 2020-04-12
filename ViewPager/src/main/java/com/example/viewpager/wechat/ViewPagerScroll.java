@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 public class ViewPagerScroll extends ViewPager {
 
     //是否禁止左右滑动
-    private boolean isScroll = false;
+    private boolean isScroll = true;
 
     public boolean isScroll() {
         return isScroll;

@@ -64,7 +64,6 @@ public class MainActivityWithTab extends AppCompatActivity {
 
     private void initViews() {
         mVpMain = findViewById(R.id.vp_main);
-        mVpMain.setScroll(false);
         mTabWeChat = findViewById(R.id.tab_wechat);
         mTabFriend = findViewById(R.id.tab_friend);
         mTabFind = findViewById(R.id.tab_find);
