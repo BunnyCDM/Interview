@@ -34,7 +34,6 @@ public class B_Activity extends AppCompatActivity {
         }
 
         tv_Next = findViewById(R.id.tv_Next);
-        tv_Next = findViewById(R.id.tv_Next);
         String info = String.format("TaskId:%d\nCurrentActivity is %s", getTaskId(), toString());
         tv_Next.setText(info);
 

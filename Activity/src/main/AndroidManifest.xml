@@ -25,7 +25,7 @@
         <activity
             android:name="A_Activity"
             android:label=".A_Activity"
-            android:launchMode="singleTop">
+            android:launchMode="standard">
 
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.VIEW" />-->
@@ -45,7 +45,7 @@
         <activity
             android:name="B_Activity"
             android:label=".B_Activity"
-            android:launchMode="singleTop">
+            android:launchMode="singleInstance">
 
             <intent-filter>
                 <action android:name="android.intent.action.B_Activity" />

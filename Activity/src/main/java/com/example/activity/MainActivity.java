@@ -8,6 +8,10 @@ import android.widget.TextView;
 
 import com.example.baselibrary.utils.log.AppLogger;
 
+/**
+ * 四种启动模式
+ * https://blog.csdn.net/zy_jibai/article/details/80587083
+ */
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv_Next;
