@@ -59,6 +59,7 @@
       <module fileurl="file://$PROJECT_DIR$/RxBus/RxBus.iml" filepath="$PROJECT_DIR$/RxBus/RxBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/Service/Service.iml" filepath="$PROJECT_DIR$/Service/Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShareSDK/ShareSDK.iml" filepath="$PROJECT_DIR$/ShareSDK/ShareSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" filepath="$PROJECT_DIR$/SharedPreferences/SharedPreferences.iml" />
       <module fileurl="file://$PROJECT_DIR$/Socket/Socket.iml" filepath="$PROJECT_DIR$/Socket/Socket.iml" />
       <module fileurl="file://$PROJECT_DIR$/SparseArray/SparseArray.iml" filepath="$PROJECT_DIR$/SparseArray/SparseArray.iml" />
