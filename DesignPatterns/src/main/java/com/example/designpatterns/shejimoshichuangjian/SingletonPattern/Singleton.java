@@ -8,14 +8,15 @@ package com.example.designpatterns.shejimoshichuangjian.SingletonPattern;
 
 public class Singleton {
 
-    private static Singleton single = null;
+    private static volatile Singleton single = null;
 
-    //把构造函数设置为private
+    //把构造函数设置为private，避免类在外部被实例化
     private Singleton() {
 
     }
 
-    public Singleton getInstance() {
+    //静态工厂方法，这个没考虑线程安全问题，线程不安全
+    public static Singleton getInstance() {
         if (single == null) {
             single = new Singleton();
         }

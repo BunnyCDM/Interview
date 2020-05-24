@@ -8,6 +8,11 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+/**
+ * 默认整个应用是通过ActivityThread创建的，
+ * 在ActivityThread中会默认创建一个线程main，
+ * 在创建main过程中也会创建一个looper，也会创建一个message
+ */
 public class SecondActivity extends AppCompatActivity {
 
 
@@ -21,6 +26,7 @@ public class SecondActivity extends AppCompatActivity {
         @SuppressLint("HandlerLeak")
         @Override
         public void run() {
+            //以下handler就创建成功了，并和当前线程关联
             Looper.prepare();//创建Looper
             looper = Looper.myLooper();
             handler = new Handler() { //默认情况下根据当前线程获取Handler对象
@@ -51,7 +57,7 @@ public class SecondActivity extends AppCompatActivity {
 //        }
 
 
-        // TODO: 2019-08-18  会报空指针bug，因为thread.looper存在还没创建成功
+        // TODO: 2019-08-18  会报空指针bug，因为thread.looper存在还没创建成功，如何避免在thirdactivity中
         Handler handler_ = new Handler(thread.looper) {
             @Override
             public void handleMessage(Message msg) {

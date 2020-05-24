@@ -3,7 +3,7 @@ package com.example.thread.thread01;
 /**
  * Created by mac on 2019/7/21.
  * <p>
- * 线程先生
+ * 线程先生、线程小姐
  */
 public class Actor extends Thread {
 
@@ -31,11 +31,11 @@ public class Actor extends Thread {
                 }
             }
 
-
         }
 
 
         System.out.println(getName() + "的演出结束");
+        //
     }
 
 

@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.baselibrary.utils.log.AppLogger;
-import com.example.baselibrary.utils.log.L;
 import com.example.viewpager.R;
 import com.example.viewpager.wechat.MainActivity;
 

@@ -58,6 +58,7 @@ public class B_Activity extends AppCompatActivity {
         });
     }
 
+
     @Override
     protected void onRestart() {
         super.onRestart();

@@ -9,10 +9,14 @@
       <module fileurl="file://$PROJECT_DIR$/ActionBar/ActionBar.iml" filepath="$PROJECT_DIR$/ActionBar/ActionBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/Activity/Activity.iml" filepath="$PROJECT_DIR$/Activity/Activity.iml" />
       <module fileurl="file://$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" filepath="$PROJECT_DIR$/ActivityForResult/ActivityForResult.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_WebView_JS/Android_WebView_JS.iml" filepath="$PROJECT_DIR$/Android_WebView_JS/Android_WebView_JS.iml" />
       <module fileurl="file://$PROJECT_DIR$/AsyncTask/AsyncTask.iml" filepath="$PROJECT_DIR$/AsyncTask/AsyncTask.iml" />
       <module fileurl="file://$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" filepath="$PROJECT_DIR$/BroadcastReceiver/BroadcastReceiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/ButterKnife/ButterKnife.iml" filepath="$PROJECT_DIR$/ButterKnife/ButterKnife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChangeSkin/ChangeSkin.iml" filepath="$PROJECT_DIR$/ChangeSkin/ChangeSkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChangeSkinModule/ChangeSkinModule.iml" filepath="$PROJECT_DIR$/ChangeSkinModule/ChangeSkinModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChangeSkinPlugin/ChangeSkinPlugin.iml" filepath="$PROJECT_DIR$/ChangeSkinPlugin/ChangeSkinPlugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/CityPicker/CityPicker.iml" filepath="$PROJECT_DIR$/CityPicker/CityPicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/CitySelector/CitySelector.iml" filepath="$PROJECT_DIR$/CitySelector/CitySelector.iml" />
       <module fileurl="file://$PROJECT_DIR$/ConstraintLayout/ConstraintLayout.iml" filepath="$PROJECT_DIR$/ConstraintLayout/ConstraintLayout.iml" />
@@ -42,6 +46,7 @@
       <module fileurl="file://$PROJECT_DIR$/JNI/JNI.iml" filepath="$PROJECT_DIR$/JNI/JNI.iml" />
       <module fileurl="file://$PROJECT_DIR$/Layout/Layout.iml" filepath="$PROJECT_DIR$/Layout/Layout.iml" />
       <module fileurl="file://$PROJECT_DIR$/ListView/ListView.iml" filepath="$PROJECT_DIR$/ListView/ListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Map/Map.iml" filepath="$PROJECT_DIR$/Map/Map.iml" />
       <module fileurl="file://$PROJECT_DIR$/Menu/Menu.iml" filepath="$PROJECT_DIR$/Menu/Menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/MultiDex/MultiDex.iml" filepath="$PROJECT_DIR$/MultiDex/MultiDex.iml" />
       <module fileurl="file://$PROJECT_DIR$/NIO/NIO.iml" filepath="$PROJECT_DIR$/NIO/NIO.iml" />

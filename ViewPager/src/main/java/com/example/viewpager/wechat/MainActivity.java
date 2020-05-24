@@ -24,7 +24,7 @@ import java.util.List;
  */
 public class MainActivity extends AppCompatActivity {
 
-    ViewPager mVpMain;
+    private ViewPager mVpMain;
     private List<String> mTitles = new ArrayList<>(Arrays.asList("微信", "通讯录", "发现", "我"));
 
     private Button mBtnWeChat;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnFind;
     private Button mBtnMine;
 
-    private SparseArray<TabFragment> mFragmets = new SparseArray<>();
+    private SparseArray<TabFragment> mFragments = new SparseArray<>();
 
     private List<Button> mTabs = new ArrayList<>();
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //获取第一个Fragment
-                TabFragment tabFragment = mFragmets.get(0);
+                TabFragment tabFragment = mFragments.get(0);
                 if (tabFragment != null) {
                     tabFragment.changeTitle("微信 changed！");
                 }
@@ -97,13 +97,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public Object instantiateItem(@NonNull ViewGroup container, int position) {
                 TabFragment fragment = (TabFragment) super.instantiateItem(container, position);
-                mFragmets.put(position, fragment);
+                mFragments.put(position, fragment);
                 return fragment;
             }
 
             @Override
             public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-                mFragmets.remove(position);
+                mFragments.remove(position);
                 super.destroyItem(container, position, object);
             }
         });
@@ -111,7 +111,8 @@ public class MainActivity extends AppCompatActivity {
         mVpMain.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixe) {
-                AppLogger.d("onPageScrolled: position=" + position + " positionOffset=" + positionOffset + " positionOffsetPixe=" + positionOffsetPixe);
+                AppLogger.d("onPageScrolled: position=" + position + " positionOffset=" + positionOffset
+                        + " positionOffsetPixe=" + positionOffsetPixe);
                 if(positionOffset>0){
                     Button left = mTabs.get(position);
                     Button right = mTabs.get(position + 1);

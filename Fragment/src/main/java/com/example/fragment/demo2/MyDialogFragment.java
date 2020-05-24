@@ -10,6 +10,10 @@ import com.example.fragment.R;
 
 /**
  * Created by mac on 2020-04-12.
+ *
+ * 至少实现onCreateView（）或者onCreateDialog（）方法
+ * onCreateView（）表示xml布局文件的形式展示dialog
+ * onCreateDialog（）表示利用alertdialog或者dialog创建
  */
 public class MyDialogFragment extends DialogFragment {
 

@@ -7,6 +7,8 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.widget.TextView;
 
+import com.example.baselibrary.utils.log.AppLogger;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         TextView mTextView2 = (TextView) findViewById(R.id.screen_density);
 
         DisplayMetrics dm = new DisplayMetrics();
-        Log.d("Utils", "onCreate: dm=" + dm);
+        AppLogger.d("onCreate:dm = " + dm);
         getWindowManager().getDefaultDisplay().getMetrics(dm);
-        Log.d("Utils", "onCreate: dm=" + dm);
+        AppLogger.d("onCreate: dm=" + dm);
 
         dm = getResources().getDisplayMetrics();
 
@@ -31,17 +33,17 @@ public class MainActivity extends AppCompatActivity {
         float scaledDensity = dm.scaledDensity;//字体显示的缩放因子，和density一样
         float xdpi = dm.xdpi;//水平方向dpi
         float ydpi = dm.ydpi;//竖直方向dpi
-        Log.d("Utils", "onCreate: densityDPI=" + densityDPI);
-        Log.d("Utils", "onCreate: density=" + density);
-        Log.d("Utils", "onCreate: scaledDensity=" + scaledDensity);
-        Log.d("Utils", "onCreate: xdpi=" + xdpi);
-        Log.d("Utils", "onCreate: ydpi=" + ydpi);
+        AppLogger.d( "onCreate: densityDPI=" + densityDPI);
+        AppLogger.d("onCreate: density=" + density);
+        AppLogger.d("onCreate: scaledDensity=" + scaledDensity);
+        AppLogger.d( "onCreate: xdpi=" + xdpi);
+        AppLogger.d("onCreate: ydpi=" + ydpi);
 
 
         int screenWidth = dm.widthPixels;//屏幕宽（像素，如：480px）
         int screenHeight = dm.heightPixels;//屏幕高（像素，如800px）
 
-        Log.d("Utils", "onCreate: " + mTextView1.getText().toString());
+        AppLogger.d("onCreate: " + mTextView1.getText().toString());
 
 
         //注释mTextView1、mTextView2可根据其显示，查看values使用的那个values文件
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         int px3 = getResources().getDimensionPixelSize(R.dimen.activity_vertical_margin_px);
 
 
-        Log.d("Utils", "onCreate:"
+        AppLogger.d("onCreate:"
                 + "\n" + "dp1=" + dp1 + "\tdp2=" + dp2 + "\tdp3=" + dp3
                 + "\n" + "sp1=" + sp1 + "\tsp2=" + sp2 + "\tsp3=" + sp3
                 + "\n" + "px1=" + px1 + "\t\t\tpx2=" + px2 + "\tpx3=" + px3);

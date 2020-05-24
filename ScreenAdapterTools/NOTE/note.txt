@@ -1,7 +1,6 @@
-http://blog.csdn.net/jiangwei0910410003/article/details/40509571
-
-
 http://blog.csdn.net/hp910315/article/details/48501197(详细解释)
+
+https://blog.csdn.net/zhaokaiqiang1992/article/details/45419023#动态设置
 
 //设备：1280*736
 com.example.mac.screenadaptation D/Utils: onCreate: dm=DisplayMetrics{density=0.0, width=0, height=0, scaledDensity=0.0, xdpi=0.0, ydpi=0.0}

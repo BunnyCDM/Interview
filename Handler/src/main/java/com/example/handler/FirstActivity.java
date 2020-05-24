@@ -18,19 +18,19 @@ public class FirstActivity extends AppCompatActivity {
 
     private Handler handler = new Handler();
 
+    private MyRunnable myRunnable = new MyRunnable();
+
     private int images[] = {1, 2, 3};
     private int index;
-
-    private MyRunnable myRunnable = new MyRunnable();
 
     class MyRunnable implements Runnable {
         @Override
         public void run() {
             index++;
             index = index % 3;
-            //imagesView.setImS(images[index]);
-            handler.postDelayed(myRunnable, 1000);
+            //imagesView.setImageResource(images[index]);
             Log.d("bunny", "run: index=" + index + " " + Thread.currentThread().getName());
+            handler.postDelayed(myRunnable, 1000);
         }
     }
 
@@ -38,7 +38,7 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = (TextView) findViewById(R.id.tv);
+        textView = findViewById(R.id.tv);
 
 
         // TODO: 2019-08-18 此方法不行，因在子线程中更新UI操作 

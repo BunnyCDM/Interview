@@ -10,6 +10,7 @@ import android.util.Log;
 
 /**
  * Created by mac on 2019-08-18.
+ * 主线程与子线程通信
  */
 public class FourActivity extends AppCompatActivity {
 
@@ -18,15 +19,15 @@ public class FourActivity extends AppCompatActivity {
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Log.d("bunny", "handleMessage2: "+Thread.currentThread().getName());
+            Log.d("bunny", "handleMessage2: " + Thread.currentThread().getName());
             Message message = new Message();
             //向子线程发送消息
-            thraedHandler.sendMessageDelayed(message, 1000);
+            threadHandler.sendMessageDelayed(message, 1000);
         }
     };
 
     //定义子线程Handler
-    private Handler thraedHandler;
+    private Handler threadHandler;
 
 
     @Override
@@ -37,11 +38,11 @@ public class FourActivity extends AppCompatActivity {
         HandlerThread handlerThread = new HandlerThread("handlerThread");
         handlerThread.start();
 
-        thraedHandler = new Handler(handlerThread.getLooper()) {
+        threadHandler = new Handler(handlerThread.getLooper()) {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                Log.d("bunny", "handleMessage1: "+Thread.currentThread().getName());
+                Log.d("bunny", "handleMessage1: " + Thread.currentThread().getName());
                 Message message = new Message();
                 //主线程发送消息
                 handler.sendMessageDelayed(message, 1000);

@@ -27,11 +27,11 @@ public class Stage extends Thread {
         }
         System.out.println("话说隋唐末年，随军与农民起义军杀的昏天黑地");
 
-        ArmyRunnable armyTaskOfSuiDnasty = new ArmyRunnable();
+        ArmyRunnable armyTaskOfSuiDynasty = new ArmyRunnable();
         ArmyRunnable armyTaskOfRevolt = new ArmyRunnable();
 
         //使用Runnable接口创建线程
-        Thread armyOfSuiDnasty = new Thread(armyTaskOfSuiDnasty, "隋军");
+        Thread armyOfSuiDnasty = new Thread(armyTaskOfSuiDynasty, "隋军");
         Thread armyOfRevolt = new Thread(armyTaskOfRevolt, "农民起义军");
 
         armyOfSuiDnasty.start();
@@ -50,7 +50,7 @@ public class Stage extends Thread {
         System.out.println("程咬金的理想就是结束战争，使百姓安居乐业");
 
         //停止军对作战，停止线程的该方法
-        armyTaskOfSuiDnasty.keepRunning = false;
+        armyTaskOfSuiDynasty.keepRunning = false;
         armyTaskOfRevolt.keepRunning = false;
         //不能使用stop李停止线程，这样会造成程序突然终止造成数据业务有害！！！
         //armyOfSuiDnasty.stop();

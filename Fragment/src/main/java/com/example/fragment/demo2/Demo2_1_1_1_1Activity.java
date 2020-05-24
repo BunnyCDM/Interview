@@ -1,5 +1,7 @@
 package com.example.fragment.demo2;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -28,8 +30,25 @@ public class Demo2_1_1_1_1Activity extends AppCompatActivity {
             public void onClick(View v) {
                 MyDialogFragment dialogFragment=new MyDialogFragment();
                 dialogFragment.show(getFragmentManager(),"dialog");
+
+//                final AlertDialog.Builder dialog = new AlertDialog.Builder(Demo2_1_1_1_1Activity.this);
+//                dialog.setTitle("提示");
+//                dialog.setMessage("是否退出当前账户");
+//                dialog.setPositiveButton("退出", new android.content.DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface arg0, int arg1) {
+//                    }
+//                });
+//                dialog.setNeutralButton("取消", new android.content.DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface arg0, int arg1) {
+//                        arg0.dismiss();
+//                    }
+//                });
+//                dialog.show();
             }
         });
+
 
     }
 
