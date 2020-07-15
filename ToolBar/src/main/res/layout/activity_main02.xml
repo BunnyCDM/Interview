@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--常规设置-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar01"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:visibility="gone"
+        app:logo="@mipmap/ic_launcher"
+        app:navigationContentDescription=""
+        app:navigationIcon="@mipmap/ic_launcher_round"
+        app:subtitle="子标题"
+        app:subtitleTextColor="@color/common_white"
+        app:title="标题"
+        app:titleMarginStart="90dp"
+        app:titleTextColor="@color/colorPrimaryDark" />
+
+
+    <!--定义一个style修改标题样式-->
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:visibility="gone"
+        app:navigationContentDescription=""
+        app:navigationIcon="@mipmap/ic_launcher_round"
+        app:title="定义一个style修改标题样式"
+        app:titleMarginStart="90dp"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+
+    <!--标题居中设置-->
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:visibility="gone"
+        app:navigationIcon="@mipmap/ic_launcher_round">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="标题居中设置"
+            android:textColor="@color/common_white"
+            android:textSize="22sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar02"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:visibility="gone" />
+
+    <!--自定义-->
+    <com.example.toolbar.TopBar
+        android:id="@+id/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        custom:leftBackground="@color/colorAccent"
+        custom:leftText="Back"
+        custom:leftTextColor="#ffffff"
+
+        custom:rightBackground="@color/colorPrimaryDark"
+        custom:rightText="More"
+        custom:rightTextColor="#ffffff"
+
+        custom:title="自定义标题"
+        custom:titleTextColor="#123412"
+        custom:titleTextSize="10sp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+</LinearLayout>

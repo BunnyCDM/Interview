@@ -20,6 +20,7 @@ import java.util.List;
 
 
 /**
+ * RecyclerView详细用法
  * https://blog.csdn.net/mountain_hua/article/details/81268471
  */
 public class MainActivity extends AppCompatActivity {

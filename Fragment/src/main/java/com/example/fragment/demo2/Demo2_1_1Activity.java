@@ -22,7 +22,7 @@ public class Demo2_1_1Activity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo2_1_1);
-        AppLogger.d("------Demo2Activity------onCreate: ");
+        AppLogger.d("------Demo2_1_1Activity------onCreate: ");
 
     }
 
@@ -30,7 +30,7 @@ public class Demo2_1_1Activity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         //如果现在处于停止状态，重新被用户使用
-        AppLogger.d("------Demo2Activity------onRestart: ");
+        AppLogger.d("------Demo2_1_1Activity------onRestart: ");
     }
 
 
@@ -38,35 +38,35 @@ public class Demo2_1_1Activity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         //用户被看到
-        AppLogger.d("------Demo2Activity------onStart: ");
+        AppLogger.d("------Demo2_1_1Activity------onStart: ");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         //获取用户焦点
-        AppLogger.d("------Demo2Activity------onResume: ");
+        AppLogger.d("------Demo2_1_1Activity------onResume: ");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         //失去用户焦点
-        AppLogger.d("------Demo2Activity------onPause: ");
+        AppLogger.d("------Demo2_1_1Activity------onPause: ");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         //完全被其他界面遮挡时
-        AppLogger.d("------Demo2Activity------onStop: ");
+        AppLogger.d("------Demo2_1_1Activity------onStop: ");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         //如果直接点击返回
-        AppLogger.d("------Demo2Activity------onDestroy: ");
+        AppLogger.d("------Demo2_1_1Activity------onDestroy: ");
     }
 
 }

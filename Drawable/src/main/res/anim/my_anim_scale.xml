@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <scale
-        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
-        android:fromXScale="0.0"
-        android:toXScale="1.4"
-        android:fromYScale="0.0"
-        android:toYScale="1.4"
-        android:pivotX="50%"
-        android:pivotY="50%"
-        android:fillAfter="false"
-        android:startOffset="700"
-        android:repeatCount="3"
-        android:duration="1000"
-        ></scale>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:fillAfter="false"
+    android:fromXScale="0.0"
+    android:fromYScale="0.0"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:repeatCount="0"
+    android:toXScale="1.0"
+    android:toYScale="1.0">
 
-</set>
+
+</scale>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<set xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<scale-->
+        <!--android:duration="1000"-->
+        <!--android:fillAfter="false"-->
+        <!--android:fromXScale="0.0"-->
+        <!--android:fromYScale="0.0"-->
+        <!--android:interpolator="@android:anim/accelerate_decelerate_interpolator"-->
+        <!--android:pivotX="50%"-->
+        <!--android:pivotY="50%"-->
+        <!--android:repeatCount="3"-->
+        <!--android:startOffset="700"-->
+        <!--android:toXScale="1.4"-->
+        <!--android:toYScale="1.4" />-->
+
+<!--</set>-->

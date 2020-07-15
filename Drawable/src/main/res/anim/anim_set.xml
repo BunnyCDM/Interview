@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together">
+
+    <translate
+        android:duration="500"
+        android:fromXDelta="1"
+        android:fromYDelta="0"
+        android:toXDelta="0.8"
+        android:toYDelta="0" />
+
+    <translate
+        android:duration="500"
+        android:fromXDelta="1"
+        android:fromYDelta="0"
+        android:toXDelta="0.8"
+        android:toYDelta="0" />
+
+
+    <translate
+        android:duration="500"
+        android:fromXDelta="0.8"
+        android:fromYDelta="0"
+        android:toXDelta="0.9"
+        android:toYDelta="0" />
+    <translate
+        android:duration="500"
+        android:fromXDelta="0.8"
+        android:fromYDelta="0"
+        android:toXDelta="0.9"
+        android:toYDelta="0" />
+
+</set>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<set xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:duration="1000"-->
+    <!--android:shareInterpolator="true">-->
+
+    <!--<alpha-->
+        <!--android:duration="1000"-->
+        <!--android:fromAlpha="0.0"-->
+        <!--android:toAlpha="1.0"/>-->
+
+    <!--<translate-->
+        <!--android:duration="1000"-->
+        <!--android:fromXDelta="0"-->
+        <!--android:fromYDelta="0"-->
+        <!--android:toXDelta="100"-->
+        <!--android:toYDelta="100" />-->
+
+<!--</set>-->

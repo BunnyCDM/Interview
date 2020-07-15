@@ -8,24 +8,41 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:clipChildren="false"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
 
         <android.support.v4.view.ViewPager
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:clipChildren="false"
             android:id="@+id/vp_main"
             android:layout_width="match_parent"
-            android:layout_height="120dp">
+            android:layout_height="120dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:clipChildren="false">
 
         </android.support.v4.view.ViewPager>
 
     </FrameLayout>
 
 
+    <!--banner旋转动画有别于其它动画-->
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="180dp"-->
+        <!--android:clipChildren="false">-->
 
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:id="@+id/vp_main"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_marginLeft="60dp"-->
+            <!--android:layout_marginRight="60dp"-->
+            <!--android:clipChildren="false">-->
+
+        <!--</android.support.v4.view.ViewPager>-->
+
+    <!--</FrameLayout>-->
 
 
 </LinearLayout>

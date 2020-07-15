@@ -21,7 +21,6 @@ public class Demo2_1_1_1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo2_1_1_1);
         AppLogger.d("------Demo2Activity------onCreate: ");
-
     }
 
     @Override

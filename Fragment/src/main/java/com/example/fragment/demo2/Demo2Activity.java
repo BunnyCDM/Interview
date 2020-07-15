@@ -38,7 +38,6 @@ public class Demo2Activity extends AppCompatActivity implements View.OnClickList
                 bundle.putString("info", info);
                 resultFragment.setArguments(bundle);
 
-                manager = getFragmentManager();
                 transaction = manager.beginTransaction();
                 transaction.replace(R.id.contentlayout, resultFragment);
                 transaction.commit();

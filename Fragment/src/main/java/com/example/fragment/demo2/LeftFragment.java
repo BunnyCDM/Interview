@@ -66,16 +66,17 @@ public class LeftFragment extends Fragment {
 //                rightFragment.setTextView(info);
 
                 //方式二：
-//                listener.sendMessage(info);
-
 //                RightFragment rightFragment= (RightFragment) getFragmentManager().
 //                        findFragmentById(R.id.rightfragment);
 //                TextView textView=rightFragment.getView().findViewById(R.id.tv_show);
 //                textView.setText(info);
 
                 //方式三：
-                TextView textView=getActivity().findViewById(R.id.tv_show);
+                TextView textView = getActivity().findViewById(R.id.tv_show);
                 textView.setText(info);
+
+                //方式四：
+                //listener.sendMessage(info);
             }
         });
         //表示当fragment第一次绘制用户界面时回调的方法

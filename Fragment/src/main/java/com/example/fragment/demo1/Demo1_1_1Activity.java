@@ -13,6 +13,7 @@ import com.example.fragment.R;
 /**
  * Created by mac on 2019/2/26.
  * <p>
+ * 因为Fragment是Android3。0后引入，为兼容之前特引入v4包
  * 演示v4包下的Fragment的动态使用
  * 注意：
  * 1.使用v4包下的Fragment时需要引入activity继承FragmentActivity
@@ -32,7 +33,7 @@ public class Demo1_1_1Activity extends FragmentActivity {
         // TODO: 2020-04-11  注意
         requestWindowFeature(Window.FEATURE_NO_TITLE);//去除标题栏,必须是继承Activity才有效果哈
         setContentView(R.layout.activity_demo1_1_1);
-        AppLogger.d("------Demo1_1Activity------onCreate: ");
+        AppLogger.d("------Demo1_1_1Activity------onCreate: ");
 
         //1.创建Fragment的管理器对象
         manager = getSupportFragmentManager();
@@ -50,7 +51,7 @@ public class Demo1_1_1Activity extends FragmentActivity {
     protected void onRestart() {
         super.onRestart();
         //如果现在处于停止状态，重新被用户使用
-        AppLogger.d("------Demo1_1Activity------onRestart: ");
+        AppLogger.d("------Demo1_1_1Activity------onRestart: ");
     }
 
 
@@ -58,35 +59,35 @@ public class Demo1_1_1Activity extends FragmentActivity {
     protected void onStart() {
         super.onStart();
         //用户被看到
-        AppLogger.d("------Demo1_1Activity------onStart: ");
+        AppLogger.d("------Demo1_1_1Activity------onStart: ");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         //获取用户焦点
-        AppLogger.d("------Demo1_1Activity------onResume: ");
+        AppLogger.d("------Demo1_1_1Activity------onResume: ");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         //失去用户焦点
-        AppLogger.d("------Demo1_1Activity------onPause: ");
+        AppLogger.d("------Demo1_1_1Activity------onPause: ");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         //完全被其他界面遮挡时
-        AppLogger.d("------Demo1_1Activity------onStop: ");
+        AppLogger.d("------Demo1_1_1Activity------onStop: ");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         //如果直接点击返回
-        AppLogger.d("------Demo1_1Activity------onDestroy: ");
+        AppLogger.d("------Demo1_1_1Activity------onDestroy: ");
     }
 
 }

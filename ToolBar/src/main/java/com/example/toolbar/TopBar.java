@@ -154,7 +154,7 @@ public class TopBar extends RelativeLayout {
     }
 
     public void setTopbarIsVisible(boolean flag) {
-        TopBar topBar = (TopBar) findViewById(R.id.toolbar);
+        TopBar topBar = (TopBar) findViewById(R.id.toolbar_custom);
         if (flag) {
             topBar.setVisibility(View.VISIBLE);
         } else {

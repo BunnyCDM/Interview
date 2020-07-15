@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.viewpager.R;
+import com.example.viewpager.wechat.fragment.RotateTransformer;
 import com.example.viewpager.wechat.fragment.SplashFragment;
 import com.example.viewpager.wechat.view.transformer.ScaleTransformer;
 
@@ -46,7 +47,6 @@ public class BannerActivity extends AppCompatActivity {
             @NonNull
             @Override
             public Object instantiateItem(@NonNull ViewGroup container, int position) {
-
                 View view = new View(container.getContext());
                 view.setBackgroundColor(mResIds[position]);
                 ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -61,7 +61,7 @@ public class BannerActivity extends AppCompatActivity {
             }
         });
 
-        mVpMain.setPageTransformer(true, new ScaleTransformer());
+        mVpMain.setPageTransformer(true, new RotateTransformer());
 
 
     }

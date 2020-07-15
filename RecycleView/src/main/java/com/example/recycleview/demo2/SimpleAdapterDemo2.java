@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.recycleview.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +19,12 @@ public class SimpleAdapterDemo2 extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     private LayoutInflater inflater;
     private Context context;
-    private List<DataModel> datas;
+    private List<DataModel> datas=new ArrayList<>();
+
+    public SimpleAdapterDemo2(Context context) {
+        this.context = context;
+        this.inflater = LayoutInflater.from(context);
+    }
 
     public SimpleAdapterDemo2(Context context, List<DataModel> datas) {
         this.context = context;

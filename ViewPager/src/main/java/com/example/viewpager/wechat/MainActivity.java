@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnMine;
 
     private SparseArray<TabFragment> mFragments = new SparseArray<>();
-
     private List<Button> mTabs = new ArrayList<>();
 
     @Override
@@ -98,12 +98,14 @@ public class MainActivity extends AppCompatActivity {
             public Object instantiateItem(@NonNull ViewGroup container, int position) {
                 TabFragment fragment = (TabFragment) super.instantiateItem(container, position);
                 mFragments.put(position, fragment);
+                AppLogger.d("instantiateItem: " + mFragments.size());
                 return fragment;
             }
 
             @Override
             public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
                 mFragments.remove(position);
+                AppLogger.d("destroyItem: " + mFragments.size());
                 super.destroyItem(container, position, object);
             }
         });
@@ -111,9 +113,19 @@ public class MainActivity extends AppCompatActivity {
         mVpMain.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixe) {
-                AppLogger.d("onPageScrolled: position=" + position + " positionOffset=" + positionOffset
+                AppLogger.d("onPageScrolled: position=" + position
+                        + " positionOffset=" + positionOffset
                         + " positionOffsetPixe=" + positionOffsetPixe);
-                if(positionOffset>0){
+                /**
+                 * Left->right: 0~1,left :pos,right:pos+1,positionOffset:0~1
+                 * Progress:left 1~0,right,0~1
+                 * 1-positionOffset,positionOffset
+                 *
+                 * right->Left: 1~0,left :pos,right:pos+1,positionOffset:1~0
+                 * Progress:left 0~1,right,1~0
+                 * 1-positionOffset,positionOffset
+                 */
+                if (positionOffset > 0) {
                     Button left = mTabs.get(position);
                     Button right = mTabs.get(position + 1);
                     left.setText((1 - positionOffset) + "");

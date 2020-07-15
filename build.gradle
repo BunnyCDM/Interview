@@ -2,10 +2,18 @@
 
 buildscript {
     repositories {
+
+        //sharesdk
+        maven {
+            url "http://mvn.mob.com/android"
+        }
+
         jcenter()
 
         //google()，被以下替换，解决Gradle DSL method not found: 'google()'
-        maven { url 'https://maven.google.com' }
+        maven {
+            url 'https://maven.google.com'
+        }
         google()//Multidex
     }
     dependencies {
@@ -21,26 +29,75 @@ buildscript {
 
         //添加Dagger apt插件
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+        //sharesdk
+        classpath 'com.mob.sdk:MobSDK:+'
+    }
+
+    //sharesdk
+    configurations.all {
+        resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
+        //exclude group: 'com.mob', module: 'MobLink-3.0.2'
     }
 }
 
 allprojects {
     repositories {
+
         jcenter()
+        //本地仓库
+//        maven {
+//            url "http://127.0.0.1:8081/repository/com.mac.baselibrary/"
+//            url "http://192.168.0.1:8081/repository/com.mac.baselibrary/"
+//        }
+
+//        mavenLocal()
 
         //google()，别以下替换，解决Gradle DSL method not found: 'google()'
         maven { url 'https://maven.google.com' }//Multidex
 
         maven { url "https://jitpack.io" }//BaseRecyclerViewAdapterHelper
 
+        //sharesdk
+        maven {
+            url "http://mvn.mob.com/android"
+        }
+
         mavenCentral()
         google()//butterknife
 
+    }
+
+    //sharesdk
+    configurations.all {
+        resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
+        //exclude group: 'com.mob', module: 'MobLink-3.0.2'
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+//sharesdk
+String findBuildTools() {
+    def localProperties = new File(project.rootDir, "local.properties")
+    if (localProperties.exists()) {
+        Properties properties = new Properties()
+        localProperties.withInputStream {
+            instr -> properties.load(instr)
+        }
+        def sdkDir = properties.getProperty('sdk.dir')
+        def buildTools = new File(sdkDir, "build-tools")
+        if (buildTools.exists()) {
+            def tools = buildTools.list()
+            if (tools != null) {
+                Arrays.sort(tools)
+                return tools[tools.length - 1]
+            }
+        }
+    }
+    return null
 }
 
 

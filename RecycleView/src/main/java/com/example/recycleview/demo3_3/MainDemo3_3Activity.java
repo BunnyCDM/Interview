@@ -12,9 +12,7 @@ import com.example.recycleview.demo3_3.recycler.BaseDecoration;
 import com.example.recycleview.demo3_3.refresh.RefreshHandler;
 
 
-/**
- * https://blog.csdn.net/mountain_hua/article/details/81268471
- */
+
 public class MainDemo3_3Activity extends AppCompatActivity {
 
     private SwipeRefreshLayout mRefreshLayout;

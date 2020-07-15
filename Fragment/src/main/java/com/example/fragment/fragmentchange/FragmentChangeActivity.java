@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.fragment.R;
@@ -15,7 +16,7 @@ import com.example.fragment.R;
  * 演示点击标签切换对应的界面ZX
  */
 
-public class FragmentChangeActivity extends Activity implements View.OnClickListener {
+public class FragmentChangeActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private FragmentManager manager;

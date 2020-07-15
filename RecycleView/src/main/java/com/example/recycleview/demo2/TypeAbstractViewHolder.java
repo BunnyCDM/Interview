@@ -16,5 +16,10 @@ public abstract class TypeAbstractViewHolder extends RecyclerView.ViewHolder {
 
     public abstract void bindHolder(DataModel dataModel);
 
+    // TODO: 2020-07-13 与上面的却别的是，下面这种可以由子类决定是否需要继承该方法，上面那种是强制实现
+//    public  void bindHolder(DataModel dataModel){
+//
+//    }
+
 
 }

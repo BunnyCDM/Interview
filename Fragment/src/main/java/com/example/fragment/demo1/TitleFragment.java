@@ -16,6 +16,11 @@ import com.example.fragment.R;
 
 /**
  * Created by mac on 2020-04-11.
+ *
+ * 创建和使用Fragment的步骤：
+ * 1。创建子类继承Fragment
+ * 2。重写onCreateView方法，该方法主要定义fragment的布局，以view对象的形式返回fragment的视图
+ * 3。将fragment引入到activity中
  */
 public class TitleFragment extends Fragment {
 

@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.baselibrary.utils.log.AppLogger;
 import com.example.fragment.R;
@@ -46,6 +47,13 @@ public class HotspotFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container
             , @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_hotspot, null);
+        TextView mTextView=view.findViewById(R.id.mTextView);
+        view.findViewById(R.id.mTextView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mTextView.setText("jfiodsjfjos");
+            }
+        });
         //表示当fragment第一次绘制用户界面时回调的方法
         AppLogger.d("------HotspotFragment------onCreateView:");
         return view;

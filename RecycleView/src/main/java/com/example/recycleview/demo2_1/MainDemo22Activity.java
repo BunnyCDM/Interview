@@ -16,9 +16,7 @@ import java.util.List;
 import static com.example.recycleview.demo2_1.SimpleAdapterDemo22.TYPE_THREE;
 
 
-/**
- * https://blog.csdn.net/mountain_hua/article/details/81268471
- */
+
 public class MainDemo22Activity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
@@ -80,11 +78,6 @@ public class MainDemo22Activity extends AppCompatActivity {
             }
         });
 
-        //3.初始化适配器
-        mSimpleAdapterDemo22 = new SimpleAdapterDemo22(this);
-        //4.设置适配器
-        mRecyclerView.setAdapter(mSimpleAdapterDemo22);
-
         mRecyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
             public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
@@ -103,6 +96,10 @@ public class MainDemo22Activity extends AppCompatActivity {
             }
         });
 
+        //3.初始化适配器
+        mSimpleAdapterDemo22 = new SimpleAdapterDemo22(this);
+        //4.设置适配器
+        mRecyclerView.setAdapter(mSimpleAdapterDemo22);
 
         mSimpleAdapterDemo22.addList(list1,list2,list3);
         mSimpleAdapterDemo22.notifyDataSetChanged();

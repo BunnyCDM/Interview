@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.intent">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.intent">
 
-    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true" android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".MainActivity01"
+            android:label="MainActivity01">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity02"
+            android:label="MainActivity02">
+            <intent-filter>
+                <!--注意格式：包名+intent.action+类名-->
+                <!--android:exported默认为true，设置为false，外部应用不可以打开-->
+
+                <action android:name="com.example.intent.intent.action.MainActivity02" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity03"
+            android:label="MainActivity03">
+            <intent-filter>
+                <!--action相同，可以通过协议data区分-->
+
+                <action android:name="com.example.intent.intent.action.MainActivity02" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity04"
+            android:label="MainActivity04">
+            <intent-filter>
+                <!--通过浏览器链接启动本地Activity-->
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>

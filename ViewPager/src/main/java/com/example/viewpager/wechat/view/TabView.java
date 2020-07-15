@@ -61,7 +61,7 @@ public class TabView extends FrameLayout {
         mTvTitle.setTextColor(evaluate(progress, COLOR_DEFAULT, COLOR_SELECT));
     }
 
-    public int evaluate(float fraction, int startValue, int endValue) {
+    private int evaluate(float fraction, int startValue, int endValue) {
         int startInt = (Integer) startValue;
         int startA = (startInt >> 24) & 0xff;
         int startR = (startInt >> 16) & 0xff;

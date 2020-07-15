@@ -19,9 +19,22 @@ import com.example.fragment.R;
 
 public class LifeCycleActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView tv_hotspot, tv_topline;
     private FragmentManager manager;
     private FragmentTransaction transaction;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_lifecycle);
+        AppLogger.d("------LifeCycleActivity------onCreate: ");
+        findViewById(R.id.hotspot).setOnClickListener(this);
+        findViewById(R.id.topline).setOnClickListener(this);
+
+        manager = getFragmentManager();
+        transaction = manager.beginTransaction();
+        transaction.add(R.id.contentlayout, new HotspotFragment());
+        transaction.commit();
+    }
 
     @Override
     public void onClick(View v) {
@@ -36,23 +49,6 @@ public class LifeCycleActivity extends AppCompatActivity implements View.OnClick
             default:
                 break;
         }
-        transaction.commit();
-    }
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lifecycle);
-        AppLogger.d("------LifeCycleActivity------onCreate: ");
-        tv_hotspot = (TextView) findViewById(R.id.hotspot);
-        tv_topline = (TextView) findViewById(R.id.topline);
-
-        tv_hotspot.setOnClickListener(this);
-        tv_topline.setOnClickListener(this);
-
-        manager = getFragmentManager();
-        transaction = manager.beginTransaction();
-        transaction.add(R.id.contentlayout, new HotspotFragment());
         transaction.commit();
     }
 

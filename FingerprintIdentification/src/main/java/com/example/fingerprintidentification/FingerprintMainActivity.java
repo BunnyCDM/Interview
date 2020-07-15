@@ -28,8 +28,12 @@ public class FingerprintMainActivity extends Activity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fingerprint_main);
-        initViews();
-        initViewListeners();
+        mFingerGuideImg = (ImageView) findViewById(R.id.fingerprint_guide);
+        mFingerGuideTxt = (TextView) findViewById(R.id.fingerprint_guide_tip);
+        findViewById(R.id.fingerprint_recognition_start).setOnClickListener(this);
+        findViewById(R.id.fingerprint_recognition_cancel).setOnClickListener(this);
+        findViewById(R.id.fingerprint_recognition_sys_unlock).setOnClickListener(this);
+        findViewById(R.id.fingerprint_recognition_sys_setting).setOnClickListener(this);
         initFingerprintCore();
     }
 
@@ -37,18 +41,6 @@ public class FingerprintMainActivity extends Activity implements View.OnClickLis
         mFingerprintCore = new FingerprintCore(this);
         mFingerprintCore.setFingerprintManager(mResultListener);
         mKeyguardLockScreenManager = new KeyguardLockScreenManager(this);
-    }
-
-    private void initViews() {
-        mFingerGuideImg = (ImageView) findViewById(R.id.fingerprint_guide);
-        mFingerGuideTxt = (TextView) findViewById(R.id.fingerprint_guide_tip);
-    }
-
-    private void initViewListeners() {
-        findViewById(R.id.fingerprint_recognition_start).setOnClickListener(this);
-        findViewById(R.id.fingerprint_recognition_cancel).setOnClickListener(this);
-        findViewById(R.id.fingerprint_recognition_sys_unlock).setOnClickListener(this);
-        findViewById(R.id.fingerprint_recognition_sys_setting).setOnClickListener(this);
     }
 
     @Override
