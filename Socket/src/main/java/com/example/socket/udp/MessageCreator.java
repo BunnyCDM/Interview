@@ -2,6 +2,7 @@ package com.example.socket.udp;
 
 /**
  * 消息创建者
+ * 具备两个口令
  */
 public class MessageCreator {
 

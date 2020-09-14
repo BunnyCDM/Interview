@@ -16,13 +16,12 @@ import java.net.Socket;
 public class Client {
 
     public static void main(String[] args) throws IOException {
-
         Socket socket = new Socket();
         socket.setSoTimeout(3000);// 超时时间
 
         // 连接本地，端口2000；超时时间3000ms
         socket.connect(new InetSocketAddress(Inet4Address.getLocalHost(),
-                2000), 3000);
+                2001), 3000);
 
         System.out.println("已发起服务器连接，并进入后续流程～");
         System.out.println("客户端信息：" + socket.getLocalAddress()
@@ -44,7 +43,6 @@ public class Client {
     }
 
     private static void todo(Socket client) throws IOException {
-
         // 得到Socket输出流，并转换为打印流
         OutputStream outputStream = client.getOutputStream();
         PrintStream socketPrintStream = new PrintStream(outputStream);
@@ -75,7 +73,6 @@ public class Client {
         // 资源释放
         socketPrintStream.close();
         socketBufferedReader.close();
-
     }
 
 

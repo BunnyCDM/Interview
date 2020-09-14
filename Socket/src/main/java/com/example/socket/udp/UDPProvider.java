@@ -14,7 +14,7 @@ public class UDPProvider {
 
         // 生成一份唯一标示
         String sn = UUID.randomUUID().toString();
-        System.out.println("sn =" + sn);//033a52c9-5dd7-43b9-ab86-83fe1e5bf315
+        System.out.println("sn =" + sn);//033a52c9-5dd7-43b9-ab86-83fe1e5bf315,699a8742-e17a-4784-a61b-a6c73f430b30
         Provider provider = new Provider(sn);
         provider.start();
 

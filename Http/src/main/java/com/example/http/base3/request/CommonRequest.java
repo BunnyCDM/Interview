@@ -17,6 +17,23 @@ import okhttp3.RequestBody;
 public class CommonRequest {
 
     /**
+     * ressemble the params to the url
+     *
+     * @param url
+     * @param params
+     * @return
+     */
+    public static Request createGetRequest(String url, RequestParams params) {
+        StringBuilder urlBuilder = new StringBuilder(url).append("?");
+        if (params != null) {
+            for (Map.Entry<String, String> entry : params.urlParams.entrySet()) {
+                urlBuilder.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
+            }
+        }
+        return new Request.Builder().url(urlBuilder.substring(0, urlBuilder.length() - 1)).get().build();
+    }
+
+    /**
      * create the key-value Request
      *
      * @param url
@@ -32,23 +49,6 @@ public class CommonRequest {
         }
         FormBody mFormBody = mFormBodyBuild.build();
         return new Request.Builder().url(url).post(mFormBody).build();
-    }
-
-    /**
-     * ressemble the params to the url
-     *
-     * @param url
-     * @param params
-     * @return
-     */
-    public static Request createGetRequest(String url, RequestParams params) {
-        StringBuilder urlBuilder = new StringBuilder(url).append("?");
-        if (params != null) {
-            for (Map.Entry<String, String> entry : params.urlParams.entrySet()) {
-                urlBuilder.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
-            }
-        }
-        return new Request.Builder().url(urlBuilder.substring(0, urlBuilder.length() - 1)).get().build();
     }
 
     /**

@@ -13,6 +13,7 @@ public class Tools {
     }
 
     public static byte[] intToByteArray(int a) {
+        //00000000 00000000 00000000 00000011
         return new byte[]{
                 (byte) ((a >> 24) & 0xFF),
                 (byte) ((a >> 16) & 0xFF),

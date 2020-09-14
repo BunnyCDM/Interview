@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.baselibrary.utils.log.AppLogger;
 import com.example.http.R;
 import com.example.http.base3.listener.DisposeDataHandle;
 import com.example.http.base3.listener.DisposeDataListener;
@@ -22,12 +23,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
-/**
- * okhttp框架解析与应用，CommonLibrary-master所在Github文件下
+/**okhttp框架解析与应用，CommonLibrary-master所在Github文件下
  * @author vision
  * @function OkHttpClient网络请求测试页面
  */
-public class OkHttpTestActivity extends Activity implements DisposeHandleCookieListener, View.OnClickListener {
+public class OkHttpTestActivity03 extends Activity implements DisposeHandleCookieListener, View.OnClickListener {
     private ImageView mImageView;
     private Button mLoginView;
     private Button mCookieView;
@@ -47,6 +47,7 @@ public class OkHttpTestActivity extends Activity implements DisposeHandleCookieL
         mCookieView = (Button) findViewById(R.id.get_cookie_view);
         mFileDownloadView = (Button) findViewById(R.id.down_load_file);
         mCookieTextView = (TextView) findViewById(R.id.cookie_show_view);
+        mImageView.setOnClickListener(this);
         mLoginView.setOnClickListener(this);
         mCookieView.setOnClickListener(this);
         mFileDownloadView.setOnClickListener(this);
@@ -61,10 +62,12 @@ public class OkHttpTestActivity extends Activity implements DisposeHandleCookieL
                 new DisposeDataHandle(new DisposeDataListener() {
                     @Override
                     public void onSuccess(Object responseObj) {
+                        AppLogger.d("onSuccess: "+responseObj.toString());
                     }
 
                     @Override
                     public void onFailure(Object reasonObj) {
+                        AppLogger.d("onFailure: "+reasonObj.toString());
                     }
                 }));
     }
@@ -101,7 +104,7 @@ public class OkHttpTestActivity extends Activity implements DisposeHandleCookieL
                     @Override
                     public void onProgress(int progrss) {
                         // 监听下载进度，更新UI
-                        Log.e("--------->当前进度为:", progrss + "");
+                        AppLogger.e("--------->当前进度为:"+progrss + "");
                     }
                 }, Environment.getExternalStorageDirectory().getAbsolutePath() + "/test2.jpg"));
     }
@@ -115,12 +118,12 @@ public class OkHttpTestActivity extends Activity implements DisposeHandleCookieL
 
                     @Override
                     public void onSuccess(Object responseObj) {
-
+                        AppLogger.d( "onSuccess: "+responseObj.toString());
                     }
 
                     @Override
                     public void onFailure(Object reasonObj) {
-
+                        AppLogger.d( "onFailure: "+reasonObj.toString());
                     }
                 }));
     }
@@ -135,6 +138,7 @@ public class OkHttpTestActivity extends Activity implements DisposeHandleCookieL
         /**
          * 这是一个需要Cookie的请求，说明Okhttp帮我们存储了Cookie
          */
+        AppLogger.d( "onSuccess: "+responseObj.toString());
         CommonOkHttpClient.post(CommonRequest.createPostRequest(UrlConstants.PUSH_LIST, null),
                 new DisposeDataHandle(new DisposeDataListener() {
                     @Override
@@ -151,10 +155,12 @@ public class OkHttpTestActivity extends Activity implements DisposeHandleCookieL
 
     @Override
     public void onFailure(Object reasonObj) {
+        AppLogger.d( "onFailure: "+reasonObj.toString());
     }
 
     @Override
     public void onCookie(ArrayList<String> cookieStrLists) {
+        AppLogger.d( "onCookie: "+cookieStrLists.size());
         // 自己处理Cookie回调，返回的是cookie字符串，如果想要cookie对象，可以使用HttpCookie解析为对象类型。
         mCookieTextView.setText(cookieStrLists.get(0));
     }
@@ -162,6 +168,9 @@ public class OkHttpTestActivity extends Activity implements DisposeHandleCookieL
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.four_view:
+                getRequest();
+                break;
             case R.id.login_view:
                 postRequest();
                 break;

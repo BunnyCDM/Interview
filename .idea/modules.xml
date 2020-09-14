@@ -3,11 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Fragment/Fragment.iml" filepath="$PROJECT_DIR$/Fragment/Fragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Http/Http.iml" filepath="$PROJECT_DIR$/Http/Http.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interview.iml" filepath="$PROJECT_DIR$/Interview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ListView/ListView.iml" filepath="$PROJECT_DIR$/ListView/ListView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RecycleView/RecycleView.iml" filepath="$PROJECT_DIR$/RecycleView/RecycleView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ViewPager/ViewPager.iml" filepath="$PROJECT_DIR$/ViewPager/ViewPager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NIO/NIO.iml" filepath="$PROJECT_DIR$/NIO/NIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/ScreenAdapterTools/ScreenAdapterTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Socket/Socket.iml" filepath="$PROJECT_DIR$/Socket/Socket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UnitTest/UnitTest.iml" filepath="$PROJECT_DIR$/UnitTest/UnitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-client/sample-client.iml" filepath="$PROJECT_DIR$/sample-client/sample-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-clink/sample-clink.iml" filepath="$PROJECT_DIR$/sample-clink/sample-clink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-foo/sample-foo.iml" filepath="$PROJECT_DIR$/sample-foo/sample-foo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-server/sample-server.iml" filepath="$PROJECT_DIR$/sample-server/sample-server.iml" />
     </modules>
   </component>
 </project>

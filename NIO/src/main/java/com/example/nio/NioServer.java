@@ -48,7 +48,7 @@ public class NioServer {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void start() throws IOException {
         /**
-         * 1. 创建Selector
+         * 1. 创建selector
          */
         Selector selector = Selector.open();
 
@@ -60,7 +60,7 @@ public class NioServer {
         /**
          * 3. 为channel通道绑定监听端口
          */
-        serverSocketChannel.bind(new InetSocketAddress(8001));
+        serverSocketChannel.bind(new InetSocketAddress(8009));
 
         /**
          * 4. **设置channel为非阻塞模式**
@@ -78,7 +78,7 @@ public class NioServer {
          */
         for (; ; ) { // while(true) c for;;
             /**
-             * TODO 获取可用channel数量
+             * TODO 获取可用channel数量，阻塞等待channel有就绪事件发生
              */
             int readyChannels = selector.select();
 

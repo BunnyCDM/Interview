@@ -176,7 +176,7 @@ public class HttpsUtils {
             sslContext = SSLContext.getInstance("SSL");
             X509TrustManager[] xTrustArray = new X509TrustManager[]
                     {mTrustManager};
-            sslContext.init(null, xTrustArray, new SecureRandom());
+            sslContext.init((KeyManager[]) null, xTrustArray, new SecureRandom());
         } catch (Exception e) {
             e.printStackTrace();
         }

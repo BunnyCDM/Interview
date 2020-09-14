@@ -13,12 +13,10 @@ import java.net.Socket;
 public class Server {
 
     public static void main(String[] args) throws IOException {
-
-        ServerSocket server = new ServerSocket(2000);
+        ServerSocket server = new ServerSocket(2001);
         System.out.println("服务器准备就绪～");
         System.out.println("服务器信息：" + server.getInetAddress()
                 + " P:" + server.getLocalPort());
-
 
         // 等待客户端连接
         for (; ; ) {

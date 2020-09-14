@@ -13,6 +13,7 @@ import java.util.Set;
  * 客户端线程类，专门接收服务器端响应信息
  */
 public class NioClientHandler implements Runnable {
+
     private Selector selector;
 
     public NioClientHandler(Selector selector) {

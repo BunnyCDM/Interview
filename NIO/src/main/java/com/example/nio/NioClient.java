@@ -10,6 +10,8 @@ import java.util.Scanner;
 
 /**
  * NIO客户端
+ * <p>
+ * implements Closeable使用意义
  */
 public class NioClient {
 
@@ -25,7 +27,7 @@ public class NioClient {
         /**
          * 连接服务器端
          */
-        SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 8001));
+        SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 2001));
 
         /**
          * 接收服务器端响应
@@ -44,6 +46,7 @@ public class NioClient {
         while (scanner.hasNextLine()) {
             String request = scanner.nextLine();
             if (request != null && request.length() > 0) {
+                System.out.println(request);
                 socketChannel.write(
                         Charset.forName("UTF-8")
                                 .encode(nickname + " : " + request));

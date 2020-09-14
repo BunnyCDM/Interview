@@ -23,3 +23,6 @@ com.example.mac.screenadaptation D/Utils: onCreate: xdpi=403.411
 com.example.mac.screenadaptation D/Utils: onCreate: ydpi=403.411
 
 
+https://www.jianshu.com/p/7aa34434ad4d
+
+

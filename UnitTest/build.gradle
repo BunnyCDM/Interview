@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    //buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.example.unittest"
@@ -30,6 +29,9 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.+'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
+
     //android 单元测试依赖
     testImplementation 'junit:junit:4.12'
+
+    implementation project(path: ':BaseLibrary')
 }

@@ -120,8 +120,7 @@ public class CommonJsonCallback implements Callback {
                     }
                 } else {
                     if (result.has(ERROR_MSG)) {
-                        mListener.onFailure(
-                                new OkHttpException(result.optInt(RESULT_CODE), result.optString(ERROR_MSG)));
+                        mListener.onFailure(new OkHttpException(result.optInt(RESULT_CODE), result.optString(ERROR_MSG)));
                     } else {
                         mListener.onFailure(new OkHttpException(result.optInt(RESULT_CODE), EMPTY_MSG));
                     }

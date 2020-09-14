@@ -38,7 +38,7 @@ import okhttp3.Response;
  * Android网络框架-OkHttp使用，okhttp所在Github文件下，其中也包括服务端代码
  * github地址：https://github.com/square/okhttp
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity02 extends AppCompatActivity implements View.OnClickListener {
 
     private TextView mText;
     private ImageView mDownImage;
@@ -109,8 +109,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Request.Builder builder = new Request.Builder();
         Request request = builder.get().url(BASE_URL + "login?username=roger&passwd=123456").build();
 
-        execute(request);
+        //3. 执行Call
+        Call call = okHttpClient.newCall(request);
+        //4.执行
+        //call.execute();//同步执行
+        //异步执行
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+                AppLogger.e("Error" + e);
+            }
 
+            @Override
+            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+                final String repo = response.body().string();
+                AppLogger.e(repo + " ");
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mText.setText(repo);
+                    }
+                });
+            }
+        });
     }
 
     private void execute(Request request) {
@@ -141,7 +162,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void doPost() {
-        RequestBody requestBody = new FormBody.Builder().add("username", "reoger").add("passwd", "123").build();
+        RequestBody requestBody = new FormBody.Builder()
+                .add("username", "reoger")
+                .add("passwd", "123")
+                .build();
 
         Request.Builder builder = new Request.Builder();
         Request request = builder.post(requestBody).url(BASE_URL + "login").build();
@@ -149,7 +173,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void doPostString() {
-        RequestBody requestBody = RequestBody.create(MediaType.parse("text/plain;charset=utf-8"), "this is json data or string data");
+        RequestBody requestBody = RequestBody.create(MediaType.parse("text/plain;charset=utf-8"),
+                "this is json data or string data");
         Request.Builder builder = new Request.Builder();
         Request request = builder.post(requestBody).url(BASE_URL + "postString").build();
         execute(request);
@@ -167,30 +192,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Request.Builder builder = new Request.Builder();
         Request request = builder.post(requestBody).url(BASE_URL + "postFile").build();
         execute(request);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.but_get://get 请求
-                doGet();
-                break;
-            case R.id.bu_post://post 请求
-                doPost();
-                break;
-            case R.id.bu_post_string://post上传string或者json数据
-                doPostString();
-                break;
-            case R.id.bu_post_file:
-                doPostFile();
-                break;
-            case R.id.bu_upload:
-                doUpload();
-                break;
-            case R.id.bu_download:
-                doDownLoad();
-                break;
-        }
     }
 
     private void doUpload() {
@@ -220,6 +221,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         execute(request);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.but_get://get 请求
+                doGet();
+                break;
+            case R.id.bu_post://post 请求
+                doPost();
+                break;
+            case R.id.bu_post_string://post上传string或者json数据
+                doPostString();
+                break;
+            case R.id.bu_post_file:
+                doPostFile();
+                break;
+            case R.id.bu_upload:
+                doUpload();
+                break;
+            case R.id.bu_download:
+                doDownLoad();
+                break;
+        }
+    }
 
     private void doDownLoad() {
         Request.Builder builder = new Request.Builder();
@@ -268,7 +292,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fos.flush();
         fos.close();
         is.close();
-        AppLogger.d( "down success!");
+        AppLogger.d("down success!");
     }
 
     //显示图片到imageView上

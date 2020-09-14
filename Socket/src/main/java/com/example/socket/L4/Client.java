@@ -93,11 +93,11 @@ public class Client {
         // 是否让紧急数据内敛，默认false；紧急数据通过 socket.sendUrgentData(1);发送
         socket.setOOBInline(true);
 
-        // 设置接收发送缓冲器大小
+        // 设置接收发送缓冲器大小，默认32
         socket.setReceiveBufferSize(64 * 1024 * 1024);
         socket.setSendBufferSize(64 * 1024 * 1024);
 
-        // 设置性能参数：短链接，延迟，带宽的相对重要性
+        // 设置性能参数：短链接，延迟，带宽的相对重要性，权重关系
         socket.setPerformancePreferences(1, 1, 0);
     }
 
@@ -108,6 +108,7 @@ public class Client {
         // 得到Socket输入流
         InputStream inputStream = client.getInputStream();
         byte[] buffer = new byte[256];
+        //ByteBuffer byteBuffer = ByteBuffer.allocate(256);
         ByteBuffer byteBuffer = ByteBuffer.wrap(buffer);
         System.out.println("byteBuffer=" + byteBuffer);
 

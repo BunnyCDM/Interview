@@ -68,6 +68,10 @@ public class CountingRequestBody extends RequestBody{
     }
 
     public interface Listener {
+        /**
+         * @param byteWrited:已写入字节数
+         * @param contentLength：总字节数
+         */
         void onRequestProgress(long byteWrited, long contentLength);
     }
 }
