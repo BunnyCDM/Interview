@@ -1,5 +1,6 @@
 package com.qiujuer.lesson.sample.client;
 
+import com.qiujuer.lesson.sample.client.bean.ServerInfo;
 import com.qiujuer.lesson.sample.foo.Foo;
 import com.qiujuer.lesson.sample.foo.handle.ConnectorCloseChain;
 import com.qiujuer.lesson.sample.foo.handle.ConnectorHandler;
@@ -11,7 +12,6 @@ import com.qiujuer.library.clink.core.schedule.IdleTimeoutScheduleJob;
 import com.qiujuer.library.clink.impl.IoSelectorProvider;
 import com.qiujuer.library.clink.impl.SchedulerImpl;
 import com.qiujuer.library.clink.utils.CloseUtils;
-import com.qiujuer.lesson.sample.client.bean.ServerInfo;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -33,7 +33,7 @@ public class Client {
                 .start();
 
         ServerInfo info = UDPSearcher.searchServer(10000);
-        System.out.println("Server:" + info);
+        System.out.println("Server: " + info);
 
         if (info != null) {
             TCPClient tcpClient = null;

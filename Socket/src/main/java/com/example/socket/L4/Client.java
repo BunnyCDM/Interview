@@ -14,7 +14,7 @@ import java.nio.ByteBuffer;
  */
 public class Client {
 
-    private static final int PORT = 20004;
+    private static final int PORT = 8000;
     private static final int LOCAL_PORT = 20001;
 
     public static void main(String[] args) throws IOException {
@@ -93,6 +93,14 @@ public class Client {
         // 是否让紧急数据内敛，默认false；紧急数据通过 socket.sendUrgentData(1);发送
         socket.setOOBInline(true);
 
+        /**
+         * linux手册中，接收缓冲区的默认值保存在/proc/sys/net/core/rmem_default
+         * cat /proc/sys/net/core/rmem_default
+         * 1048576 :接收缓冲区的默认值是：1048576，1M
+         *
+         * cat /proc/sys/net/core/wmem_default
+         * 512488:发送缓冲区的默认值是：512488，512K
+         */
         // 设置接收发送缓冲器大小，默认32
         socket.setReceiveBufferSize(64 * 1024 * 1024);
         socket.setSendBufferSize(64 * 1024 * 1024);

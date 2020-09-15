@@ -4,7 +4,9 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 
 import java.io.IOException;
+import java.net.Inet4Address;
 import java.net.InetSocketAddress;
+import java.net.ServerSocket;
 import java.nio.ByteBuffer;
 import java.nio.channels.Channel;
 import java.nio.channels.SelectionKey;
@@ -60,7 +62,8 @@ public class NioServer {
         /**
          * 3. 为channel通道绑定监听端口
          */
-        serverSocketChannel.bind(new InetSocketAddress(8009));
+        //serverSocketChannel.bind(new InetSocketAddress(8000));
+        serverSocketChannel.bind(new InetSocketAddress(Inet4Address.getLocalHost(), 8000));
 
         /**
          * 4. **设置channel为非阻塞模式**
@@ -72,6 +75,10 @@ public class NioServer {
          */
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);//接收连接事件
         System.out.println("服务器启动成功！");
+
+        ServerSocket server = serverSocketChannel.socket();
+        System.out.println("服务器准备就绪～");
+        System.out.println("服务器信息：" + server.getInetAddress() + " P:" + server.getLocalPort());
 
         /**
          * 6. 循环等待新接入的连接
@@ -145,6 +152,8 @@ public class NioServer {
          */
         socketChannel.register(selector, SelectionKey.OP_READ);
 
+
+        System.out.println("回复客户端提示信息");
         /**
          * 回复客户端提示信息
          */
@@ -195,6 +204,8 @@ public class NioServer {
         if (request.length() > 0) {
             // 广播给其他客户端
             broadCast(selector, socketChannel, request);
+
+            System.out.println("读取客户端请求信息 is " + request);
         }
     }
 

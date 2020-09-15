@@ -41,8 +41,9 @@ public class Foo {
     private static final String CACHE_DIR = "cache";
 
     public static File getCacheDir(String dir) {
-        ///Users/mac/work/Android/Workspace/Studio/Interview/cache/server
+        ///Users/mac/work/Android/Workspace/Studio/Interview/cache/client
         String path = System.getProperty("user.dir") + (File.separator + CACHE_DIR + File.separator + dir);
+        System.out.println("getCacheDir  path is " + path);
         File file = new File(path);
         if (!file.exists()) {
             if (!file.mkdirs()) {
@@ -55,6 +56,7 @@ public class Foo {
     public static File createRandomTemp(File parent) {
         String string = UUID.randomUUID().toString() + ".tmp";
         File file = new File(parent, string);
+        System.out.println("createRandomTemp path is " + file.getPath());
         try {
             file.createNewFile();
         } catch (IOException e) {
