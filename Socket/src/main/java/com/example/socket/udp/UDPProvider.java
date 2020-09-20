@@ -65,6 +65,7 @@ public class UDPProvider {
 
                     // 解析端口号
                     int responsePort = MessageCreator.parsePort(data);
+                    System.out.println("解析端口号:" + responsePort);
                     if (responsePort != -1) {
                         // 构建一份回送数据
                         String responseData = MessageCreator.buildWithSn(sn);

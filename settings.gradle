@@ -1,6 +1,9 @@
-//include ':app', ':Handler', ':RecycleView', ':SwipeRefreshLayout', ':Synchronized', ':AsyncTask', ':Service', ':BroadcastReceiver', ':ContentProvider', ':Intent', ':Fragment', ':DesignPatterns', ':Activity', ':ToolBar', ':Thread', ':SharedPreferences', ':RadioButton', ':Menu', ':ActivityForResult', ':ScreenAdapterTools', ':ListView', ':Iconify', ':ButterKnife', ':Timer', ':Drawable', ':GreenDao', ':GreenDaoGenerate', ':Layout', ':MultiDex', ':Dagger', ':UnitTest', ':Socket', ':Permissions', ':ARouter', ':SparseArray', ':ConstraintLayout', ':ViewStub', ':TouchEvent', ':sample-clink', ':sample-foo', ':sample-client', ':sample-server', ':VideoView', ':NIO', ':Three_Characteristics_Of_Object_Orient', ':GridView', ':ViewPager', ':BaseLibrary', ':RecyclerViewLibrary', ':ACache', ':FingerprintIdentification', ':GestureVerify', ':CustomPullMenu', ':CitySelector', ':CityPicker', ':GenerateSignatureFile', ':Generate_JAR', ':Generate_AAR', ':Generate_Library', ':AIDL-Service', ':AIDL-Client', ':EventBus', ':RxBus', ':JNI', ':PerformanceOptimization', ':Http', ':DataBinding', ':FrameModel', ':Android_WebView_JS', ':ChangeSkin', ':ChangeSkinModule', ':ChangeSkinPlugin', ':Map', ':ShareSDK', ':Context'
+//include ':app', ':RecycleView', ':SwipeRefreshLayout', ':Service', ':BroadcastReceiver', ':ContentProvider', ':Intent', ':Fragment', ':DesignPatterns', ':Activity', ':ToolBar', ':SharedPreferences', ':RadioButton', ':Menu', ':ActivityForResult',  ':ListView', ':Iconify', ':ButterKnife', ':Timer', ':Drawable', ':GreenDao', ':GreenDaoGenerate', ':Layout', ':MultiDex', ':Dagger', ':Permissions', ':ARouter', ':SparseArray', ':ConstraintLayout', ':ViewStub', ':TouchEvent',  ':VideoView',  ':GridView', ':ViewPager',  ':RecyclerViewLibrary', ':ACache', ':FingerprintIdentification', ':GestureVerify', ':CustomPullMenu', ':CitySelector', ':CityPicker', ':GenerateSignatureFile', ':Generate_JAR', ':Generate_AAR', ':Generate_Library', ':AIDL-Service', ':AIDL-Client', ':EventBus', ':RxBus', ':JNI', ':PerformanceOptimization',  ':DataBinding', ':FrameModel', ':Android_WebView_JS', ':ChangeSkin', ':ChangeSkinModule', ':ChangeSkinPlugin', ':Map', ':ShareSDK', ':Context'
 
 
-include ':ScreenAdapterTools'
-include ':BaseLibrary', ':Http', ':UnitTest'
-include ':NIO', ':Socket', ':sample-client', ':sample-clink', ':sample-foo', ':sample-server'
+include ':BaseLibrary'
+//include ':ScreenAdapterTools'
+//include ':Http', ':UnitTest'
+//include ':AsyncTask',':Handler'
+include ':Three_Characteristics_Of_Object_Orient', ':Thread', ':Synchronized', ':NIO', ':Socket',
+        ':sample-client', ':sample-clink', ':sample-foo', ':sample-server'

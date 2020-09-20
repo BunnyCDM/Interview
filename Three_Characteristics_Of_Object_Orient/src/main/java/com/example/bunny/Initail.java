@@ -18,6 +18,24 @@ public class Initail {
         IPlayGame ip2 = new Psp();
         ip2.playGame();
 
+
+        IPlayGame iPlayGame = new IPlayGame() {
+            @Override
+            public void playGame() {
+                System.out.println("使用匿名内部类的方式实现接口1");
+            }
+        };
+        iPlayGame.playGame();
+
+
+        new IPlayGame() {
+
+            @Override
+            public void playGame() {
+                System.out.println("使用匿名内部类的方式实现接口2");
+            }
+        }.playGame();
+
     }
 
 }

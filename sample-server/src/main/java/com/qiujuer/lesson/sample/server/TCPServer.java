@@ -201,6 +201,7 @@ public class TCPServer implements ServerAcceptor.AcceptListener,
         @Override
         protected boolean consume(ConnectorHandler handler, StringReceivePacket stringReceivePacket) {
             String str = stringReceivePacket.entity();
+            System.out.println("str is "+str);
             if (str.startsWith(Foo.COMMAND_GROUP_JOIN)) {
                 Group group = groups.get(Foo.DEFAULT_GROUP_NAME);
                 if (group.addMember(handler)) {

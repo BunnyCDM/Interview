@@ -9,11 +9,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/BaseLibrary" />
-            <option value="$PROJECT_DIR$/Http" />
             <option value="$PROJECT_DIR$/NIO" />
-            <option value="$PROJECT_DIR$/ScreenAdapterTools" />
             <option value="$PROJECT_DIR$/Socket" />
-            <option value="$PROJECT_DIR$/UnitTest" />
+            <option value="$PROJECT_DIR$/Synchronized" />
+            <option value="$PROJECT_DIR$/Thread" />
+            <option value="$PROJECT_DIR$/Three_Characteristics_Of_Object_Orient" />
             <option value="$PROJECT_DIR$/sample-client" />
             <option value="$PROJECT_DIR$/sample-clink" />
             <option value="$PROJECT_DIR$/sample-foo" />
