@@ -1,5 +1,7 @@
 package com.example.socket.L4;
 
+import java.io.FileOutputStream;
+
 /**
  * Created by mac on 2019/7/14.
  */
@@ -20,6 +22,15 @@ public class Tools {
                 (byte) ((a >> 8) & 0xFF),
                 (byte) (a & 0xFF)
         };
+
+
+//        int a=10;
+//        FileOutputStream fos=new FileOutputStream();
+//        fos.write(a>>>24);
+//        fos.write(a>>>16);
+//        fos.write(a>>>8);
+        //write 只能写八位，那么写一个int需要写4次每次8位
+//        fos.write(a);
     }
 }
 

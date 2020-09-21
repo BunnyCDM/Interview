@@ -5,5 +5,5 @@ include ':BaseLibrary'
 //include ':ScreenAdapterTools'
 //include ':Http', ':UnitTest'
 //include ':AsyncTask',':Handler'
-include ':Three_Characteristics_Of_Object_Orient', ':Thread', ':Synchronized', ':NIO', ':Socket',
+include ':Three_Characteristics_Of_Object_Orient', ':Thread', ':IO', ':Synchronized', ':NIO', ':Socket',
         ':sample-client', ':sample-clink', ':sample-foo', ':sample-server'
