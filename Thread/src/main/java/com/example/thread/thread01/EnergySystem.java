@@ -37,6 +37,7 @@ public class EnergySystem {
 
         // TODO: 2019/7/21 优化前 
 //        if (energyBoxes[form] < amount) {
+//            System.out.println(energyBoxes[form]+"---"+amount+"---"+Thread.currentThread().getName());
 //            return;
 //        }
 //
@@ -54,6 +55,7 @@ public class EnergySystem {
             //while循环，保证条件下不满足任务时都会被条件阻挡，而不是继续竞争CPU资源
             while (energyBoxes[form] < amount) {
                 try {
+                    System.out.println(energyBoxes[form] + "---" + amount + "---" + Thread.currentThread().getName());
                     //线程同步,条件不满足，将当前线程放入Wait Set
                     lockObj.wait();
                 } catch (InterruptedException e) {
@@ -68,7 +70,6 @@ public class EnergySystem {
 
             //线程同步，唤醒所有在lockObj对象上等待的线程
             lockObj.notifyAll();//lockObj.notify();
-
         }
 
     }

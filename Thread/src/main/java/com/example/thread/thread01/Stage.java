@@ -31,10 +31,10 @@ public class Stage extends Thread {
         ArmyRunnable armyTaskOfRevolt = new ArmyRunnable();
 
         //使用Runnable接口创建线程
-        Thread armyOfSuiDnasty = new Thread(armyTaskOfSuiDynasty, "隋军");
+        Thread armyOfSuiDynasty = new Thread(armyTaskOfSuiDynasty, "隋军");
         Thread armyOfRevolt = new Thread(armyTaskOfRevolt, "农民起义军");
 
-        armyOfSuiDnasty.start();
+        armyOfSuiDynasty.start();
         armyOfRevolt.start();
 
         try {
@@ -53,7 +53,7 @@ public class Stage extends Thread {
         armyTaskOfSuiDynasty.keepRunning = false;
         armyTaskOfRevolt.keepRunning = false;
         //不能使用stop李停止线程，这样会造成程序突然终止造成数据业务有害！！！
-        //armyOfSuiDnasty.stop();
+        //armyOfSuiDynasty.stop();
         //armyOfRevolt.stop();
         //可以查看java API文档，并不能终止线程
         //armyOfSuiDnasty.interrupt();

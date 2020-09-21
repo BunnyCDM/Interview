@@ -5,6 +5,7 @@ package com.example.thread.thread01;
  * <p>
  * 线程先生、线程小姐
  */
+
 public class Actor extends Thread {
 
 
@@ -35,7 +36,6 @@ public class Actor extends Thread {
 
 
         System.out.println(getName() + "的演出结束");
-        //
     }
 
 
