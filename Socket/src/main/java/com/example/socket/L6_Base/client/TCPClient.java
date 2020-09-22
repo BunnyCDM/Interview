@@ -1,12 +1,12 @@
-package com.example.socket.L7_7_8_9_10.client;
+package com.example.socket.L6_Base.client;
 
-import com.example.socket.L7_7_8_9_10.client.bean.ServerInfo;
-import com.example.socket.L7_7_8_9_10.clink.utils.CloseUtils;
+import com.example.socket.L6_Base.clink.CloseUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Inet4Address;
 import java.net.InetSocketAddress;
@@ -14,7 +14,7 @@ import java.net.Socket;
 import java.net.SocketTimeoutException;
 
 /**
- * Created by mac on 2019-08-04.
+ * Created by mac on 2020-09-22.
  */
 public class TCPClient {
     private final Socket socket;
@@ -37,13 +37,13 @@ public class TCPClient {
         printStream.println(msg);
     }
 
-    public static TCPClient startWith(ServerInfo info) throws IOException {
+    public static TCPClient startWith(int port) throws IOException {
         Socket socket = new Socket();
         // 超时时间
         socket.setSoTimeout(3000);
 
         // 连接本地，端口2000；超时时间3000ms
-        socket.connect(new InetSocketAddress(Inet4Address.getByName(info.getAddress()), info.getPort()), 3000);
+        socket.connect(new InetSocketAddress(Inet4Address.getLocalHost(), port), 3000);
 
         System.out.println("已发起服务器连接，并进入后续流程～");
         System.out.println("客户端信息：" + socket.getLocalAddress() + " P:" + socket.getLocalPort());
@@ -52,15 +52,14 @@ public class TCPClient {
         try {
             ReadHandler readHandler = new ReadHandler(socket.getInputStream());
             readHandler.start();
+
             return new TCPClient(socket, readHandler);
         } catch (Exception e) {
             System.out.println("连接异常");
             CloseUtils.close(socket);
         }
-
         return null;
     }
-
 
     static class ReadHandler extends Thread {
         private boolean done = false;
@@ -107,4 +106,29 @@ public class TCPClient {
             CloseUtils.close(inputStream);
         }
     }
+
+    private static void write(Socket client) throws IOException {
+        // 构建键盘输入流
+        InputStream in = System.in;
+        BufferedReader input = new BufferedReader(new InputStreamReader(in));
+
+        // 得到Socket输出流，并转换为打印流
+        OutputStream outputStream = client.getOutputStream();
+        PrintStream socketPrintStream = new PrintStream(outputStream);
+
+        do {
+            // 键盘读取一行
+            String str = input.readLine();
+            // 发送到服务器
+            socketPrintStream.println(str);
+
+            if ("00bye00".equalsIgnoreCase(str)) {
+                break;
+            }
+        } while (true);
+
+        // 资源释放
+        socketPrintStream.close();
+    }
+
 }

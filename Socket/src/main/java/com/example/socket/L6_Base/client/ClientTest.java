@@ -1,30 +1,29 @@
-package com.example.socket.L7_7_8_9_10.client;
+package com.example.socket.L6_Base.client;
 
-import com.example.socket.L7_7_8_9_10.client.bean.ServerInfo;
+import com.example.socket.L6_Base.foo.TCPConstants;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by mac on 2019-08-04.
+ * Created by mac on 2020-09-22.
  */
 public class ClientTest {
+
     private static boolean done;
 
     public static void main(String[] args) throws IOException {
-        ServerInfo info = UDPSearcher.searchServer(10000);
-        System.out.println("Server:" + info);
-        if (info == null) {
-            return;
-        }
 
         // 当前连接数量
         int size = 0;
         final List<TCPClient> tcpClients = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             try {
-                TCPClient tcpClient = TCPClient.startWith(info);
+                TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER);
                 if (tcpClient == null) {
                     System.out.println("连接异常");
                     continue;
@@ -51,7 +50,7 @@ public class ClientTest {
         Runnable runnable = () -> {
             while (!done) {
                 for (TCPClient tcpClient : tcpClients) {
-                    tcpClient.send("Hello~~");
+                    tcpClient.send("Hello~");
                 }
                 try {
                     Thread.sleep(1000);
@@ -82,5 +81,21 @@ public class ClientTest {
     }
 
 
-}
+    private static void write(TCPClient tcpClient) throws IOException {
+        // 构建键盘输入流
+        InputStream in = System.in;
+        BufferedReader input = new BufferedReader(new InputStreamReader(in));
 
+        do {
+            // 键盘读取一行
+            String str = input.readLine();
+            // 发送到服务器
+            tcpClient.send("Hello~");
+
+            if ("00bye00".equalsIgnoreCase(str)) {
+                break;
+            }
+        } while (true);
+    }
+
+}

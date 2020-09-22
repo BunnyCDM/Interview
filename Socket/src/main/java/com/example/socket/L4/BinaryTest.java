@@ -52,6 +52,7 @@ public class BinaryTest {
         int i = Tools.byteArrayToInt(bytes);
         System.out.println("i is " + i);
 
+
     }
 
 }

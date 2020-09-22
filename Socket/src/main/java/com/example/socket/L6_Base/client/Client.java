@@ -1,6 +1,6 @@
-package com.example.socket.L7_7_8_9_10.client;
+package com.example.socket.L6_Base.client;
 
-import com.example.socket.L7_7_8_9_10.client.bean.ServerInfo;
+import com.example.socket.L6_Base.foo.TCPConstants;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,33 +8,23 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by mac on 2019-08-04.
+ * Created by mac on 2020-09-22.
  */
 public class Client {
+
     public static void main(String[] args) {
-        ServerInfo info = UDPSearcher.searchServer(10000);
-        System.out.println("Server:" + info);
+        try {
 
-        if (info != null) {
-            TCPClient tcpClient = null;
-
-            try {
-                tcpClient = TCPClient.startWith(info);
-                if (tcpClient == null) {
-                    return;
-                }
-
-                write(tcpClient);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                if (tcpClient != null) {
-                    tcpClient.exit();
-                }
+            TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER);
+            if (tcpClient == null) {
+                return;
             }
+
+            write(tcpClient);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-
 
     private static void write(TCPClient tcpClient) throws IOException {
         // 构建键盘输入流
@@ -54,4 +44,3 @@ public class Client {
     }
 
 }
-
