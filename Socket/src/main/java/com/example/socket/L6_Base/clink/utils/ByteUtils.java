@@ -1,4 +1,4 @@
-package com.example.socket.L6_Base.clink;
+package com.example.socket.L6_Base.clink.utils;
 
 /**
  * Created by mac on 2020-09-21.

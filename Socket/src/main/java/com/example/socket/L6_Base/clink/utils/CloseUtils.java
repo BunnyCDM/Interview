@@ -1,4 +1,4 @@
-package com.example.socket.L6_Base.clink;
+package com.example.socket.L6_Base.clink.utils;
 
 import java.io.Closeable;
 import java.io.IOException;

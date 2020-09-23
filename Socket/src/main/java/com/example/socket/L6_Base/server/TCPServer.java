@@ -1,11 +1,9 @@
 package com.example.socket.L6_Base.server;
 
-import com.example.socket.L6_Base.clink.CloseUtils;
+import com.example.socket.L6_Base.clink.utils.CloseUtils;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
@@ -148,8 +146,6 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
                             try {
                                 // 客户端构建异步线程
                                 ClientHandler clientHandler = new ClientHandler(socketChannel, TCPServer.this);
-                                // 读取数据并打印
-                                clientHandler.readToPrint();
                                 // 添加同步处理
                                 synchronized (TCPServer.this) {
                                     clientHandlerList.add(clientHandler);

@@ -1,5 +1,7 @@
 package com.example.socket.L6_Base.server;
 
+import com.example.socket.L6_Base.clink.core.IoContext;
+import com.example.socket.L6_Base.clink.impl.IoSelectorProvider;
 import com.example.socket.L6_Base.foo.TCPConstants;
 
 import java.io.BufferedReader;
@@ -12,6 +14,10 @@ import java.io.InputStreamReader;
 public class Server {
 
     public static void main(String[] args) throws IOException {
+        IoContext.setup()
+                .ioProvider(new IoSelectorProvider())
+                .start();
+
         TCPServer tcpServer = new TCPServer(TCPConstants.PORT_SERVER);
         boolean isSucceed = tcpServer.start();
         if (!isSucceed) {
@@ -28,6 +34,8 @@ public class Server {
         } while (!"00bye00".equalsIgnoreCase(str));
 
         tcpServer.stop();
+
+        IoContext.close();
     }
 
 

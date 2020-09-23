@@ -1,6 +1,6 @@
 package com.example.socket.L6_Base.client;
 
-import com.example.socket.L6_Base.clink.CloseUtils;
+import com.example.socket.L6_Base.clink.utils.CloseUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
