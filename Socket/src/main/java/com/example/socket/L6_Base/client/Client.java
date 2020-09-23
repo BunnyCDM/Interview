@@ -1,5 +1,7 @@
 package com.example.socket.L6_Base.client;
 
+import com.example.socket.L6_Base.clink.core.IoContext;
+import com.example.socket.L6_Base.clink.impl.IoSelectorProvider;
 import com.example.socket.L6_Base.foo.TCPConstants;
 
 import java.io.BufferedReader;
@@ -12,8 +14,12 @@ import java.io.InputStreamReader;
  */
 public class Client {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         try {
+
+            IoContext.setup()
+                    .ioProvider(new IoSelectorProvider())
+                    .start();
 
             TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER);
             if (tcpClient == null) {
@@ -24,6 +30,8 @@ public class Client {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        IoContext.close();
     }
 
     private static void write(TCPClient tcpClient) throws IOException {
@@ -39,9 +47,9 @@ public class Client {
             /**
              * 多消息粘包复现测试（客户端）
              */
-//            tcpClient.send(str);
-//            tcpClient.send(str);
-//            tcpClient.send(str);
+            tcpClient.send(str);
+            tcpClient.send(str);
+            tcpClient.send(str);
 
             if ("00bye00".equalsIgnoreCase(str)) {
                 break;

@@ -1,6 +1,10 @@
 package com.example.socket.L6_Base.clink.core;
 
+import com.example.socket.L6_Base.clink.box.StringReceivePacket;
+import com.example.socket.L6_Base.clink.box.StringSendPacket;
 import com.example.socket.L6_Base.clink.impl.SocketChannelAdapter;
+import com.example.socket.L6_Base.clink.impl.async.AsyncReceiveDispatcher;
+import com.example.socket.L6_Base.clink.impl.async.AsyncSendDispatcher;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -18,6 +22,8 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     private SocketChannel channel;
     private Sender sender;
     private Receiver receiver;
+    private SendDispatcher sendDispatcher;
+    private ReceiveDispatcher receiveDispatcher;
 
     public void setup(SocketChannel socketChannel) throws IOException {
         this.channel = socketChannel;
@@ -28,22 +34,26 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
         this.sender = adapter;
         this.receiver = adapter;
 
-        readNextMessage();
+        sendDispatcher=new AsyncSendDispatcher(sender);
+        receiveDispatcher=new AsyncReceiveDispatcher(receiver,receivePacketCallback);
+
+        //启动接收
+        receiveDispatcher.start();
     }
 
-    private void readNextMessage() {
-        if (receiver != null) {
-            try {
-                receiver.receiveAsync(echoReceiveListener);
-            } catch (IOException e) {
-                System.out.println("开始接收数据异常：" + e.getMessage());
-            }
-        }
+    public void send(String msg) {
+        SendPacket packet = new StringSendPacket(msg);
+        sendDispatcher.send(packet);
     }
+
 
     @Override
     public void close() throws IOException {
-
+        receiveDispatcher.close();
+        sendDispatcher.close();
+        sender.close();
+        receiver.close();
+        channel.close();
     }
 
     @Override
@@ -51,22 +61,21 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
 
     }
 
-    private IoArgs.IoArgsEventListener echoReceiveListener = new IoArgs.IoArgsEventListener() {
-        @Override
-        public void onStarted(IoArgs args) {
-
-        }
-
-        @Override
-        public void onCompleted(IoArgs args) {
-            // 打印
-            onReceiveNewMessage(args.bufferString());
-            // 读取下一条数据
-            readNextMessage();
-        }
-    };
-
     protected void onReceiveNewMessage(String str) {
         System.out.println(key.toString() + ":" + str);
     }
+
+    /**
+     * 当收到一个新的包Packet时会进行回调的内部类
+     */
+    private ReceiveDispatcher.ReceivePacketCallback receivePacketCallback=new ReceiveDispatcher.ReceivePacketCallback() {
+        @Override
+        public void onReceivePacketCompleted(ReceivePacket packet) {
+            if(packet instanceof StringReceivePacket){
+             String msg=((StringReceivePacket)packet).string();
+             onReceiveNewMessage(msg);
+            }
+
+        }
+    };
 }

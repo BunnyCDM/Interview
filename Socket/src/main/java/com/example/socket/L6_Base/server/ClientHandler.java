@@ -15,49 +15,19 @@ import java.util.concurrent.Executors;
 /**
  * Created by mac on 2020-09-22.
  */
-public class ClientHandler {
+public class ClientHandler extends  Connector{
 
-    private final Connector connector;
-    private final SocketChannel socketChannel;
-    private final ClientWriteHandler writeHandler;
     private final ClientHandlerCallback clientHandlerCallback;
     private final String clientInfo;
 
     public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback) throws IOException {
-        this.socketChannel = socketChannel;
-
-        connector=new Connector(){
-
-            @Override
-            public void onChannelClosed(SocketChannel channel) {
-                super.onChannelClosed(channel);
-                exitBySelf();
-            }
-
-            @Override
-            protected void onReceiveNewMessage(String str) {
-                super.onReceiveNewMessage(str);
-                clientHandlerCallback.onNewMessageArrived(ClientHandler.this,str);
-            }
-        };
-        connector.setup(socketChannel);
-
-        Selector writeSelector = Selector.open();
-        socketChannel.register(writeSelector, SelectionKey.OP_WRITE);
-        this.writeHandler = new ClientWriteHandler(writeSelector);
-
         this.clientHandlerCallback = clientHandlerCallback;
         this.clientInfo = socketChannel.getRemoteAddress().toString();
+
         System.out.println("新客户端连接：" + clientInfo);
         //this.clientInfo = "A[" + socket.getInetAddress().getHostAddress() + "]" + " P[" + socket.getPort() + "]";
-    }
 
-    public String getClientInfo() {
-        return clientInfo;
-    }
-
-    public void send(String str) {
-        writeHandler.send(str);
+        setup(socketChannel);
     }
 
     private void exitBySelf() {
@@ -66,11 +36,21 @@ public class ClientHandler {
     }
 
     public void exit() {
-        CloseUtils.close(connector);
-        writeHandler.exit();
-        CloseUtils.close(socketChannel);
+        CloseUtils.close(this);
         System.out.println("客户端已退出：" + clientInfo);
         //System.out.println("客户端已退出：" + socket.getInetAddress() + " P:" + socket.getPort());
+    }
+
+    @Override
+    public void onChannelClosed(SocketChannel channel) {
+        super.onChannelClosed(channel);
+        exitBySelf();
+    }
+
+    @Override
+    protected void onReceiveNewMessage(String str) {
+        super.onReceiveNewMessage(str);
+        clientHandlerCallback.onNewMessageArrived(this,str);
     }
 
     public interface ClientHandlerCallback {
@@ -79,64 +59,4 @@ public class ClientHandler {
         void onNewMessageArrived(ClientHandler handler, String msg);
     }
 
-    class ClientWriteHandler {
-        private boolean done = false;
-        private final Selector selector;
-        private final ByteBuffer byteBuffer;
-        private final ExecutorService executorService;
-
-        ClientWriteHandler(Selector selector) {
-            this.selector = selector;
-            this.byteBuffer = ByteBuffer.allocate(256);
-            this.executorService = Executors.newSingleThreadExecutor();
-        }
-
-        class WriteRunnable implements Runnable {
-            private final String msg;
-
-            WriteRunnable(String msg) {
-                this.msg = msg + "\n";
-            }
-
-            @Override
-            public void run() {
-                if (ClientWriteHandler.this.done) {
-                    return;
-                }
-
-                byteBuffer.clear();
-                byteBuffer.put(msg.getBytes());
-                // 反转操作, 重点
-                byteBuffer.flip();
-
-                while (!done && byteBuffer.hasRemaining()) {
-                    try {
-                        int len = socketChannel.write(byteBuffer);
-                        // len = 0 合法
-                        if (len < 0) {
-                            System.out.println("客户端已无法发送数据！");
-                            ClientHandler.this.exitBySelf();
-                            break;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
-
-        void send(String str) {
-            if (done) {
-                return;
-            }
-            executorService.execute(new WriteRunnable(str));
-        }
-
-        void exit() {
-            done = true;
-            CloseUtils.close(selector);
-            executorService.shutdownNow();
-        }
-
-    }
 }

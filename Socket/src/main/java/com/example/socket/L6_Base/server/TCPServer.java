@@ -88,7 +88,7 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
 
     @Override
     public void onNewMessageArrived(final ClientHandler handler, final String msg) {
-        System.out.println("Received-" + handler.getClientInfo() + ":" + msg);
+        //System.out.println("Received-" + handler.getClientInfo() + ":" + msg);
         /**
          * 多消息粘包复现测试（服务端）
          */

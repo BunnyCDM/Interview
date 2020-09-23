@@ -26,11 +26,11 @@ public class Tools {
 
 //        int a=10;
 //        FileOutputStream fos=new FileOutputStream();
-//        fos.write(a>>>24);
-//        fos.write(a>>>16);
-//        fos.write(a>>>8);
-        //write 只能写八位，那么写一个int需要写4次每次8位
-//        fos.write(a);
+//        fos.writeTo(a>>>24);
+//        fos.writeTo(a>>>16);
+//        fos.writeTo(a>>>8);
+        //writeTo 只能写八位，那么写一个int需要写4次每次8位
+//        fos.writeTo(a);
     }
 }
 
