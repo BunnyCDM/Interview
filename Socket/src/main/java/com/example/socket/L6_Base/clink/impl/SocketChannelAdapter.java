@@ -34,7 +34,7 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
 
     @Override
     public boolean receiveAsync(IoArgs.IoArgsEventListener listener) throws IOException {
-        if(isClosed.get()){
+        if (isClosed.get()) {
             throw new IOException("Current channel is closed!");
         }
 
@@ -67,12 +67,28 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
         }
     }
 
+    /**
+     * 消息到达提醒重复触发测试（读取消息时未设置取消监听）
+     */
+//    private boolean runed;
+
     private final IoProvider.HandleInputCallback inputCallback = new IoProvider.HandleInputCallback() {
         @Override
         protected void canProviderInput() {
             if (isClosed.get()) {
                 return;
             }
+
+//            if(runed){
+//                return;
+//            }
+//            runed = true;
+//
+//            try {
+//                Thread.sleep(8000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
 
             IoArgs args = new IoArgs();
             IoArgs.IoArgsEventListener listener = SocketChannelAdapter.this.receiveIoEventListener;

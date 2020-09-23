@@ -73,7 +73,6 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
 
         //停止线程池
         forwardingThreadPoolExecutor.shutdownNow();
-
     }
 
     public synchronized void broadcast(String str) {
@@ -90,6 +89,10 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
     @Override
     public void onNewMessageArrived(final ClientHandler handler, final String msg) {
         System.out.println("Received-" + handler.getClientInfo() + ":" + msg);
+        /**
+         * 多消息粘包复现测试（服务端）
+         */
+//        System.out.println("Received-" + handler.getClientInfo() + ":" + msg.replace("\n","--"));
 
         forwardingThreadPoolExecutor.execute(new Runnable() {
             @Override

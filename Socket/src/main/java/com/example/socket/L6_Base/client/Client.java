@@ -36,6 +36,12 @@ public class Client {
             String str = input.readLine();
             // 发送到服务器
             tcpClient.send(str);
+            /**
+             * 多消息粘包复现测试（客户端）
+             */
+//            tcpClient.send(str);
+//            tcpClient.send(str);
+//            tcpClient.send(str);
 
             if ("00bye00".equalsIgnoreCase(str)) {
                 break;

@@ -67,6 +67,10 @@ public class IoSelectorProvider implements IoProvider {
                                 handleSelection(selectionKey, SelectionKey.OP_READ, inputCallbackMap, inputHandlePool);
                             }
                         }
+                        /**
+                         * 消息到达提醒重复触发测试（读取消息时未设置取消监听）
+                         */
+//                        System.out.println("有数据需要读取:"+selectionKeys.size());
                         selectionKeys.clear();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -97,6 +101,7 @@ public class IoSelectorProvider implements IoProvider {
                                 handleSelection(selectionKey, SelectionKey.OP_WRITE, outputCallbackMap, outputHandlePool);
                             }
                         }
+
                         selectionKeys.clear();
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -126,6 +131,11 @@ public class IoSelectorProvider implements IoProvider {
                                         ExecutorService pool) {
         // 重点
         // 取消继续对keyOps的监听
+        /**
+         * 消息到达提醒重复触发测试（读取消息时未设置取消监听）
+         */
+//        key.interestOps(key.readyOps() & ~keyOps);
+
         key.interestOps(key.readyOps() & ~keyOps);
 
         Runnable runnable = null;
