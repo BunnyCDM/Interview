@@ -71,7 +71,6 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher {
                 packetTemp=null;
                 CloseUtils.close(packet);
             }
-            receiver.setReceiveListener(null);
         }
     }
 

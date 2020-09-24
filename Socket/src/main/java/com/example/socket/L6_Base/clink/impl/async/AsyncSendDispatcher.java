@@ -61,7 +61,7 @@ public class AsyncSendDispatcher implements SendDispatcher {
         }
 
         SendPacket packet = packetTemp = takePacket();
-        if (packet != null) {
+        if (packet == null) {
             //队列为空，取消状态发送
             isSending.set(false);
             return;

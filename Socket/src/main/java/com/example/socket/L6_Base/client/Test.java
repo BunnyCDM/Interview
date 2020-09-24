@@ -12,7 +12,34 @@ public class Test {
 
     public static void main(String[] args) {
 
-        test6();
+        test7();
+    }
+
+    private static void test7() {
+        String cmd_read_file_15 = "00b095001e";
+        byte[] bytes=hexStringToByteArray(cmd_read_file_15);
+        System.out.println(Arrays.toString(bytes));
+    }
+
+    /**
+     * 十六进制串转化为byte数组
+     *
+     * @param hex 被转化的hex string
+     * @return the array of byte
+     */
+    public static final byte[] hexStringToByteArray(String hex)
+            throws IllegalArgumentException {
+        if (hex.length() % 2 != 0) {
+            throw new IllegalArgumentException();
+        }
+        char[] arr = hex.toCharArray();
+        byte[] b = new byte[hex.length() / 2];
+        for (int i = 0, j = 0, l = hex.length(); i < l; i++, j++) {
+            String swap = "" + arr[i++] + arr[i];
+            int byteint = Integer.parseInt(swap, 16) & 0xFF;
+            b[j] = new Integer(byteint).byteValue();
+        }
+        return b;
     }
 
     private static void test6() {
