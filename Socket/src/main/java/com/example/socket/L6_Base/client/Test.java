@@ -2,6 +2,7 @@ package com.example.socket.L6_Base.client;
 
 import com.example.socket.L4.Tools;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 /**
@@ -11,15 +12,53 @@ public class Test {
 
     public static void main(String[] args) {
 
-        test4();
+        test6();
     }
 
-    public static final int OP_READ = 1 << 0;
-    public static final int OP_WRITE = 1 << 2;
-    public static final int OP_CONNECT = 1 << 3;
-    public static final int OP_ACCEPT = 1 << 4;
+    private static void test6() {
+        int i = Math.min(5, 10);
+        System.out.println("i is " + i);
+
+        int i2 = Math.max(5, 10);
+        System.out.println("i2 is " + i2);
+
+
+        double i3 = Math.random();
+        System.out.println("i3 is " + i3);//[0～1）
+
+
+        System.out.println(Math.ceil(i3)); //向上取整
+        System.out.println(Math.floor(i3));//向下取整
+
+
+        /**
+         * java保留小数位
+         * 注意：当不保留小数位时四舍五入，只有大于0.5结果才为1哈
+         */
+        DecimalFormat df = new DecimalFormat("#0.0");
+        System.out.println(df.format(0.51));
+    }
+
+    private static void test5() {
+        int count = 1;
+        int count1 = count += count;
+        System.out.println("count1 is " + count1);
+
+        int count2 = count1++;
+        System.out.println("count2 is " + count2);
+
+        int count3 = ++count2;
+        System.out.println("count3 is " + count3);
+
+    }
+
 
     private static void test4() {
+        int OP_READ = 1 << 0;
+        int OP_WRITE = 1 << 2;
+        int OP_CONNECT = 1 << 3;
+        int OP_ACCEPT = 1 << 4;
+
         System.out.println("OP_READ is " + OP_READ);
         System.out.println("OP_WRITE is " + OP_WRITE);
         System.out.println("OP_CONNECT is " + OP_CONNECT);
