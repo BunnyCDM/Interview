@@ -7,18 +7,203 @@ import java.util.Arrays;
 
 /**
  * Created by mac on 2020-09-22.
+ * <p>
+ * ByteBuffer buffer = ByteBuffer.wrap(byteBuffer);
+ * buffer.putInt(total);
  */
 public class Test {
 
-    public static void main(String[] args) {
-
-        test7();
+    /**
+     * 两个byte 数组叠加. 将 desBytes 添加到 srcBytes
+     *
+     * @param srcBytes 被添加的byte s数组
+     * @param desBytes 　添加的byte 数组
+     * @return byte[]　返回添加后的数组
+     */
+    public static byte[] addBytes(byte[] srcBytes, byte[] desBytes) {
+        byte[] returnArray = new byte[srcBytes.length + desBytes.length];
+        System.arraycopy(srcBytes, 0, returnArray, 0, srcBytes.length);
+        System.arraycopy(desBytes, 0, returnArray, srcBytes.length, desBytes.length);
+        return returnArray;
     }
 
-    private static void test7() {
-        String cmd_read_file_15 = "00b095001e";
-        byte[] bytes=hexStringToByteArray(cmd_read_file_15);
+    /**
+     * 将 一个desByte 添加到 srcBytes
+     *
+     * @param srcBytes 　被添加的byte 数组
+     * @param desByte  　添加的byte 数组
+     * @return byte[]　返回添加后的数组
+     */
+    public static byte[] addBytes(byte[] srcBytes, byte desByte) {
+        byte[] desByteArray = new byte[]{desByte};
+        return addBytes(srcBytes, desByteArray);
+    }
+
+    /**
+     * int 转byte 数组 高位在前，低位在后
+     *
+     * @param res int value
+     * @return byte array value of int ,high to low,
+     */
+    public static byte[] intToByteArrayHighToLow(int res) {
+        byte[] targets = new byte[4];
+
+        targets[3] = (byte) (res & 0xff);// 最低位
+        targets[2] = (byte) ((res >> 8) & 0xff);// 次低位
+        targets[1] = (byte) ((res >> 16) & 0xff);// 次高位
+        targets[0] = (byte) (res >>> 24);// 最高位,无符号右移。
+        return targets;
+    }
+
+
+    /**
+     * byte 数组 转 int ，低位在前，高位在后。
+     *
+     * @param b byte 数组
+     * @return int value 如果长度大于４，那么直接返回0
+     */
+    public static int byteArrayToIntLowToHigh(byte[] b) {
+        int returnValue = 0;
+        if (b.length > 4) {
+            //数组太大，直接返回0
+            return returnValue;
+        }
+        for (int i = 0; i < b.length; i++) {
+            int leftOffset = i * 8;
+            returnValue = returnValue + ((b[i] & 0xff) << leftOffset);
+        }
+        return returnValue;
+    }
+
+    public static void main(String[] args) {
+        byte[] bytes = "123456".getBytes();
         System.out.println(Arrays.toString(bytes));
+
+    }
+
+    public static int byteArrayToInt(byte[] b) {
+        return b[3] & 0xFF |
+                (b[2] & 0xFF) << 8 |
+                (b[1] & 0xFF) << 16 |
+                (b[0] & 0xFF) << 24;
+    }
+
+    public static byte[] intToByteArray(int a) {
+        //00000000 00000000 00000000 00000011
+        return new byte[]{
+                (byte) ((a >> 24) & 0xFF),
+                (byte) ((a >> 16) & 0xFF),
+                (byte) ((a >> 8) & 0xFF),
+                (byte) (a & 0xFF)
+        };
+    }
+
+    /**
+     * 字节数组转换为十六进制字符串
+     *
+     * @param b 需要转换的字节
+     * @return String 十六进制字符串
+     */
+    public static final String byteToHex(byte b) {
+        StringBuilder sb = new StringBuilder();
+        int i = b & 0xff;
+        String stmp = Integer.toHexString(i);
+        if (stmp.length() == 1) {
+            sb.append("0").append(stmp);
+        } else {
+            sb.append(stmp);
+        }
+        return sb.toString().toUpperCase();
+    }
+
+    /**
+     * 字节数组转换为十六进制字符串
+     *
+     * @param b byte[] 需要转换的字节数组
+     * @return String 十六进制字符串
+     */
+    public static String byteArrayToHex(byte[] b) {
+        if (b == null) {
+            throw new IllegalArgumentException(
+                    "Argument b ( byte array ) is null! ");
+        }
+        String hs = "";
+        String stmp = "";
+        for (int n = 0; n < b.length; n++) {
+            stmp = Integer.toHexString(b[n] & 0xff);
+            if (stmp.length() == 1) {
+                hs = hs + "0" + stmp;
+            } else {
+                hs = hs + stmp;
+            }
+        }
+        return hs.toUpperCase();
+    }
+
+    /**
+     * 将byte 数组 转化成 hex string
+     *
+     * @param src 　byte 数组
+     * @return String　hex string
+     */
+    public static String byteArrayToHexString(byte[] src) {
+        StringBuilder stringBuilder = new StringBuilder("");
+        if (src == null || src.length <= 0) {
+            return null;
+        }
+        for (int i = 0; i < src.length; i++) {
+            int v = src[i] & 0xFF;
+            String hv = Integer.toHexString(v);
+            if (hv.length() < 2) {
+                stringBuilder.append(0);
+            }
+            stringBuilder.append(hv);
+        }
+        return stringBuilder.toString().toUpperCase();
+    }
+
+    /**
+     * byte array 转化成　hex String
+     *
+     * @param bytes 源
+     * @return String　hex
+     */
+    public static String byteArrayToHexArray(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < bytes.length; i++) {
+            sb.append(byteToHexString(bytes[i]));
+        }
+        return sb.toString();
+    }
+
+    /**
+     * 将一个byte 转化成 十六进制的 字符串
+     * 此方法依赖了{@link DatatypeConverter#printHexBinary(byte[])}
+     *
+     * @param bte 　被转化的字节
+     * @return String 用大写表示
+     */
+    public static String byteToHexString(byte bte) {
+        String hexString = byteToHex(bte);
+        //String hexString = DatatypeConverter.printHexBinary(new byte[]{bte});
+        return hexString.toUpperCase();
+    }
+
+    /**
+     * 长度为2的十六进制串转化为单byte
+     *
+     * @param hex 被转化的hex string,长度为２
+     * @return the array of byte
+     */
+    public static final byte hexStringToByte(String hex)
+            throws IllegalArgumentException {
+        if (hex.length() % 2 != 0) {
+            throw new IllegalArgumentException();
+        }
+
+        int byteint = Integer.parseInt(hex, 16) & 0xFF;
+        byte reByte = new Integer(byteint).byteValue();
+        return reByte;
     }
 
     /**
@@ -41,6 +226,63 @@ public class Test {
         }
         return b;
     }
+
+    private static void test7() {
+        //3 = 二进制=00000011，十六进制=3
+        System.out.println(Arrays.toString(intToByteArray(3)));//[0, 0, 0, 3]
+        System.out.println(byteArrayToInt(intToByteArray(3)));//3
+
+        //352 ：二进制=【00000000 00000000 00000001 01100000】，十六进制=160
+        byte[] bytes = intToByteArray(352);
+        System.out.println(Arrays.toString(bytes));//[0, 0, 1, 96]
+        System.out.println(byteArrayToInt(intToByteArray(352)));//352
+
+        System.out.println(byteToHex(bytes[3]));//60
+        System.out.println(byteArrayToHex(bytes));//00000160
+        System.out.println(byteArrayToHexString(bytes));//00000160
+        System.out.println(byteArrayToHexArray(bytes));//00000160
+
+        System.out.println(hexStringToByte("60"));//00000160
+        System.out.println(Arrays.toString(hexStringToByteArray("00000160")));//00000160
+        System.out.println(Arrays.toString(hexStringToBytes("00000160")));//00000160
+        //String cmd = "00A40000023F0100";
+        //byte[] bytes = new byte[]{0, -92, 0, 0, 2, 63, 1, 0};
+
+        byte[] bytes1 = new byte[]{0, -80, -107, 0};
+        System.out.println(byteArrayToHexArray(bytes1));
+        //System.out.println(Arrays.toString(hexStringToByteArray("00000000899666660000000000000000000 0350520200 924205009240000")));
+
+        byte[] bytes2 = new byte[]{0, 0, 53, 5};
+        System.out.println(byteArrayToHexArray(bytes2));
+
+    }
+
+    public static byte[] hexStringToBytes(String hexString) {
+
+        hexString = hexString.toLowerCase();//小写
+
+        if ("0x".equals(hexString.substring(0, 2))) {
+            hexString = hexString.substring(2);//去掉十六机制前缀
+        }
+        int length = hexString.length() / 2;
+
+        final byte[] byteArray = new byte[length];
+        int k = 0;
+        for (int i = 0; i < byteArray.length; i++) {
+            //因为是16进制，最多只会占用4位，转换成字节需要两个16进制的字符，高位在先
+            //将hex 转换成byte   "&" 操作为了防止负数的自动扩展
+            // hex转换成byte 其实只占用了4位，然后把高位进行右移四位
+            // 然后“|”操作  低四位 就能得到 两个 16进制数转换成一个byte.
+            //
+            byte high = (byte) (Character.digit(hexString.charAt(k), 16) & 0xff);
+            byte low = (byte) (Character.digit(hexString.charAt(k + 1), 16) & 0xff);
+            byteArray[i] = (byte) (high << 4 | low);
+            k += 2;
+        }
+        return byteArray;
+
+    }
+
 
     private static void test6() {
         int i = Math.min(5, 10);
@@ -109,7 +351,6 @@ public class Test {
     }
 
     private static void test3() {
-
         byte[] bytes = new byte[]{0, 0, 0, 0, 0, 0, 32, 7, 0, 0, 0, 126, 8, 0, 0, 81};
         byte[] bytes_no = new byte[]{0, 0, 32, 7};
 

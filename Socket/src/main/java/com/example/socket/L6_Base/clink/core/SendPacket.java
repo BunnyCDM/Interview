@@ -5,7 +5,7 @@ package com.example.socket.L6_Base.clink.core;
  * <p>
  * 发送的包定义
  */
-public abstract class SendPacket extends Packet{
+public abstract class SendPacket extends Packet {
 
     private boolean isCanceled;
 

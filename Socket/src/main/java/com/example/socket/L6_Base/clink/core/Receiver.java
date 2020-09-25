@@ -7,7 +7,7 @@ import java.io.IOException;
  * Created by mac on 2020-09-23.
  */
 public interface Receiver extends Closeable {
-    void  setReceiveListener(IoArgs.IoArgsEventListener listener);
+    void setReceiveListener(IoArgs.IoArgsEventListener listener);
 
-    boolean receiveAsync(IoArgs args ) throws IOException;
+    boolean receiveAsync(IoArgs args) throws IOException;
 }

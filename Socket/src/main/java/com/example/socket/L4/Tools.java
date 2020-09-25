@@ -1,7 +1,5 @@
 package com.example.socket.L4;
 
-import java.io.FileOutputStream;
-
 /**
  * Created by mac on 2019/7/14.
  */
@@ -32,5 +30,44 @@ public class Tools {
         //writeTo 只能写八位，那么写一个int需要写4次每次8位
 //        fos.writeTo(a);
     }
+
+
+    /**
+     * byte 数组 转 int ，低位在前，高位在后。
+     *
+     * @param b byte 数组
+     * @return int value 如果长度大于４，那么直接返回0
+     */
+    public static int byteArrayToIntLowToHigh(byte[] b) {
+        int returnValue = 0;
+        if (b.length > 4) {
+            //数组太大，直接返回0
+            return returnValue;
+        }
+        for (int i = 0; i < b.length; i++) {
+            int leftOffset = i * 8;
+            returnValue = returnValue + ((b[i] & 0xff) << leftOffset);
+        }
+        return returnValue;
+    }
+
+
+    /**
+     * int 数组 转 byte ，低位在前，高位在后。
+     *
+     * @param a
+     * @return
+     */
+    public static byte[] intToByteArrayIntLowToHigh(int a) {
+        //00000000 00000000 00000000 00000011
+        return new byte[]{
+                (byte) (a & 0xFF),
+                (byte) ((a >> 8) & 0xFF),
+                (byte) ((a >> 16) & 0xFF),
+                (byte) ((a >> 24) & 0xFF),
+        };
+
+    }
+
 }
 

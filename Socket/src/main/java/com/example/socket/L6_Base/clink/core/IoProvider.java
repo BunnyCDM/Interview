@@ -37,7 +37,7 @@ public interface IoProvider extends Closeable {
         }
 
         public final <T> T getAttach() {
-            T attach= (T) this.attach;
+            T attach = (T) this.attach;
             return attach;
         }
 

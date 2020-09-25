@@ -1,14 +1,11 @@
 package com.example.socket.L6_Base.clink.impl.async;
 
-import android.widget.Toast;
-
 import com.example.socket.L6_Base.clink.CloseUtils;
 import com.example.socket.L6_Base.clink.box.StringReceivePacket;
 import com.example.socket.L6_Base.clink.core.IoArgs;
 import com.example.socket.L6_Base.clink.core.ReceiveDispatcher;
 import com.example.socket.L6_Base.clink.core.ReceivePacket;
 import com.example.socket.L6_Base.clink.core.Receiver;
-import com.example.socket.L6_Base.clink.core.SendPacket;
 
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -66,9 +63,9 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher {
     @Override
     public void close() throws IOException {
         if (isClosed.compareAndSet(false, true)) {
-            ReceivePacket packet=packetTemp;
-            if(packet!=null){
-                packetTemp=null;
+            ReceivePacket packet = packetTemp;
+            if (packet != null) {
+                packetTemp = null;
                 CloseUtils.close(packet);
             }
         }

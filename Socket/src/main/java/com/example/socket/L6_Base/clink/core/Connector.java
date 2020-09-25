@@ -34,8 +34,8 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
         this.sender = adapter;
         this.receiver = adapter;
 
-        sendDispatcher=new AsyncSendDispatcher(sender);
-        receiveDispatcher=new AsyncReceiveDispatcher(receiver,receivePacketCallback);
+        sendDispatcher = new AsyncSendDispatcher(sender);
+        receiveDispatcher = new AsyncReceiveDispatcher(receiver, receivePacketCallback);
 
         //启动接收
         receiveDispatcher.start();
@@ -68,12 +68,12 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
     /**
      * 当收到一个新的包Packet时会进行回调的内部类
      */
-    private ReceiveDispatcher.ReceivePacketCallback receivePacketCallback=new ReceiveDispatcher.ReceivePacketCallback() {
+    private ReceiveDispatcher.ReceivePacketCallback receivePacketCallback = new ReceiveDispatcher.ReceivePacketCallback() {
         @Override
         public void onReceivePacketCompleted(ReceivePacket packet) {
-            if(packet instanceof StringReceivePacket){
-             String msg=((StringReceivePacket)packet).string();
-             onReceiveNewMessage(msg);
+            if (packet instanceof StringReceivePacket) {
+                String msg = ((StringReceivePacket) packet).string();
+                onReceiveNewMessage(msg);
             }
 
         }

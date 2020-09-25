@@ -45,7 +45,7 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
             throw new IOException("Current channel is closed!");
         }
 
-        receiveArgsTemp =args;
+        receiveArgsTemp = args;
 
         return ioProvider.registerInput(channel, inputCallback);
     }
@@ -105,7 +105,7 @@ public class SocketChannelAdapter implements Sender, Receiver, Closeable {
 
             try {
                 // 具体的读取操作
-                if (args.readFrom(channel) > 0 ) {
+                if (args.readFrom(channel) > 0) {
                     // 读取完成回调
                     listener.onCompleted(args);
                 } else {

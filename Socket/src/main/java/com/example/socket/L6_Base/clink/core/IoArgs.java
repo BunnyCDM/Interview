@@ -13,8 +13,8 @@ import java.nio.channels.SocketChannel;
 public class IoArgs {
 
     // 单次操作最大区间
-    private volatile int limit = 256;
-    private byte[] byteBuffer = new byte[256];
+    private volatile int limit = 5;
+    private byte[] byteBuffer = new byte[5];
     /**
      * 单消息不完整测试
      */
@@ -26,7 +26,7 @@ public class IoArgs {
      * 从bytes数组进行消费
      */
     public int readFrom(byte[] bytes, int offset) {
-        int size = Math.min(bytes.length-offset, buffer.remaining());
+        int size = Math.min(bytes.length - offset, buffer.remaining());
         buffer.put(bytes, offset, size);
         return size;
     }
@@ -108,7 +108,7 @@ public class IoArgs {
         return buffer.getInt();
     }
 
-    public int capactity(){
+    public int capactity() {
         return buffer.capacity();
     }
 

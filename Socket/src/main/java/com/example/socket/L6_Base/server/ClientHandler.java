@@ -4,18 +4,12 @@ import com.example.socket.L6_Base.clink.core.Connector;
 import com.example.socket.L6_Base.clink.utils.CloseUtils;
 
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.util.Iterator;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * Created by mac on 2020-09-22.
  */
-public class ClientHandler extends  Connector{
+public class ClientHandler extends Connector {
 
     private final ClientHandlerCallback clientHandlerCallback;
     private final String clientInfo;
@@ -50,7 +44,7 @@ public class ClientHandler extends  Connector{
     @Override
     protected void onReceiveNewMessage(String str) {
         super.onReceiveNewMessage(str);
-        clientHandlerCallback.onNewMessageArrived(this,str);
+        clientHandlerCallback.onNewMessageArrived(this, str);
     }
 
     public interface ClientHandlerCallback {
