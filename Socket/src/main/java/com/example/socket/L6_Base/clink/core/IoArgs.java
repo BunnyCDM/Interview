@@ -3,7 +3,9 @@ package com.example.socket.L6_Base.clink.core;
 import java.io.EOFException;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.channels.WritableByteChannel;
 
 /**
  * Created by mac on 2020-09-23.
@@ -14,30 +16,41 @@ public class IoArgs {
 
     // 单次操作最大区间
     private volatile int limit = 5;
-    private byte[] byteBuffer = new byte[5];
-    /**
-     * 单消息不完整测试
-     */
-//    private byte[] byteBuffer = new byte[4];
-    private ByteBuffer buffer = ByteBuffer.wrap(byteBuffer);
+    private ByteBuffer buffer = ByteBuffer.allocate(5);
 
 
     /**
      * 从bytes数组进行消费
      */
-    public int readFrom(byte[] bytes, int offset) {
-        int size = Math.min(bytes.length - offset, buffer.remaining());
-        buffer.put(bytes, offset, size);
-        return size;
+    public int readFrom(ReadableByteChannel channel) throws IOException {
+        startWriting();
+
+        int bytesProduced = 0;
+        while (buffer.hasRemaining()) {
+            int len = channel.read(buffer);
+            if (len < 0) {
+                throw new EOFException();
+            }
+            bytesProduced += len;
+        }
+
+        finishWriting();
+        return bytesProduced;
     }
 
     /**
      * 写入数据到bytes中
      */
-    public int writeTo(byte[] bytes, int offset) {
-        int size = Math.min(bytes.length - offset, buffer.remaining());
-        buffer.get(bytes, offset, size);
-        return size;
+    public int writeTo(WritableByteChannel channel) throws IOException {
+        int bytesProduced = 0;
+        while (buffer.hasRemaining()) {
+            int len = channel.write(buffer);
+            if (len < 0) {
+                throw new EOFException();
+            }
+            bytesProduced += len;
+        }
+        return bytesProduced;
     }
 
 
@@ -101,7 +114,9 @@ public class IoArgs {
     }
 
     public void writeLength(int total) {
+        startWriting();
         buffer.putInt(total);
+        finishWriting();
     }
 
     public int readLength() {
@@ -112,9 +127,31 @@ public class IoArgs {
         return buffer.capacity();
     }
 
-    public interface IoArgsEventListener {
-        void onStarted(IoArgs args);
+    /**
+     * IoArgs 提供者、处理者；数据的生产或消费者
+     */
+    public interface IoArgsEventProcessor {
+        /**
+         * 提供一份可消费的IoArgs
+         *
+         * @return IoArgs
+         */
+        IoArgs provideIoArgs();
 
-        void onCompleted(IoArgs args);
+        /**
+         * 消费失败时回调
+         *
+         * @param e 异常信息
+         * @return 是否关闭链接，True关闭
+         */
+        void onConsumeFailed(IoArgs args,Exception e);
+
+        /**
+         * 消费成功
+         *
+         * @param args IoArgs
+         * @return True:直接注册下一份调度，False:无需注册
+         */
+        void onConsumeCompleted(IoArgs args);
     }
 }

@@ -25,23 +25,13 @@ public interface IoProvider extends Closeable {
     }
 
     abstract class HandleOutputCallback implements Runnable {
-        private Object attach;//附加值，此时网卡不一定可以写数据，所以附加值上面
 
         @Override
         public final void run() {
-            canProviderOutput(attach);
+            canProviderOutput();
         }
 
-        public final void setAttach(Object attach) {
-            this.attach = attach;
-        }
-
-        public final <T> T getAttach() {
-            T attach = (T) this.attach;
-            return attach;
-        }
-
-        protected abstract void canProviderOutput(Object attach);
+        protected abstract void canProviderOutput();
     }
 
 }

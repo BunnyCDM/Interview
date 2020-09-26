@@ -2,33 +2,34 @@ package com.example.socket.L6_Base.clink.box;
 
 import com.example.socket.L6_Base.clink.core.ReceivePacket;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
  * Created by mac on 2020-09-23.
  */
-public class StringReceivePacket extends ReceivePacket {
+public class StringReceivePacket extends ReceivePacket<ByteArrayOutputStream> {
 
-    private byte[] buffer;
-    private int position;
+    private String string;
 
     public StringReceivePacket(int len) {
-        this.buffer = new byte[len];
         length = len;
     }
 
-    @Override
-    public void save(byte[] bytes, int count) {
-        System.arraycopy(bytes, 0, buffer, position, count);
-        position += count;
-    }
-
     public String string() {
-        return new String(buffer);
+        return string;
+    }
+
+
+
+    @Override
+    protected ByteArrayOutputStream createStream() {
+        return new ByteArrayOutputStream((int) length);
     }
 
     @Override
-    public void close() throws IOException {
-
+    protected void closeStream(ByteArrayOutputStream stream) throws IOException {
+        super.closeStream(stream);
+        string=new String(stream.toByteArray());
     }
 }

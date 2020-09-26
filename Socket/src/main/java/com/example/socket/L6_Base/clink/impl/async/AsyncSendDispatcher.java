@@ -7,6 +7,9 @@ import com.example.socket.L6_Base.clink.core.SendPacket;
 import com.example.socket.L6_Base.clink.core.Sender;
 
 import java.io.IOException;
+import java.nio.channels.Channel;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -14,7 +17,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * Created by mac on 2020-09-23.
  */
-public class AsyncSendDispatcher implements SendDispatcher {
+public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventProcessor {
 
     private final Sender sender;
     private final Queue<SendPacket> queue = new ConcurrentLinkedDeque<>();
@@ -22,14 +25,16 @@ public class AsyncSendDispatcher implements SendDispatcher {
     private final AtomicBoolean isClosed = new AtomicBoolean(false);
 
     private IoArgs ioArgs = new IoArgs();
-    private SendPacket packetTemp;
+    private SendPacket<?> packetTemp;//?代表范型为定义
 
     //当前发送的packet大小，以及进度
-    private int total;
+    private ReadableByteChannel packetChannel;
+    private long total;
     private int position;
 
     public AsyncSendDispatcher(Sender sender) {
         this.sender = sender;
+        sender.setSenderListener(this);
     }
 
     @Override
@@ -74,31 +79,36 @@ public class AsyncSendDispatcher implements SendDispatcher {
     }
 
     private void sendCurrentPacket() {
-        IoArgs args = ioArgs;
-
-        //开始清理
-        args.startWriting();
         if (position >= total) {
+            completePacket(position == total);
             sendNextPacket();
             return;
-        } else if (position == 0) {
-            //首包，需要携带长度信息
-            args.writeLength(total);
         }
 
-        byte[] bytes = packetTemp.bytes();
-        //把bytes的数据写入到IoArgs
-        int count = args.readFrom(bytes, position);
-        position += count;
-
-        //完成封装
-        args.finishWriting();
-
         try {
-            sender.sendAsync(args, ioArgsEventListener);
+            sender.postSendAsync();
         } catch (IOException e) {
             closeAndNotify();
         }
+    }
+
+    /**
+     * 完成Packet发送
+     *
+     * @param isSucceed:是否发送成功
+     */
+    private void completePacket(boolean isSucceed) {
+        SendPacket packet = this.packetTemp;
+        if (packet == null) {
+            return;
+        }
+        CloseUtils.close(packet);
+        CloseUtils.close(packetChannel);
+
+        packetTemp = null;
+        packetChannel = null;
+        total = 0;
+        position = 0;
     }
 
     private void closeAndNotify() {
@@ -109,25 +119,44 @@ public class AsyncSendDispatcher implements SendDispatcher {
     public void close() throws IOException {
         if (isClosed.compareAndSet(false, true)) {
             isSending.set(false);
-            SendPacket packet = this.packetTemp;
-            if (packet != null) {
-                packetTemp = null;
-                CloseUtils.close(packet);
-            }
+            //异常关闭导致的完成
+            completePacket(false);
         }
     }
 
-    private final IoArgs.IoArgsEventListener ioArgsEventListener = new IoArgs.IoArgsEventListener() {
-        @Override
-        public void onStarted(IoArgs args) {
+    @Override
+    public IoArgs provideIoArgs() {
+        IoArgs args = ioArgs;
+        if(packetChannel==null){
+            packetChannel= Channels.newChannel(packetTemp.open());
+            args.limit(4);
+            // TODO: 2020-09-26 注意，文件大小不能大于int最大值，一个bug
+            args.writeLength((int) packetTemp.length());
+        }else {
+            args.limit((int) Math.min(args.capactity(),total-position));
 
+            try {
+                int count=args.readFrom(packetChannel);
+                position+=count;
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
         }
 
-        @Override
-        public void onCompleted(IoArgs args) {
-            //继续发送当前包
-            sendCurrentPacket();
-        }
-    };
+        return args;
+    }
+
+    @Override
+    public void onConsumeFailed(IoArgs args, Exception e) {
+        e.printStackTrace();
+    }
+
+    @Override
+    public void onConsumeCompleted(IoArgs args) {
+        //继续发送当前包
+        sendCurrentPacket();
+    }
+
 
 }
