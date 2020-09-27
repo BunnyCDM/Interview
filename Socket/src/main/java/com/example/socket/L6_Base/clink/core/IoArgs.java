@@ -15,8 +15,8 @@ import java.nio.channels.WritableByteChannel;
 public class IoArgs {
 
     // 单次操作最大区间
-    private volatile int limit = 5;
-    private ByteBuffer buffer = ByteBuffer.allocate(5);
+    private volatile int limit = 256;
+    private ByteBuffer buffer = ByteBuffer.allocate(256);
 
 
     /**
@@ -144,7 +144,7 @@ public class IoArgs {
          * @param e 异常信息
          * @return 是否关闭链接，True关闭
          */
-        void onConsumeFailed(IoArgs args,Exception e);
+        void onConsumeFailed(IoArgs args, Exception e);
 
         /**
          * 消费成功

@@ -3,6 +3,7 @@ package com.example.socket.L6_Base.clink.impl.async;
 import com.example.socket.L6_Base.clink.CloseUtils;
 import com.example.socket.L6_Base.clink.box.StringReceivePacket;
 import com.example.socket.L6_Base.clink.core.IoArgs;
+import com.example.socket.L6_Base.clink.core.Packet;
 import com.example.socket.L6_Base.clink.core.ReceiveDispatcher;
 import com.example.socket.L6_Base.clink.core.ReceivePacket;
 import com.example.socket.L6_Base.clink.core.Receiver;
@@ -22,7 +23,7 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsE
     private final ReceivePacketCallback callback;
 
     private IoArgs ioArgs = new IoArgs();
-    private ReceivePacket<?> packetTemp;
+    private ReceivePacket<?,?> packetTemp;
 
     //当前发送的packet大小，以及进度
     private WritableByteChannel packetChannel;
@@ -81,7 +82,9 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsE
     private void assemblePacket(IoArgs args) {
         if (packetTemp == null) {
             int length = args.readLength();
-            packetTemp = new StringReceivePacket(length);
+            byte type=length>200? Packet.TYPE_STREAM_FILE:Packet.TYPE_MEMORY_STRING;
+
+            packetTemp = callback.onArrivedNewPacket(type,length);
             packetChannel = Channels.newChannel(packetTemp.open());
 
             total = length;

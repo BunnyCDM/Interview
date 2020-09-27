@@ -76,8 +76,15 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        byte[] bytes = "123456".getBytes();
+        byte[] bytes=hexStringToByteArray("B07099B5");
         System.out.println(Arrays.toString(bytes));
+
+        //byte[] bytes_=new byte[]{ 16, 3, 16, 7};
+        byte[] bytes_=new byte[]{2,33, 8, 35};
+        //byte[] bytes_=new byte[]{115, 49, 32, 9, 35, 0, 0, 16, 3, 16, 7, 2, 33, 8, 35, 0};
+        System.out.println(Tools.byteArrayToInt(bytes_));
+        System.out.println(byteArrayToHex(bytes_));
+
 
     }
 

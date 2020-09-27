@@ -49,6 +49,13 @@ public class Tools {
             returnValue = returnValue + ((b[i] & 0xff) << leftOffset);
         }
         return returnValue;
+
+//        int value;
+//        value = (int) ((src[0] & 0xFF)
+//                | ((src[1] & 0xFF)<<8)
+//                | ((src[2] & 0xFF)<<16)
+//                | ((src[3] & 0xFF)<<24));
+//        return value;
     }
 
 
@@ -60,12 +67,12 @@ public class Tools {
      */
     public static byte[] intToByteArrayIntLowToHigh(int a) {
         //00000000 00000000 00000000 00000011
-        return new byte[]{
-                (byte) (a & 0xFF),
-                (byte) ((a >> 8) & 0xFF),
-                (byte) ((a >> 16) & 0xFF),
-                (byte) ((a >> 24) & 0xFF),
-        };
+        byte[] bytes = new byte[4];
+        for (int i = 0; i < bytes.length; i++){
+            int n = bytes.length - 1 -i;
+            bytes[4 - i - 1] = (byte)((a>>8*n));
+        }
+        return bytes;
 
     }
 

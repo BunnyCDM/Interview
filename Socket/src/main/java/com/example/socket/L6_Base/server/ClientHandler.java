@@ -1,8 +1,13 @@
 package com.example.socket.L6_Base.server;
 
+import com.example.socket.L6_Base.clink.box.FileReceivePacket;
 import com.example.socket.L6_Base.clink.core.Connector;
+import com.example.socket.L6_Base.clink.core.Packet;
+import com.example.socket.L6_Base.clink.core.ReceivePacket;
 import com.example.socket.L6_Base.clink.utils.CloseUtils;
+import com.example.socket.L6_Base.foo.Foo;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.channels.SocketChannel;
 
@@ -10,13 +15,14 @@ import java.nio.channels.SocketChannel;
  * Created by mac on 2020-09-22.
  */
 public class ClientHandler extends Connector {
-
+    private final File cachePath;
     private final ClientHandlerCallback clientHandlerCallback;
     private final String clientInfo;
 
-    public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback) throws IOException {
+    public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback,File cachePath) throws IOException {
         this.clientHandlerCallback = clientHandlerCallback;
         this.clientInfo = socketChannel.getRemoteAddress().toString();
+        this.cachePath = cachePath;
 
         System.out.println("新客户端连接：" + clientInfo);
         //this.clientInfo = "A[" + socket.getInetAddress().getHostAddress() + "]" + " P[" + socket.getPort() + "]";
@@ -42,9 +48,18 @@ public class ClientHandler extends Connector {
     }
 
     @Override
-    protected void onReceiveNewMessage(String str) {
-        super.onReceiveNewMessage(str);
-        clientHandlerCallback.onNewMessageArrived(this, str);
+    protected File createNewReceiveFile() {
+        return Foo.createRandomTemp(cachePath);
+    }
+
+    @Override
+    protected void onReceivePacket(ReceivePacket packet) {
+        super.onReceivePacket(packet);
+        if (packet.type() == Packet.TYPE_MEMORY_STRING) {
+            String string = (String) packet.entity();
+            System.out.println(key.toString() + ":" + string);
+            clientHandlerCallback.onNewMessageArrived(this, string);
+        }
     }
 
     public interface ClientHandlerCallback {

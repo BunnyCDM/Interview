@@ -46,7 +46,7 @@ public class BinaryTest {
         System.out.println(Integer.valueOf("62", 16));
 
         //00000011
-        byte[] bytes = Tools.intToByteArray(3);
+        byte[] bytes = Tools.intToByteArrayIntLowToHigh(1);
         System.out.println("bytes is " + Arrays.toString(bytes));
 
         int i = Tools.byteArrayToInt(bytes);

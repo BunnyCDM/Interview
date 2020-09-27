@@ -1,8 +1,10 @@
 package com.example.socket.L6_Base.client;
 
+import com.example.socket.L6_Base.foo.Foo;
 import com.example.socket.L6_Base.foo.TCPConstants;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -17,13 +19,14 @@ public class ClientTest {
     private static boolean done;
 
     public static void main(String[] args) throws IOException {
+        File cachePath = Foo.getCacheDir("client/test");
 
         // 当前连接数量
         int size = 0;
         final List<TCPClient> tcpClients = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             try {
-                TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER);
+                TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER,cachePath);
                 if (tcpClient == null) {
                     System.out.println("连接异常");
                     continue;

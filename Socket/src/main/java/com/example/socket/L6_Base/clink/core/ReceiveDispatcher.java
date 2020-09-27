@@ -15,11 +15,11 @@ public interface ReceiveDispatcher extends Closeable {
     void stop();
 
     interface ReceivePacketCallback {
-        //ReceivePacket<?, ?> onArrivedNewPacket(byte type, long length, byte[] headerInfo);
+
+        ReceivePacket<?, ?> onArrivedNewPacket(byte type, long length);
 
         void onReceivePacketCompleted(ReceivePacket packet);
 
-        //void onReceivedHeartbeat();
     }
 
 }
