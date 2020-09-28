@@ -18,13 +18,31 @@ public class IoArgs {
     private volatile int limit = 256;
     private ByteBuffer buffer = ByteBuffer.allocate(256);
 
+    /**
+     * 从bytes数组进行消费
+     */
+    public int readFrom(byte[] bytes, int offset, int count) {
+        int size = Math.min(count, buffer.remaining());
+        if (size <= 0) {
+            return 0;
+        }
+        buffer.put(bytes, offset, size);
+        return size;
+    }
+
+    /**
+     * 写入数据到bytes中
+     */
+    public int writeTo(byte[] bytes, int offset) {
+        int size = Math.min(bytes.length - offset, buffer.remaining());
+        buffer.get(bytes, offset, size);
+        return size;
+    }
 
     /**
      * 从bytes数组进行消费
      */
     public int readFrom(ReadableByteChannel channel) throws IOException {
-        startWriting();
-
         int bytesProduced = 0;
         while (buffer.hasRemaining()) {
             int len = channel.read(buffer);
@@ -33,8 +51,6 @@ public class IoArgs {
             }
             bytesProduced += len;
         }
-
-        finishWriting();
         return bytesProduced;
     }
 
@@ -125,6 +141,34 @@ public class IoArgs {
 
     public int capactity() {
         return buffer.capacity();
+    }
+
+    public boolean remained() {
+        return buffer.remaining() > 0;
+    }
+
+    /**
+     * 填充数据
+     *
+     * @param size 想要填充数据的长度
+     * @return 真实填充数据的长度
+     */
+    public int fillEmpty(int size) {
+        int fillSize = Math.min(size, buffer.remaining());
+        buffer.position(buffer.position() + fillSize);
+        return fillSize;
+    }
+
+    /**
+     * 清空部分数据
+     *
+     * @param size 想要清空的数据长度
+     * @return 真实清空的数据长度
+     */
+    public int setEmpty(int size) {
+        int emptySize = Math.min(size, buffer.remaining());
+        buffer.position(buffer.position() + emptySize);
+        return emptySize;
     }
 
     /**

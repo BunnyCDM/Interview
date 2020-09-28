@@ -49,7 +49,7 @@ public class BinaryTest {
         byte[] bytes = Tools.intToByteArrayIntLowToHigh(1);
         System.out.println("bytes is " + Arrays.toString(bytes));
 
-        int i = Tools.byteArrayToInt(bytes);
+        int i = Tools.byteArrayToIntHighToLow(bytes);
         System.out.println("i is " + i);
 
 
