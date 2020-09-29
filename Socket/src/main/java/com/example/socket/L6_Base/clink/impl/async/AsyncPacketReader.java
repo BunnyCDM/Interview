@@ -13,6 +13,8 @@ import java.io.Closeable;
 import java.io.IOException;
 
 /**
+ * 用于管理packet发送与接收
+ * <p>
  * Packet转换为帧序列，并进行读取发送的封装管理类
  */
 public class AsyncPacketReader implements Closeable {

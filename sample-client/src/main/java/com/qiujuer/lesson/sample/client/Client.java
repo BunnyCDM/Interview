@@ -2,6 +2,7 @@ package com.qiujuer.lesson.sample.client;
 
 import com.qiujuer.lesson.sample.client.bean.ServerInfo;
 import com.qiujuer.lesson.sample.foo.Foo;
+import com.qiujuer.lesson.sample.foo.constants.TCPConstants;
 import com.qiujuer.lesson.sample.foo.handle.ConnectorCloseChain;
 import com.qiujuer.lesson.sample.foo.handle.ConnectorHandler;
 import com.qiujuer.library.clink.box.FileSendPacket;
@@ -18,6 +19,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.Inet4Address;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -32,8 +35,10 @@ public class Client {
                 .scheduler(new SchedulerImpl(1))
                 .start();
 
-        ServerInfo info = UDPSearcher.searchServer(10000);
-        System.out.println("Server: " + info);
+//        ServerInfo info = UDPSearcher.searchServer(10000);
+//        System.out.println("Server: " + info);
+
+        ServerInfo info=new ServerInfo(TCPConstants.PORT_SERVER,"127.0.0.1",UUID.randomUUID().toString());
 
         if (info != null) {
             TCPClient tcpClient = null;

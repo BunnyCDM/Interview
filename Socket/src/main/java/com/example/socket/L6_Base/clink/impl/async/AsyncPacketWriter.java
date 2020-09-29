@@ -17,9 +17,8 @@ import java.util.Collection;
 import java.util.HashMap;
 
 /**
- * 写数据到Packet中
- */
-/**
+ * 用于管理packet发送与接收
+ * <p>
  * 写数据到Packet中
  */
 class AsyncPacketWriter implements Closeable {
