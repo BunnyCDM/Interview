@@ -51,7 +51,6 @@ public class IoArgs {
             }
             bytesProduced += len;
         }
-
         return bytesProduced;
     }
 
@@ -75,6 +74,8 @@ public class IoArgs {
      * 从SocketChannel读取数据
      */
     public int readFrom(SocketChannel channel) throws IOException {
+        startWriting();
+
         int bytesProduced = 0;
         while (buffer.hasRemaining()) {
             int len = channel.read(buffer);
@@ -83,6 +84,8 @@ public class IoArgs {
             }
             bytesProduced += len;
         }
+
+        finishWriting();
         return bytesProduced;
     }
 
@@ -126,6 +129,11 @@ public class IoArgs {
         this.limit = Math.min(limit, buffer.capacity());
     }
 
+    public void writeLength(int total) {
+        startWriting();
+        buffer.putInt(total);
+        finishWriting();
+    }
 
     public int readLength() {
         return buffer.getInt();
@@ -145,7 +153,7 @@ public class IoArgs {
      * @param size 想要填充数据的长度
      * @return 真实填充数据的长度
      */
-    public int fillEmpty(int size){
+    public int fillEmpty(int size) {
         int fillSize = Math.min(size, buffer.remaining());
         buffer.position(buffer.position() + fillSize);
         return fillSize;

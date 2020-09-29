@@ -23,6 +23,7 @@ public abstract class Packet<Stream extends Closeable> implements Closeable {
     private Stream stream;
 
 
+
     public long length() {
         return length;
     }
@@ -90,6 +91,5 @@ public abstract class Packet<Stream extends Closeable> implements Closeable {
     public byte[] headerInfo() {
         return null;
     }
-
 
 }

@@ -7,19 +7,21 @@ import com.example.socket.L6_Base.clink.core.SendPacket;
 import com.example.socket.L6_Base.clink.core.Sender;
 
 import java.io.IOException;
+import java.nio.channels.Channel;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Created by mac on 2020-09-23.
  */
-public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventProcessor , AsyncPacketReader.PacketProvider {
-
+public class AsyncSendDispatcher implements SendDispatcher,
+        IoArgs.IoArgsEventProcessor, AsyncPacketReader.PacketProvider {
     private final Sender sender;
-    private final Queue<SendPacket> queue = new ConcurrentLinkedDeque<>();
+    private final Queue<SendPacket> queue = new ConcurrentLinkedQueue<>();
     private final AtomicBoolean isSending = new AtomicBoolean();
     private final AtomicBoolean isClosed = new AtomicBoolean(false);
 
@@ -31,6 +33,15 @@ public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventPr
         sender.setSenderListener(this);
     }
 
+    /**
+     * 发送Packet
+     * 首先添加到队列，如果当前状态为未启动发送状态
+     * 则，尝试让reader提取一份packet进行数据发送
+     * <p>
+     * 如果提取数据后reader有数据，则进行异步输出注册
+     *
+     * @param packet 数据
+     */
     @Override
     public void send(SendPacket packet) {
         synchronized (queueLock) {
@@ -110,6 +121,9 @@ public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventPr
         }
     }
 
+    /**
+     * 请求网络发送异常时触发，进行关闭操作
+     */
     private void closeAndNotify() {
         CloseUtils.close(this);
     }
@@ -139,7 +153,6 @@ public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventPr
         return reader.fillData();
     }
 
-
     /**
      * 网络发送IoArgs出现异常
      *
@@ -168,6 +181,4 @@ public class AsyncSendDispatcher implements SendDispatcher, IoArgs.IoArgsEventPr
             requestSend();
         }
     }
-
-
 }

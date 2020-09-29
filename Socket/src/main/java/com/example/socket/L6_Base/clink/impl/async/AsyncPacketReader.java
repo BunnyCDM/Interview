@@ -4,21 +4,18 @@ import com.example.socket.L6_Base.clink.core.Frame;
 import com.example.socket.L6_Base.clink.core.IoArgs;
 import com.example.socket.L6_Base.clink.core.SendPacket;
 import com.example.socket.L6_Base.clink.core.ds.BytePriorityNode;
-import com.example.socket.L6_Base.clink.frames.AbsSendPacketFrame;
-import com.example.socket.L6_Base.clink.frames.CancelSendFrame;
-import com.example.socket.L6_Base.clink.frames.SendEntityFrame;
-import com.example.socket.L6_Base.clink.frames.SendHeaderFrame;
+import com.example.socket.L6_Base.clink.core.frames.AbsSendPacketFrame;
+import com.example.socket.L6_Base.clink.core.frames.CancelSendFrame;
+import com.example.socket.L6_Base.clink.core.frames.SendEntityFrame;
+import com.example.socket.L6_Base.clink.core.frames.SendHeaderFrame;
 
 import java.io.Closeable;
 import java.io.IOException;
 
 /**
- * Created by mac on 2020-09-28.
- * <p>
- * 用于管理packet发送与接收
+ * Packet转换为帧序列，并进行读取发送的封装管理类
  */
 public class AsyncPacketReader implements Closeable {
-
     private final PacketProvider provider;
     private volatile IoArgs args = new IoArgs();
 
@@ -29,8 +26,7 @@ public class AsyncPacketReader implements Closeable {
     // 1,2,3.....255
     private short lastIdentifier = 0;
 
-
-    public AsyncPacketReader(PacketProvider provider) {
+    AsyncPacketReader(PacketProvider provider) {
         this.provider = provider;
     }
 
@@ -70,6 +66,7 @@ public class AsyncPacketReader implements Closeable {
             return null;
         }
 
+
         try {
             if (currentFrame.handle(args)) {
                 // 消费完本帧
@@ -102,7 +99,7 @@ public class AsyncPacketReader implements Closeable {
      *
      * @param packet 待取消的packet
      */
-    void cancel(SendPacket packet) {
+    synchronized void cancel(SendPacket packet) {
         if (nodeSize == 0) {
             return;
         }
@@ -137,11 +134,9 @@ public class AsyncPacketReader implements Closeable {
 
     /**
      * 关闭当前Reader，关闭时应关闭所有的Frame对应的Packet
-     *
-     * @throws IOException 关闭时出现异常
      */
     @Override
-    public void close() throws IOException {
+    public synchronized void close() {
         while (node != null) {
             Frame frame = node.item;
             if (frame instanceof AbsSendPacketFrame) {
@@ -181,6 +176,7 @@ public class AsyncPacketReader implements Closeable {
         }
         return node.item;
     }
+
 
     /**
      * 弹出链表头的帧
@@ -228,7 +224,6 @@ public class AsyncPacketReader implements Closeable {
         return identifier;
     }
 
-
     /**
      * Packet提供者
      */
@@ -248,4 +243,6 @@ public class AsyncPacketReader implements Closeable {
          */
         void completedPacket(SendPacket packet, boolean isSucceed);
     }
+
 }
+

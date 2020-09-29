@@ -3,13 +3,14 @@ package com.example.socket.L6_Base.clink.core;
 import java.io.IOException;
 
 /**
- * Created by mac on 2020-09-28.
+ * 帧-分片使用
  */
 public abstract class Frame {
     // 帧头长度
     public static final int FRAME_HEADER_LENGTH = 6;
     // 单帧最大容量 64KB
     public static final int MAX_CAPACITY = 64 * 1024 - 1;
+
 
     // Packet头信息帧
     public static final byte TYPE_PACKET_HEADER = 11;
@@ -26,7 +27,7 @@ public abstract class Frame {
     // 头部6字节固定
     protected final byte[] header = new byte[FRAME_HEADER_LENGTH];
 
-    public Frame(int length,byte type,byte flag, short identifier) {
+    public Frame(int length, byte type, byte flag, short identifier) {
         if (length < 0 || length > MAX_CAPACITY) {
             throw new RuntimeException("The Body length of a single frame should be between 0 and " + MAX_CAPACITY);
         }
@@ -44,6 +45,7 @@ public abstract class Frame {
 
         header[4] = (byte) identifier;
         header[5] = 0;
+
     }
 
     public Frame(byte[] header) {

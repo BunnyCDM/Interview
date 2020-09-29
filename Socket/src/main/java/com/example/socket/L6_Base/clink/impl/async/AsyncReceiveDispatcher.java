@@ -14,11 +14,12 @@ import java.nio.channels.WritableByteChannel;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * Created by mac on 2020-09-23.
+ * 接收调度
  */
-public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsEventProcessor, AsyncPacketWriter.PacketProvider {
-
+public class AsyncReceiveDispatcher implements ReceiveDispatcher,
+        IoArgs.IoArgsEventProcessor, AsyncPacketWriter.PacketProvider {
     private final AtomicBoolean isClosed = new AtomicBoolean(false);
+
     private final Receiver receiver;
     private final ReceivePacketCallback callback;
 
@@ -29,7 +30,6 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsE
         this.receiver.setReceiveListener(this);
         this.callback = callback;
     }
-
 
     /**
      * 开始进入接收方法
@@ -44,16 +44,22 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsE
      */
     @Override
     public void stop() {
+
     }
 
-
+    /**
+     * 关闭操作，关闭相关流
+     */
     @Override
-    public void close() throws IOException {
+    public void close() {
         if (isClosed.compareAndSet(false, true)) {
             writer.close();
         }
     }
 
+    /**
+     * 自主发起的关闭操作，并且需要进行通知
+     */
     private void closeAndNotify() {
         CloseUtils.close(this);
     }
@@ -64,11 +70,10 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsE
     private void registerReceive() {
         try {
             receiver.postReceiveAsync();
-        } catch (Exception e) {
+        } catch (IOException e) {
             closeAndNotify();
         }
     }
-
 
     /**
      * 网络接收就绪，此时可以读取数据，需要返回一个容器用于容纳数据
@@ -125,3 +130,4 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher, IoArgs.IoArgsE
         callback.onReceivePacketCompleted(packet);
     }
 }
+

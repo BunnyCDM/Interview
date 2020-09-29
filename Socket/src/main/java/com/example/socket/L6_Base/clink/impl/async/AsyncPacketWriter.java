@@ -3,11 +3,11 @@ package com.example.socket.L6_Base.clink.impl.async;
 import com.example.socket.L6_Base.clink.core.Frame;
 import com.example.socket.L6_Base.clink.core.IoArgs;
 import com.example.socket.L6_Base.clink.core.ReceivePacket;
-import com.example.socket.L6_Base.clink.frames.AbsReceiveFrame;
-import com.example.socket.L6_Base.clink.frames.CancelReceiveFrame;
-import com.example.socket.L6_Base.clink.frames.ReceiveEntityFrame;
-import com.example.socket.L6_Base.clink.frames.ReceiveFrameFactory;
-import com.example.socket.L6_Base.clink.frames.ReceiveHeaderFrame;
+import com.example.socket.L6_Base.clink.core.frames.AbsReceiveFrame;
+import com.example.socket.L6_Base.clink.core.frames.CancelReceiveFrame;
+import com.example.socket.L6_Base.clink.core.frames.ReceiveEntityFrame;
+import com.example.socket.L6_Base.clink.core.frames.ReceiveFrameFactory;
+import com.example.socket.L6_Base.clink.core.frames.ReceiveHeaderFrame;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -17,14 +17,12 @@ import java.util.Collection;
 import java.util.HashMap;
 
 /**
- * Created by mac on 2020-09-28.
- * <p>
- * 用于管理packet发送与接收
- * <p>
  * 写数据到Packet中
  */
-public class AsyncPacketWriter implements Closeable {
-
+/**
+ * 写数据到Packet中
+ */
+class AsyncPacketWriter implements Closeable {
     private final PacketProvider provider;
 
     private final HashMap<Short, PacketModel> packetMap = new HashMap<>();
@@ -140,6 +138,18 @@ public class AsyncPacketWriter implements Closeable {
         }
     }
 
+    /**
+     * 添加一个新的Packet到当前缓冲区
+     *
+     * @param identifier Packet标志
+     * @param packet     Packet
+     */
+    private void appendNewPacket(short identifier, ReceivePacket packet) {
+        synchronized (packetMap) {
+            PacketModel model = new PacketModel(packet);
+            packetMap.put(identifier, model);
+        }
+    }
 
     /**
      * 获取Packet对应的输出通道，用以设置给帧进行数据传输
@@ -152,19 +162,6 @@ public class AsyncPacketWriter implements Closeable {
         synchronized (packetMap) {
             PacketModel model = packetMap.get(identifier);
             return model == null ? null : model.channel;
-        }
-    }
-
-    /**
-     * 添加一个新的Packet到当前缓冲区
-     *
-     * @param identifier Packet标志
-     * @param packet     Packet
-     */
-    private void appendNewPacket(short identifier, ReceivePacket packet) {
-        synchronized (packetMap) {
-            PacketModel model = new PacketModel(packet);
-            packetMap.put(identifier, model);
         }
     }
 
@@ -221,17 +218,19 @@ public class AsyncPacketWriter implements Closeable {
         void completedPacket(ReceivePacket packet, boolean isSucceed);
     }
 
-    static class PacketModel{
+    /**
+     * 对于接收包的简单封装
+     * 用以提供Packet、通道、未接收数据长度信息存储
+     */
+    static class PacketModel {
         final ReceivePacket packet;
         final WritableByteChannel channel;
         volatile long unreceivedLength;
 
-        public PacketModel(ReceivePacket<?,?> packet) {
+        PacketModel(ReceivePacket<?, ?> packet) {
             this.packet = packet;
             this.channel = Channels.newChannel(packet.open());
             this.unreceivedLength = packet.length();
         }
     }
-
-
 }
