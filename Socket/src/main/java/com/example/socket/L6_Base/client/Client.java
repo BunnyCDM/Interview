@@ -24,10 +24,6 @@ public class Client {
                     .ioProvider(new IoSelectorProvider())
                     .start();
 
-            IoContext.setup()
-                    .ioProvider(new IoSelectorProvider())
-                    .start();
-
             TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER,cachePath);
             if (tcpClient == null) {
                 return;

@@ -4,10 +4,10 @@ import com.example.socket.L6_Base.clink.core.Frame;
 import com.example.socket.L6_Base.clink.core.IoArgs;
 import com.example.socket.L6_Base.clink.core.SendPacket;
 import com.example.socket.L6_Base.clink.core.ds.BytePriorityNode;
-import com.example.socket.L6_Base.clink.core.frames.AbsSendPacketFrame;
-import com.example.socket.L6_Base.clink.core.frames.CancelSendFrame;
-import com.example.socket.L6_Base.clink.core.frames.SendEntityFrame;
-import com.example.socket.L6_Base.clink.core.frames.SendHeaderFrame;
+import com.example.socket.L6_Base.clink.frames.AbsSendPacketFrame;
+import com.example.socket.L6_Base.clink.frames.CancelSendFrame;
+import com.example.socket.L6_Base.clink.frames.SendEntityFrame;
+import com.example.socket.L6_Base.clink.frames.SendHeaderFrame;
 
 import java.io.Closeable;
 import java.io.IOException;
