@@ -1,6 +1,5 @@
-package com.example.socket.L6_Base.server;
+package com.example.socket.L6_Base.server.handle;
 
-import com.example.socket.L6_Base.clink.box.FileReceivePacket;
 import com.example.socket.L6_Base.clink.core.Connector;
 import com.example.socket.L6_Base.clink.core.Packet;
 import com.example.socket.L6_Base.clink.core.ReceivePacket;
@@ -30,6 +29,10 @@ public class ClientHandler extends Connector {
         setup(socketChannel);
     }
 
+    public String getClientInfo(){
+        return  clientInfo;
+    }
+
     private void exitBySelf() {
         exit();
         clientHandlerCallback.onSelfClosed(this);
@@ -53,8 +56,8 @@ public class ClientHandler extends Connector {
     }
 
     @Override
-    protected void onReceivePacket(ReceivePacket packet) {
-        super.onReceivePacket(packet);
+    protected void onReceivedPacket(ReceivePacket packet) {
+        super.onReceivedPacket(packet);
         if (packet.type() == Packet.TYPE_MEMORY_STRING) {
             String string = (String) packet.entity();
             System.out.println(key.toString() + ":" + string);

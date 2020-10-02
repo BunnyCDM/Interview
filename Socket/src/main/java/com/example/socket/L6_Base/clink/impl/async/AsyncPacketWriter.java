@@ -5,6 +5,7 @@ import com.example.socket.L6_Base.clink.core.IoArgs;
 import com.example.socket.L6_Base.clink.core.ReceivePacket;
 import com.example.socket.L6_Base.clink.frames.AbsReceiveFrame;
 import com.example.socket.L6_Base.clink.frames.CancelReceiveFrame;
+import com.example.socket.L6_Base.clink.frames.HeartbeatReceiveFrame;
 import com.example.socket.L6_Base.clink.frames.ReceiveEntityFrame;
 import com.example.socket.L6_Base.clink.frames.ReceiveFrameFactory;
 import com.example.socket.L6_Base.clink.frames.ReceiveHeaderFrame;
@@ -112,7 +113,10 @@ class AsyncPacketWriter implements Closeable {
         if (frame instanceof CancelReceiveFrame) {
             cancelReceivePacket(frame.getBodyIdentifier());
             return null;
-        } else if (frame instanceof ReceiveEntityFrame) {
+        }else if (frame instanceof HeartbeatReceiveFrame){
+            provider.onReceivedHeartbeat();
+            return null;
+        }else if (frame instanceof ReceiveEntityFrame) {
             WritableByteChannel channel = getPacketChannel(frame.getBodyIdentifier());
             ((ReceiveEntityFrame) frame).bindPacketChannel(channel);
         }
@@ -129,6 +133,9 @@ class AsyncPacketWriter implements Closeable {
             short identifier = frame.getBodyIdentifier();
             int length = frame.getBodyLength();
             PacketModel model = packetMap.get(identifier);
+            if (model == null) {
+                return;
+            }
             model.unreceivedLength -= length;
             if (model.unreceivedLength <= 0) {
                 provider.completedPacket(model.packet, true);
@@ -215,6 +222,11 @@ class AsyncPacketWriter implements Closeable {
          * @param isSucceed 是否成功接收完成
          */
         void completedPacket(ReceivePacket packet, boolean isSucceed);
+
+        /**
+         * 当收到一个心跳包时触发
+         */
+        void onReceivedHeartbeat();
     }
 
     /**

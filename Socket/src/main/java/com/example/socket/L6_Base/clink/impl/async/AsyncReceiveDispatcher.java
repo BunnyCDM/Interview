@@ -82,7 +82,10 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher,
      */
     @Override
     public IoArgs provideIoArgs() {
-        return writer.takeIoArgs();
+        IoArgs ioArgs = writer.takeIoArgs();
+        // 一份新的IoArgs需要调用一次开始写入数据的操作
+        ioArgs.startWriting();
+        return ioArgs;
     }
 
     /**
@@ -103,10 +106,18 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher,
      */
     @Override
     public void onConsumeCompleted(IoArgs args) {
+        if (isClosed.get()) {
+            return;
+        }
+
+        // 消费数据之前标示args数据填充完成，
+        // 改变未可读取数据状态
+        args.finishWriting();
+
         // 有数据则重复消费
         do {
             writer.consumeIoArgs(args);
-        } while (args.remained());
+        } while (args.remained()&& !isClosed.get());
         registerReceive();
     }
 
@@ -128,6 +139,14 @@ public class AsyncReceiveDispatcher implements ReceiveDispatcher,
     public void completedPacket(ReceivePacket packet, boolean isSucceed) {
         CloseUtils.close(packet);
         callback.onReceivePacketCompleted(packet);
+    }
+
+    /**
+     * 当收到心跳包时直接往外抛出到Connector
+     */
+    @Override
+    public void onReceivedHeartbeat() {
+        callback.onReceivedHeartbeat();
     }
 }
 

@@ -2,6 +2,7 @@ package com.example.socket.L6_Base.server;
 
 import com.example.socket.L6_Base.clink.core.IoContext;
 import com.example.socket.L6_Base.clink.impl.IoSelectorProvider;
+import com.example.socket.L6_Base.clink.impl.SchedulerImpl;
 import com.example.socket.L6_Base.foo.Foo;
 import com.example.socket.L6_Base.foo.TCPConstants;
 
@@ -20,6 +21,7 @@ public class Server {
 
         IoContext.setup()
                 .ioProvider(new IoSelectorProvider())
+                .scheduler(new SchedulerImpl(1))
                 .start();
 
         TCPServer tcpServer = new TCPServer(TCPConstants.PORT_SERVER,cachePath);
@@ -29,15 +31,17 @@ public class Server {
             return;
         }
 
-
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String str;
         do {
             str = bufferedReader.readLine();
-            if ("00bye00".equalsIgnoreCase(str)) {
+            if (str == null || Foo.COMMAND_EXIT.equalsIgnoreCase(str)) {
                 break;
             }
-
+            if (str.length() == 0) {
+                continue;
+            }
+            // 发送字符串
             tcpServer.broadcast(str);
         } while (true);
 

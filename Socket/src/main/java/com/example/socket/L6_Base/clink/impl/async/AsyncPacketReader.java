@@ -6,6 +6,7 @@ import com.example.socket.L6_Base.clink.core.SendPacket;
 import com.example.socket.L6_Base.clink.core.ds.BytePriorityNode;
 import com.example.socket.L6_Base.clink.frames.AbsSendPacketFrame;
 import com.example.socket.L6_Base.clink.frames.CancelSendFrame;
+import com.example.socket.L6_Base.clink.frames.HeartbeatSendFrame;
 import com.example.socket.L6_Base.clink.frames.SendEntityFrame;
 import com.example.socket.L6_Base.clink.frames.SendHeaderFrame;
 
@@ -53,6 +54,26 @@ public class AsyncPacketReader implements Closeable {
 
         synchronized (this) {
             return nodeSize != 0;
+        }
+    }
+
+    /**
+     * 请求发送一份心跳帧，若当前心跳帧已存在则不重新添加到队列
+     *
+     * @return True 添加队列成功
+     */
+    boolean requestSendHeartbeatFrame() {
+        synchronized (this) {
+            for (BytePriorityNode<Frame> x = node; x != null; x = x.next) {
+                Frame frame=x.item;
+                if(frame.getBodyType()==Frame.TYPE_COMMAND_HEARTBEAT){
+                    return false;
+                }
+            }
+
+            //添加心跳帧
+            appendNewFrame(new HeartbeatSendFrame());
+            return true;
         }
     }
 
@@ -145,6 +166,7 @@ public class AsyncPacketReader implements Closeable {
                 SendPacket packet = ((AbsSendPacketFrame) frame).getPacket();
                 provider.completedPacket(packet, false);
             }
+            node = node.next;
         }
 
         nodeSize = 0;

@@ -12,6 +12,8 @@ import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
 import java.nio.channels.SocketChannel;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -27,6 +29,7 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
     private Receiver receiver;
     private SendDispatcher sendDispatcher;
     private ReceiveDispatcher receiveDispatcher;
+    private final List<ScheduleJob> scheduleJobs = new ArrayList<>(4);
 
     public void setup(SocketChannel socketChannel) throws IOException {
         this.channel = socketChannel;
@@ -52,9 +55,56 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
     public void send(SendPacket packet) {
         sendDispatcher.send(packet);
     }
+    /**
+     * 调度一份任务
+     *
+     * @param job 任务
+     */
+    public void schedule(ScheduleJob job) {
+        synchronized (scheduleJobs) {
+            if (scheduleJobs.contains(job)) {
+                return;
+            }
+            IoContext context = IoContext.get();
+            Scheduler scheduler = context.getScheduler();
+            job.schedule(scheduler);
+            scheduleJobs.add(job);
+        }
+    }
+
+    /**
+     * 发射一份空闲超时事件
+     */
+    public void fireIdleTimeoutEvent() {
+        sendDispatcher.sendHeartbeat();
+    }
+
+    /**
+     * 发射一份异常事件，子类需要关注
+     *
+     * @param throwable 异常
+     */
+    public void fireExceptionCaught(Throwable throwable) {
+    }
+
+    /**
+     * 获取最后的活跃时间点
+     *
+     * @return 发送、接收的最后活跃时间
+     */
+    public long getLastActiveTime(){
+        return Math.max(sender.getLastWriteTime(),receiver.getLastReadTime());
+    }
 
     @Override
     public void close() throws IOException {
+        synchronized (scheduleJobs) {
+            // 全部取消调度
+            for (ScheduleJob scheduleJob : scheduleJobs) {
+                scheduleJob.unSchedule();
+            }
+            scheduleJobs.clear();
+        }
         receiveDispatcher.close();
         sendDispatcher.close();
         sender.close();
@@ -64,12 +114,11 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
 
     @Override
     public void onChannelClosed(SocketChannel channel) {
-
     }
 
     protected abstract File createNewReceiveFile();
 
-    protected void onReceivePacket(ReceivePacket packet) {
+    protected void onReceivedPacket(ReceivePacket packet) {
         System.out.println(key.toString() + ":[New Packet]-Type:" + packet.type() + ",Length:" + packet.length);
     }
 
@@ -95,7 +144,13 @@ public abstract class Connector implements Closeable, SocketChannelAdapter.OnCha
 
         @Override
         public void onReceivePacketCompleted(ReceivePacket packet) {
-            onReceivePacket(packet);
+            onReceivedPacket(packet);
+        }
+
+        @Override
+        public void onReceivedHeartbeat() {
+            System.out.println(key.toString() + ":[Heartbeat]");
         }
     };
+
 }

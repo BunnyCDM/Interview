@@ -2,7 +2,10 @@ package com.example.socket.L6_Base.client;
 
 import com.example.socket.L6_Base.clink.box.FileSendPacket;
 import com.example.socket.L6_Base.clink.core.IoContext;
+import com.example.socket.L6_Base.clink.core.ScheduleJob;
+import com.example.socket.L6_Base.clink.core.schedule.IdleTimeoutScheduleJob;
 import com.example.socket.L6_Base.clink.impl.IoSelectorProvider;
+import com.example.socket.L6_Base.clink.impl.SchedulerImpl;
 import com.example.socket.L6_Base.foo.Foo;
 import com.example.socket.L6_Base.foo.TCPConstants;
 
@@ -11,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by mac on 2020-09-22.
@@ -22,12 +26,17 @@ public class Client {
             File cachePath = Foo.getCacheDir("client");
             IoContext.setup()
                     .ioProvider(new IoSelectorProvider())
+                    .scheduler(new SchedulerImpl(1))
                     .start();
 
             TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER,cachePath);
             if (tcpClient == null) {
                 return;
             }
+
+            // 开始调度一份心跳包
+            ScheduleJob scheduleJob = new IdleTimeoutScheduleJob(10, TimeUnit.SECONDS, tcpClient);
+            tcpClient.schedule(scheduleJob);
 
             write(tcpClient);
         } catch (IOException e) {
@@ -45,8 +54,12 @@ public class Client {
         do {
             // 键盘读取一行
             String str = input.readLine();
-            if ("00bye00".equalsIgnoreCase(str)) {
+            if (str == null || Foo.COMMAND_EXIT.equalsIgnoreCase(str)) {
                 break;
+            }
+
+            if (str.length() == 0) {
+                continue;
             }
 
             // --f url

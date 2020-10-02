@@ -1,5 +1,7 @@
 package com.example.socket.L6_Base.client;
 
+import com.example.socket.L6_Base.clink.core.IoContext;
+import com.example.socket.L6_Base.clink.impl.IoSelectorProvider;
 import com.example.socket.L6_Base.foo.Foo;
 import com.example.socket.L6_Base.foo.TCPConstants;
 
@@ -21,29 +23,27 @@ public class ClientTest {
     public static void main(String[] args) throws IOException {
         File cachePath = Foo.getCacheDir("client/test");
 
+        IoContext.setup()
+                .ioProvider(new IoSelectorProvider())
+                .start();
+
         // 当前连接数量
         int size = 0;
         final List<TCPClient> tcpClients = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             try {
                 TCPClient tcpClient = TCPClient.startWith(TCPConstants.PORT_SERVER,cachePath);
                 if (tcpClient == null) {
-                    System.out.println("连接异常");
-                    continue;
+                    throw new NullPointerException();
                 }
 
                 tcpClients.add(tcpClient);
 
                 System.out.println("连接成功：" + (++size));
 
-            } catch (IOException e) {
+            } catch (IOException  | NullPointerException e) {
                 System.out.println("连接异常");
-            }
-
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                break;
             }
         }
 
@@ -81,6 +81,7 @@ public class ClientTest {
             tcpClient.exit();
         }
 
+        IoContext.close();
     }
 
 
