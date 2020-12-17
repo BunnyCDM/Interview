@@ -16,20 +16,25 @@ public class Test {
 
     public static void main(String[] args) {
         //00000000 00000000 00000000 00000011
-        byte[] bytes=Tools.intToByteArrayHighToLow(352);
-        System.out.println(Arrays.toString(bytes));
+//        byte[] bytes=Tools.intToByteArrayHighToLow(352);
+//        System.out.println(Arrays.toString(bytes));
+//
+//        int i=bytes[2];
+//        byte[] bytes_i=Tools.intToByteArrayHighToLow(i);
+//        System.out.println(Arrays.toString(bytes_i));
+//
+//        int ii=bytes[3];
+//        byte[] bytes_ii=Tools.intToByteArrayHighToLow(ii);
+//        System.out.println(Arrays.toString(bytes_ii));
+//
+//        int iii=i<<8 | ii;
+//        byte[] bytes_iii=Tools.intToByteArrayHighToLow(iii);
+//        System.out.println(Arrays.toString(bytes_iii));
 
-        int i=bytes[2];
-        byte[] bytes_i=Tools.intToByteArrayHighToLow(i);
-        System.out.println(Arrays.toString(bytes_i));
+        System.out.println(Arrays.toString(Tools.hexStringToByteArray("8DEAF1EF")));
+        System.out.println(Arrays.toString(Tools.hexStringToByteArray("40256088")));
+        System.out.println(Arrays.toString(Tools.hexStringToByteArray("E914CC54")));//[-23, 20, -52, 84]
 
-        int ii=bytes[3];
-        byte[] bytes_ii=Tools.intToByteArrayHighToLow(ii);
-        System.out.println(Arrays.toString(bytes_ii));
-
-        int iii=i<<8 | ii;
-        byte[] bytes_iii=Tools.intToByteArrayHighToLow(iii);
-        System.out.println(Arrays.toString(bytes_iii));
     }
 
 

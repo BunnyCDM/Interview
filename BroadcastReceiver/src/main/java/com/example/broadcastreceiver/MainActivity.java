@@ -44,7 +44,6 @@ public class MainActivity extends Activity {
     }
 
     private void initData() {
-
         IntentFilter filter2 = new IntentFilter("com.asw.broadcast1");
         mOrdinaryBroadcast2 = new OrdinaryBroadcast2();
         registerReceiver(mOrdinaryBroadcast2, filter2);

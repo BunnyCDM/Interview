@@ -22,7 +22,7 @@
         <provider
             android:name=".DBContentProvider"
             android:authorities="com.example.zsqlite"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>

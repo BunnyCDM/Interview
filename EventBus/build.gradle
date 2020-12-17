@@ -34,4 +34,5 @@ dependencies {
     implementation project(path: ':BaseLibrary')
 
     implementation 'org.greenrobot:eventbus:3.0.0'
+    //implementation 'org.greenrobot:eventbus:3.1.1'
 }

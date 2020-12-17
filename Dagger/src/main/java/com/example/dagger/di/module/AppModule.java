@@ -14,6 +14,7 @@ import dagger.Provides;
 
 /**
  * Created by mac on 2017/12/5.
+ * 用来提供对象
  */
 
 @Module

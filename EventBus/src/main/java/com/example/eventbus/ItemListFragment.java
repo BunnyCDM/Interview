@@ -8,7 +8,11 @@ import android.widget.ListView;
 
 import com.example.baselibrary.utils.log.AppLogger;
 
-import de.greenrobot.event.EventBus;
+//import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 
 /**
  * Created by mac on 2019-11-26.
@@ -31,7 +35,7 @@ public class ItemListFragment extends ListFragment {
         super.onViewCreated(view, savedInstanceState);
 
         //开启线程加载列表
-        new Thread() {// 开启线程加载列表
+        new Thread() {
             @Override
             public void run() {
                 super.run();
@@ -59,6 +63,7 @@ public class ItemListFragment extends ListFragment {
      *
      * @param event
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(Event.ItemListEvent event) {
         AppLogger.d("onEventMainThread: ItemListFragment");
         setListAdapter(new ArrayAdapter<Item>(getActivity(),

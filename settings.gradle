@@ -2,8 +2,11 @@
 
 
 include ':BaseLibrary'
+//include ':Dagger'
+include ':Activity', ':Fragment', ':BroadcastReceiver', ':Service', ':ContentProvider'
+//include ':RxBus',':EventBus',':AIDL-Service',':AIDL-Client'
 //include ':ScreenAdapterTools'
 //include ':Http', ':UnitTest'
 //include ':AsyncTask',':Handler'
-include ':Three_Characteristics_Of_Object_Orient', ':Thread', ':IO', ':Synchronized', ':NIO', ':Socket',
-        ':sample-client', ':sample-clink', ':sample-foo', ':sample-server'
+//include ':Three_Characteristics_Of_Object_Orient', ':Thread', ':IO', ':Synchronized', ':NIO', ':Socket',
+//        ':sample-client', ':sample-clink', ':sample-foo', ':sample-server'

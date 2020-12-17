@@ -4,13 +4,13 @@ apply plugin: 'com.android.application'
 //apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 25
-    //buildToolsVersion '25.0.3'
+    compileSdkVersion 28
+    //buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.example.dagger"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -36,9 +36,11 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
+
+    implementation project(':BaseLibrary')
 
     //Dagger2
 
@@ -51,6 +53,9 @@ dependencies {
     //2.注释以上dependencies引入修改为以下引入方式
     //3.root build.gradle添加dagger不变
 
-    implementation 'com.google.dagger:dagger:2.4'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+    // dagger2
+    implementation 'com.google.dagger:dagger:2.23.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.23.1'
+
+
 }

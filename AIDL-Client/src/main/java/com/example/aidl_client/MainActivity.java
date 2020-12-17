@@ -10,11 +10,14 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.aidl_service.IService;
 import com.example.baselibrary.utils.log.AppLogger;
+
+import org.joor.Reflect;
 
 import java.util.List;
 
@@ -53,15 +56,25 @@ public class MainActivity extends AppCompatActivity {
     private void initService() {
 //        Intent i = new Intent();
 //        i.setAction("android.intent.action.AIDLService");
-//        i.setPackage("aidl");
+//        i.setPackage("com.example.aidl_service");
 //        boolean ret = bindService(i, mConnection, Context.BIND_AUTO_CREATE);
-//        Log.d(TAG, "initService: ret=" + ret);
+//        AppLogger.d("initService: ret=" + ret);
 
-        final Intent intent = new Intent();
+//        final Intent intent = new Intent();
+//        intent.setAction("android.intent.action.AIDLService");
+//        final Intent eintent = new Intent(createExplicitFromImplicitIntent(this, intent));
+//        boolean ret = bindService(eintent, mConnection, Service.BIND_AUTO_CREATE);
+//        AppLogger.d("initService: ret=" + ret);
+
+        Intent intent = new Intent();
         intent.setAction("android.intent.action.AIDLService");
-        final Intent eintent = new Intent(createExplicitFromImplicitIntent(this, intent));
-        boolean ret = bindService(eintent, mConnection, Service.BIND_AUTO_CREATE);
-        AppLogger.d("initService: ret=" + ret);
+        intent.setPackage(getPackageName());
+        Reflect.on(this).call("bindServiceAsUser", intent, mConnection, Context.BIND_AUTO_CREATE,
+                Reflect.onClass(UserHandle.class).field("CURRENT").get());
+
+//        Reflect.on(this).call("bindServiceAsUser",
+//                new Intent(this, UNWebRTCService.class), mConnection, Context.BIND_AUTO_CREATE,
+//                Reflect.onClass(UserHandle.class).field("CURRENT").get());
     }
 
     private void releaseService() {

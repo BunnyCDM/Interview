@@ -10,7 +10,10 @@ import android.widget.TextView;
 
 import com.example.baselibrary.utils.log.AppLogger;
 
-import de.greenrobot.event.EventBus;
+//import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * Created by mac on 2019-11-26.
@@ -43,6 +46,7 @@ public class ItemDetailFragment extends Fragment {
     /**
      * List点击时会发送些事件，接收到事件后更新详情
      */
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(Item item) {
         AppLogger.d("onEventMainThread: ItemDetailFragment");
         if (item != null)

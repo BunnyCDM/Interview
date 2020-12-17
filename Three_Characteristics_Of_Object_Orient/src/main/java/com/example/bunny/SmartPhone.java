@@ -13,14 +13,13 @@ public class SmartPhone extends Telphone implements IPlayGame {
     }
 
     @Override
-    public void playGame() {
-        System.out.println("具有了玩游戏的功能");
-    }
-
-
-    @Override
     public String getTest() {
         return super.getTest();
+    }
+
+    @Override
+    public void playGame() {
+        System.out.println("具有了玩游戏的功能");
     }
 
 }

@@ -60,6 +60,12 @@ public class HotspotFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        AppLogger.d("------HotspotFragment------onViewCreated:");
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         //表示当fragment所属的activity创建成功时回调的方法

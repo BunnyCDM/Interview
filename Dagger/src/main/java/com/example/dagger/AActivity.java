@@ -1,10 +1,9 @@
 package com.example.dagger;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 
-
+import com.example.baselibrary.utils.log.AppLogger;
 import com.example.dagger.data.User;
 
 import javax.inject.Inject;
@@ -13,7 +12,7 @@ import javax.inject.Inject;
  * Created by mac on 2017/12/7.
  */
 
-public class AActivity extends Activity {
+public class AActivity extends AppCompatActivity {
 
     @Inject
     User user;
@@ -22,10 +21,11 @@ public class AActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        AppLogger.e("onCreate: user（1）=" + user);
         MyApplication.getComponent().inject(this);
 
-        Log.e("cdm", "onCreate: user=" + user);
-        Log.d("cdm", "onCreate: " + user.getName());
+        AppLogger.e("onCreate: user（2）=" + user);
+        AppLogger.e("onCreate: " + user.getName());
     }
 
 }
