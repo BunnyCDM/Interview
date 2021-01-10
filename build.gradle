@@ -5,7 +5,8 @@ buildscript {
 
         //sharesdk
         maven {
-            url "http://mvn.mob.com/android"
+            //url "http://mvn.mob.com/android",
+            url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
         }
 
         jcenter()
@@ -61,6 +62,10 @@ allprojects {
         //sharesdk
         maven {
             url "http://mvn.mob.com/android"
+        }
+
+        maven {
+            url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
         }
 
         mavenCentral()

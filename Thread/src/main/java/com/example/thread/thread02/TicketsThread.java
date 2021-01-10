@@ -5,9 +5,7 @@ package com.example.thread.thread02;
  */
 public class TicketsThread {
 
-
     public static void main(String[] args) {
-
         //创建三个线程，模拟三个窗口卖票
         MyThread mt1 = new MyThread("窗口1");
         MyThread mt2 = new MyThread("窗口2");

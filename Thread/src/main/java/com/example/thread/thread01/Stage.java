@@ -39,7 +39,7 @@ public class Stage extends Thread {
 
         try {
             //舞台线程休眠，大家专心观看军队厮杀
-            Thread.sleep(5);
+            Thread.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

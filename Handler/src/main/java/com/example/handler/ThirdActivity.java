@@ -8,14 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.baselibrary.utils.log.AppLogger;
+
 public class ThirdActivity extends AppCompatActivity {
 
     private TextView textView;
 
 
     //使用HandlerThread会避免SecondActivity中空指针问题，同时已解决多线程并发的问题
-    private HandlerThread thread;
-    private Handler handler;
+    private HandlerThread handlerThread;
+    private Handler threadHandler;
 
 
     @Override
@@ -25,17 +27,20 @@ public class ThirdActivity extends AppCompatActivity {
         textView = findViewById(R.id.tv);
         textView.setText("handler thread");
 
-        thread = new HandlerThread("handler thread");
-        thread.start();
+        //[handler thread,5,main]
+        handlerThread = new HandlerThread("handler thread");
+        handlerThread.start();
 
-        handler = new Handler(thread.getLooper()) {
+        threadHandler = new Handler(handlerThread.getLooper()) {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
-                Log.d("bunny", "handleMessage: " + Thread.currentThread());
+                AppLogger.d("handleMessage: " + Thread.currentThread()
+                        +"\n"+Thread.currentThread().getName());
+                textView.setText("handler thread!!");
             }
         };
 
-        handler.sendEmptyMessage(1);
+        threadHandler.sendEmptyMessage(1);
     }
 }

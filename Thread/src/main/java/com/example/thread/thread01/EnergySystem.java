@@ -79,7 +79,7 @@ public class EnergySystem {
      *
      * @return
      */
-    public double getTotalEnergies() {
+    private double getTotalEnergies() {
         double sunm = 0;
         for (double amount : energyBoxes) {
             sunm += amount;

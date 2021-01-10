@@ -8,17 +8,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AsyncTask" />
             <option value="$PROJECT_DIR$/BaseLibrary" />
-            <option value="$PROJECT_DIR$/IO" />
-            <option value="$PROJECT_DIR$/NIO" />
-            <option value="$PROJECT_DIR$/Socket" />
+            <option value="$PROJECT_DIR$/Handler" />
             <option value="$PROJECT_DIR$/Synchronized" />
             <option value="$PROJECT_DIR$/Thread" />
-            <option value="$PROJECT_DIR$/Three_Characteristics_Of_Object_Orient" />
-            <option value="$PROJECT_DIR$/sample-client" />
-            <option value="$PROJECT_DIR$/sample-clink" />
-            <option value="$PROJECT_DIR$/sample-foo" />
-            <option value="$PROJECT_DIR$/sample-server" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

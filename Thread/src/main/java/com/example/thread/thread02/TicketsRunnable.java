@@ -5,9 +5,7 @@ package com.example.thread.thread02;
  */
 public class TicketsRunnable {
 
-
     public static void main(String[] args) {
-
         MyRunnable runnable = new MyRunnable();
         Thread thread1 = new Thread(runnable, "窗口1");
         Thread thread2 = new Thread(runnable, "窗口2");
@@ -15,7 +13,6 @@ public class TicketsRunnable {
         thread1.start();
         thread2.start();
         thread3.start();
-
     }
 
     static class MyRunnable implements Runnable {
