@@ -1,14 +1,27 @@
-//include ':app', ':RecycleView', ':SwipeRefreshLayout', ':Service', ':BroadcastReceiver', ':ContentProvider', ':Intent', ':Fragment', ':DesignPatterns', ':Activity', ':ToolBar', ':SharedPreferences', ':RadioButton', ':Menu', ':ActivityForResult',  ':ListView', ':Iconify', ':ButterKnife', ':Timer', ':Drawable', ':GreenDao', ':GreenDaoGenerate', ':Layout', ':MultiDex', ':Dagger', ':Permissions', ':ARouter', ':SparseArray', ':ConstraintLayout', ':ViewStub', ':TouchEvent',  ':VideoView',  ':GridView', ':ViewPager',  ':RecyclerViewLibrary', ':ACache', ':FingerprintIdentification', ':GestureVerify', ':CustomPullMenu', ':CitySelector', ':CityPicker', ':GenerateSignatureFile', ':Generate_JAR', ':Generate_AAR', ':Generate_Library', ':AIDL-Service', ':AIDL-Client', ':EventBus', ':RxBus', ':JNI', ':PerformanceOptimization',  ':DataBinding', ':FrameModel', ':Android_WebView_JS', ':ChangeSkin', ':ChangeSkinModule', ':ChangeSkinPlugin', ':Map', ':ShareSDK', ':Context'
+//include ':app', ':RecycleView', ':SwipeRefreshLayout', ':Service', ':BroadcastReceiver', ':ContentProvider', ':Intent',
+// ':Fragment', ':DesignPatterns', ':Activity', ':ToolBar', ':SharedPreferences', ':RadioButton', ':Menu', ':ActivityForResult',
+// ':ListView', ':Iconify', ':ButterKnife', ':Timer', ':Drawable', ':GreenDao', ':GreenDaoGenerate', ':Layout', ':MultiDex', ':Dagger',
+// ':Permissions', ':ARouter', ':SparseArray', ':ConstraintLayout', ':ViewStub', ':TouchEvent',  ':VideoView',  ':GridView', ':ViewPager',
+// ':RecyclerViewLibrary', ':ACache', ':FingerprintIdentification', ':GestureVerify', ':CustomPullMenu', ':CitySelector', ':CityPicker',
+// ':GenerateSignatureFile', ':Generate_JAR', ':Generate_AAR', ':Generate_Library', ':AIDL-Service', ':AIDL-Client', ':EventBus', ':RxBus',
+// ':JNI', ':PerformanceOptimization',  ':DataBinding', ':FrameModel', ':Android_WebView_JS', ':ChangeSkin', ':ChangeSkinModule',
+// ':ChangeSkinPlugin', ':Map', ':ShareSDK', ':Context'
 
 
 include ':BaseLibrary'
+include ':JNI'
+include ':TouchEvent'
 //include ':Dagger'
 //include ':Android_WebView_JS'
-//include ':Activity', ':Fragment', ':BroadcastReceiver', ':Service', ':ContentProvider'
+include ':Activity', ':Fragment', ':BroadcastReceiver', ':Service', ':ContentProvider'
+//include ':DataBinding'
+//include ':GenerateSignatureFile'
 //include ':RxBus',':EventBus',':AIDL-Service'
-//include ':AIDL-Service',':AIDL-Client'
+include ':AIDL-Service', ':AIDL-Client'
+include ':Annotations', ':AOP'
 //include ':ScreenAdapterTools'
 //include ':Http', ':UnitTest'
-include ':AsyncTask', ':Handler', ':Thread', ':Synchronized'
+//include ':ListPreference'
+//include ':AsyncTask', ':Handler', ':Thread', ':Synchronized'
 //include ':Three_Characteristics_Of_Object_Orient', ':IO', ':NIO', ':Socket',
 //        ':sample-client', ':sample-clink', ':sample-foo', ':sample-server'

@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/AsyncTask" />
+            <option value="$PROJECT_DIR$/AIDL-Client" />
+            <option value="$PROJECT_DIR$/AIDL-Service" />
+            <option value="$PROJECT_DIR$/AOP" />
+            <option value="$PROJECT_DIR$/Activity" />
+            <option value="$PROJECT_DIR$/Annotations" />
             <option value="$PROJECT_DIR$/BaseLibrary" />
-            <option value="$PROJECT_DIR$/Handler" />
-            <option value="$PROJECT_DIR$/Synchronized" />
-            <option value="$PROJECT_DIR$/Thread" />
+            <option value="$PROJECT_DIR$/BroadcastReceiver" />
+            <option value="$PROJECT_DIR$/ContentProvider" />
+            <option value="$PROJECT_DIR$/Fragment" />
+            <option value="$PROJECT_DIR$/JNI" />
+            <option value="$PROJECT_DIR$/Service" />
+            <option value="$PROJECT_DIR$/TouchEvent" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

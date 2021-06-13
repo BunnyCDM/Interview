@@ -12,6 +12,12 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+//        ndk{
+//            moduleName "native-lib"
+//            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86', 'x86_64'
+//            ldLibs("log")
+//        }
+
         // 使用Cmake工具
         externalNativeBuild {
             cmake {

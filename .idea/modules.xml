@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AsyncTask/AsyncTask.iml" filepath="$PROJECT_DIR$/AsyncTask/AsyncTask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" filepath="$PROJECT_DIR$/BaseLibrary/BaseLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Handler/Handler.iml" filepath="$PROJECT_DIR$/Handler/Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interview.iml" filepath="$PROJECT_DIR$/Interview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Synchronized/Synchronized.iml" filepath="$PROJECT_DIR$/Synchronized/Synchronized.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Thread/Thread.iml" filepath="$PROJECT_DIR$/Thread/Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AIDL-Client/Interview.AIDL-Client.iml" filepath="$PROJECT_DIR$/.idea/modules/AIDL-Client/Interview.AIDL-Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AIDL-Service/Interview.AIDL-Service.iml" filepath="$PROJECT_DIR$/.idea/modules/AIDL-Service/Interview.AIDL-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AOP/Interview.AOP.iml" filepath="$PROJECT_DIR$/.idea/modules/AOP/Interview.AOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Activity/Interview.Activity.iml" filepath="$PROJECT_DIR$/.idea/modules/Activity/Interview.Activity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Annotations/Interview.Annotations.iml" filepath="$PROJECT_DIR$/.idea/modules/Annotations/Interview.Annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BaseLibrary/Interview.BaseLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/BaseLibrary/Interview.BaseLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BroadcastReceiver/Interview.BroadcastReceiver.iml" filepath="$PROJECT_DIR$/.idea/modules/BroadcastReceiver/Interview.BroadcastReceiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ContentProvider/Interview.ContentProvider.iml" filepath="$PROJECT_DIR$/.idea/modules/ContentProvider/Interview.ContentProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Fragment/Interview.Fragment.iml" filepath="$PROJECT_DIR$/.idea/modules/Fragment/Interview.Fragment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JNI/Interview.JNI.iml" filepath="$PROJECT_DIR$/.idea/modules/JNI/Interview.JNI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Service/Interview.Service.iml" filepath="$PROJECT_DIR$/.idea/modules/Service/Interview.Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TouchEvent/Interview.TouchEvent.iml" filepath="$PROJECT_DIR$/.idea/modules/TouchEvent/Interview.TouchEvent.iml" />
     </modules>
   </component>
 </project>
