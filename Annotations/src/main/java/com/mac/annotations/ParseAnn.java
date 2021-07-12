@@ -14,7 +14,7 @@ public class ParseAnn {
         try {
             //1、使用类加载器加载类
             Class c=Class.forName("com.mac.annotations.Child");
-            //2、找到类上面的注解
+            //2、找到类上面的注解 "
             boolean isExist=c.isAnnotationPresent(Description.class);
             //3、拿到注解实例
             if(isExist){

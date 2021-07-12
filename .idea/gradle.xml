@@ -17,9 +17,12 @@
             <option value="$PROJECT_DIR$/Annotations" />
             <option value="$PROJECT_DIR$/BaseLibrary" />
             <option value="$PROJECT_DIR$/BroadcastReceiver" />
+            <option value="$PROJECT_DIR$/ButterKnife" />
+            <option value="$PROJECT_DIR$/ConstraintLayout" />
             <option value="$PROJECT_DIR$/ContentProvider" />
             <option value="$PROJECT_DIR$/Fragment" />
             <option value="$PROJECT_DIR$/JNI" />
+            <option value="$PROJECT_DIR$/ScreenAdapterTools" />
             <option value="$PROJECT_DIR$/Service" />
             <option value="$PROJECT_DIR$/TouchEvent" />
           </set>

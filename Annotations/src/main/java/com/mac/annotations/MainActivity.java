@@ -19,4 +19,13 @@ public class MainActivity extends AppCompatActivity {
         return "red";
     }
 
+
+    //@SuppressWarnings("deprecation")//忽略警告
+    @SuppressWarnings("ALL")//忽略警告
+    public void sing(){
+        Person person=new Child();
+        person.sing();
+
+    }
+
 }
