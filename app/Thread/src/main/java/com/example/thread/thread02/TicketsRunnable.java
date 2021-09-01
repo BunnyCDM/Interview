@@ -1,8 +1,6 @@
 package com.example.thread.thread02;
 
-/**
- * Created by mac on 2019/7/21.
- */
+
 public class TicketsRunnable {
 
     public static void main(String[] args) {

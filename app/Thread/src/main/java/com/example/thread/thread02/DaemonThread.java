@@ -6,7 +6,6 @@ import java.io.OutputStream;
 import java.util.Scanner;
 
 /**
- * Created by mac on 2021-01-10.
  * thread.setDaemon(true)：设置为守护线程
  */
 public class DaemonThread {
@@ -25,10 +24,11 @@ public class DaemonThread {
     }
 
     private static void writeToFile() throws Exception {
-        File fileName = new File("/Users/mac/Desktop/un/test.txt");
+        File fileName = new File("/Users/mac/Desktop/test.txt");
+        System.out.println(fileName.exists());
         OutputStream os = new FileOutputStream(fileName, true);
         int count = 0;
-        while (count < 999) {
+        while (count < 9) {
             os.write(("\r\nword" + count).getBytes());
             System.out.println("'进入守护线程'" + Thread.currentThread().getName()
                     + "向文件中写入word" + count++);

@@ -1,8 +1,6 @@
 package com.example.thread.thread01;
 
 /**
- * Created by mac on 2019/7/21.
- * <p>
  * 军队线程，模拟作战双方的行为
  */
 public class ArmyRunnable implements Runnable {

@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import com.example.baselibrary.utils.log.AppLogger;
 
-/**
- * Created by mac on 2019/3/20.
- */
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -182,7 +179,7 @@ public class FirstActivity extends AppCompatActivity {
     private Handler handlerCallBack = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message msg) {
-            Log.d("bunny", "handleMessage: 11111"+"====="+msg.what);
+            Log.d("bunny", "handleMessage: 11111" + "=====" + msg.what);
             // TODO: 2019-08-18 在这里可以截获哈，是否截获return false
             return false;
         }
@@ -190,7 +187,7 @@ public class FirstActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            Log.d("bunny", "handleMessage: 22222"+"====="+msg.what);
+            Log.d("bunny", "handleMessage: 22222" + "=====" + msg.what);
         }
     };
 

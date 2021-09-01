@@ -7,7 +7,6 @@ import android.os.Bundle;
 //https://www.cnblogs.com/imfjj/p/6094114.html
 //https://www.cnblogs.com/duanxz/p/3737186.html
 
-
 /**
  * 隋唐演义演示，角色入下：
  * 军队：ArmyRunnable

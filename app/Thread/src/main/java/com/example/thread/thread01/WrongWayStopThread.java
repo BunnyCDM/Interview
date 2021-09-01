@@ -1,9 +1,6 @@
 package com.example.thread.thread01;
 
-/**
- * Created by mac on 2019/7/21.
- *
- */
+
 public class WrongWayStopThread extends Thread {
 
     public static void main(String[] args) {
@@ -29,8 +26,8 @@ public class WrongWayStopThread extends Thread {
         super.run();
 
         while (!this.isInterrupted()) { //其实就相当于隋唐演义中的标志volatile boolean keepRunning = true;
-            System.out.println("Thread is running");
             long time = System.currentTimeMillis();
+            System.out.println("Thread is running,"+(System.currentTimeMillis() - time));
             //相当于Thread.sleep(1000)
             while ((System.currentTimeMillis() - time < 1000)) {
 

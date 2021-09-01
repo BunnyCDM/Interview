@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.example.baselibrary.utils.log.AppLogger;
 
 /**
- * Created by mac on 2019-08-18.
  * 主线程与子线程通信
  */
 public class FourActivity extends AppCompatActivity {
@@ -23,7 +22,7 @@ public class FourActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             //[main,5,main]
-            AppLogger.d("handleMessage2: " + Thread.currentThread()
+            AppLogger.d("主线程Handler: " + Thread.currentThread()
                     + "\n" + Thread.currentThread().getName());
 
 //            try {
@@ -57,11 +56,11 @@ public class FourActivity extends AppCompatActivity {
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
                 //[handlerThread,5,main]
-                AppLogger.d("handleMessage1: " + Thread.currentThread()
+                AppLogger.d("子线程Handler: " + Thread.currentThread()
                         + "\n" + Thread.currentThread().getName());
                 //向主线程发送消息
-                //Message message = new Message();
-                //handler.sendMessageDelayed(message, 1000);
+                Message message = new Message();
+                handler.sendMessageDelayed(message, 1000);
 
 //                try {
 //                    Thread.sleep(6000);
@@ -74,8 +73,8 @@ public class FourActivity extends AppCompatActivity {
             }
         };
 
-        //threadHandler.sendEmptyMessage(1);
-        handler.sendEmptyMessage(1);
+        threadHandler.sendEmptyMessage(1);
+//        handler.sendEmptyMessage(1);
 
     }
 }
