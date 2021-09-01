@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/dialog_window_width" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <Button android:gravity="center|left" android:id="@id/take_photo" android:background="@drawable/list_item_middle_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Button" />
-    <Button android:gravity="center|left" android:id="@id/picker_photo" android:background="@drawable/list_item_middle_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Button" />
-</LinearLayout>

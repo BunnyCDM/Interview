@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/rel_layout_column_past_header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="#ff222222" android:id="@id/post_column_past_header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/past_articles" android:textDirection="locale" android:layout_marginStart="16.0dip" android:layout_alignParentStart="true" />
-    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="@color/main_yellow" android:id="@id/post_column_past_header_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" android:text="@string/str_caps_more" android:layout_centerVertical="true" android:textDirection="locale" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
-</RelativeLayout>

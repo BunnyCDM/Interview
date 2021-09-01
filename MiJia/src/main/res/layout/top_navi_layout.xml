@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.xiaomi.smarthome.newui.widget.topnavi.widgets.EdgeTransparentView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="33.0dip" android:layout_marginStart="3.0dip" android:layout_marginEnd="33.0dip" app:edge_position="right" app:edge_width="15.0dip">
-        <com.xiaomi.smarthome.newui.widget.topnavi.widgets.PageIndicator android:id="@id/page_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/device_main_page_top_navi_height" />
-    </com.xiaomi.smarthome.newui.widget.topnavi.widgets.EdgeTransparentView>
-    <TextView android:textSize="15.0sp" android:ellipsize="end" android:gravity="fill_vertical" android:id="@id/room_name" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/device_main_page_top_navi_height" android:layout_marginLeft="10.0dip" android:layout_marginRight="33.0dip" android:text="" android:singleLine="true" android:layout_centerVertical="true" android:translationY="-30.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="33.0dip" />
-    <ImageButton android:layout_gravity="center" android:id="@id/arrow_down_img" android:background="@null" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="6.0dip" android:paddingBottom="3.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/navi_arrow_down_expand" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
-</merge>

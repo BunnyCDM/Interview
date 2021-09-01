@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.xiaomi.smarthome.voice.microaudio.viewutil.MicroMultiCmdView android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/micro_multi_cmd_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/micro_multi_cmd_result" />
-    <ListView android:id="@id/micro_multi_cmd_lv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:listSelector="@color/transparent" android:divider="@color/transparent" android:layout_below="@id/micro_multi_cmd_tv" />
-    <TextView android:textSize="20.0sp" android:textColor="@color/white_60_transparent" android:id="@id/multi_cmd_error_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/micro_history_error" android:layout_centerInParent="true" />
-</com.xiaomi.smarthome.voice.microaudio.viewutil.MicroMultiCmdView>

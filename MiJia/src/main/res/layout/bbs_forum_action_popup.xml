@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:background="@drawable/bg_pop_border" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/forum_action_share" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_ic_action_share" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
-    <ImageView android:layout_gravity="center_vertical" android:id="@id/forum_action_comment" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbs_ic_action_comment" android:paddingStart="10.0dip" android:paddingEnd="16.0dip" />
-    <com.mi.global.bbs.view.praise.PraiseButton android:layout_gravity="center_vertical" android:id="@id/forum_action_like" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="10.0dip" app:anim_scale_factor="1.2" app:circle_color="#ffffc107" app:firework_color="#ffff5722" app:icon_size="32.0dip" />
-</LinearLayout>

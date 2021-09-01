@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
-    <ImageView android:id="@id/image_diagnose_icon" android:background="@drawable/shape_inner_circle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_battery" android:scaleType="center" android:layout_centerInParent="true" android:contentDescription="@string/app_name" />
-    <in.cashify.otex.widget.CircleRoadProgress android:id="@id/circleProgress" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:arcLoadingColor="@color/otexColorPrimary" custom:arcLoadingStrokeWidth="@dimen/dimen_5" custom:roadColor="#29000000" custom:roadOuterCircleColor="#fff3f3f3" custom:roadOuterCircleStrokeWidth="@dimen/dimen_5" custom:roadStrokeWidth="@dimen/dimen_5" />
-</RelativeLayout>

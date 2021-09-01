@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:internal="http://schemas.android.com/apk/prv/res/android">
-    <include layout="@layout/mibi_notification" />
-    <ImageView android:id="@id/big_picture" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mibi_android_notification_padding_left" android:layout_marginRight="@dimen/mibi_android_notification_padding_right" android:layout_marginBottom="10.0dip" android:scaleType="centerCrop" />
-</LinearLayout>

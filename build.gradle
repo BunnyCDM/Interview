@@ -4,16 +4,16 @@ buildscript {
     repositories {
 
         //sharesdk
-        maven {
-            //url "http://mvn.mob.com/android",
-            url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
-        }
+//        maven {
+//            //url "http://mvn.mob.com/android",
+//            url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
+//        }
 
         jcenter()
 
         //google()，被以下替换，解决Gradle DSL method not found: 'google()'
         maven {
-            url 'https://maven.google.com'
+            url 'https://dl.google.com/dl/android/maven2/'
         }
         google()//Multidex
     }
@@ -32,7 +32,7 @@ buildscript {
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 
         //sharesdk
-        classpath 'com.mob.sdk:MobSDK:+'
+//        classpath 'com.mob.sdk:MobSDK:+'
 
         //AspectJX
         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.8'
@@ -40,10 +40,10 @@ buildscript {
     }
 
     //sharesdk
-    configurations.all {
-        resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
-        //exclude group: 'com.mob', module: 'MobLink-3.0.2'
-    }
+//    configurations.all {
+//        resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
+//        //exclude group: 'com.mob', module: 'MobLink-3.0.2'
+//    }
 }
 
 allprojects {
@@ -59,14 +59,14 @@ allprojects {
 //        mavenLocal()
 
         //google()，别以下替换，解决Gradle DSL method not found: 'google()'
-        maven { url 'https://maven.google.com' }//Multidex
+        maven { url 'https://dl.google.com/dl/android/maven2/' }//Multidex
 
         maven { url "https://jitpack.io" }//BaseRecyclerViewAdapterHelper
 
         //sharesdk
-        maven {
-            url "http://mvn.mob.com/android"
-        }
+//        maven {
+//            url "http://mvn.mob.com/android"
+//        }
 
         maven {
             url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
@@ -78,10 +78,10 @@ allprojects {
     }
 
     //sharesdk
-    configurations.all {
-        resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
-        //exclude group: 'com.mob', module: 'MobLink-3.0.2'
-    }
+//    configurations.all {
+//        resolutionStrategy.cacheDynamicVersionsFor 1, 'seconds'
+//        //exclude group: 'com.mob', module: 'MobLink-3.0.2'
+//    }
 }
 
 task clean(type: Delete) {

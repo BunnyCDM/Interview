@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/activity_plate" android:background="@color/common_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/bbs_common_refresh_layout" />
-    <com.mi.global.bbs.view.SlidingTabStripView android:textSize="14.0sp" android:id="@id/forum_item_top_strip" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</FrameLayout>

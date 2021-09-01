@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/mipay_safe_keyboard_bar_bg" android:layout_width="fill_parent" android:layout_height="38.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mipay_safe_keyboard_bar_shield" />
-        <TextView android:textSize="12.0dip" android:textColor="@color/mipay_safe_keyboard_title_color" android:id="@id/title_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="@string/mipay_safe_keyboard_title" />
-    </LinearLayout>
-    <ImageView android:id="@id/hide_imageview" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/mipay_safe_keyboard_key_hide" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-</RelativeLayout>

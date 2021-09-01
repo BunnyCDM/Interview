@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:tag="layout/item_notice_0" android:layout_width="fill_parent" android:layout_height="40.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.xiaomi.jr.view.NoticeView android:id="@id/notice_view" android:tag="binding_1" android:background="#fffffae7" android:paddingLeft="@dimen/common_list_item_left_margin" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/common_list_item_left_margin" android:paddingEnd="20.0dip" />
-    <View android:background="#ffd9d9d9" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
-</RelativeLayout>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
-        <TextView android:textSize="14.0sp" android:textColor="@color/bbs_white_text_color" android:gravity="center" android:layout_gravity="end" android:id="@id/commit" android:background="@drawable/bbs_submit_sharp" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="1.0dip" android:minHeight="1.0dip" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginEnd="16.0dip" />
-    </android.support.v7.widget.Toolbar>
-    <FrameLayout android:id="@id/image_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-</LinearLayout>

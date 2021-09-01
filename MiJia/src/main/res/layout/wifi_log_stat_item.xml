@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:layout_width="46.0dip" android:layout_height="460.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.xiaomi.smarthome.miio.activity.WifiLogStatItemView android:id="@id/item_name" android:layout_width="46.0dip" android:layout_height="420.0dip" android:layout_marginBottom="40.0dip" android:layout_alignParentTop="true" />
-    <TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/class_P" android:gravity="center" android:id="@id/item_text" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-</RelativeLayout>

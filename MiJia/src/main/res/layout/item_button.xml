@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView android:gravity="center" android:id="@id/action_imageview" android:tag="layout/item_button_0" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" style="@style/Mifi.Widget.TextView.List.Button.Action"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

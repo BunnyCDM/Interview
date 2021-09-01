@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:background="#ffe3e3e6" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
-    <TextView android:textSize="@dimen/font_size_11sp" android:textColor="@color/class_Y" android:gravity="center" android:id="@id/btn_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/delete" android:drawableTop="@drawable/delete_button" android:drawablePadding="4.0dip" android:layout_centerInParent="true" />
-</RelativeLayout>

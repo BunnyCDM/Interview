@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_1_line_0" android:clickable="true" android:layout_width="fill_parent" android:layout_height="52.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:id="@id/title_imageview" android:tag="binding_1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/common_list_item_left_margin" android:layout_marginRight="5.0dip" android:layout_weight="1.0" style="@style/Mifi.Widget.TextView.List.Item.Primary" />
-    <TextView android:id="@id/action_textview" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" style="@style/Mifi.Widget.TextView.List.Item.Action" />
-    <ImageView android:id="@id/arrow_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/common_list_item_right_margin" android:src="@drawable/arrow_right" />
-</LinearLayout>

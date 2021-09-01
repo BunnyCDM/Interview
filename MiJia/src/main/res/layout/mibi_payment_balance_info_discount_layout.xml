@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/mibi_counter_balance_info_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/mibi_text_size_payment_small" android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mibi_payment_general_small_gap" android:layout_marginBottom="@dimen/mibi_payment_general_small_gap" android:text="@string/mibi_giftcard_discount" style="@style/Mibi.TextAppearance.Payment.General.Gray" />
-    <View android:background="@color/mibi_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/mibi_divider" />
-    <TableLayout android:id="@id/table_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="0" android:shrinkColumns="0" />
-</LinearLayout>

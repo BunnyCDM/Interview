@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/title_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:maxWidth="300.0dip" android:maxLines="1" android:layout_marginStart="30.0dip" />
-    <com.xiaomi.smarthome.library.common.widget.ExpandGridView android:gravity="center" android:id="@id/grid_view" android:background="@drawable/transfer_device_add_group_bg" android:paddingTop="13.0dip" android:paddingBottom="13.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="13.0dip" android:listSelector="@android:color/transparent" android:horizontalSpacing="10.0dip" android:verticalSpacing="10.0dip" android:numColumns="4" android:paddingStart="17.0dip" android:paddingEnd="17.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
-</LinearLayout>

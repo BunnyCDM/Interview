@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/bg_gray" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
-        <ListView android:id="@id/address_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" />
-        <com.mi.global.shop.widget.CustomTextView android:textSize="14.0sp" android:textColor="#ffb0b0b0" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/empty_view" android:visibility="gone" android:layout_width="260.0dip" android:layout_height="wrap_content" android:layout_marginTop="110.0dip" android:text="@string/user_address_list_empty" android:drawableTop="@drawable/shop_address_empty" android:drawablePadding="20.0dip" />
-    </FrameLayout>
-    <com.mi.global.shop.widget.CustomButtonView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/add_address_btn" android:background="@color/orange" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="15.0dip" android:text="@string/user_address_add" />
-</LinearLayout>

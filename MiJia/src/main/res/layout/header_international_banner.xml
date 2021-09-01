@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.xiaomi.smarthome.newui.widget.banner.InternationalCustomBannerHeaderView android:id="@id/custom_header_view" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:canLoop="false" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.8"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

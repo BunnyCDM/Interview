@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.xiaomi.smarthome.library.common.widget.ResizeLayout android:orientation="vertical" android:id="@id/top_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/module_a_3_title_bar_return" />
-    <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/black" android:id="@id/scan_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="46.0dip" android:layout_marginTop="252.0dip" android:text="@string/scanning_device_please_wait" android:layout_below="@id/title_bar" android:layout_marginStart="46.0dip" />
-    <com.xiaomi.smarthome.device.choosedevice.ScanDeviceProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="3.2999878dip" android:layout_marginLeft="46.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="46.0dip" android:layout_below="@id/scan_des" />
-</com.xiaomi.smarthome.library.common.widget.ResizeLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.xiaomi.smarthome.mibrain.viewutil.MiBrainExecutingView android:id="@id/mi_brain_executing_view" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.xiaomi.smarthome.mibrain.viewutil.RadarLayout android:id="@id/mi_brain_executing_radar_layout" android:layout_width="167.0dip" android:layout_height="167.0dip" android:layout_centerInParent="true" />
-    <com.xiaomi.smarthome.mibrain.viewutil.RadarLayout android:id="@id/mi_brain_executing_radar_layout_ring" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
-    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/mi_brain_executing_simple_dv" android:layout_width="112.0dip" android:layout_height="112.0dip" android:layout_centerInParent="true" />
-</com.xiaomi.smarthome.mibrain.viewutil.MiBrainExecutingView>

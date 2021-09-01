@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/rlTitleBar" layout="@layout/cs_view_cloud_video_header" />
-    <com.xiaomi.smarthome.fastvideo.VideoViewGl android:id="@id/vvPic" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-</RelativeLayout>

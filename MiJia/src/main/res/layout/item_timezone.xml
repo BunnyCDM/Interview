@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_centerVertical="true">
-        <TextView android:textSize="14.669983sp" android:textColor="#ff000000" android:id="@id/text_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="阿姆斯特丹(当前）" />
-        <TextView android:textSize="12.0sp" android:textColor="@color/setting_item_title_text_color" android:id="@id/text_gmt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GMT+02:00" />
-    </LinearLayout>
-    <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="24.0dip" android:layout_alignParentBottom="true" />
-</RelativeLayout>

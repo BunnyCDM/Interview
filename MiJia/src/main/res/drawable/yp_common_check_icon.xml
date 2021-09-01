@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="true" android:state_checked="true" android:drawable="@drawable/yp_std_icon_checkbox_check" />
-    <item android:state_enabled="true" android:state_checked="false" android:drawable="@drawable/yp_std_icon_checkbox_uncheck" />
-    <item android:state_enabled="false" android:state_checked="true" android:drawable="@drawable/yp_std_icon_checkbox_check_disable" />
-    <item android:state_enabled="false" android:state_checked="false" android:drawable="@drawable/yp_std_icon_checkbox_uncheck_disable" />
-    <item android:drawable="@drawable/yp_std_icon_checkbox_uncheck" />
-</selector>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="@dimen/std_dialog_list_item_title_font_size" android:textColor="@color/yp_std_dialog_list_item_txt_color" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/text1" android:background="@drawable/yp_common_menu_list_bg" android:paddingLeft="3.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/std_dialog_list_item_height"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,27 +1,23 @@
-//include ':app', ':RecycleView', ':SwipeRefreshLayout', ':Service', ':BroadcastReceiver', ':ContentProvider', ':Intent',
-// ':Fragment', ':DesignPatterns', ':Activity', ':ToolBar', ':SharedPreferences', ':RadioButton', ':Menu', ':ActivityForResult',
-// ':ListView', ':Iconify', ':Timer', ':Drawable', ':GreenDao', ':GreenDaoGenerate', ':Layout', ':MultiDex', ':Dagger',
-// ':Permissions', ':ARouter', ':SparseArray', ':ViewStub', ':TouchEvent',  ':VideoView',  ':GridView', ':ViewPager',
-// ':RecyclerViewLibrary', ':ACache', ':FingerprintIdentification', ':GestureVerify', ':CustomPullMenu', ':CitySelector', ':CityPicker',
-// ':GenerateSignatureFile', ':Generate_JAR', ':Generate_AAR', ':Generate_Library', ':AIDL-Service', ':AIDL-Client', ':EventBus', ':RxBus',
-// ':JNI', ':PerformanceOptimization',  ':DataBinding', ':FrameModel', ':Android_WebView_JS', ':ChangeSkin', ':ChangeSkinModule',
-// ':ChangeSkinPlugin', ':Map', ':ShareSDK', ':Context'
+include ':GreenDao', ':GreenDaoGenerate'
+include ':CitySelector', ':CityPicker'
+//include ':ChangeSkin', ':ChangeSkinModule',':ChangeSkinPlugin'
 
+include ':Socket', ':sample-client', ':sample-clink', ':sample-foo', ':sample-server'
+
+include ':lib:RecyclerViewLibrary'
 
 include ':BaseLibrary'
-include ':JNI'
-include ':TouchEvent'
-//include ':Dagger'
-//include ':Android_WebView_JS'
-include ':Activity', ':Fragment', ':BroadcastReceiver', ':Service', ':ContentProvider'
-//include ':DataBinding'
-//include ':GenerateSignatureFile'
-//include ':RxBus',':EventBus',':AIDL-Service'
-include ':AIDL-Service', ':AIDL-Client'
-include ':Annotations', ':AOP', ':ButterKnife'
-include ':ScreenAdapterTools', ':ConstraintLayout'
-//include ':Http', ':UnitTest'
-//include ':ListPreference'
-//include ':AsyncTask', ':Handler', ':Thread', ':Synchronized'
-//include ':Three_Characteristics_Of_Object_Orient', ':IO', ':NIO', ':Socket',
-//        ':sample-client', ':sample-clink', ':sample-foo', ':sam   ple-server'
+include ':app:AOP', ':app:Annotations', ':app:ButterKnife', ':app:Dagger'
+include ':app:Handler', ':app:Thread', ':app:Synchronized', ':app:AsyncTask'
+include ':app:Activity', ':app:Fragment', ':app:BroadcastReceiver', ':app:Service', ':app:ContentProvider',
+        ':app:ActivityForResult', ':app:ConstraintLayout', ':app:Layout'
+include ':app:RecycleView', ':app:ScreenAdapterTools', ':app:RadioButton', ':app:SwipeRefreshLayout',
+        ':app:ListView', ':app:ListPreference', ':app:GridView', ':app:Drawable', ':app:ViewPager', ':app:ViewStub', ':app:Map', ':app:Menu'
+include ':app:EventBus', ':app:RxBus', ':app:MultiDex', ':app:Http'
+include ':app:ARouter', ':app:Context', ':app:TouchEvent', ':app:ToolBar', ':app:Timer', ':app:SparseArray', ':app:SharedPreferences', ':app:Intent', ':app:Iconify'
+include ':app:Android_WebView_JS', ':app:VideoView', ':app:UnitTest', ':app:Permissions', ':app:PerformanceOptimization', ':app:FrameModel', ':app:FingerprintIdentification', ':app:GestureVerify'
+include ':app:DataBinding', ':app:DesignPatterns'
+include ':app:Three_Characteristics_Of_Object_Orient', ':app:IO', ':app:NIO'
+include ':app:JNI', ':app:AIDL-Service', ':app:AIDL-Client'
+include ':app:GenerateSignatureFile', ':app:Generate_AAR', ':app:Generate_JAR', ':app:Generate_Library'
+include ':app:CustomPullMenu', ':app:ACache'

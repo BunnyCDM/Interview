@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/bbs_splash_layout" />
-    <ImageView android:id="@id/bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_gravity="end|center|top" android:id="@id/skip" android:background="@drawable/bbs_btn_skip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="21.0dip" android:text="@string/bbs_skip" android:textDirection="locale" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
-    <include layout="@layout/bbs_launch_info_layout" />
-</FrameLayout>

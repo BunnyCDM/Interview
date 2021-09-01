@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/title_bar_choose_connect_device" />
-    <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_bar" />
-    <com.xiaomi.smarthome.library.common.widget.HeaderGridView android:id="@id/device_grid_list" android:background="#fff2f2f2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:numColumns="4" android:layout_below="@id/title_bar" />
-    <View android:id="@id/search_mask" android:background="#ffebebeb" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_bar" />
-</RelativeLayout>

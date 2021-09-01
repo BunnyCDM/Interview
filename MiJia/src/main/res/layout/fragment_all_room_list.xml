@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:background="@color/std_list_divider_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
-    <include layout="@layout/common_list_space_empty" />
-    <include layout="@layout/common_white_empty_view_new" />
-    <android.support.v7.widget.RecyclerView android:id="@id/recyclerview" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</android.support.constraint.ConstraintLayout>

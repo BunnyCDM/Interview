@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools"
-    tools:keep="@drawable/guide_*,@drawable/ic_*,@drawable/icon_*,@drawable/card_*,@drawable/small_card_*,@drawable/tab_*,@drawable/coin_*,@drawable/checkin_*,@raw/xiaomi_static_config,@raw/yitu_face_model2,@drawable/search_insurance,@raw/*"/>

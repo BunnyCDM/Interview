@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center" android:id="@id/rl_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
-    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/iv_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="9.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" />
-    <ImageView android:id="@id/iv_beta" android:layout_width="24.0dip" android:layout_height="12.0dip" android:layout_marginLeft="27.0dip" android:layout_marginTop="19.0dip" />
-    <com.mi.global.shop.widget.CustomTextView android:textSize="@dimen/text_size_dp_10" android:textColor="@color/orange_red" android:gravity="center" android:layout_gravity="right" android:id="@id/tv_count" android:background="@drawable/shop_orangle_inner_circle" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="34.0dip" android:layout_marginTop="1.5dip" />
-    <com.mi.global.shop.widget.CustomTextView android:textSize="@dimen/text_size_dp_12" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/iv_icon" android:layout_centerHorizontal="true" />
-</RelativeLayout>

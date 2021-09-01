@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:background="@color/mibi_text_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <include layout="@layout/mibi_mili_center_header" />
-        <ViewStub android:id="@id/stub_home_container" android:layout="@layout/mibi_mili_center_home_grid" android:inflatedId="@id/home_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>

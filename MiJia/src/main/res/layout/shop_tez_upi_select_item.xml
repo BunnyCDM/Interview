@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.mi.global.shop.widget.CustomTextView android:textSize="14.0sp" android:textColor="#ff424242" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_selected" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" android:text="" android:singleLine="true" />
-</FrameLayout>

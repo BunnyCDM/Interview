@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<fragment android:name="com.xiaomi.smarthome.homeroom.LeftDrawerFragment" android:layout_gravity="left" android:id="@id/device_tag_left_fragment" android:tag="drawer" android:layout_width="260.0dip" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.mi.global.bbs.view.Editor.FontTextView android:textSize="13.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/column_apply_bt" android:background="@drawable/column_apply_white_bt_bg" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:paddingRight="10.0dip" android:paddingBottom="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/column_title_apply" android:textDirection="locale" android:layout_marginEnd="16.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

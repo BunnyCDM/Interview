@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/layoutLocal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="#ff333333" android:gravity="center" android:id="@id/my_thread" android:background="@drawable/round_dialog_first_item_selector" android:padding="14.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/all_threads" android:textDirection="locale" />
-    <View android:background="@color/dialog_item_selected_color" android:layout_width="fill_parent" android:layout_height="0.8000001dip" />
-    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="#ff333333" android:gravity="center" android:id="@id/my_thread_in_column" android:background="@drawable/round_dialog_last_item_selector" android:padding="14.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/threads_added_in_column" android:textDirection="locale" />
-</LinearLayout>

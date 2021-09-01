@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
-    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/iv_promote_icon" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginLeft="15.0dip" />
-    <com.mi.global.shop.widget.CustomTextView android:textSize="11.0dip" android:textColor="@color/orange_red" android:id="@id/tv_promote_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="2.0dip" android:layout_weight="1.0" />
-    <ImageView android:id="@id/iv_activity_arrow" android:visibility="gone" android:layout_width="7.0dip" android:layout_height="12.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/shop_arrow_right_orange" android:scaleType="fitXY" android:layout_alignParentRight="true" />
-</LinearLayout>

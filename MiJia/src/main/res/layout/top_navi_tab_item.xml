@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.xiaomi.smarthome.newui.widget.topnavi.widgets.TopTab android:textSize="@dimen/font_size_13sp" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="常用" android:singleLine="true" style="@style/top_tab_style"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

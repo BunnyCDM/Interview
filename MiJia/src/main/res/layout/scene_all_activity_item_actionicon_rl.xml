@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_width="@dimen/scene_all_activity_width_and_height" android:layout_height="@dimen/scene_all_activity_width_and_height">
-        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/icon_sdv" android:layout_width="@dimen/scene_all_activity_width_and_height" android:layout_height="@dimen/scene_all_activity_width_and_height" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
-        <ImageView android:id="@id/icon_more" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/scene_all_more_icon" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-</LinearLayout>

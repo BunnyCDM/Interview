@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="@dimen/font_size_12sp" android:textColor="@color/flow_tag_item_color" android:gravity="center" android:background="@drawable/flow_tag_item_bg" android:paddingLeft="17.0dip" android:paddingTop="7.0dip" android:paddingRight="17.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

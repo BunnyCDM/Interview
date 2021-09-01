@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="#fff1f1f1" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/module_a_3_title_bar_return" />
-    <include android:id="@id/bluetooth" android:visibility="gone" layout="@layout/send_way_item" />
-    <include android:id="@id/qrcode" android:visibility="gone" layout="@layout/send_way_item" />
-    <include android:id="@id/wifi" android:visibility="gone" layout="@layout/send_way_item" />
-    <include android:id="@id/sound" android:visibility="gone" layout="@layout/send_way_item" />
-</LinearLayout>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/item_panel_0" android:background="#ffffffff" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:tag="binding_1" android:layout_width="@dimen/panel_icon_width" android:layout_height="@dimen/panel_icon_width" />
-    <TextView android:textSize="16.0dip" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23.0dip" style="@style/Mifi.Widget.TextView.List.Panel.Title" />
-    <TextView android:textSize="12.0dip" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" style="@style/Mifi.Widget.TextView.List.Item.Secondary" />
-    <Button android:gravity="center" android:id="@id/action_button" android:tag="binding_4" android:layout_width="170.0dip" android:layout_height="39.299988dip" android:layout_marginTop="42.0dip" style="@style/Mifi.Widget.Button.Blue" />
-</LinearLayout>

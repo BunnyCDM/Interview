@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@drawable/transparent_drawable" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:gravity="top" android:id="@id/pull_footer" android:clickable="false" android:layout_width="fill_parent" android:layout_height="13.299988dip" android:src="@drawable/transparent_drawable" />
-</LinearLayout>

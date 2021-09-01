@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:gravity="center" android:orientation="vertical" android:id="@id/container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:id="@id/refresh_image" android:paddingBottom="60.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:textSize="14.0sp" android:textColor="#ff555555" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/refresh_btn" android:background="@drawable/common_button" android:visibility="gone" android:layout_width="170.0dip" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="@string/shop_click_refresh" />
-    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/circle_normal" />
-</FrameLayout>

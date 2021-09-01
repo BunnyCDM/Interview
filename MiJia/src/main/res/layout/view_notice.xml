@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/action_textview" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notice_more" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Mifi.Widget.TextView.List.Notice.Action" />
-    <TextView android:id="@id/notice_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_toLeftOf="@id/action_textview" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_marginEnd="12.0dip" android:layout_toStartOf="@id/action_textview" android:layout_alignParentStart="true" style="@style/Mifi.Widget.TextView.List.Notice.Title" />
-</RelativeLayout>

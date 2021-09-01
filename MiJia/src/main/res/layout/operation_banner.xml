@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.xiaomi.smarthome.operation.appindex.PopHelpCardView android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardCornerRadius="6.0dip" app:cardElevation="0.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <ImageView android:id="@id/banner_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
-        <ImageView android:id="@id/close" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginRight="1.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/banner_close" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-</com.xiaomi.smarthome.operation.appindex.PopHelpCardView>

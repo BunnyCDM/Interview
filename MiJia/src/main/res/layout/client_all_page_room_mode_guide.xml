@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@color/black_70_transparent" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/bg_click" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/room_mode_guide" android:layout_centerInParent="true" />
-    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/white" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/device_main_page_room_mode_guide" android:layout_below="@id/icon" android:layout_centerHorizontal="true" />
-</RelativeLayout>

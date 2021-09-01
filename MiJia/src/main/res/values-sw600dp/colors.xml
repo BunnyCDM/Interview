@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="mibi_text_color_giftcard_item_activity">#ff333333</color>
-    <color name="mibi_text_color_giftcard_item_available">#ffea5800</color>
-    <color name="mibi_text_color_giftcard_item_expired_time">#66000000</color>
-</resources>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.xiaomi.smarthome.library.common.widget.ColorRadioButton android:textSize="10.0sp" android:textColor="#ff333333" android:textColorLink="@color/white" android:gravity="bottom|center" android:paddingLeft="@dimen/yeelight_radiobutton_padding" android:paddingTop="@dimen/yeelight_radiobutton_padding" android:paddingRight="@dimen/yeelight_radiobutton_padding" android:layout_width="@dimen/yeelight_radiobutton_width" android:layout_height="@dimen/yeelight_radiobutton_height" android:button="@drawable/transparent" android:paddingStart="@dimen/yeelight_radiobutton_padding" android:paddingEnd="@dimen/yeelight_radiobutton_padding"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

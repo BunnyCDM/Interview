@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/price_text_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:includeFontPadding="false" android:layout_marginEnd="7.0dip" />
-    <TextView android:textSize="20.0sp" android:textColor="#fffd5716" android:gravity="center" android:id="@id/price_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
-    <TextView android:textSize="10.5sp" android:textColor="#fffd5716" android:gravity="center" android:id="@id/price_text_3" android:background="@drawable/device_shop_category_bg" android:paddingLeft="4.0dip" android:paddingTop="1.0dip" android:paddingRight="4.0dip" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:minWidth="40.0dip" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" android:layout_marginStart="7.0dip" />
-</LinearLayout>

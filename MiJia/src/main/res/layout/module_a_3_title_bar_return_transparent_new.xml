@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/title_bar" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@id/module_a_3_return_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:src="@drawable/return_bt_white" android:scaleType="fitCenter" android:layout_centerVertical="true" android:contentDescription="@string/action_back" android:layout_marginStart="9.0dip" />
-        <TextView android:textSize="@dimen/font_size_15sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/module_a_3_return_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/titlebar_return_area_size" android:maxWidth="180.0dip" android:maxLines="1" android:layout_centerInParent="true" android:layout_marginEnd="@dimen/titlebar_return_area_size" />
-        <ImageView android:id="@id/progress_image" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/common_loading_circle_white" android:layout_toLeftOf="@id/module_a_3_return_title" android:layout_centerVertical="true" android:layout_marginEnd="5.0dip" android:layout_toStartOf="@id/module_a_3_return_title" />
-    </RelativeLayout>
-</FrameLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:background="@drawable/mishopsdk_pop_up_bg" android:layout_width="343.0dip" android:layout_height="wrap_content">
-        <TextView android:textSize="@dimen/mishopsdk_t16" android:textColor="@color/mishopsdk_t_grey_title" android:gravity="center_horizontal" android:id="@id/mishopsdk_tips_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="40.0dip" />
-        <TextView android:textSize="@dimen/mishopsdk_t12" android:textColor="@color/mishopsdk_t_grey_desc" android:gravity="center_horizontal" android:id="@id/mishopsdk_tips_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="30.0dip" />
-        <TextView android:textSize="@dimen/mishopsdk_t14" android:textColor="@color/mishopsdk_orange" android:gravity="center" android:id="@id/mishopsdk_cancle_text" android:background="@drawable/mishop_dialog_rightbtn_bg" android:layout_width="fill_parent" android:layout_height="41.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="25.0dip" android:text="@string/mishopsdk_i_know" />
-    </LinearLayout>
-</FrameLayout>

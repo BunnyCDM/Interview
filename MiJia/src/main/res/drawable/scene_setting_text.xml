@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="true" android:color="@color/std_dialog_list_item_title_selected" />
-    <item android:color="@color/std_list_title" />
-</selector>

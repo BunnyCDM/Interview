@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/up_btn" android:background="@drawable/miio_sec_device_up" android:layout_width="250.0dip" android:layout_height="125.0dip" />
-    <View android:id="@id/down_btn" android:background="@drawable/miio_sec_device_down" android:layout_width="250.0dip" android:layout_height="125.0dip" android:layout_marginTop="125.0dip" />
-    <View android:id="@id/left_btn" android:background="@drawable/miio_sec_device_left" android:layout_width="125.0dip" android:layout_height="250.0dip" />
-    <View android:id="@id/right_btn" android:background="@drawable/miio_sec_device_right" android:layout_width="125.0dip" android:layout_height="250.0dip" android:layout_marginLeft="125.0dip" />
-    <View android:id="@id/ok_btn" android:background="@drawable/miio_sec_device_ok" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginLeft="75.0dip" android:layout_marginTop="75.0dip" />
-</merge>

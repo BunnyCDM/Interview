@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/ir_edit_board" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditText android:textSize="@dimen/ir_font_size_normal" android:textColor="@color/ir_text_color_normal" android:textColorHint="@color/ir_text_color_transparent_black" android:id="@id/ir_edit_view" android:background="@drawable/ir_common_input_bg" android:paddingLeft="@dimen/ir_controller_edit_padding_left" android:paddingRight="@dimen/ir_controller_edit_padding_left" android:layout_width="fill_parent" android:layout_height="@dimen/ir_controller_edit_input_height" android:layout_marginLeft="@dimen/ir_controller_edit_padding" android:layout_marginRight="@dimen/ir_controller_edit_padding" android:hint="@string/ir_controller_edit_hint" android:inputType="text" />
-</FrameLayout>

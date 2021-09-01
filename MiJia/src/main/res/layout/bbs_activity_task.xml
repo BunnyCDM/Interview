@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SwipeRefreshLayout android:id="@id/outer_refresh_layout" android:background="@drawable/bbs_bg_task" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/layoutLocal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ScrollView android:id="@id/task_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="false">
-        <include layout="@layout/bbs_mission_layout" />
-    </ScrollView>
-</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Button android:textSize="12.0sp" android:textColor="#66ffffff" android:id="@id/btn_lock_common" android:background="@drawable/lock_common_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/find_mikey"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

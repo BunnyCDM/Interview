@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/activity_item_layout" android:background="@drawable/white_pressed_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/item_img" android:layout_width="fill_parent" android:layout_height="182.0dip" android:scaleType="centerCrop" android:layout_centerVertical="true" />
-    <View android:background="@color/common_bg_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
-</LinearLayout>

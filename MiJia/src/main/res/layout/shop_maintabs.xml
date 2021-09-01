@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/v_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:id="@id/fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <android.support.design.widget.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/fab_product" android:background="@android:color/transparent" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="25.0dip" android:layout_marginBottom="50.0dip" android:src="@drawable/shop_ic_go_to_product" android:scaleType="center" app:backgroundTint="@color/window_background" app:borderWidth="0.0dip" app:elevation="4.0dip" app:fabSize="normal" app:rippleColor="@color/title_text_color_shadow" />
-</FrameLayout>

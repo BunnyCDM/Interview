@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/miui10_card_title_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0sp" android:textColor="@color/tv_card_title" android:id="@id/tv_device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:layout_centerVertical="true" />
-    <TextView android:textSize="14.0sp" android:textColor="@color/tv_card_title_offline" android:id="@id/tv_offline" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:maxWidth="200.0dip" android:text="@string/device_offline_title" android:singleLine="true" android:layout_toRightOf="@id/tv_device_name" android:layout_centerVertical="true" />
-    <View android:id="@id/enter_device_divider" android:background="#1a000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
-</RelativeLayout>

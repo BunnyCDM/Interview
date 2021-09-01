@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/capture_photo_bg" android:scaleType="centerCrop" />
-    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:background="@drawable/idcard_border" android:layout_width="200.0dip" android:layout_height="100.0dip" android:layout_marginBottom="150.0dip" android:text="@string/capture_idcard_tip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-</RelativeLayout>

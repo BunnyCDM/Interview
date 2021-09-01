@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="64.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:gravity="center" android:id="@id/device_icon" android:background="@drawable/family_add_device_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/category_title_margin_left" android:layout_centerVertical="true" android:layout_marginStart="@dimen/category_title_margin_left" />
-    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/black_80_transparent" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:text="@string/family_add_device" android:layout_toRightOf="@id/device_icon" android:layout_centerVertical="true" android:layout_marginStart="25.0dip" android:layout_toEndOf="@id/device_icon" />
-    <ImageView android:background="@drawable/right_arrow_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="26.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="26.0dip" android:layout_alignParentEnd="true" />
-    <View style="@style/item_underline" />
-</RelativeLayout>

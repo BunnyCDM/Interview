@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/for_you_header_layout" android:background="@drawable/white_pressed_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="15.0sp" android:textColor="@color/for_you_list_header_title" android:id="@id/for_you_list_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip" android:text="@string/for_you_customize_title" android:drawableEnd="@drawable/bbs_item_next_icon" android:textDirection="locale" android:layout_marginStart="16.0dip" android:layout_marginEnd="15.0dip" />
-    <View android:background="@color/mission_item_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="16.0dip" />
-</LinearLayout>

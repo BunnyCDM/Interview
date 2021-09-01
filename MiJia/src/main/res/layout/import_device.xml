@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout android:paddingLeft="17.0dip" android:paddingRight="17.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="@dimen/font_size_14sp" android:textColor="@color/class_text_17" android:gravity="center" android:background="@drawable/my_scene_filter_tv_bg_selector" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/import_device_from_other_home" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/common_empty_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:src="@drawable/yp_common_error_network_unavailable" android:layout_centerHorizontal="true" />
-    <com.xiaomi.smarthome.common.ui.widget.XMTextView android:id="@id/common_empty_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/common_empty_hint" android:layout_below="@id/common_empty_img" android:layout_centerHorizontal="true" style="@style/PrimarySubTitleText_13" />
-    <com.xiaomi.smarthome.common.ui.widget.XMTextView android:id="@id/common_empty_btn" android:visibility="invisible" android:layout_width="100.0dip" android:layout_height="30.0dip" android:layout_marginTop="14.0dip" android:text="@string/common_error_retry" android:layout_below="@id/common_empty_main" android:layout_centerHorizontal="true" style="@style/Widget.CommonDefaultButton" />
-</merge>

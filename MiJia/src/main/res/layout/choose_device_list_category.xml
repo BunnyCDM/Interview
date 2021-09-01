@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/left_line" android:background="#ffe5e5e5" android:layout_width="73.0dip" android:layout_height="1.0px" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
-    <TextView android:textSize="@dimen/font_size_12sp" android:textColor="#ff333333" android:ellipsize="end" android:gravity="center" android:id="@id/category_name" android:layout_width="80.0dip" android:layout_height="wrap_content" android:text="@string/smarthome_device_common_device" android:singleLine="true" android:layout_centerInParent="true" />
-    <View android:id="@id/right_line" android:background="#ffe5e5e5" android:layout_width="73.0dip" android:layout_height="1.0px" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
-</RelativeLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="#fff7f7f7" android:layout_width="fill_parent" android:layout_height="46.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:layout_marginTop="19.0dip" android:text="@string/goto_support_qrcode_page" android:layout_marginStart="19.0dip" />
-</FrameLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/result_uncertain" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/mibi_result_uncertain_icon" android:layout_width="@dimen/mibi_result_uncertain_icon_size" android:layout_height="@dimen/mibi_result_uncertain_icon_size" android:layout_marginTop="@dimen/mibi_counter_uncertain_margin_top" android:src="@drawable/mibi_pay_uncertain_center_icon" android:scaleType="fitCenter" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
-    <TextView android:textStyle="bold" android:id="@id/mibi_result_uncertain_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/mibi_order_pay_uncertain_summary" android:layout_below="@id/mibi_result_uncertain_icon" android:layout_centerHorizontal="true" style="@style/Mibi.TextAppearance.Payment.General" />
-    <TextView android:textSize="@dimen/mibi_counter_detail_size" android:id="@id/mibi_result_uncertain_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/mibi_result_uncertain_summary" android:layout_centerHorizontal="true" style="@style/Mibi.TextAppearance.Payment.General.Gray" />
-</RelativeLayout>

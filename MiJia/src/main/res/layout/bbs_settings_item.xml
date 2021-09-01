@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge style="@style/layoutLocal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.mi.global.bbs.view.Editor.FontTextView android:gravity="center_vertical" android:id="@id/settings_item_title" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:textDirection="locale" android:paddingStart="15.0dip" />
-    <com.mi.global.bbs.view.ImageCheckView android:layout_gravity="center_vertical" android:id="@id/settings_item_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/switch_selector" android:layout_marginEnd="20.0dip" />
-</merge>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="10.0sp" android:gravity="center" android:id="@id/selected_state" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:textSize="10.0sp" android:gravity="center" android:id="@id/normal_state" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</RelativeLayout>

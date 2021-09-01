@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<inset android:insetLeft="45.0dip" android:insetRight="27.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <shape android:shape="line">
-        <stroke android:color="#ffe6e6e6" android:dashWidth="3.0dip" android:dashGap="3.0dip" />
-    </shape>
-</inset>

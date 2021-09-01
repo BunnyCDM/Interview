@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:background="@color/std_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:id="@id/loading_content" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <include android:layout_width="fill_parent" android:layout_height="@dimen/titlebar_height" android:layout_alignParentTop="true" layout="@layout/module_a_3_title_bar_return_more" />
-        <ProgressBar android:gravity="center_vertical" android:id="@id/loading_progress" android:layout_width="fill_parent" android:layout_height="2.0dip" android:max="100" android:indeterminateDrawable="@null" android:progressDrawable="@drawable/play_progress" style="@android:style/Widget.ProgressBar.Horizontal" />
-    </LinearLayout>
-    <com.xiaomi.smarthome.framework.webview.SmartHomeWebView android:id="@id/content_webview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:windowSoftInputMode="adjustResize" />
-</FrameLayout>

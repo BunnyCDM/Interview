@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextureView android:id="@id/camera_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
-    <ViewStub android:id="@id/mask" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.xiaomi.jr.verification.ShutterView android:id="@id/shutter" android:layout_width="@dimen/manual_shutter_size" android:layout_height="@dimen/manual_shutter_size" android:layout_marginBottom="31.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-    <ImageView android:id="@id/rotate_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-</RelativeLayout>

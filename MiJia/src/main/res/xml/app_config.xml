@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<widget id="com.example.myapp" version="1.0.0">
-    <name>Hello</name>
-    <preference name="loglevel" value="DEBUG" />
-    <preference name="launch_locally" value="false" />
-    <preference name="launch_url" value="http://tj1-mijia-test29.kscn/weex/js/index/index.bundle.min.js" />
-    <preference name="local_url" value="file://assets/index.js" />
-</widget>

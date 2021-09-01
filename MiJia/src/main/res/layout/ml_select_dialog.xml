@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<view android:id="@id/select_dialog_listview" android:scrollbars="vertical" android:layoutAnimation="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/std_dialog_list_padding_bottom" android:cacheColorHint="@null" android:divider="@color/std_list_divider_line" android:dividerHeight="1.0px" android:overScrollMode="ifContentScrolls" class="com.xiaomi.smarthome.library.common.dialog.MLAlertController$RecycleListView"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

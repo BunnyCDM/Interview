@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/mishopsdk_sns_img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:textSize="12.0sp" android:textColor="@color/mishopsdk_t_grey_buttonicon" android:gravity="center" android:id="@id/mishopsdk_sns_name" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>

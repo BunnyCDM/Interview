@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:id="@id/ll_upi_container" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
-        <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center" android:id="@id/sv_logo" android:padding="@dimen/confirm_payment_innerpadding" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="60.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="60.0dip" android:layout_marginBottom="10.0dip" fresco:actualImageScaleType="fitCenter" />
-        <com.mi.global.shop.widget.CustomTextView android:textSize="@dimen/text_size_dp_12" android:textColor="@color/delivery_selected" android:layout_gravity="center" android:id="@id/item_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
-    </LinearLayout>
-    <ImageView android:id="@id/iv_upi_checked" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/shop_multiple_choice_s" />
-</FrameLayout>

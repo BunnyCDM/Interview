@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:background="@color/sign_head_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/layoutLocal"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/pre_month_iv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/left_arrow_seletor" android:paddingStart="@dimen/day_padding" android:paddingEnd="@dimen/day_padding" />
-    <com.mi.global.bbs.view.Editor.FontTextView android:textSize="16.0sp" android:textColor="@color/main_yellow" android:gravity="center" android:id="@id/current_date_tv" android:padding="@dimen/day_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:textDirection="locale" />
-    <ImageView android:id="@id/next_month_iv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/right_arrow_seletor" android:paddingStart="@dimen/day_padding" android:paddingEnd="@dimen/day_padding" />
-</LinearLayout>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.mi.global.bbs.view.Editor.FontTextView android:textSize="14.0sp" android:textColor="@color/toolbar_action_text_color" android:gravity="center" android:id="@id/actionbar_submit" android:clickable="true" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="@string/bbs_submit" android:textDirection="locale" android:paddingEnd="16.0dip" app:textBounds="medium"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
