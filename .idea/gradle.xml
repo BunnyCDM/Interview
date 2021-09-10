@@ -4,7 +4,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -34,7 +34,6 @@
             <option value="$PROJECT_DIR$/app/Context" />
             <option value="$PROJECT_DIR$/app/CustomPullMenu" />
             <option value="$PROJECT_DIR$/app/Dagger" />
-            <option value="$PROJECT_DIR$/app/DataBinding" />
             <option value="$PROJECT_DIR$/app/DesignPatterns" />
             <option value="$PROJECT_DIR$/app/Drawable" />
             <option value="$PROJECT_DIR$/app/EventBus" />
@@ -64,7 +63,10 @@
             <option value="$PROJECT_DIR$/app/Permissions" />
             <option value="$PROJECT_DIR$/app/RadioButton" />
             <option value="$PROJECT_DIR$/app/RecycleView" />
+            <option value="$PROJECT_DIR$/app/Retrofit" />
             <option value="$PROJECT_DIR$/app/RxBus" />
+            <option value="$PROJECT_DIR$/app/RxJava" />
+            <option value="$PROJECT_DIR$/app/RxRetrofit" />
             <option value="$PROJECT_DIR$/app/ScreenAdapterTools" />
             <option value="$PROJECT_DIR$/app/Service" />
             <option value="$PROJECT_DIR$/app/SharedPreferences" />
@@ -89,7 +91,6 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>
