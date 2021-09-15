@@ -12,6 +12,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/Android_WebView_JS/src/main/res/layout/activity_main.xml" value="0.13240740740740742" />
         <entry key="app/DataBinding/src/main/res/layout/activity_main.xml" value="0.15640766902119072" />
       </map>
     </option>

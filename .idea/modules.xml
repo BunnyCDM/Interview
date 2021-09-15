@@ -27,7 +27,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Context/Interview.app.Context.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Context/Interview.app.Context.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CustomPullMenu/Interview.app.CustomPullMenu.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CustomPullMenu/Interview.app.CustomPullMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Dagger/Interview.app.Dagger.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Dagger/Interview.app.Dagger.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DataBinding/Interview.app.DataBinding.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DataBinding/Interview.app.DataBinding.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DesignPatterns/Interview.app.DesignPatterns.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DesignPatterns/Interview.app.DesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Drawable/Interview.app.Drawable.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Drawable/Interview.app.Drawable.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EventBus/Interview.app.EventBus.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EventBus/Interview.app.EventBus.iml" />

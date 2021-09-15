@@ -1,0 +1,4 @@
+com/example/MyClass.java
+ com.example.MyClass
+com/example/MyPerson.java
+ com.example.MyPerson

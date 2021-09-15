@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textColor="@color/common_blue"
+        android:textColor="@android:color/holo_blue_bright"
         tools:text="111111" />
 
     <LinearLayout
