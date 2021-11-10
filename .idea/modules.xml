@@ -15,23 +15,17 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AIDL-Service/Interview.app.AIDL-Service.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AIDL-Service/Interview.app.AIDL-Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AOP/Interview.app.AOP.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AOP/Interview.app.AOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ARouter/Interview.app.ARouter.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ARouter/Interview.app.ARouter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Activity/Interview.app.Activity.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Activity/Interview.app.Activity.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ActivityForResult/Interview.app.ActivityForResult.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ActivityForResult/Interview.app.ActivityForResult.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android_WebView_JS/Interview.app.Android_WebView_JS.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android_WebView_JS/Interview.app.Android_WebView_JS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Annotations/Interview.app.Annotations.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Annotations/Interview.app.Annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AsyncTask/Interview.app.AsyncTask.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AsyncTask/Interview.app.AsyncTask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BroadcastReceiver/Interview.app.BroadcastReceiver.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BroadcastReceiver/Interview.app.BroadcastReceiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ButterKnife/Interview.app.ButterKnife.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ButterKnife/Interview.app.ButterKnife.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ConstraintLayout/Interview.app.ConstraintLayout.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ConstraintLayout/Interview.app.ConstraintLayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ContentProvider/Interview.app.ContentProvider.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ContentProvider/Interview.app.ContentProvider.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Context/Interview.app.Context.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Context/Interview.app.Context.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CustomPullMenu/Interview.app.CustomPullMenu.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CustomPullMenu/Interview.app.CustomPullMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Dagger/Interview.app.Dagger.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Dagger/Interview.app.Dagger.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DesignPatterns/Interview.app.DesignPatterns.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DesignPatterns/Interview.app.DesignPatterns.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Drawable/Interview.app.Drawable.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Drawable/Interview.app.Drawable.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EventBus/Interview.app.EventBus.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EventBus/Interview.app.EventBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FingerprintIdentification/Interview.app.FingerprintIdentification.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FingerprintIdentification/Interview.app.FingerprintIdentification.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Fragment/Interview.app.Fragment.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Fragment/Interview.app.Fragment.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FrameModel/Interview.app.FrameModel.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FrameModel/Interview.app.FrameModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GenerateSignatureFile/Interview.app.GenerateSignatureFile.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GenerateSignatureFile/Interview.app.GenerateSignatureFile.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Generate_AAR/Interview.app.Generate_AAR.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Generate_AAR/Interview.app.Generate_AAR.iml" />
@@ -39,7 +33,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Generate_Library/Interview.app.Generate_Library.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Generate_Library/Interview.app.Generate_Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GestureVerify/Interview.app.GestureVerify.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GestureVerify/Interview.app.GestureVerify.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GridView/Interview.app.GridView.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GridView/Interview.app.GridView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Handler/Interview.app.Handler.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Handler/Interview.app.Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Http/Interview.app.Http.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Http/Interview.app.Http.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/IO/Interview.app.IO.iml" filepath="$PROJECT_DIR$/.idea/modules/app/IO/Interview.app.IO.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Iconify/Interview.app.Iconify.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Iconify/Interview.app.Iconify.iml" />
@@ -47,7 +40,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JNI/Interview.app.JNI.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JNI/Interview.app.JNI.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Layout/Interview.app.Layout.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Layout/Interview.app.Layout.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListPreference/Interview.app.ListPreference.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListPreference/Interview.app.ListPreference.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListView/Interview.app.ListView.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListView/Interview.app.ListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Map/Interview.app.Map.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Map/Interview.app.Map.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Menu/Interview.app.Menu.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Menu/Interview.app.Menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MultiDex/Interview.app.MultiDex.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MultiDex/Interview.app.MultiDex.iml" />
@@ -61,7 +53,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RxJava/Interview.app.RxJava.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RxJava/Interview.app.RxJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RxRetrofit/Interview.app.RxRetrofit.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RxRetrofit/Interview.app.RxRetrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ScreenAdapterTools/Interview.app.ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ScreenAdapterTools/Interview.app.ScreenAdapterTools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Service/Interview.app.Service.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Service/Interview.app.Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SharedPreferences/Interview.app.SharedPreferences.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SharedPreferences/Interview.app.SharedPreferences.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SparseArray/Interview.app.SparseArray.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SparseArray/Interview.app.SparseArray.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SwipeRefreshLayout/Interview.app.SwipeRefreshLayout.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SwipeRefreshLayout/Interview.app.SwipeRefreshLayout.iml" />
@@ -70,7 +61,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Three_Characteristics_Of_Object_Orient/Interview.app.Three_Characteristics_Of_Object_Orient.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Three_Characteristics_Of_Object_Orient/Interview.app.Three_Characteristics_Of_Object_Orient.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Timer/Interview.app.Timer.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Timer/Interview.app.Timer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ToolBar/Interview.app.ToolBar.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ToolBar/Interview.app.ToolBar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TouchEvent/Interview.app.TouchEvent.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TouchEvent/Interview.app.TouchEvent.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/UnitTest/Interview.app.UnitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/UnitTest/Interview.app.UnitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VideoView/Interview.app.VideoView.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VideoView/Interview.app.VideoView.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ViewPager/Interview.app.ViewPager.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ViewPager/Interview.app.ViewPager.iml" />

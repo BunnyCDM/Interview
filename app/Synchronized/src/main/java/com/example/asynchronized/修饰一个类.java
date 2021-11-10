@@ -28,12 +28,14 @@ public class 修饰一个类 {
         }
 
         public static void method() {
-            for (int i = 0; i < 5; i++) {
-                try {
-                    System.out.println(Thread.currentThread().getName() + ":" + (count++));
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+            synchronized (SyncThread.class){
+                for (int i = 0; i < 5; i++) {
+                    try {
+                        System.out.println(Thread.currentThread().getName() + ":" + (count++));
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }

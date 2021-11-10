@@ -25,8 +25,8 @@ public class WrongWayStopThread extends Thread {
     public void run() {
         super.run();
 
+        long time = System.currentTimeMillis();
         while (!this.isInterrupted()) { //其实就相当于隋唐演义中的标志volatile boolean keepRunning = true;
-            long time = System.currentTimeMillis();
             System.out.println("Thread is running,"+(System.currentTimeMillis() - time));
             //相当于Thread.sleep(1000)
             while ((System.currentTimeMillis() - time < 1000)) {

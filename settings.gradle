@@ -8,13 +8,12 @@ include ':lib:RecyclerViewLibrary'
 
 include ':BaseLibrary'
 include ':app:AOP', ':app:Annotations', ':app:ButterKnife', ':app:Dagger'
-include ':app:Handler', ':app:Thread', ':app:Synchronized', ':app:AsyncTask'
-include ':app:Activity', ':app:Fragment', ':app:BroadcastReceiver', ':app:Service', ':app:ContentProvider',
-        ':app:ActivityForResult', ':app:ConstraintLayout', ':app:Layout'
-include ':app:RecycleView', ':app:ScreenAdapterTools', ':app:RadioButton', ':app:SwipeRefreshLayout',
-        ':app:ListView', ':app:ListPreference', ':app:GridView', ':app:Drawable', ':app:ViewPager', ':app:ViewStub', ':app:Map', ':app:Menu'
+include ':app:Thread', ':app:Synchronized', ':app:AsyncTask'
+include ':app:ConstraintLayout', ':app:Layout'
+include ':app:ScreenAdapterTools', ':app:RadioButton', ':app:SwipeRefreshLayout',
+        ':app:ListPreference', ':app:GridView', ':app:ViewPager', ':app:ViewStub', ':app:Map', ':app:Menu'
 include ':app:EventBus', ':app:RxBus', ':app:MultiDex', ':app:Http'
-include ':app:ARouter', ':app:Context', ':app:TouchEvent', ':app:ToolBar', ':app:Timer', ':app:SparseArray', ':app:SharedPreferences', ':app:Intent', ':app:Iconify'
+include ':app:ARouter', ':app:Context', ':app:ToolBar', ':app:Timer', ':app:SparseArray', ':app:SharedPreferences', ':app:Intent', ':app:Iconify'
 include ':app:Android_WebView_JS', ':app:VideoView', ':app:UnitTest', ':app:Permissions', ':app:PerformanceOptimization', ':app:FrameModel', ':app:FingerprintIdentification', ':app:GestureVerify'
 include ':app:Three_Characteristics_Of_Object_Orient', ':app:IO', ':app:NIO'
 include ':app:JNI', ':app:AIDL-Service', ':app:AIDL-Client'

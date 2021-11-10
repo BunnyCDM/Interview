@@ -1,5 +1,8 @@
 package com.example.thread.thread01;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Created by mac on 2019/7/21.
  * <p>
@@ -13,6 +16,7 @@ public class EnergySystem {
     //如何做到互斥，首先构建一个锁对象
     private final Object lockObj = new Object();
 
+    private Lock mLock = new ReentrantLock();
 
     /**
      * @param n：能量盒子

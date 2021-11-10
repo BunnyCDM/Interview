@@ -122,19 +122,22 @@ public class 修饰一个代码块 {
 
         private Account account;
 
+        public static final Object signal = new Object(); // 线程间通信变量
+
         public AccountOperator(Account account) {
             this.account = account;
         }
 
         @Override
         public void run() {
-            synchronized (account) {
+            synchronized (signal) {/*synchronized (account) {*/
                 account.deposit(500);
                 account.withdraw(500);
                 System.out.println(Thread.currentThread().getName() + ":" + account.getBalance());
             }
         }
     }
+
 
     public static void main(String args[]) {
 
@@ -204,8 +207,8 @@ public class 修饰一个代码块 {
         final int THREAD_NUM = 5;
         Thread threads[] = new Thread[THREAD_NUM];
         for (int i = 0; i < THREAD_NUM; i++) {
-            threads[i] = new Thread(accountOperator, "Thread" + i);
-            threads[i].start();
+//            threads[i] = new Thread(accountOperator, "Thread" + i);
+//            threads[i].start();
         }
         /**
          Thread0:10000.0

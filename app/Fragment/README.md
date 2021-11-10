@@ -1,2 +1,0 @@
-demo1：Fragment应用上
-demo2：Fragment应用下

@@ -14,7 +14,7 @@ public class EnergySystemTest {
 
     public static void main(String[] args) {
         EnergySystem eng = new EnergySystem(BOX_AMOUNT, INITAL_ENERGY);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println("EnergySystemTest Start");
             EnergyTransferTask task = new EnergyTransferTask(eng, i, INITAL_ENERGY);
             Thread t = new Thread(task, "TransferThread+" + i);
