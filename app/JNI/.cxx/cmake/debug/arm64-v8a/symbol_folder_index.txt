@@ -1,1 +1,1 @@
-/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/build/intermediates/cmake/debug/obj/arm64-v8a
+/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/build/intermediates/cmake/debug/obj/arm64-v8a

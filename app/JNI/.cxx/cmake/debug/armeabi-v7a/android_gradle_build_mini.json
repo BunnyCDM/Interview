@@ -1,19 +1,19 @@
 {
   "buildFiles": [
-    "/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/CMakeLists.txt"
+    "/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
       "/Users/mac/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
       "-C",
-      "/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/.cxx/cmake/debug/armeabi-v7a",
+      "/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/.cxx/cmake/debug/armeabi-v7a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
     "/Users/mac/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
     "-C",
-    "/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/.cxx/cmake/debug/armeabi-v7a",
+    "/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/.cxx/cmake/debug/armeabi-v7a",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
@@ -22,11 +22,11 @@
       "buildCommandComponents": [
         "/Users/mac/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
         "-C",
-        "/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/.cxx/cmake/debug/armeabi-v7a",
+        "/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/.cxx/cmake/debug/armeabi-v7a",
         "native-lib"
       ],
       "abi": "armeabi-v7a",
-      "output": "/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
+      "output": "/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
       "runtimeFiles": []
     }
   }

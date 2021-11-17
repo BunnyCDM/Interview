@@ -7,7 +7,7 @@ include ':Socket', ':sample-client', ':sample-clink', ':sample-foo', ':sample-se
 include ':lib:RecyclerViewLibrary'
 
 include ':BaseLibrary'
-include ':app:AOP', ':app:Annotations', ':app:ButterKnife', ':app:Dagger'
+include ':app:ButterKnife', ':app:Dagger',':app:AOP'
 include ':app:Thread', ':app:Synchronized', ':app:AsyncTask'
 include ':app:ConstraintLayout', ':app:Layout'
 include ':app:ScreenAdapterTools', ':app:RadioButton', ':app:SwipeRefreshLayout',
