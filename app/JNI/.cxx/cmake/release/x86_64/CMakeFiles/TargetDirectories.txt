@@ -1,3 +1,0 @@
-/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/.cxx/cmake/release/x86_64/CMakeFiles/rebuild_cache.dir
-/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/.cxx/cmake/release/x86_64/CMakeFiles/edit_cache.dir
-/Users/mac/work/Android/Workspace/Studio/Interview/app/JNI/.cxx/cmake/release/x86_64/CMakeFiles/native-lib.dir

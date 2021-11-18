@@ -1,1 +1,0 @@
-/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/build/intermediates/cmake/debug/obj/x86_64

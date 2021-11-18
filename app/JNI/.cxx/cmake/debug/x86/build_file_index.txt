@@ -1,1 +1,0 @@
-/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/CMakeLists.txt

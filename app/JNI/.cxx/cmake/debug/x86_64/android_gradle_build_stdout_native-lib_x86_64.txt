@@ -1,2 +1,0 @@
-ninja: Entering directory `/Users/mac/work/Android/workspace/Studio/Interview/app/JNI/.cxx/cmake/debug/x86_64'
-ninja: no work to do.
