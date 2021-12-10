@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<!--    圆形定位-->
+<!--    app:layout_constraintCircle="@id/text1"-->
+<!--    app:layout_constraintCircleAngle="30"-->
+<!--    app:layout_constraintCircleRadius="100dp"-->
+
+<!--    内容会包裹不会超出-->
+<!--    app:layout_constrainedWidth="true"-->
+
+    <TextView
+        android:id="@+id/text1"
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="0"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="1"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="30"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="2"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="3"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="4"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="5"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="150"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="6"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="7"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="210"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="8"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="240"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="9"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="10"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="300"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="11"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="330"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:gravity="center"
+        android:background="#00BCD4"
+        android:text="12"
+        android:textSize="32sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintCircle="@id/text1"
+        app:layout_constraintCircleAngle="360"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

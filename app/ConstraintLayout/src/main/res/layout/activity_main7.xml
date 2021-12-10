@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    当左边隐藏后起效果-->
+<!--    app:layout_goneMarginLeft="100dp"-->
+
+    <TextView
+        android:background="#673AB7"
+        android:id="@+id/tv1"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:text="A"
+        android:gravity="center"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        app:layout_goneMarginLeft="100dp"
+        android:background="#03A9F4"
+        android:id="@+id/tv2"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:text="B"
+        android:gravity="center"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@id/tv1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:background="#FF5722"
+        android:id="@+id/tv3"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:text="C"
+        android:gravity="center"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@id/tv2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

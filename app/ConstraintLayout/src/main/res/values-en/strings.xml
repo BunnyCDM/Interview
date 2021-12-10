@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="app_name">ConstraintLayout</string>
+    <string name="login">this is login</string>
+    <string name="pwd">pwd</string>
+
+</resources>

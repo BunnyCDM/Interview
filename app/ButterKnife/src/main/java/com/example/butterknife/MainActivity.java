@@ -17,6 +17,8 @@ import butterknife.OnClick;
  * https://www.bilibili.com/video/BV1vU4y1h7wx?p=3
  *
  * https://www.jianshu.com/p/9bee8e143410
+ *
+ * https://blog.csdn.net/zyw0101/article/details/80399225
  */
 //@InjectLayout(R.layout.activity_main)
 public class MainActivity extends Activity {

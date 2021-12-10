@@ -6,6 +6,11 @@ import android.view.View;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+/**
+ * 布局注入
+ * 控件注入
+ * 事件注入
+ */
 public class InjectManager {
 
     public static void inject(Object obj) {
@@ -56,13 +61,12 @@ public class InjectManager {
         }
     }
 
-
     private static void injectView(Object obj) {
         //控件注入
         //findViewById()
         Class<?> aClass = obj.getClass();
 
-        Field[] fields = aClass.getDeclaredFields();
+        Field[] fields = aClass.getDeclaredFields();//private也可以用
 
         for (Field field : fields) {
             InjectView annotation = field.getAnnotation(InjectView.class);
@@ -74,7 +78,7 @@ public class InjectManager {
                     int value = annotation.value();
                     View invoke = (View) findViewById.invoke(obj, value);
 
-                    field.setAccessible(true);
+                    field.setAccessible(true);//private也可以用
                     field.set(obj, invoke);
 
                 } catch (Exception e) {
