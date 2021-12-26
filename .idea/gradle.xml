@@ -15,8 +15,6 @@
             <option value="$PROJECT_DIR$/CitySelector" />
             <option value="$PROJECT_DIR$/GreenDao" />
             <option value="$PROJECT_DIR$/GreenDaoGenerate" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/app/ConstraintLayout" />
             <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/lib/RecyclerViewLibrary" />
           </set>
