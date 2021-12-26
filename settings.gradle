@@ -6,7 +6,6 @@ include ':CitySelector', ':CityPicker'
 
 include ':lib:RecyclerViewLibrary'
 include ':BaseLibrary'
-include ':app:ConstraintLayout'
 //include ':app:ButterKnife', ':app:Dagger'
 //include ':app:Synchronized', ':app:AsyncTask'
 //include ':app:Layout'

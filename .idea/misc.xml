@@ -30,7 +30,9 @@
         <entry key="app/ConstraintLayout/src/main/res/layout/activity_main8.xml" value="0.2864583333333333" />
         <entry key="app/ConstraintLayout/src/main/res/layout/activity_main9.xml" value="0.2864583333333333" />
         <entry key="app/ConstraintLayout/src/main/res/layout/barrier_main.xml" value="0.2864583333333333" />
+        <entry key="app/ConstraintLayout/src/main/res/layout/bias_main.xml" value="0.1" />
         <entry key="app/ConstraintLayout/src/main/res/layout/chainstyle_main.xml" value="0.2864583333333333" />
+        <entry key="app/ConstraintLayout/src/main/res/layout/group_main.xml" value="0.151268115942029" />
         <entry key="app/ConstraintLayout/src/main/res/layout/guideline_main.xml" value="0.2864583333333333" />
         <entry key="app/DataBinding/src/main/res/layout/activity_main.xml" value="0.15640766902119072" />
         <entry key="app/JNI/src/main/res/layout/activity_main.xml" value="0.2767210144927536" />
