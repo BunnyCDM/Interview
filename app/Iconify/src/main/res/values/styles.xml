@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TabSelectStyle">
+        <item name="android:background">@drawable/selector_tab_switch</item>
+    </style>
+
 </resources>
