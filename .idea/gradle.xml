@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/GreenDaoGenerate" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app/Iconify" />
+            <option value="$PROJECT_DIR$/app/ScreenAdapterTools" />
             <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/lib/RecyclerViewLibrary" />
           </set>

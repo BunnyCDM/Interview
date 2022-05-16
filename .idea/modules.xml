@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Interview.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Interview.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AOP/Interview.app.AOP.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AOP/Interview.app.AOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Iconify/Interview.app.Iconify.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Iconify/Interview.app.Iconify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ScreenAdapterTools/Interview.app.ScreenAdapterTools.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ScreenAdapterTools/Interview.app.ScreenAdapterTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/Interview.lib.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/Interview.lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/RecyclerViewLibrary/Interview.lib.RecyclerViewLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/RecyclerViewLibrary/Interview.lib.RecyclerViewLibrary.iml" />
     </modules>
